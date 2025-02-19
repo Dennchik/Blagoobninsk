@@ -9,9 +9,9 @@ $titleHeight: 3rem;
 $min-height: calc(100% - ($headerHeight + $footerHeight));
 //* ---------------------------- [Font Variables] ------------------------------
 $font-path: '../fonts';
-$font-default: 'Shantell Sans', sans-serif;
+$font-default: 'cyrillicold', sans-serif;
 $font-family-secondary: 'Amatic SC', sans-serif;
-$font-family-exclude: 'Rubik Wet Paint', sans-serif;
+$font-family-exclude: 'Shafarik', sans-serif;
 $font-family-exclude-secondary: 'Sofia Sans Extra Condensed', sans-serif;
 $font-weight-default: 400;
 $font-size: 1.6rem;
@@ -68,7 +68,7 @@ $text-shadow-color: 0 0 1px #b0b0f9;
 	--font-color-active: rgb(119, 150, 243);
 	--font-color-not-active: rgba(139, 176, 255, 0.424);
 	//* ---------------------------- [Background] --------------------------------
-	--background-color: rgb(14, 14, 14);
+	--background-color: #d2f2ff;
 	--background-second: rgb(2, 10, 16);
 	--background-selected: rgba(43, 45, 65, 0.337);
 	--background-terminal: rgb(22, 22, 30);

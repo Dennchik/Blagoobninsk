@@ -107,25 +107,12 @@
 		}
 	}
 
-	// .header__icon-home
-	&__icon-home {
-		margin-right: 1.6rem;
-		._icon {
-			transition: color 0.4s ease-in-out;
-		}
-		&:hover {
-			._icon {
-				color: #ff8040;
-				@extend .text-shadow-pink;
-			}
-		}
-	}
-
 	// .header__logo
 	&__logo {
 		width: 50px;
 		height: 53px;
 		opacity: 0.9;
+		clip-path: circle(50% at 50% 50%);
 
 		@include screen-690 {
 			width: 40px;
@@ -135,7 +122,7 @@
 
 	// .header__text
 	&__text {
-		margin-left: -10px;
+		margin-left: 1rem;
 		text-transform: uppercase;
 		white-space: nowrap;
 		display: flex;
@@ -175,16 +162,6 @@
 			margin-right: 2rem;
 		}
 
-		&:hover {
-			.icon-home {
-				&::before {
-					transition: all 0.4s ease 0s;
-					color: $luminescent-orange;
-					@extend .text-shadow-pink;
-				}
-			}
-		}
-
 		.icon-home {
 			&::before {
 				transition: all 0.4s ease 0s;
@@ -216,7 +193,7 @@
 		&:hover {
 			.icon-contacts {
 				color: $luminescent-orange;
-				@extend .text-shadow-pink;
+				@extend .text-shadow-gold;
 			}
 		}
 	}

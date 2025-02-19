@@ -1,0 +1,92 @@
+@use 'core/all.scss' as *;
+
+.parallax {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	opacity: 0.9;
+	overflow: hidden;
+	// filter: grayscale(1);
+
+	&__inner {
+		height: 100%;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	&__image-cont {
+		position: relative;
+		overflow: hidden;
+
+		img {
+			max-width: none;
+		}
+	}
+
+	&__image-cont {
+		.parallax__anime-swipe,
+		img {
+			position: absolute;
+			width: 700%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+
+		&:not(:last-child) {
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				background-color: #ffffff42;
+				height: 100%;
+				top: 0;
+				width: 2.5px;
+				z-index: 999;
+			}
+		}
+
+		&:nth-child(1) {
+			img {
+				left: -100%;
+			}
+		}
+
+		&:nth-child(2) {
+			img {
+				left: -200%;
+			}
+		}
+
+		&:nth-child(3) {
+			img {
+				left: -300%;
+			}
+		}
+
+		&:nth-child(4) {
+			img {
+				left: -400%;
+			}
+		}
+
+		&:nth-child(5) {
+			img {
+				left: -500%;
+			}
+		}
+
+		&:nth-child(6) {
+			img {
+				left: -600%;
+			}
+		}
+	}
+
+	// .parallax__anime-swipe
+	&__anime-swipe {
+		width: 100%;
+		background-color: $black-color;
+	}
+}

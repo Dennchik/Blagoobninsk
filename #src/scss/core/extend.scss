@@ -3,7 +3,16 @@
 
 .box-shadow {
 	box-shadow: 0 1px 10px #020101;
-	backdrop-filter: blur(22px);
+	backdrop-filter: blur(10px);
+}
+
+.gradient-header {
+	background-image: linear-gradient(
+		-45deg,
+		rgb(64, 83, 101),
+		rgba(64, 83, 101, 0.11) 65%,
+		rgb(64, 83, 101) 75%
+	);
 }
 
 .font-size-calc-h2 {
@@ -20,14 +29,6 @@
 	}
 }
 
-.gradient-header {
-	background-image: linear-gradient(
-		-45deg,
-		$black-color,
-		rgba(61, 61, 61, 0.514) 65%,
-		$black-color 75%
-	);
-}
 .gradient-footer {
 	background-image: linear-gradient(
 		-40deg,
@@ -63,19 +64,25 @@
 	border-style: none solid;
 }
 
-.text-shadow-pink {
+.text-shadow-gold {
 	text-shadow:
 		0 0 15px #000,
 		0 0 1em #000,
-		0 0 0.1em $neon-pink;
+		0 0 0.1em $neon-yellow;
 }
 
 .text-shadow {
 	text-shadow:
-		0 0 15px #000,
-		0 0 1em #000,
-		0 0 0.2em blue;
+		0 0 15px #00000093,
+		0 0 1em #00000093,
+		0 0 0.2em rgba(0, 0, 255, 0);
 }
+// .text-shadow {
+// 	text-shadow:
+// 		0 0 15px #000,
+// 		0 0 1em #000,
+// 		0 0 0.2em blue;
+// }
 
 .link_split {
 	position: relative;
@@ -100,8 +107,8 @@
 
 		&::before,
 		&::after {
-			@extend .text-shadow-pink;
-			color: $luminescent-orange;
+			@extend .text-shadow;
+			color: $neon-blue;
 			transition:
 				color 0.5s,
 				transform 0.5s;

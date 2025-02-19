@@ -18,7 +18,7 @@
 	&__row {
 		display: flex;
 		align-items: flex-end;
-		justify-content: space-between;
+		justify-content: flex-end;
 		row-gap: 4rem;
 
 		.el-2 {
@@ -31,13 +31,13 @@
 
 			.performance__column {
 				&:nth-child(1) {
+					display: flex;
 					p {
 						font-size: 62px;
 						font-weight: 700;
 						line-height: 100%;
 						text-transform: uppercase;
-						color: #ff8040;
-						@extend .text-shadow-pink;
+						@extend .text-shadow-gold;
 
 						@include minmax-490-1920 {
 							font-size: calc(
@@ -49,11 +49,6 @@
 							font-size: 42px;
 						}
 					}
-				}
-
-				&:nth-child(2) {
-					display: flex;
-
 					._icon {
 						transform: translateY(2rem);
 
@@ -62,6 +57,10 @@
 							color: #747272;
 						}
 					}
+				}
+
+				&:nth-child(2) {
+					display: flex;
 				}
 			}
 		}
@@ -104,32 +103,23 @@
 		h1 {
 			font-family: $font-family-exclude;
 			text-transform: uppercase;
-			color: gray;
+			color: $electric-lime;
 
 			span {
 				pointer-events: none;
-				font-size: 128px;
+				font-size: 96px;
 				letter-spacing: -2px;
-
-				&:last-child {
-					line-height: 100%;
-				}
+				white-space: nowrap;
+				line-height: 100%;
 
 				@include minmax-490-1920 {
-					font-size: calc(39px + (128 - 39) * ((100vw - 490px) / (1920 - 490)));
+					font-size: calc(39px + (96 - 39) * ((100vw - 490px) / (1920 - 490)));
 				}
 
 				@include screen-490 {
 					font-size: 39px;
 				}
 			}
-		}
-
-		&:nth-child(1) {
-			width: min-content;
-		}
-		&:nth-child(2) {
-			max-width: 54.963rem;
 		}
 	}
 
@@ -138,7 +128,6 @@
 		display: flex;
 		align-items: flex-end;
 		gap: 1.6rem;
-		color: gray;
 		opacity: 0.7;
 		margin-left: 1.6rem;
 
@@ -146,15 +135,15 @@
 			display: flex;
 			align-items: end;
 			letter-spacing: -2px;
-			font: 128px $font-family-exclude;
+			font: 96px $font-family-exclude;
 			transform: scaleY(1.5);
 
 			@include minmax-490-1920 {
-				font-size: calc(48px + (128 - 38) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(48px + (96 - 38) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
-				font-size: 48px;
+				font-size: 39px;
 			}
 		}
 
@@ -173,7 +162,7 @@
 
 			.status {
 				font-size: inherit;
-				color: #fff;
+				// color: #fff;
 			}
 		}
 	}
@@ -191,96 +180,6 @@
 				text-align: right;
 				margin-bottom: 1rem;
 			}
-		}
-	}
-
-	.parallax {
-		position: absolute;
-		height: 100vh;
-		width: 100%;
-		opacity: 0.3;
-		filter: grayscale(1);
-
-		&__inner {
-			height: 100%;
-			display: grid;
-			grid-template-columns: repeat(6, 1fr);
-		}
-
-		&__image-cont {
-			position: relative;
-			overflow: hidden;
-
-			img {
-				max-width: none;
-			}
-		}
-
-		&__image-cont {
-			.parallax__anime-swipe,
-			img {
-				position: absolute;
-				width: 700%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				object-fit: cover;
-			}
-
-			&:not(:last-child) {
-				&::after {
-					content: '';
-					position: absolute;
-					right: 0;
-					background-color: #111;
-					height: 100%;
-					top: 0;
-					width: 2.5px;
-					z-index: 999;
-				}
-			}
-
-			&:nth-child(1) {
-				img {
-					left: -100%;
-				}
-			}
-
-			&:nth-child(2) {
-				img {
-					left: -200%;
-				}
-			}
-
-			&:nth-child(3) {
-				img {
-					left: -300%;
-				}
-			}
-
-			&:nth-child(4) {
-				img {
-					left: -400%;
-				}
-			}
-
-			&:nth-child(5) {
-				img {
-					left: -500%;
-				}
-			}
-
-			&:nth-child(6) {
-				img {
-					left: -600%;
-				}
-			}
-		}
-
-		// .parallax__anime-swipe
-		&__anime-swipe {
-			width: 100%;
-			background-color: $black-color;
 		}
 	}
 }

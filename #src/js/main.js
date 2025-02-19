@@ -5,6 +5,10 @@ loaded('.preloader');
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 
 dynamicAdaptive();
+
+document.querySelector('.hamburger').addEventListener('click', (e) => {
+	e.currentTarget.classList.toggle('is-active');
+});
 //* ---------------- Плавная прокрутка страницы до позиции ---------------------
 import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
 
@@ -37,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	month = month.replace('.', '').charAt(0).toUpperCase() + month.slice(1, -1);
 
 	dateContainer.innerHTML = `<div class="day">${day}</div> <div class="data-wrapper">
-<div class="month">${month}</div><div class="status"><p>Доступен</br> для&nbsp;работы</p></div></div>`;
+<div class="month">${month}</div></div>`;
 
 
 	//* --------------------------- Animation Header -----------------------------
