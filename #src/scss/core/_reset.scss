@@ -24,7 +24,7 @@ body {
 	// user-select: none;
 	overscroll-behavior: none;
 	font: 1.6rem/1.6 $font-default;
-	background: var(--background-color);
+	background: $background-color;
 	@extend .text-shadow;
 
 	&.no-scroll {

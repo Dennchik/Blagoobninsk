@@ -71,18 +71,18 @@
 		0 0 0.1em $neon-yellow;
 }
 
-.text-shadow {
-	text-shadow:
-		0 0 15px #00000093,
-		0 0 1em #00000093,
-		0 0 0.2em rgba(0, 0, 255, 0);
-}
 // .text-shadow {
 // 	text-shadow:
-// 		0 0 15px #000,
-// 		0 0 1em #000,
-// 		0 0 0.2em blue;
+// 		0 0 15px #00000093,
+// 		0 0 1em #00000093,
+// 		0 0 0.2em rgba(0, 0, 255, 0);
 // }
+.text-shadow {
+	text-shadow:
+		0 0 15px #000,
+		0 0 1em #000,
+		0 0 0.2em blue;
+}
 
 .link_split {
 	position: relative;
