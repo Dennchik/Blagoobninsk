@@ -1,10 +1,10 @@
 import {
-	animateTitles,
-	tlVerticalOpacity,
-	tlRotateIcon,
+	// animateTitles,
+	// tlVerticalOpacity,
+	// tlRotateIcon,
 	skewSetter,
-	animateImage,
-	tmBounce,
+	// animateImage,
+	// tmBounce,
 	cassieEvans
 } from './animations/animations.jsx';
 //* ----------------------------------------------------------------------------
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 
-	setTimeout(() => {
-		tlRotateIcon();
-	}, 2000);
+	// setTimeout(() => {
+	// 	tlRotateIcon();
+	// }, 2000);
 });

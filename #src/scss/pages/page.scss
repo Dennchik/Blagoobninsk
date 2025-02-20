@@ -1,11 +1,17 @@
 @use '../core/all' as *;
-.sec-color {
-	background: url('../img/pictures/fon.jpg') center top / cover no-repeat;
-	background-color: #003c81;
-	position: absolute;
+.bg-section {
+	background: url('../img/pictures/fon.png') center top / cover no-repeat;
+	mix-blend-mode: difference;
+	// backdrop-filter:;
+	// filter: grayscale(1) sepia(0) saturate(0.5) contrast(0.9) brightness(0.4);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
 	width: 100%;
 	height: 100%;
-	opacity: 0.5;
+	// opacity: 0.5;
 }
 .page {
 	overflow: hidden;
@@ -117,6 +123,7 @@
 		&::before {
 			content: '';
 			position: absolute;
+			z-index: 0;
 			height: 100%;
 			width: 100%;
 			background-size: 111% 200%;

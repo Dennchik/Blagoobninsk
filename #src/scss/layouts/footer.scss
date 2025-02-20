@@ -19,6 +19,7 @@
 	// .footer__content
 	&__content {
 		display: grid;
+		column-gap: 3rem;
 		grid-template-columns: max-content 1fr;
 
 		@include screen-425 {
@@ -34,86 +35,53 @@
 		&:nth-child(1) {
 			grid-row: 1 / 3;
 			width: min-content;
-			max-width: 560px;
+			max-width: 690px;
 
 			@include minmax-320-1920 {
-				max-width: calc(150px + (560 - 150) * ((100vw - 320px) / (1920 - 320)));
+				max-width: calc(150px + (600 - 150) * ((100vw - 320px) / (1920 - 320)));
 			}
 
 			@include screen-690 {
 				grid-row: 1 / 2;
 			}
 
-			@include screen-425 {
-				// justify-self: center;
-			}
-
 			@include screen-320 {
 				min-width: 150px;
 			}
 		}
-
-		&:nth-child(2) {
-			display: grid;
-			width: auto;
-		}
-
-		&:nth-child(3) {
-			grid-column: 2 / 3;
-			justify-self: start;
-			align-self: end;
-			width: 100%;
-
-			@include screen-690 {
-				grid-column: 1 / 3;
-				width: 100%;
-			}
-
-			@include screen-425 {
-				grid-column: 1 / 2;
-			}
-		}
 	}
 
-	// .footer__info
-	&__info {
+	// .footer__title
+	&__title {
 		margin-left: -8rem;
 		width: min-content;
-		font-family: $font-family-exclude;
 		text-transform: uppercase;
 		color: gray;
 		transform: scale(0.7, 1.5);
+		font-family: $font-family-exclude;
+		text-transform: uppercase;
+		margin-top: 6rem;
 
 		span {
 			display: block;
 			pointer-events: none;
-			font-size: 128px;
+			font-size: 86px;
 			letter-spacing: -2px;
-			line-height: 1;
+			white-space: nowrap;
+			line-height: 100%;
 
 			&:nth-child(2) {
-				margin-top: -80px;
-
-				@include minmax-320-1920 {
-					margin-top: calc(
-						-10px + (-80 - (-10)) * ((100vw - 320px) / (1920 - 320))
-					);
-				}
-
-				@include screen-320 {
-					margin-top: -20px;
-				}
+				margin-top: -30px;
 			}
 
 			@include minmax-490-1920 {
-				font-size: calc(39px + (128 - 39) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(39px + (86 - 39) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
 				font-size: 39px;
 			}
 		}
-
 		@include minmax-320-1920 {
 			margin-left: calc(
 				-30px + (-80 - (-30)) * ((100vw - 320px) / (1920 - 320))
@@ -125,48 +93,12 @@
 		}
 	}
 
-	// .footer__title
-	&__title {
-		display: grid;
-		grid-template-columns: auto min-content;
-		justify-content: start;
-		align-items: center;
-		gap: 2rem;
-
-		@include screen-690 {
-			grid-template-columns: 1fr;
-		}
-	}
-
 	// .footer__text
 	&__text {
-		font-size: 28px;
+		font-size: 20px;
+		color: gray;
 		span {
 			white-space: nowrap;
-		}
-	}
-
-	// .footer__button
-	&__button {
-		span {
-			white-space: nowrap;
-		}
-		@include minmax-490-1140 {
-			font-size: calc(18px + (32 - 20) * ((100vw - 490px) / (1140 - 490)));
-		}
-
-		@include screen-690 {
-			width: fit-content;
-		}
-
-		@include screen-490 {
-			display: flex;
-			justify-content: center;
-			font-size: 18px;
-		}
-
-		@include screen-320 {
-			width: 100%;
 		}
 	}
 
@@ -193,7 +125,7 @@
 	&__column {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		gap: 2rem;
 		width: 100%;
 
 		&:nth-child(2) {
@@ -212,8 +144,9 @@
 
 	// .contacts__item
 	&__item {
+		color: #fff;
 		margin-top: 1rem;
-		font-family: $font-family-secondary;
+		// font-family: $font-family-exclude;
 		font-size: 32px;
 
 		@include minmax-320-1920 {
@@ -222,6 +155,17 @@
 
 		@include screen-320 {
 			font-size: 18px;
+		}
+	}
+
+	// .contacts__link
+	&__link {
+		color: #fff;
+		@extend .link_split;
+		&::before,
+		&::after {
+			color: #fff;
+			@extend .text-shadow;
 		}
 	}
 }

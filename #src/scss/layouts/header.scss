@@ -7,6 +7,7 @@
 	background: transparent;
 	display: flex;
 	align-items: center;
+	color: #fff;
 
 	&::before {
 		z-index: 7;
@@ -129,7 +130,7 @@
 		align-items: flex-end;
 
 		span {
-			opacity: 0.7;
+			opacity: 1;
 			z-index: -1;
 
 			font: {
@@ -137,17 +138,21 @@
 				weight: 400;
 			}
 
-			@extend .text-shadow;
-
 			@include screen-960 {
 				font-size: 1.8rem;
 			}
 		}
 	}
 
+	// .header__menu
+	&__menu {
+		height: 100%;
+	}
+
 	// .header__menu-items
 	&__menu-items {
 		user-select: none;
+		height: 100%;
 		display: flex;
 		transition: all 0.4s ease 0s;
 		text-transform: uppercase;
@@ -157,24 +162,19 @@
 	// .header__item
 	&__item {
 		position: relative;
-
+		color: var(--font-body-color);
 		&:not(:last-child) {
 			margin-right: 2rem;
-		}
-
-		.icon-home {
-			&::before {
-				transition: all 0.4s ease 0s;
-				@extend .text-shadow;
-			}
 		}
 	}
 
 	&__link-key {
 		font-weight: 300;
-
-		&:not(:first-child) {
-			opacity: 1;
+		text-shadow: none;
+		color: var(--font-body-color);
+		&::before,
+		&::after {
+			color: var(--font-body-color);
 		}
 	}
 }
@@ -189,49 +189,6 @@
 		align-items: center;
 		transition: all 0.4s ease-in-out;
 		margin-left: 1.6rem;
-
-		&:hover {
-			.icon-contacts {
-				color: $luminescent-orange;
-				@extend .text-shadow-gold;
-			}
-		}
-	}
-
-	.icon-contacts {
-		font-size: 4.4rem;
-		margin-right: 1rem;
-		transition: all 0.4s ease-in-out;
-		color: $gray;
-
-		@include screen-425 {
-			margin-right: 0;
-		}
-
-		@include screen-690 {
-			font-size: 34px;
-		}
-	}
-
-	// .el-community__content
-	&__content {
-		color: #d4d4d4;
-		line-height: 100%;
-		@extend .text-shadow;
-
-		@include screen-425 {
-			display: none;
-		}
-	}
-
-	// .el-community__title
-	&__title {
-		text-transform: uppercase;
-		white-space: nowrap;
-
-		@include screen-490 {
-			display: none;
-		}
 	}
 }
 

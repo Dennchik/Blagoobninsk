@@ -37,7 +37,7 @@ $luminescent-orange: rgb(255, 164, 32);
 $liquid-neon: rgb(200, 255, 0);
 $electric-lime: rgb(204, 255, 0);
 
-$background-color: rgb(20, 20, 24);
+$background-color: #fffff1;
 $background-color-transparent: rgba(19, 19, 22, 0.9);
 
 $color: rgb(26, 21, 48);
@@ -46,8 +46,6 @@ $black-color: rgb(2, 1, 1);
 $blue-color: rgb(73, 87, 123);
 $blue-color-transparent: rgba(73, 87, 123, 0.404);
 $gray: gray;
-$orange: rgb(246, 116, 56);
-$darkcyan: rgb(0, 139, 139);
 $border-color: rgb(30, 32, 46);
 
 //* ---------------------------- [Other colors] --------------------------------
@@ -62,13 +60,13 @@ $text-shadow-color: 0 0 1px #b0b0f9;
 //* ----------------------------------------------------------------------------
 :root {
 	--background-color-transparent: rgba(19, 19, 22, 0.79);
-	--font-body-color: rgb(255, 255, 255);
+	--font-body-color: rgb(86, 56, 20);
 	--font-color-second: rgb(77, 91, 206);
 	--font-color-title: rgb(136, 192, 255);
 	--font-color-active: rgb(119, 150, 243);
 	--font-color-not-active: rgba(139, 176, 255, 0.424);
 	//* ---------------------------- [Background] --------------------------------
-	--background-color: #d2f2ff;
+	--background-color: rgb(210, 242, 255);
 	--background-second: rgb(2, 10, 16);
 	--background-selected: rgba(43, 45, 65, 0.337);
 	--background-terminal: rgb(22, 22, 30);

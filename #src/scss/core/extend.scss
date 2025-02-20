@@ -6,15 +6,22 @@
 	backdrop-filter: blur(10px);
 }
 
+// .gradient-header {
+// 	background-image: linear-gradient(
+// 		-45deg,
+// 		rgb(64, 83, 101),
+// 		rgba(64, 83, 101, 0.11) 65%,
+// 		rgb(64, 83, 101) 75%
+// 	);
+// }
 .gradient-header {
 	background-image: linear-gradient(
-		-45deg,
-		rgb(64, 83, 101),
-		rgba(64, 83, 101, 0.11) 65%,
-		rgb(64, 83, 101) 75%
+		-40deg,
+		#04040e,
+		rgb(43 55 73) 65%,
+		#09091b 75%
 	);
 }
-
 .font-size-calc-h2 {
 	@include minmax-490-1920 {
 		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));
@@ -32,9 +39,9 @@
 .gradient-footer {
 	background-image: linear-gradient(
 		-40deg,
-		$black-color 35%,
-		rgba(199, 199, 199, 0.055) 65%,
-		$black-color 75%
+		#04040e 35%,
+		rgb(43 55 73) 80%,
+		#09091b 75%
 	);
 }
 
@@ -77,9 +84,10 @@
 // 		0 0 1em #00000093,
 // 		0 0 0.2em rgba(0, 0, 255, 0);
 // }
+
 .text-shadow {
 	text-shadow:
-		0 0 15px #000,
+		0 0 15px #0000003a,
 		0 0 1em #000,
 		0 0 0.2em blue;
 }
@@ -107,8 +115,6 @@
 
 		&::before,
 		&::after {
-			@extend .text-shadow;
-			color: $neon-blue;
 			transition:
 				color 0.5s,
 				transform 0.5s;
@@ -121,7 +127,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		color: #fff;
+		// color: var(--font-body-color);
 		transition:
 			color 0.5s,
 			transform 0.5s;

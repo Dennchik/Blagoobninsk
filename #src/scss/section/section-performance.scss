@@ -20,6 +20,7 @@
 		align-items: flex-end;
 		justify-content: flex-end;
 		row-gap: 4rem;
+		color: #fff;
 
 		.el-2 {
 			padding-bottom: 4rem;
@@ -37,7 +38,7 @@
 						font-weight: 700;
 						line-height: 100%;
 						text-transform: uppercase;
-						@extend .text-shadow-gold;
+						@extend .text-shadow;
 
 						@include minmax-490-1920 {
 							font-size: calc(
@@ -54,7 +55,7 @@
 
 						&::before {
 							font-size: 3.2rem;
-							color: #747272;
+							// color: #747272;
 						}
 					}
 				}
@@ -103,7 +104,6 @@
 		h1 {
 			font-family: $font-family-exclude;
 			text-transform: uppercase;
-			// color: $electric-lime;
 
 			span {
 				pointer-events: none;
