@@ -41,7 +41,7 @@ body {
 	margin: 0;
 	padding: 0;
 	border: none;
-	scrollbar-width: none;
+	// scrollbar-width: thin;
 }
 
 *,
@@ -182,14 +182,18 @@ h6 {
 ::-webkit-scrollbar {
 	width: 0.5rem;
 	padding: 0.031em;
+	transition: all 0.4s ease-in-out;
 }
 
 ::-webkit-scrollbar-track {
 	background: var(--scrollbar-thumb-bgcolor);
+	opacity: 0;
+
 	// background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
+	cursor: pointer;
 	border: 1px solid var(--border-color);
 	border-radius: 2px;
 	background-color: var(--themes-color);
@@ -206,6 +210,8 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
+	opacity: 1;
+	transition: background-image 0.4s ease-in-out;
 	background-color: var(--background-thumb);
 	background-image: -webkit-linear-gradient(
 		45deg,
