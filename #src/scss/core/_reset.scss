@@ -3,12 +3,12 @@
 @use 'extend.scss' as *;
 
 html {
+	scrollbar-width: none;
 	font: {
 		style: normal;
 		size: 62.5%;
 		weight: $font-weight-default;
 		family: $font-default;
-		// font-family: 'Great Vibes', Helvetica, sans-serif;
 	}
 	height: 100%;
 	counter-reset: heading;
@@ -21,6 +21,7 @@ html {
 }
 
 body {
+	scrollbar-width: none;
 	// user-select: none;
 	overscroll-behavior: none;
 	font: 1.6rem/1.6 $font-default;

@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, Observer,
 
 //* _____________________ Конфигурация - ScrollTrigger _________________________
 ScrollTrigger.normalizeScroll(false);
-ScrollTrigger.config({ignoreMobileResize: true});
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 //* ----------------------------------------------------------------------------
 const smoother = ScrollSmoother.create({
@@ -26,9 +26,9 @@ const smoother = ScrollSmoother.create({
 });
 
 //* _______________________ Создание ScrollTrigger _____________________________
-export function refreshScrollTrigger() {
-	return ScrollTrigger.refresh();
-}
+// export function refreshScrollTrigger() {
+// 	return ScrollTrigger.refresh();
+// }
 
 // export function LagTextFunction() {
 // 	const smoother = ScrollSmoother.get();
@@ -67,26 +67,26 @@ export function tlRotateIcon() {
 		scrollTrigger: {
 			trigger: '._rotate-el-01',
 			start: 'top bottom', // Начало анимации, когда `.trigger` выше нижней
-													 // границы экрана
+			// границы экрана
 			end: 'top top', // Конец анимации, когда `.trigger` выше нижней границы
-											// экрана
+			// экрана
 			scrub: true, // Гладкая привязка к скроллу с небольшой задержкой
 			// markers: true, // Для отладки (убрать в продакшене)
 		}
 	});
-	gsap.to('._rotate-el-02', {
-		rotate: -720, // постоянное вращение
-		ease: 'none', // Равномерное изменение без ускорений
-		scrollTrigger: {
-			trigger: '._rotate-el-02',
-			start: 'top bottom', // Начало анимации, когда `.trigger` выше нижней
-													 // границы экрана
-			end: 'top top', // Конец анимации, когда `.trigger` выше нижней границы
-											// экрана
-			scrub: true, // Гладкая привязка к скроллу с небольшой задержкой
-			// markers: true, // Для отладки (убрать в продакшене)
-		}
-	});
+	// gsap.to('._rotate-el-02', {
+	// 	rotate: -720, // постоянное вращение
+	// 	ease: 'none', // Равномерное изменение без ускорений
+	// 	scrollTrigger: {
+	// 		trigger: '._rotate-el-02',
+	// 		start: 'top bottom', // Начало анимации, когда `.trigger` выше нижней
+	// 												 // границы экрана
+	// 		end: 'top top', // Конец анимации, когда `.trigger` выше нижней границы
+	// 										// экрана
+	// 		scrub: true, // Гладкая привязка к скроллу с небольшой задержкой
+	// 		// markers: true, // Для отладки (убрать в продакшене)
+	// 	}
+	// });
 }
 
 //* __________________ Плавное исчезновение "performance" ______________________
@@ -97,9 +97,9 @@ export function tlVerticalOpacity() {
 		scrollTrigger: {
 			trigger: '.performance',
 			start: 'top top', // Начало анимации, когда `.performance` на 80% вниз от
-												// верхней границы экрана
+			// верхней границы экрана
 			end: 'bottom top', // Конец анимации, когда `.performance` полностью ушел
-												 // вверх
+			// вверх
 			scrub: 2, // Гладкая привязка к скроллу с небольшой задержкой
 			// markers: true, // Для отладки (убрать в продакшене)
 		}
@@ -126,34 +126,6 @@ export function tlVerticalOpacity() {
 // }
 
 //* ____________ Плавное появление заголовков (Анимация Titles) ________________
-export function animateTitles(element, trigger, endTrigger, start, end) {
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: trigger,
-			start: `top bottom-${start}`,
-			endTrigger: endTrigger,
-			end: `top bottom-${end}`,
-			toggleActions: 'play none none reverse',
-			// markers: true,
-		},
-	});
-
-	// Анимация для смещения по Y
-	timeline.from(element, {
-		y: 300,
-		duration: 0.8, // Продолжительность смещения
-		ease: 'power1.out', // Мягкая анимация
-	});
-
-	// Анимация для прозрачности с большей продолжительностью
-	timeline.from(element, {
-			opacity: 0,
-			duration: 1.2, // Увеличиваем продолжительность для opacity
-			ease: 'power1.out', // Мягкая анимация
-		},
-		'<',
-	); // "<" синхронизирует начало обеих анимаций
-}
 
 //* _________________________ Анимация: Parallax _______________________________
 export function cassieEvans() {
@@ -185,110 +157,32 @@ export function cassieEvans() {
 }
 
 //* ___________________ Анимация: lag & skew - колонок _________________________
-export function skewSetter() {
-	// Создаем быстрый сеттер для свойства skewY.
-	const setSkew = gsap.quickTo('.grid-box__item, .col-1, .col-2', 'skewY');
-	// Ограничиваем значение наклона от -20 до 20 градусов.
-	const clampSkew = gsap.utils.clamp(-5, 5);
-	// Получаем экземпляр ScrollSmoother.
-	const smootherInstance = ScrollSmoother.get();
+// export function skewSetter() {
+// 	// Создаем быстрый сеттер для свойства skewY.
+// 	const setSkew = gsap.quickTo('.grid-box__item, .col-1, .col-2', 'skewY');
+// 	// Ограничиваем значение наклона от -20 до 20 градусов.
+// 	const clampSkew = gsap.utils.clamp(-5, 5);
+// 	// Получаем экземпляр ScrollSmoother.
+// 	const smootherInstance = ScrollSmoother.get();
 
-	// Используем gsap.ticker для обновления на каждом кадре.
-	gsap.ticker.add(() => {
-		// Получаем текущую скорость прокрутки и вычисляем наклон.
-		const velocity = smootherInstance.getVelocity();
-		setSkew(clampSkew(velocity / -50));
-	});
+// 	// Используем gsap.ticker для обновления на каждом кадре.
+// 	gsap.ticker.add(() => {
+// 		// Получаем текущую скорость прокрутки и вычисляем наклон.
+// 		const velocity = smootherInstance.getVelocity();
+// 		setSkew(clampSkew(velocity / -50));
+// 	});
 
-	if (window.innerWidth > 490) {
-		smootherInstance.effects('.lag-1', {lag: 2, speed: 1});
-		smootherInstance.effects('.lag-2', {lag: 1.5, speed: 1.2});
-		smootherInstance.effects('.col-1', {lag: 1.5, speed: 0.8});
-		smootherInstance.effects('.col-2', {lag: 1.5, speed: 1});
-	}
-}
+// 	if (window.innerWidth > 490) {
+// 		smootherInstance.effects('.lag-1', { lag: 2, speed: 1 });
+// 		smootherInstance.effects('.lag-2', { lag: 1.5, speed: 1.2 });
+// 		smootherInstance.effects('.col-1', { lag: 1.5, speed: 0.8 });
+// 		smootherInstance.effects('.col-2', { lag: 1.5, speed: 1 });
+// 	}
+// }
 
 //* ___________________ Анимация: Появление картинок ___________________________
-export function animateImage(element, trigger, endTrigger, start, end) {
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: trigger,
-			start: `top bottom-${start}`,
-			endTrigger: endTrigger,
-			end: `top bottom-${end}`,
-			toggleActions: 'play none none reverse',
-			// markers: true,
-		},
-	});
-
-	// Анимация для смещения по Y
-	timeline.from(element, {
-		y: 300,
-		duration: 0.7, // Продолжительность смещения
-		ease: 'slow(0.1,2,true)',
-		// ease: 'expoScale(10,2.5,none)', 
-	});
-}
 
 //* ____________________ Анимация: Появление текста ____________________________
-export function tmBounce(target, trigger, endTrigger, start, end) {
-	// Create a custom bounce ease:
-	CustomBounce.create('Bounce', {
-		strength: 0.2,
-		squash: 1,
-		endAtStart: false,
-		// squashID: 'Bounce-squash',
-	});
-
-	const timeline = gsap.timeline({
-		scrollTrigger: {
-			trigger: trigger,
-			start: `center bottom-${start}`,
-			endTrigger: endTrigger,
-			end: `center bottom-${end}`,
-			toggleActions: 'play none none reverse',
-			// markers: true,
-		}
-	});
-
-	CustomEase.create('Custom-Ease', 'M0,0 C0.126,0.382 0,0.999 0.5,0.8 1,0.6' +
-		' 0.818,1.001 1,1 ');
-	// Выполните отскок, воздействуя на свойство "y".
-	timeline.from(target, {
-		duration: 1.2,
-		y: 200,
-		scaleX: 0.1,
-		scaleY: 0.1,
-		opacity: 0,
-		ease: 'Custom-Ease',
-		transformOrigin: 'center bottom',
-	});
-
-	// Одновременно делайте скручивание и растяжку:
-	timeline.to(target, {
-		duration: 1.2,
-		opacity: 1,
-		ease: 'Bounce',
-	});
-}
 
 //* __________________ Анимация: Иконок при наведении __________________________
-// export function iconWiggle(target) {
-// 	gsap.to(target, {
-// 		duration: 0.5,
-// 		ease: CustomWiggle.create('myWiggle', {
-// 			wiggles: 10,   // количество колебаний (начните с 10 и корректируйте по
-// 										 // вкусу)
-// 			strength: 5,   // амплитуда колебаний (подберите оптимальное значение)
-// 			type: 'uniform',
-// 			// endAtStart: true,
-// 		}),
-// 		x: -20,
-// 		// Смещение по оси X (можно задать "+=10" для относительного смещения)
-// 		endAtStart: true,
-// 		// включает обратную анимацию
-// 		yoyo: true,
-// 		// Повторяет анимацию один раз (т.е. Туда и обратно)
-// 		repeat: 10
-// 	});
-// }
+

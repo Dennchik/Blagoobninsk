@@ -37,19 +37,49 @@ $h-hide-distance: $h-width + $h-padding;
 		position: relative;
 	}
 
-	&:hover &__inner {
-		transform: translate(-#{$h-hide-distance}, 50%);
-		opacity: $h-transition-opacity;
+	&:hover {
+		.hamburger__inner {
+			transform: translate(-#{$h-hide-distance}, 50%);
+			opacity: $h-transition-opacity;
+
+			&::before,
+			&::after {
+				transform: translate(#{$h-hide-distance * 2}, 0);
+				opacity: $h-transition-opacity;
+			}
+		}
+
+		.hamburger__hidden {
+			opacity: 1;
+			transform: translate(0, -50%);
+
+			&::before,
+			&::after {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
+		}
 	}
 
-	&:hover &__inner::before,
-	&:hover &__inner::after {
-		transform: translate(#{$h-hide-distance * 2}, 0);
-		opacity: $h-transition-opacity;
-	}
+	&.is-active {
+		.hamburger__inner {
+			display: none;
+		}
 
-	&.is-active &__inner {
-		display: none;
+		.hamburger__hidden {
+			opacity: 1;
+			transform: rotate(45deg);
+
+			&::before {
+				transform: translate(0, #{$h-vertical-gap}) rotate(90deg);
+				transform-origin: center;
+			}
+
+			&::after {
+				transform-origin: center;
+				transform: translate(0, -#{$h-vertical-gap}) rotate(0);
+			}
+		}
 	}
 
 	&__inner {
@@ -74,32 +104,6 @@ $h-hide-distance: $h-width + $h-padding;
 		&::after {
 			top: $h-vertical-gap;
 		}
-	}
-
-	&:hover &__hidden {
-		opacity: 1;
-		transform: translate(0, -50%);
-	}
-
-	&:hover &__hidden::before,
-	&:hover &__hidden::after {
-		opacity: 1;
-		transform: translate(0, 0);
-	}
-
-	&.is-active &__hidden {
-		opacity: 1;
-		transform: rotate(45deg);
-	}
-
-	&.is-active &__hidden::before {
-		transform: translate(0, #{$h-vertical-gap}) rotate(90deg);
-		transform-origin: center;
-	}
-
-	&.is-active &__hidden::after {
-		transform-origin: center;
-		transform: translate(0, -#{$h-vertical-gap}) rotate(0);
 	}
 
 	&__hidden {

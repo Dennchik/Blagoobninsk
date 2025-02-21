@@ -9,6 +9,15 @@
 	align-items: center;
 	color: #fff;
 
+	&.with-border {
+		.header__link-key {
+			&::before,
+			&::after {
+				color: #fff;
+			}
+		}
+	}
+
 	&::before {
 		z-index: 7;
 		opacity: 0;
@@ -162,16 +171,17 @@
 	// .header__item
 	&__item {
 		position: relative;
-		color: var(--font-body-color);
 		&:not(:last-child) {
 			margin-right: 2rem;
 		}
 	}
 
+	// .header__link-key
 	&__link-key {
 		font-weight: 300;
 		text-shadow: none;
 		color: var(--font-body-color);
+
 		&::before,
 		&::after {
 			color: var(--font-body-color);

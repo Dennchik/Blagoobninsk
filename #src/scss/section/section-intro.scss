@@ -28,14 +28,14 @@
 	}
 
 	&__bg {
-		background: url('../img/pictures/wall.jpg') top;
+		background: url('../img/pictures/paper.jpg') top;
 		position: absolute;
 		z-index: 0;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		opacity: 0.5;
+		opacity: 0.7;
 	}
 
 	// .section-intro__row
@@ -102,8 +102,8 @@
 		padding: 3rem;
 		background: #fef6edaf;
 		max-width: 70rem;
-
 		border-radius: 6px;
+		// backdrop-filter: brightness(60%);
 
 		@include screen-490 {
 			font-size: 15px;
@@ -166,29 +166,28 @@
 	// .news__content
 	&__content {
 		box-shadow: 0 0 7px #9e9e9e;
-		padding: 1rem;
+		padding: 1.6rem 1rem;
 		background: #fef6edaf;
 		border-radius: 5px;
+		// backdrop-filter: brightness(60%);
 	}
 
 	// .news__title
 	&__title {
-		border-bottom: 1px solid var(--font-body-color);
+		background: #fef6edaf;
+		padding: 1rem;
+		box-shadow: 0 2px 7px #9e9e9e;
+		position: relative;
+		z-index: 3;
 	}
 
 	// .news__wrapp-container
 	&__wrapp-container {
+		position: relative;
+		z-index: 0;
 		display: flex;
 		gap: 1rem;
 		flex-direction: row-reverse;
-	}
-
-	// .news__button
-	&__button {
-		position: absolute;
-		right: 10px;
-		z-index: 2;
-		height: 100%;
 	}
 
 	// .news__info
@@ -233,61 +232,5 @@
 			max-width: 182px;
 			object-fit: contain;
 		}
-	}
-}
-
-.arrow {
-	cursor: pointer;
-	position: relative;
-	width: 20px;
-	height: 50px;
-	margin: 0 10px;
-	transform: rotate(90deg);
-
-	div {
-		position: relative;
-		top: 15px;
-		width: 90px;
-		height: 5px;
-		background-color: #dabc54;
-		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-		left: 0;
-		display: block;
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 25px;
-			height: 5px;
-			top: -8px;
-			right: -8px;
-			background-color: #dabc54;
-			transform: rotate(45deg);
-		}
-
-		&::before {
-			content: '';
-			position: absolute;
-			width: 25px;
-			height: 5px;
-			top: 8px;
-			right: -8px;
-			background-color: #dabc54;
-			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-			transform: rotate(-45deg);
-		}
-		animation: arrow 1s linear infinite;
-	}
-}
-
-@keyframes arrow {
-	0% {
-		left: 0;
-	}
-	50% {
-		left: 10px;
-	}
-	100% {
-		left: 0;
 	}
 }
