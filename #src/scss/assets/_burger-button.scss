@@ -1,134 +1,26 @@
 @use '../core/all' as *;
-$h-padding: 15px;
-$h-width: 36px;
-$h-height: 24px;
-$h-background-color: transparent;
-$h-line-color: #fff;
-$h-line-height: 2px;
-$h-border-radius: 4px;
-$h-transition-time: 0.4s;
-$h-transition-function: ease;
-$h-transition-opacity: 0;
-$h-vertical-gap: 13px;
-$h-initial-opposition: 5px;
-$h-hide-distance: $h-width + $h-padding;
-
-@mixin line-props {
-	width: 100%;
-	height: $h-line-height;
-	background-color: $h-line-color;
-	border-radius: $h-border-radius;
-	position: absolute;
-	transition-property: transform, opacity;
-	transition-timing-function: ease;
-	transition-duration: $h-transition-time;
-}
 
 .hamburger {
-	padding: $h-padding;
 	cursor: pointer;
-	display: inline-block;
-	overflow: hidden;
-	background-color: $h-background-color;
-
-	&__container {
-		width: $h-width;
-		height: $h-height;
-		position: relative;
+	// .hamburger__line
+	&__line {
+		width: 50px;
+		height: 5px;
+		background-color: $background-color;
+		display: block;
+		margin: 8px auto;
+		transition: all 0.3s ease-in-out;
 	}
-
-	&:hover {
-		.hamburger__inner {
-			transform: translate(-#{$h-hide-distance}, 50%);
-			opacity: $h-transition-opacity;
-
-			&::before,
-			&::after {
-				transform: translate(#{$h-hide-distance * 2}, 0);
-				opacity: $h-transition-opacity;
-			}
-		}
-
-		.hamburger__hidden {
-			opacity: 1;
-			transform: translate(0, -50%);
-
-			&::before,
-			&::after {
-				opacity: 1;
-				transform: translate(0, 0);
-			}
-		}
-	}
-
 	&.is-active {
-		.hamburger__inner {
-			display: none;
-		}
-
-		.hamburger__hidden {
-			opacity: 1;
-			transform: rotate(45deg);
-
-			&::before {
-				transform: translate(0, #{$h-vertical-gap}) rotate(90deg);
-				transform-origin: center;
+		.hamburger__line {
+			background-color: $font-color-link;
+			&:nth-child(1) {
+				transform: translateY(13px);
 			}
 
-			&::after {
-				transform-origin: center;
-				transform: translate(0, -#{$h-vertical-gap}) rotate(0);
+			&:nth-child(3) {
+				transform: translateY(-13px);
 			}
-		}
-	}
-
-	&__inner {
-		@include line-props();
-		top: 50%;
-		transform: translate($h-initial-opposition, -50%);
-		opacity: 1;
-
-		&::before,
-		&::after {
-			@include line-props();
-
-			content: '';
-			opacity: 1;
-			transform: translate(-#{$h-initial-opposition}, 0);
-		}
-
-		&::before {
-			top: -#{$h-vertical-gap};
-		}
-
-		&::after {
-			top: $h-vertical-gap;
-		}
-	}
-
-	&__hidden {
-		opacity: 0;
-		@include line-props();
-
-		background-color: $neon-blue;
-		top: 50%;
-		transform: translate(#{$h-hide-distance}, -50%);
-
-		&::before,
-		&::after {
-			@include line-props();
-			background-color: $neon-blue;
-
-			content: '';
-			transform: translate(#{$h-hide-distance * 2}, 0);
-		}
-
-		&::before {
-			top: -#{$h-vertical-gap};
-		}
-
-		&::after {
-			top: $h-vertical-gap;
 		}
 	}
 }

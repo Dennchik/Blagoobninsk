@@ -2,7 +2,6 @@
 
 .project-list {
 	position: fixed;
-	// position: relative;
 	top: 0;
 	right: 0;
 	width: auto;
@@ -10,6 +9,10 @@
 	z-index: 13;
 	transform: translateX(100%);
 	transition: transform 0.5s cubic-bezier(0.7, -0.955, 0.55, 1.55);
+
+	@include screen-320 {
+		width: 100%;
+	}
 
 	&._open-list {
 		transition: transform 0.5s ease-in;
@@ -21,14 +24,6 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
-		background: $background-color-transparent;
-		border-left: 1px solid $black-color;
-		border-right: 1px solid $black-color;
-		padding: 2rem 4rem;
-
-		@include screen-490 {
-			padding: 1rem 2rem;
-		}
 	}
 
 	// .project-list__content
@@ -41,16 +36,17 @@
 
 	// .project-list__header
 	&__header {
+		pointer-events: none;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 1rem;
-		border-bottom: 1px solid $border-color;
+		background: $background-color;
 	}
 
 	// .project-list__title
 	&__title {
 		padding-bottom: 2rem;
+		height: 8rem;
 
 		@include screen-490 {
 			padding-bottom: 1rem;
@@ -72,25 +68,29 @@
 		}
 	}
 
-	// .project-list__close-button
-	&__close-button {
-		transform: translateX(25%);
-
-		._icon {
-			transform: rotate(-45deg);
-
-			&::before {
-				color: gray;
-				font-size: 34px;
-			}
-		}
-	}
-
 	// .project-list__list
 	&__list {
+		position: relative;
 		height: 100%;
 		overflow-x: hidden;
 		display: block;
+		pointer-events: all;
+		background-color: $background;
+		opacity: 0.8;
+
+		ul {
+			position: relative;
+			z-index: 1;
+		}
+		&__frame-container,
+		.frame-container {
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 
 		span {
 			font-size: 2.2rem;
@@ -125,7 +125,7 @@
 				white-space: nowrap;
 			}
 
-			@include screen-425 {
+			@include screen-320 {
 				&:nth-child(2) {
 					justify-self: start;
 					white-space: nowrap;
@@ -141,20 +141,21 @@
 				}
 			}
 
-			@include screen-425 {
+			@include screen-320 {
 				justify-self: start;
 			}
 		}
 
-		@include screen-425 {
-			grid-template-columns: 1fr min-content;
+		@include screen-320 {
+			grid-template-columns: max-content min-content;
 		}
 	}
 
 	// .project-list__list-item
 	&__list-item {
+		padding: 0 1rem;
 		&:not(:last-child) {
-			border-bottom: 1px solid $border-color;
+			border-bottom: 1px solid #1e202e24;
 		}
 	}
 }

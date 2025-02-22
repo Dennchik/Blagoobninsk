@@ -23,26 +23,28 @@ burgerButtons.addEventListener('click', () => {
 	const backgroundColorTransparent = getComputedStyle(
 		document.documentElement).getPropertyValue(
 			'--background-color-transparent');
-	listContent.style.pointerEvents = 'all';
-	listContent.style.backgroundColor = backgroundColorTransparent;
 
 	burgerButtons.firstChild.classList.toggle('is-active');
 	projectList.classList.toggle('_open-list');
-
+	document.body.classList.toggle('no-scroll');
 	if (projectList.classList.contains('_open-list')) {
+		// listContent.style.pointerEvents = 'all';
+		listContent.style.backgroundColor = backgroundColorTransparent;
 		document.body.classList.add('no-scroll');
 	} else {
 		document.body.classList.remove('no-scroll');
+		listContent.style.backgroundColor = 'transparent';
+		// listContent.style.pointerEvents = 'none';
 	}
 });
 
-closeButton.addEventListener('click', () => {
-	document.body.classList.remove('no-scroll');
-	burgerButtons.firstChild.classList.remove('is-active');
-	projectList.classList.remove('_open-list');
-	listContent.style.pointerEvents = 'none';
-	listContent.style.backgroundColor = 'transparent';
-});
+// closeButton.addEventListener('click', () => {
+// 	document.body.classList.remove('no-scroll');
+// 	burgerButtons.firstChild.classList.remove('is-active');
+// 	projectList.classList.remove('_open-list');
+// 	listContent.style.pointerEvents = 'none';
+// 	listContent.style.backgroundColor = 'transparent';
+// });
 //* ----------------------------------------------------------------------------
 import {
 	timeLineHeaderItem,

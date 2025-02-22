@@ -79,6 +79,10 @@
 				font-size: calc(34px + (54 - 34) * ((100vw - 490px) / (1920 - 490)));
 			}
 
+			@include screen-768 {
+				margin-left: 2rem;
+			}
+
 			@include screen-490 {
 				font-size: 34px;
 			}
