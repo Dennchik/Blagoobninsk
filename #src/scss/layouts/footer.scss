@@ -3,7 +3,7 @@
 .footer {
 	// .footer__body
 	&__body {
-		padding: 6rem 0 2rem;
+		padding: 6rem 0 2rem 4rem;
 
 		@include minmax-1440-1920 {
 			padding-bottom: calc(
@@ -11,8 +11,8 @@
 			);
 		}
 
-		@include screen-1440 {
-			// padding-bottom: 20px;
+		@include screen-490 {
+			padding-left: 0;
 		}
 	}
 
@@ -20,9 +20,15 @@
 	&__content {
 		display: grid;
 		column-gap: 2rem;
-		grid-template-columns: 548px auto;
+		grid-template-columns: 548px max-content;
 
-		@include screen-425 {
+		@include minmax-690-1920 {
+			grid-template-columns:
+				calc(190px + (548 - 190) * ((100vw - 320px) / (1920 - 320)))
+				1fr;
+		}
+
+		@include screen-690 {
 			grid-template-columns: 1fr;
 			gap: 4rem;
 		}
@@ -101,8 +107,11 @@
 			font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
 		}
 
-		@include screen-320 {
+		@include screen-375 {
 			font-size: 14px;
+			p {
+				// text-align: right;
+			}
 		}
 	}
 

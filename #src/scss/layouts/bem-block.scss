@@ -13,15 +13,18 @@
 }
 
 //* ----------------------------------------------------------------------------
+.sec-color {
+	background: $background;
+	box-shadow: 0 -7px 10px #0201015b;
+}
 .return-button {
 	position: fixed;
 	z-index: 13;
 	top: 50%;
-	left: 0;
+	right: 0;
 	margin-top: -17px;
-	width: 45px;
-	height: 45px;
-	margin-left: 2vw;
+	width: 35px;
+	height: 35px;
 
 	i {
 		box-shadow: 0 0 7px black;
@@ -39,12 +42,11 @@
 		left: 0;
 		width: 35px;
 		height: 35px;
-		margin-right: 1rem;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
-		color: $black-color;
+		color: $font-color-secondr;
 		border-radius: 50%;
-		background: #3a3a3a;
+		background: $color;
 
 		&:hover {
 			animation: fadeInBackground;
@@ -218,7 +220,7 @@
 	border: 1px solid #8a8a8a;
 
 	font: {
-		family: $font-family-secondary;
+		family: $font-family-exclude;
 		size: 32px;
 		weight: 400;
 	}

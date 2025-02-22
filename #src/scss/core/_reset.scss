@@ -8,7 +8,7 @@ html {
 		style: normal;
 		size: 62.5%;
 		weight: $font-weight-default;
-		family: $font-default;
+		family: $font-family-default;
 	}
 	height: 100%;
 	counter-reset: heading;
@@ -24,7 +24,7 @@ body {
 	scrollbar-width: none;
 	// user-select: none;
 	overscroll-behavior: none;
-	font: 1.6rem/1.6 $font-default;
+	font: 1.6rem/1.6 $font-family-default;
 	background: $background-color;
 	@extend .text-shadow;
 
@@ -33,7 +33,7 @@ body {
 	}
 
 	@include screen-490 {
-		font: 1.5rem/1.5 $font-default;
+		font: 1.5rem/1.5 $font-family-default;
 	}
 }
 
@@ -84,7 +84,7 @@ a:visited {
 
 h2,
 h3 {
-	font-family: $font-family-secondary;
+	font-family: $font-family-exclude;
 }
 
 input,

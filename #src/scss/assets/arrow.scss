@@ -2,7 +2,8 @@
 
 .arrow {
 	position: relative;
-	margin: -40px -0.5rem 0 -0.5rem;
+	z-index: 9;
+	margin-top: -40px;
 	width: auto;
 	height: 100px;
 	top: (50%);

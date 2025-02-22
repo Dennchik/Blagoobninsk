@@ -9,18 +9,18 @@ $titleHeight: 3rem;
 $min-height: calc(100% - ($headerHeight + $footerHeight));
 //* ---------------------------- [Font Variables] ------------------------------
 $font-path: '../fonts';
-$font-default: 'cyrillicold', sans-serif;
-$font-family-secondary: 'Amatic SC', sans-serif;
+$font-family-default: 'Sofia Sans Extra Condensed', sans-serif;
 $font-family-exclude: 'Monomakh', sans-serif;
-$font-family-exclude-secondary: 'Sofia Sans Extra Condensed', sans-serif;
 $font-weight-default: 400;
 $font-size: 1.6rem;
-$font-size-default: 1.4rem;
 //* ------------------------------ [Font color] --------------------------------
-$font-color-var-name: rgb(119, 250, 255);
-$font-color-var: rgb(205, 109, 250);
-$font-color-other-var: rgb(233, 146, 135);
-//* -------------------------------- [Color] -----------------------------------
+
+$font-color-default: rgb(9, 9, 27);
+$font-color-secondr: rgb(250, 250, 255);
+$font-color-link: rgb(250, 250, 255);
+$link-color: rgb(90, 90, 90);
+// $font-color-secondr: rgb(119, 250, 255);
+//* ------------------------------ [Neon Color] --------------------------------
 $neon-green: rgb(56, 255, 20);
 $neon-fuchsia: rgb(254, 89, 194);
 $neon-pink: rgb(254, 1, 154);
@@ -36,11 +36,12 @@ $luminescent-red: rgb(248, 0, 0);
 $luminescent-orange: rgb(255, 164, 32);
 $liquid-neon: rgb(200, 255, 0);
 $electric-lime: rgb(204, 255, 0);
-
-$background-color: #fffff1;
+//* --------------------------- [Background Color] -----------------------------
+$background: rgb(254, 246, 237);
+$background-color: hsla(32, 89%, 96%, 0.686);
 $background-color-transparent: rgba(19, 19, 22, 0.9);
 
-$color: rgb(26, 21, 48);
+$color: rgb(4, 4, 14);
 $color-secondary: rgb(51, 39, 100);
 $black-color: rgb(2, 1, 1);
 $blue-color: rgb(73, 87, 123);
@@ -48,16 +49,14 @@ $blue-color-transparent: rgba(73, 87, 123, 0.404);
 $gray: gray;
 $border-color: rgb(30, 32, 46);
 
-//* ---------------------------- [Other colors] --------------------------------
+//* ------------------------------- [Shadow] -----------------------------------
 $boxShadow: 0px 0px 2px 3px rgba(4, 217, 255, 0.699);
 $BlackShadow: rgb(9, 17, 22);
 $filter: drop-shadow(1px 0px 3px rgb(32, 25, 71)) invert(5%);
 //* ----------------------------------------------------------------------------
-$text-title: rgb(143, 242, 255);
-$link-color: rgb(90, 90, 90);
+$color-title: rgb(143, 242, 255);
 $text-selection: rgba(0, 84, 99, 0.247);
 $text-color-selection: rgb(155, 153, 153);
-$text-shadow-color: 0 0 1px #b0b0f9;
 //* ----------------------------------------------------------------------------
 // rgb(9, 9, 27) rgb(86, 56, 20);
 :root {

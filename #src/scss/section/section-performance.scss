@@ -91,7 +91,7 @@
 	// .performance__column
 	&__column {
 		.el-1 {
-			font-family: $font-family-secondary;
+			font-family: $font-family-exclude;
 			font-weight: 900;
 		}
 
@@ -150,7 +150,7 @@
 		.data-wrapper {
 			.status,
 			.month {
-				font-family: $font-family-secondary;
+				font-family: $font-family-exclude;
 				font-size: 3.4rem;
 				font-weight: 900;
 				line-height: 1;
