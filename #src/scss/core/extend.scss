@@ -109,11 +109,13 @@
 	&::before,
 	&::after {
 		content: attr(data-letters);
+		opacity: 1;
 		position: absolute;
 		top: 0;
 		left: 0;
 		transition:
-			color 0.5s,
+			color 0.3s,
+			opacity 0.3s,
 			transform 0.5s;
 	}
 

@@ -2,12 +2,12 @@ import loaded from './assets/preloader.js';
 
 loaded('.preloader');
 
-import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
+// import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 
-dynamicAdaptive();
+// dynamicAdaptive();
 
-// import returnToSavedPosition from './modules/return-position.js';
-// returnToSavedPosition();
+import returnToSavedPosition from './modules/return-position.js';
+returnToSavedPosition();
 //* ---------------- Плавная прокрутка страницы до позиции ---------------------
 import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
 

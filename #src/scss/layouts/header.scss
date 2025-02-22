@@ -156,6 +156,10 @@
 	// .header__menu
 	&__menu {
 		height: 100%;
+
+		@include screen-960 {
+			display: none;
+		}
 	}
 
 	// .header__menu-items
@@ -180,11 +184,13 @@
 	&__link-key {
 		font-weight: 300;
 		text-shadow: none;
-		color: var(--font-body-color);
+		color: $neon-blue-dark;
 
 		&::before,
 		&::after {
-			color: var(--font-body-color);
+			color: $link-color;
+
+			opacity: 0;
 		}
 	}
 }
