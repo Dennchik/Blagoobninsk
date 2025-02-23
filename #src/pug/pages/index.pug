@@ -10,7 +10,7 @@ prepend script
 block title
 	- var text='Официальный сайт 3го благочиния города Обнинска'
 
-block header 
+//- block header 
 	header.page__header
 		include ../layouts/header
 block main-content
@@ -19,9 +19,9 @@ block main-content
 	section.main-content__sections#about.sec-color
 		include ../section/section-intro
 	section.main-content__sections#project
-		//- include ../section/section-project 
+	//- include ../section/section-project 
+block menu-list
+	aside.main-content__menu-list
+		include ../assets/project-list
 //- block content-hidden
 	include ../chunks/content-hidden
-block project-list
-	aside.main-content__project-list
-		include ../assets/project-list

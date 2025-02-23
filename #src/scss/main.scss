@@ -43,6 +43,7 @@
 	box-sizing: content-box;
 	margin: 0 auto;
 	padding: 0 4rem;
+
 	@include screen-1140 {
 		padding: 0 2rem;
 	}

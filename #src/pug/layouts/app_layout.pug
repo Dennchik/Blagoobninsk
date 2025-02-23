@@ -28,6 +28,8 @@ html(lang="ru")
 		.wrapper#holder
 			.page(data-page="index")
 				block header 
+					header.page__header
+						include ../layouts/header
 				block page-content
 					main._main-content
 						.main-content#wrapper
@@ -42,4 +44,4 @@ html(lang="ru")
 				block content-hidden
 				//- block burger-menu
 				//- 	include ../assets/burger-menu
-				block project-list
+				block menu-list

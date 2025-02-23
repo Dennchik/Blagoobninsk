@@ -8,10 +8,18 @@
 		align-items: center;
 	}
 
+	// .performance__container
+	&__container {
+		width: 100%;
+	}
+
 	// .performance__content
 	&__content {
 		height: 100%;
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
 	}
 
 	// .performance__row
@@ -19,12 +27,9 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: flex-end;
+		width: 100%;
 		row-gap: 4rem;
 		color: #fff;
-
-		.el-2 {
-			padding-bottom: 4rem;
-		}
 
 		&:nth-child(1) {
 			column-gap: 1rem;
@@ -32,6 +37,7 @@
 
 			.performance__column {
 				&:nth-child(1) {
+					padding-right: 3rem;
 					display: flex;
 					p {
 						font-size: 62px;
@@ -55,34 +61,42 @@
 
 						&::before {
 							font-size: 3.2rem;
-							// color: #747272;
 						}
 					}
 				}
 
 				&:nth-child(2) {
 					display: flex;
+					padding-bottom: 4rem;
 				}
 			}
 		}
 
 		&:nth-child(2) {
 			display: grid;
-			grid-template-columns: min-content max-content;
-			justify-content: space-between;
+			grid-template-columns: min-content 1fr;
 
 			@include screen-690 {
 				grid-template-columns: 1fr;
 				justify-items: end;
+				width: auto;
+			}
+
+			@include screen-375 {
+				max-width: 290px;
 			}
 
 			.performance__column {
+				justify-self: start;
 				&:nth-child(1) {
-					display: flex;
-
 					span {
 						display: block;
 					}
+				}
+
+				&:nth-child(2) {
+					justify-self: end;
+					padding-right: 3rem;
 				}
 			}
 		}
@@ -90,35 +104,34 @@
 
 	// .performance__column
 	&__column {
-		.el-1 {
-			font-family: $font-family-exclude;
-			font-weight: 900;
-		}
-
-		&.bounce-01 {
-			@include screen-690 {
-				padding-left: 12vw;
-			}
-		}
+		font-family: $font-family-exclude;
 
 		h1 {
+			width: auto;
+			font-size: 96px;
+			font-weight: 400;
 			font-family: $font-family-exclude;
 			text-transform: uppercase;
 
+			@include minmax-490-1920 {
+				font-size: calc(39px + (96 - 39) * ((100vw - 490px) / (1920 - 490)));
+			}
+
+			@include screen-690 {
+				margin-right: -55px;
+				padding-right: 3rem;
+			}
+
+			@include screen-490 {
+				// max-width: 290px;
+				font-size: 39px;
+			}
+
 			span {
 				pointer-events: none;
-				font-size: 96px;
 				letter-spacing: -2px;
 				white-space: nowrap;
 				line-height: 100%;
-
-				@include minmax-490-1920 {
-					font-size: calc(39px + (96 - 39) * ((100vw - 490px) / (1920 - 490)));
-				}
-
-				@include screen-490 {
-					font-size: 39px;
-				}
 			}
 		}
 	}
@@ -162,24 +175,17 @@
 
 			.status {
 				font-size: inherit;
-				// color: #fff;
 			}
 		}
 	}
 
 	// .performance__text
 	&__text {
-		font-weight: 300;
-		@extend .text-shadow;
+		font-weight: 400;
+		text-align: right;
 
 		p {
-			opacity: 0.8;
 			line-height: 1.4;
-
-			&:first-child {
-				text-align: right;
-				margin-bottom: 1rem;
-			}
 		}
 	}
 }

@@ -11,6 +11,7 @@
 		margin: 8px auto;
 		transition: all 0.3s ease-in-out;
 	}
+
 	&.is-active {
 		.hamburger__line {
 			background-color: $font-color-link;

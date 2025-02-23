@@ -1,6 +1,6 @@
 @use '../core/all' as *;
 .bg-section {
-	background: url('../img/pictures/fon.png') center top / cover no-repeat;
+	background: url('../img/parallax/pic-01.png') center top / cover no-repeat;
 
 	// backdrop-filter:;
 	// filter: grayscale(1) sepia(0) saturate(0.5) contrast(0.9) brightness(0.4);
@@ -132,8 +132,8 @@
 		}
 	}
 
-	// .main-content__project-list
-	&__project-list {
+	// .main-content__menu-list
+	&__menu-list {
 		position: fixed;
 		top: 8rem;
 		left: 0;
