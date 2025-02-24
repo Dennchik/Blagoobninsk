@@ -7,10 +7,15 @@
 	background: transparent;
 	display: flex;
 	align-items: center;
-	color: $font-color-secondr;
+	color: $font-color-link;
+	text-shadow: none;
 	font-family: $font-family-exclude;
 
 	&.with-border {
+		color: $font-color-secondr;
+		.hamburger__line {
+			background: $font-color-secondr;
+		}
 		.header__link-key {
 			&::before,
 			&::after {
@@ -64,10 +69,13 @@
 
 	// .header__burger-menu
 	&__burger-button {
-		margin-left: 1.6rem;
+		transform: translateY(-3px);
 
-		@include min-768 {
-			// display: none;
+		.hamburger {
+			transition: opacity 0.5s ease-in;
+			&.is-active {
+				opacity: 0;
+			}
 		}
 	}
 
@@ -114,13 +122,13 @@
 	// .header__logo
 	&__logo {
 		width: 50px;
-		height: 53px;
+		height: 50px;
 		opacity: 0.9;
 		clip-path: circle(50% at 50% 50%);
 
 		@include screen-690 {
 			width: 40px;
-			height: 43px;
+			height: 40px;
 		}
 	}
 
@@ -149,6 +157,7 @@
 	// .header__menu
 	&__menu {
 		height: 100%;
+		margin-right: 2.4rem;
 
 		@include screen-960 {
 			display: none;
@@ -176,15 +185,14 @@
 	// .header__link-key
 	&__link-key {
 		font-weight: 300;
-		// text-shadow: none;
-		color: $font-color-default;
-		@extend .text-shadow-white;
+		color: $font-color-link;
+		text-shadow: none;
 
 		&::before,
 		&::after {
 			transition: all 0.3s ease-in-out !important;
-			color: $font-color-default;
-			@extend .text-shadow-white;
+			color: $font-color-link;
+			text-shadow: none;
 			opacity: 0;
 		}
 	}

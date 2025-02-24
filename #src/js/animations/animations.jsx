@@ -1,15 +1,14 @@
 import { gsap } from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { SplitText } from 'gsap/SplitText';
-import { Observer } from 'gsap/Observer';
+// import { SplitText } from 'gsap/SplitText';
+// import { Observer } from 'gsap/Observer';
 
-import { CustomEase } from 'gsap/CustomEase';
-import { CustomBounce } from 'gsap/CustomBounce';
-import { CustomWiggle } from 'gsap/CustomWiggle';
+// import { CustomEase } from 'gsap/CustomEase';
+// import { CustomBounce } from 'gsap/CustomBounce';
+// import { CustomWiggle } from 'gsap/CustomWiggle';
 //* _____________ Регистрация - ScrollTrigger, ScrollSmoother __________________
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, Observer,
-	CustomEase, CustomBounce, CustomWiggle);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 //* _____________________ Конфигурация - ScrollTrigger _________________________
 ScrollTrigger.normalizeScroll(false);
@@ -25,6 +24,13 @@ const smoother = ScrollSmoother.create({
 	smoothTouch: 0.1,
 });
 
+//* ___________________________ "applyParallax" ________________________________
+export function applyParallax(element) {
+	const smoother = ScrollSmoother.get();
+	smoother.effects(element, {
+		speed: () => 0.5
+	});
+}
 //* _______________________ Создание ScrollTrigger _____________________________
 // export function refreshScrollTrigger() {
 // 	return ScrollTrigger.refresh();
@@ -91,7 +97,7 @@ export function tlRotateIcon() {
 
 //* __________________ Плавное исчезновение "performance" ______________________
 export function tlVerticalOpacity() {
-	gsap.to('.el-4', {
+	gsap.to('.el-opacity, .bg-section__image', {
 		opacity: 0, // Исчезает полностью
 		ease: 'none', // Равномерное изменение без ускорений
 		scrollTrigger: {
@@ -100,30 +106,30 @@ export function tlVerticalOpacity() {
 			// верхней границы экрана
 			end: 'bottom top', // Конец анимации, когда `.performance` полностью ушел
 			// вверх
-			scrub: 2, // Гладкая привязка к скроллу с небольшой задержкой
+			scrub: 1, // Гладкая привязка к скроллу с небольшой задержкой
 			// markers: true, // Для отладки (убрать в продакшене)
 		}
 	});
 }
 
 //* _______________________ Плавное появление "Waves" __________________________
-// export function tlVerticalReverse() {
-// 	gsap.to('.vertical-reverse', {
-// 		opacity: 0.5, // Появление элемента
-// 		ease: 'none', // Равномерное изменение без ускорений
-// 		scrollTrigger: {
-// 			trigger: '.performance',
-// 			/* Начало анимации, когда `.performance` на 80% вниз от верхней
-// 			границы экрана */
-// 			start: 'top top',
-// 			/* Конец анимации, когда `.performance` полностью ушел
-// 			вверх */
-// 			end: 'bottom top',
-// 			scrub: 2, // Гладкая привязка к скроллу с небольшой задержкой
-// 			// markers: true, // Для отладки (убрать в продакшене)
-// 		}
-// 	});
-// }
+export function tlVerticalReverse() {
+	gsap.to('.vertical-reverse', {
+		opacity: 0.5, // Появление элемента
+		ease: 'none', // Равномерное изменение без ускорений
+		scrollTrigger: {
+			trigger: '.performance',
+			/* Начало анимации, когда `.performance` на 80% вниз от верхней
+			границы экрана */
+			start: 'top top',
+			/* Конец анимации, когда `.performance` полностью ушел
+			вверх */
+			end: 'bottom top',
+			scrub: 2, // Гладкая привязка к скроллу с небольшой задержкой
+			// markers: true, // Для отладки (убрать в продакшене)
+		}
+	});
+}
 
 //* ____________ Плавное появление заголовков (Анимация Titles) ________________
 

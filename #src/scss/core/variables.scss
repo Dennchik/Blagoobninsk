@@ -17,8 +17,8 @@ $font-size: 1.6rem;
 
 $font-color-default: rgb(9, 9, 27);
 $font-color-secondr: rgb(250, 250, 255);
-$font-color-link: rgb(250, 250, 255);
-$link-color: rgb(90, 90, 90);
+$font-color-link: rgb(86, 56, 20);
+// $font-color-link: rgb(88, 54, 31);
 // $font-color-secondr: rgb(119, 250, 255);
 //* ------------------------------ [Neon Color] --------------------------------
 $neon-green: rgb(56, 255, 20);
@@ -39,15 +39,15 @@ $electric-lime: rgb(204, 255, 0);
 //* --------------------------- [Background Color] -----------------------------
 $background: rgb(254, 246, 237);
 $background-color: hsla(32, 89%, 96%, 0.686);
-$background-color-transparent: rgba(19, 19, 22, 0.9);
+// $background-color-transparent: rgba(19, 19, 22, 0.9);
+$background-color-transparent: rgba(19, 19, 22, 0);
 
 $color: rgb(4, 4, 14);
 $color-secondary: rgb(51, 39, 100);
-$black-color: rgb(2, 1, 1);
-$blue-color: rgb(73, 87, 123);
+$black-color: rgb(9, 9, 27);
 $blue-color-transparent: rgba(73, 87, 123, 0.404);
 $gray: gray;
-$border-color: rgb(30, 32, 46);
+$border-color: rgba(158, 158, 158, 0.302);
 
 //* ------------------------------- [Shadow] -----------------------------------
 $boxShadow: 0px 0px 2px 3px rgba(4, 217, 255, 0.699);

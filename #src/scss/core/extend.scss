@@ -3,10 +3,9 @@
 
 .frame-container {
 	border: 40px solid transparent;
-	border-image-outset: 10px;
 	border-image: url('../img/frame/border.png') 110;
 	border-image-repeat: repeat;
-	opacity: 0.5;
+	// opacity: 0.5;
 }
 
 .frame-container-inner {
@@ -28,7 +27,7 @@
 		-40deg,
 		#04040e,
 		rgb(43 55 73) 65%,
-		#09091b 75%
+		rgb(9, 9, 27) 75%
 	);
 }
 
@@ -85,14 +84,14 @@
 	text-shadow:
 		0 0 15px #e4e4e4,
 		0 0 1em #e4e4e4,
-		0 0 0.2em blue;
+		0 0 0.2em $neon-blue-dark;
 }
 
 .text-shadow {
 	text-shadow:
 		0 0 15px #55648d3a,
 		0 0 1em #55648d3a,
-		0 0 0.2em blue;
+		0 0 0.2em $neon-blue-dark;
 }
 
 .link_split {

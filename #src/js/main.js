@@ -15,28 +15,35 @@ anchorsSmoothScrolling();
 
 //* ----------------------------------------------------------------------------
 const menuList = document.querySelector('.menu-list');
-const burgerButtons = document.querySelector('.burger-button');
-const listContent = document.querySelector('.main-content__menu-list');
+const burgerButtons = document.querySelectorAll('.burger-button');
+const listContent = document.querySelector('.page__menu-list');
+const buttons = document.querySelectorAll('.hamburger');
 
-burgerButtons.addEventListener('click', () => {
-	const backgroundColorTransparent = getComputedStyle(
-		document.documentElement).getPropertyValue(
-			'--background-color-transparent');
-	console.log(menuList);
-
-	burgerButtons.firstChild.classList.toggle('is-active');
-	menuList.classList.toggle('_open-list');
-	document.body.classList.toggle('no-scroll');
-	if (menuList.classList.contains('_open-list')) {
-		// listContent.style.pointerEvents = 'all';
-		listContent.style.backgroundColor = backgroundColorTransparent;
-		document.body.classList.add('no-scroll');
-	} else {
-		document.body.classList.remove('no-scroll');
-		listContent.style.backgroundColor = 'transparent';
-		// listContent.style.pointerEvents = 'none';
-	}
+burgerButtons.forEach(burgerButton => {
+	burgerButton.addEventListener('click', () => {
+		const backgroundColorTransparent = getComputedStyle(
+			document.documentElement).getPropertyValue(
+				'--background-color-transparent');
+		for (let i = 0; i < buttons.length; i++) {
+			buttons[i].classList.toggle('is-active');
+		}
+		// burgerButton.firstChild.classList.toggle('is-active');
+		menuList.classList.toggle('_open-list');
+		document.body.classList.toggle('no-scroll');
+		if (menuList.classList.contains('_open-list')) {
+			// listContent.style.pointerEvents = 'all';
+			listContent.style.backgroundColor = backgroundColorTransparent;
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
+			listContent.style.backgroundColor = 'transparent';
+			// listContent.style.pointerEvents = 'none';
+		}
+	});
 });
+
+
+
 
 // const closeButton = document.querySelector('.project-list__close-button');
 // closeButton.addEventListener('click', () => {
