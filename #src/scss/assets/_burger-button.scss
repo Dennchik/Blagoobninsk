@@ -4,11 +4,11 @@
 	cursor: pointer;
 	// .hamburger__line
 	&__line {
-		width: 50px;
-		height: 5px;
+		width: 40px;
+		height: 4px;
 		background-color: $font-color-link;
 		display: block;
-		margin: 8px auto;
+		margin: 6px auto;
 		transition: all 0.3s ease-in-out;
 	}
 
@@ -16,11 +16,11 @@
 		.hamburger__line {
 			background-color: $font-color-link;
 			&:nth-child(1) {
-				transform: translateY(13px);
+				transform: translateY(10px);
 			}
 
 			&:nth-child(3) {
-				transform: translateY(-13px);
+				transform: translateY(-10px);
 			}
 		}
 	}

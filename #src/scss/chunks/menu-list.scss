@@ -8,14 +8,14 @@
 	height: 100vh;
 	z-index: 19;
 	transform: translateX(115%);
-	transition: transform 0.5s cubic-bezier(0.7, -0.955, 0.55, 1.55);
+	transition: transform 0.3s cubic-bezier(0.7, -0.955, 0.55, 1.55);
 
 	@include screen-320 {
 		width: 100%;
 	}
 
 	&._open-list {
-		transition: transform 0.5s ease-in;
+		transition: transform 0.3s ease-in;
 		transform: translateX(0);
 	}
 
@@ -74,9 +74,11 @@
 		h3 {
 			text-shadow: none;
 			width: auto;
-			font-size: 2.2rem;
+			font-size: 2.4rem;
 			line-height: 1.1;
 			text-align: left;
+			color: $font-color-link;
+			font-weight: 600;
 		}
 	}
 

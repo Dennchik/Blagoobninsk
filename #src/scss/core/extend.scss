@@ -3,7 +3,7 @@
 
 .frame-container {
 	border: 40px solid transparent;
-	border-image: url('../img/frame/border.png') 110;
+	border-image: url('../img/frame/border.png') 85 110;
 	border-image-repeat: repeat;
 	// opacity: 0.5;
 }
@@ -89,9 +89,9 @@
 
 .text-shadow {
 	text-shadow:
-		0 0 15px #55648d3a,
-		0 0 1em #55648d3a,
-		0 0 0.2em $neon-blue-dark;
+		0 0 15px #0000003a,
+		0 0 1em #00000093,
+		0 0 0.2em blue;
 }
 
 .link_split {
