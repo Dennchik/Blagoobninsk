@@ -9,11 +9,8 @@
 	pointer-events: none;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;
 	background-size: cover;
 	background: $background;
-
-	// filter: grayscale(1);
 
 	// .bg-section__image
 	&__image {
@@ -30,8 +27,11 @@
 			pointer-events: none;
 			// opacity: 0.2;
 			object-fit: cover;
-			object-position: top center;
+			object-position: center;
 			will-change: transform;
+			@include screen-1440 {
+				object-position: 36% 0;
+			}
 		}
 	}
 }
@@ -74,10 +74,10 @@
 			&::after {
 				content: '';
 				position: absolute;
-				right: 0;
-				background-color: #ffffff42;
-				height: 100%;
 				top: 0;
+				right: 0;
+				background-color: #ffffff25;
+				height: 100%;
 				width: 2.5px;
 				z-index: 999;
 			}

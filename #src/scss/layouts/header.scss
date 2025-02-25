@@ -7,8 +7,8 @@
 	background: transparent;
 	display: flex;
 	align-items: center;
-	color: $font-color-link;
 	text-shadow: none;
+	color: $font-color-link;
 	font-family: $font-family-exclude;
 
 	&.with-border {
@@ -16,6 +16,14 @@
 		.hamburger__line {
 			background: $font-color-secondr;
 		}
+
+		.header__text {
+			span {
+				color: rgb(226, 226, 255);
+				font-weight: 400;
+			}
+		}
+
 		.header__link-key {
 			&::before,
 			&::after {
@@ -69,7 +77,7 @@
 
 	// .header__burger-menu
 	&__burger-button {
-		transform: translateY(-3px);
+		transform: translateY(-1px);
 
 		.hamburger {
 			transition: opacity 0.5s ease-in;
@@ -87,22 +95,18 @@
 		height: 8rem;
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 4rem;
 		justify-content: space-between;
+
+		@include screen-490 {
+			gap: 1rem;
+		}
 	}
 
 	// .header__logo-wrpper
 	&__logo-wrpper {
 		display: flex;
 		align-items: center;
-
-		@include screen-425 {
-			.header__text {
-				span {
-					font-size: 11px;
-				}
-			}
-		}
 	}
 
 	// .header__column
@@ -129,6 +133,11 @@
 		@include screen-690 {
 			width: 40px;
 			height: 40px;
+			img {
+				width: 40px;
+				height: 40px;
+				max-width: none;
+			}
 		}
 	}
 
@@ -138,18 +147,26 @@
 		text-transform: uppercase;
 		display: flex;
 		align-items: flex-end;
+		line-height: 1;
 
 		span {
 			opacity: 1;
 			z-index: -1;
 
 			font: {
-				size: 2.2rem;
-				weight: 400;
+				size: 1.8rem;
+				weight: 600;
 			}
 
 			@include screen-960 {
 				font-size: 1.8rem;
+			}
+
+			@include screen-425 {
+				span {
+					font-size: 13px;
+					font-weight: 600;
+				}
 			}
 		}
 	}
