@@ -1,9 +1,6 @@
 @use '../core/all' as *;
 
 .page {
-	// overflow: hidden;
-	width: 100%;
-
 	// .page__menu-list
 	&__menu-list {
 		position: fixed;
@@ -13,7 +10,7 @@
 		height: 100vh;
 		z-index: 18;
 		pointer-events: none;
-		transition: all 0.7s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	// .page__header
@@ -43,7 +40,7 @@
 		height: 100%;
 	}
 
-	// . main-content__about
+	// .main-content__about
 	&__about {
 		position: relative;
 		z-index: 1;
@@ -52,8 +49,14 @@
 		height: 100%;
 	}
 
-	// .main-content__sections
-	&__sections {
+	// .main-content__main-content-sections
+	&__main-content-sections {
+		position: relative;
+		background: $background;
+	}
+
+	// .main-content__section
+	&__section {
 		position: relative;
 		z-index: 1;
 		width: 100%;
