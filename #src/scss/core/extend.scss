@@ -1,8 +1,26 @@
 @use 'variables' as *;
 @use 'mixins.scss' as *;
 
+.background-clip {
+	&::before {
+		content: 'Храмы';
+		display: block;
+		position: absolute;
+		background-clip: text;
+		background: linear-gradient(-135deg, transparent 40%, $font-color-link);
+		background-clip: text;
+		color: transparent;
+		text-shadow: none;
+		background-size: 300% 100%;
+		background-position: 100% 0%;
+		transition: background-position 0.5s;
+		mix-blend-mode: multiply;
+	}
+}
+
 .frame-container {
 	position: absolute;
+	margin: 0 auto;
 	z-index: 0;
 	top: 0;
 	left: 0;
@@ -11,7 +29,11 @@
 	border: 40px solid transparent;
 	border-image: url('../img/frame/border.png') 85 110;
 	border-image-repeat: repeat;
-	// opacity: 0.5;
+	@include screen-320 {
+		border: 20px solid transparent;
+		border-image: url('../img/frame/border.png') 85 110;
+		border-image-repeat: repeat;
+	}
 }
 
 .frame-container-inner {

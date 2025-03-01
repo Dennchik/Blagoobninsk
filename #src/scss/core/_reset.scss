@@ -13,7 +13,7 @@ html {
 	height: 100%;
 	counter-reset: heading;
 	letter-spacing: 1.1px;
-	color: var(--font-body-color);
+	color: var(--font-color-default);
 
 	@include screen-1024 {
 		font-size: 50%;
@@ -27,7 +27,7 @@ body {
 	font: 1.6rem/1.6 $font-family-default;
 	background: $background;
 
-	@extend .text-shadow;
+	// @extend .text-shadow;
 
 	&.no-scroll {
 		overflow: hidden;

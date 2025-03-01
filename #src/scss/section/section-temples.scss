@@ -1,35 +1,73 @@
 @use '../core/all' as *;
+
 .temples {
 	// .temples__body
-
 	&__body {
 		padding: 12rem 4rem 6rem;
+
+		@include screen-320 {
+			padding: 8rem 2rem 6rem;
+		}
 	}
 
 	// .temples__row
 	&__row {
 		padding: 4rem 2.6rem;
+
+		.temples__title {
+			margin-bottom: 4rem;
+		}
+
+		@include screen-1140 {
+			padding: 4rem 0;
+		}
+	}
+
+	.temples__title,
+	h3 {
+		@include screen-1140 {
+			margin-left: 0;
+		}
 	}
 
 	// .temples__title
 	&__title {
-		margin-bottom: 4rem;
-		@extend .text-shadow-black;
+		margin-left: 2.5rem;
+		display: flex;
+		gap: 0.4rem;
+		align-items: center;
 
-		h2 {
-			font: 74px $font-family-exclude;
-			font-weight: 700;
-			line-height: 1;
-			transform: scale(1, 2.5);
-			color: $font-color-link;
-			@extend .text-shadow-black;
-
-			@include minmax-490-1920 {
-				font-size: calc(34px + (54 - 34) * ((100vw - 490px) / (1920 - 490)));
+		&._active {
+			h2 {
+				&::before {
+					background-position: 10% 0%;
+				}
 			}
 
-			@include screen-768 {
-				margin-left: 2rem;
+			h3 {
+				color: $font-color-default;
+				color: $font-color-link;
+				opacity: 1;
+			}
+		}
+
+		h2 {
+			font: 84px $font-family-exclude;
+			font-weight: 700;
+			transform: scale(1, 1.5);
+			@extend .background-clip;
+
+			&::before {
+				content: 'Храмы';
+			}
+
+			span {
+				color: $background;
+				text-shadow: $darkOutline;
+			}
+
+			@include minmax-490-1920 {
+				font-size: calc(34px + (84 - 34) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
@@ -38,7 +76,23 @@
 		}
 
 		h3 {
+			color: $background;
+			text-shadow: $darkOutline;
+			margin-left: -2.5rem;
 			font-size: 4.6rem;
+			opacity: 0.8;
+			// -webkit-text-stroke: 1px turquoise;
+			transition:
+				color 0.4s,
+				opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+
+			@include minmax-320-1920 {
+				font-size: calc(20px + (46 - 20) * ((100vw - 320px) / (1920 - 320)));
+			}
+
+			@include screen-320 {
+				font-size: 20px;
+			}
 		}
 	}
 
@@ -50,30 +104,57 @@
 		display: grid;
 		gap: 4rem;
 		grid-template-columns: 60% auto;
+
+		@include screen-1140 {
+			grid-template-columns: auto;
+			gap: 8rem;
+		}
 	}
 
+	// .temples__frame
 	&__frame {
 		margin: 0 25px;
 		position: relative;
 		height: 100%;
 		align-items: center;
-		display: grid;
-		gap: 2rem;
-		grid-template-columns: 1fr minmax(190px, 249px);
+
+		strong {
+			line-height: 110%;
+		}
+
+		p {
+			a {
+				display: block;
+				transition: opacity 0.3s ease-in-out;
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 8rem;
+		}
+
+		&:not(:first-child) {
+			flex: 1 1 100%;
+		}
 
 		.temples__image {
-			float: left;
-			max-width: 356px;
-			margin-right: 2rem;
+			@include min-690 {
+				float: left;
+				max-width: 356px;
+				margin-right: 2rem;
+			}
 		}
 
 		&:nth-child(1) {
-			grid-template-columns: 1fr;
+			grid-template-columns: 1fr 1fr;
 		}
 
 		.frame-container-inner {
 			position: absolute;
-			z-index: 0;
+			z-index: -1;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -85,6 +166,11 @@
 	&__column {
 		position: relative;
 		height: 100%;
+
+		&:not(:first-child) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	// .temples__image
@@ -97,9 +183,12 @@
 
 	// .temples__info
 	&__info {
+		position: relative;
+		z-index: 1px;
 		margin-bottom: 1rem;
 		font-size: 1.8rem;
 		line-height: 135%;
+
 		p {
 			text-shadow: none;
 			line-height: 120%;
@@ -111,6 +200,7 @@
 		grid-column: 1 / 3;
 		font-size: 2.2rem;
 		text-shadow: none;
+		line-height: 125%;
 		p {
 			line-height: 120%;
 			&:not(:last-child) {

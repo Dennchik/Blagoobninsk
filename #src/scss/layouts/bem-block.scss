@@ -292,19 +292,23 @@
 }
 
 .hr-shelf {
+	flex: 1 1 auto;
 	position: relative;
 	z-index: 11;
+	display: flex;
+	justify-content: end;
+	width: auto;
+	height: 39px;
+	opacity: 0.4;
 
 	// .hr-shelf__content
 	&__content {
-		background: url('../img/') center left no-repeat;
-		margin: -50px auto 10px;
-		padding: 0;
-		height: 50px;
-		border: none;
-		width: 80%;
-		border-bottom: 1px solid rgba(56, 31, 71, 0.47);
-		box-shadow: 0 20px 20px -20px #100e10;
+		width: 100%;
+		height: 39px;
+		background: url('../img/frame/hr.png') left;
+		background-repeat: repeat;
+		object-fit: none;
+		height: 40px;
 	}
 }
 

@@ -23,7 +23,9 @@ burgerButtons.forEach(burgerButton => {
 	burgerButton.addEventListener('click', () => {
 		const backgroundColorTransparent = getComputedStyle(
 			document.documentElement).getPropertyValue(
-				'--background-color-transparent');
+				'--background-transparent');
+
+
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].classList.toggle('is-active');
 		}
@@ -41,18 +43,6 @@ burgerButtons.forEach(burgerButton => {
 		}
 	});
 });
-
-
-
-
-// const closeButton = document.querySelector('.project-list__close-button');
-// closeButton.addEventListener('click', () => {
-// 	document.body.classList.remove('no-scroll');
-// 	burgerButtons.firstChild.classList.remove('is-active');
-// 	projectList.classList.remove('_open-list');
-// 	listContent.style.pointerEvents = 'none';
-// 	listContent.style.backgroundColor = 'transparent';
-// });
 //* ----------------------------------------------------------------------------
 import {
 	timeLineHeaderItem,

@@ -5,6 +5,14 @@
 	&__body {
 		font-size: 2.2rem;
 		padding: 12rem 4rem 6rem;
+
+		@include screen-690 {
+			padding-top: 8rem;
+		}
+
+		@include screen-320 {
+			padding: 8rem 2rem 6rem;
+		}
 	}
 
 	// .section-intro__frame-container
@@ -31,6 +39,7 @@
 
 	// .section-intro__content
 	&__content {
+		margin: 0 2.5rem;
 		display: grid;
 		grid-template-columns: 60% auto;
 		position: relative;
@@ -39,8 +48,8 @@
 
 		@include screen-1140 {
 			grid-template-columns: auto;
-			padding: 8rem 0;
 			gap: 12rem;
+			margin: 0;
 		}
 	}
 
@@ -63,22 +72,36 @@
 
 	// .section-intro__title
 	&__title {
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 4rem;
 
-		h2 {
-			font: 74px $font-family-exclude;
-			font-weight: 700;
-			line-height: 1;
-			transform: scale(1, 2.5);
-			color: $font-color-link;
-			@extend .text-shadow-black;
+		&._active {
+			h2 {
+				&::before {
+					background-position: 10% 0%;
+				}
+			}
+		}
 
-			@include minmax-490-1920 {
-				font-size: calc(34px + (54 - 34) * ((100vw - 490px) / (1920 - 490)));
+		h2 {
+			font: 84px $font-family-exclude;
+			font-weight: 700;
+			transform: scale(1, 1.5);
+			color: $font-color-link;
+			@extend .background-clip;
+
+			&::before {
+				content: 'О Благочинии';
 			}
 
-			@include screen-768 {
-				margin-left: 2rem;
+			span {
+				color: $background;
+				text-shadow: $darkOutline;
+			}
+
+			@include minmax-490-1920 {
+				font-size: calc(34px + (84 - 34) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
@@ -86,7 +109,7 @@
 			}
 		}
 
-		span {
+		> span {
 			margin: 2rem 2rem 2rem 2.5rem;
 			opacity: 0.7;
 			display: inline-block;
@@ -141,10 +164,11 @@
 
 	// .section-intro__image
 	&__image {
-		align-self: center;
+		align-self: flex-start;
 		position: relative;
 		display: inline-block;
 		width: 100%;
+		border: 1px solid $border-color;
 
 		img {
 			position: relative !important;
@@ -155,10 +179,10 @@
 
 	// .section-intro__image-title
 	&__image-title {
-		position: absolute;
+		// position: absolute;
 		bottom: 0;
-		font-size: 18px;
-		color: $font-color-secondr;
+		font-size: 20px;
+		font-weight: 600;
 		padding: 1rem 2rem;
 	}
 

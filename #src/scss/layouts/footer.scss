@@ -3,7 +3,7 @@
 .footer {
 	// .footer__body
 	&__body {
-		padding: 6rem 0 2rem 4rem;
+		padding: 6rem 0 2rem;
 
 		@include minmax-1440-1920 {
 			padding-bottom: calc(

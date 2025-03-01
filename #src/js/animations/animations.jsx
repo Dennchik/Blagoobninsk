@@ -56,16 +56,20 @@ export function applyParallax(element) {
 
 //*
 // ----------------------------------------------------------------------------
-// export function initSectionTriggerMove(trigger, targets) {
-// 	ScrollTrigger.create({
-// 		trigger: trigger,
-// 		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px
-// ниже верха окна браузера*/ start: 'top center', endTrigger: trigger, //*
-// Конец события - конец документа /*Конец событие когда верхняя граница
-// элемента 1 достигнет верха окна браузера*/ end: 'bottom center',
-// toggleClass: { targets: targets, className: '_active' }, // markers: true
-// }); } * ___________________________ Rotate Icon
-// ____________________________________
+export function initSectionTriggerMove(trigger, targets) {
+	ScrollTrigger.create({
+		trigger: trigger,
+		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px ниже верха окна браузера*/
+		start: 'top center',
+		endTrigger: trigger,
+		// Конец события - конец документа 
+		/*Конец событие когда верхняя граница лемента 1 достигнет верха окна браузера*/
+		end: 'bottom center',
+		toggleClass: { targets: targets, className: '_active' },
+		// markers: true
+	});
+}
+// * ___________________________ Rotate Icon ___________________________________
 export function tlRotateIcon() {
 	gsap.to('._rotate-el-01', {
 		rotate: -720, // постоянное вращение
@@ -188,7 +192,52 @@ export function cassieEvans() {
 
 //* ___________________ Анимация: Появление картинок ___________________________
 
-//* ____________________ Анимация: Появление текста ____________________________
 
+//* ____________________ Анимация: Появление текста ____________________________
+export function animateH2(element) {
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: element,
+			start: 'top center+=15%',
+			endTrigger: element,
+			end: 'top center+=15%',
+			toggleActions: 'play none none reverse',
+			// markers: true,
+
+			// Добавляем и удаляем класс вручную
+			onEnter: () => document.querySelector(element)?.classList.add('_active'),
+			onLeaveBack: () => document.querySelector(element)?.classList.remove('_active'),
+		},
+	});
+
+	// Анимация для смещения по Y
+	timeline.from(element, {
+		y: 25,
+		duration: 0.8, // Продолжительность смещения
+		ease: 'sine.in', // Мягкая анимация
+	});
+}
+
+export function animateH3(element) {
+	const timeline = gsap.timeline({
+		scrollTrigger: {
+			trigger: element,
+			start: 'top center+=15%',
+			endTrigger: element,
+			end: 'top center+=15%',
+			toggleActions: 'play none none reverse',
+			// markers: true,
+
+			// Добавляем и удаляем класс вручную
+			onEnter: () => document.querySelector(element)?.classList.add('_active'),
+			onLeaveBack: () => document.querySelector(element)?.classList.remove('_active'),
+		},
+	});
+
+	// Анимация для смещения по Y
+	timeline.from(element, {
+		ease: 'sine.in', // Мягкая анимация
+	});
+}
 //* __________________ Анимация: Иконок при наведении __________________________
 
