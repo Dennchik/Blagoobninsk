@@ -70,18 +70,18 @@
 			object-fit: cover;
 		}
 
-		&:not(:last-child) {
-			&::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				background-color: #ffffff25;
-				height: 100%;
-				width: 2.5px;
-				z-index: 999;
-			}
-		}
+		// &:not(:last-child) {
+		// 	&::after {
+		// 		content: '';
+		// 		position: absolute;
+		// 		top: 0;
+		// 		right: 0;
+		// 		background-color: #ffffff25;
+		// 		height: 100%;
+		// 		width: 2.5px;
+		// 		z-index: 999;
+		// 	}
+		// }
 
 		&:nth-child(1) {
 			img {

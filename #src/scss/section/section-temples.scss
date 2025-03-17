@@ -26,7 +26,7 @@
 	.temples__title,
 	h3 {
 		@include screen-1140 {
-			margin-left: 0;
+			margin-left: 0.5rem;
 		}
 	}
 
@@ -62,7 +62,7 @@
 			}
 
 			span {
-				color: $background;
+				color: $font-color-secondr;
 				text-shadow: $darkOutline;
 			}
 
@@ -76,7 +76,6 @@
 		}
 
 		h3 {
-			color: $background;
 			text-shadow: $darkOutline;
 			margin-left: -2.5rem;
 			font-size: 4.6rem;
@@ -85,6 +84,7 @@
 			transition:
 				color 0.4s,
 				opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+			color: $font-color-secondr;
 
 			@include minmax-320-1920 {
 				font-size: calc(20px + (46 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -115,7 +115,6 @@
 	&__frame {
 		margin: 0 25px;
 		position: relative;
-		height: 100%;
 		align-items: center;
 
 		strong {
@@ -141,15 +140,13 @@
 		}
 
 		.temples__image {
-			@include min-690 {
+			width: 100%;
+			margin-bottom: 2rem;
+			@include min-550 {
 				float: left;
 				max-width: 356px;
 				margin-right: 2rem;
 			}
-		}
-
-		&:nth-child(1) {
-			grid-template-columns: 1fr 1fr;
 		}
 
 		.frame-container-inner {
@@ -162,6 +159,12 @@
 		}
 	}
 
+	// temples__frame--grid-row
+	// &__frame--grid-row {
+	// 	grid-row: 1 / 2;
+	// 	align-self: start;
+	// }
+
 	// .temples__column
 	&__column {
 		position: relative;
@@ -170,6 +173,8 @@
 		&:not(:first-child) {
 			display: flex;
 			flex-direction: column;
+			grid-template-columns: 1fr;
+			height: 100%;
 		}
 	}
 
@@ -184,7 +189,7 @@
 	// .temples__info
 	&__info {
 		position: relative;
-		z-index: 1px;
+		z-index: 1;
 		margin-bottom: 1rem;
 		font-size: 1.8rem;
 		line-height: 135%;
@@ -197,10 +202,10 @@
 
 	// .temples__text
 	&__text {
-		grid-column: 1 / 3;
 		font-size: 2.2rem;
 		text-shadow: none;
 		line-height: 125%;
+
 		p {
 			line-height: 120%;
 			&:not(:last-child) {

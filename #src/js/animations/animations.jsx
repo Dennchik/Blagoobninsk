@@ -164,6 +164,32 @@ export function cassieEvans() {
 			scrub: true
 		}
 	});
+
+	// const smootherInstance = ScrollSmoother.get();
+	// smootherInstance.effects('.lag-1', { lag: 0.5, speed: 0.7 });
+}
+
+export function parallaxEvans() {
+	gsap.timeline({
+		scrollTrigger: {
+			trigger: '.wrapper',
+			start: '0 0',
+			end: '100% 100%',
+			scrub: 1
+		}
+	})
+		.fromTo('.move-time', { y: 0 }, { y: -1000 }, 0)
+		.fromTo('.cloud1', { y: 0 }, { y: -650 }, 0)
+		.fromTo('.cloud3', { y: 0 }, { y: 250 }, 0);
+	// // .fromTo('.cloud3', { y: 0 }, { y: 850 }, 0);
+	// gsap.timeline({
+	// 	scrollTrigger: {
+	// 		trigger: '.wrapper',
+	// 		start: '0 0',
+	// 		end: '100% 100%',
+	// 		scrub: 1
+	// 	}
+	// })
 }
 
 //* ___________________ Анимация: lag & skew - колонок _________________________

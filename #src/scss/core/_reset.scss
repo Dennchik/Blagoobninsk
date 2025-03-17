@@ -25,9 +25,10 @@ body {
 	// user-select: none;
 	overscroll-behavior: none;
 	font: 1.6rem/1.6 $font-family-default;
-	background: $background;
-
+	// background: $background;
+	// background-color: #9cc7ff;
 	// @extend .text-shadow;
+	background: #000;
 
 	&.no-scroll {
 		overflow: hidden;
@@ -59,7 +60,7 @@ svg {
 	pointer-events: none;
 	width: 100%;
 	height: auto;
-	max-width: 100%;
+	max-width: none;
 }
 
 a {
