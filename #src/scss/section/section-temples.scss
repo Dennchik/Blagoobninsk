@@ -53,7 +53,8 @@
 
 		h2 {
 			font: 84px $font-family-exclude;
-			font-weight: 700;
+			font-weight: 400;
+			text-transform: uppercase;
 			transform: scale(1, 1.5);
 			@extend .background-clip;
 
@@ -67,7 +68,7 @@
 			}
 
 			@include minmax-490-1920 {
-				font-size: calc(34px + (84 - 34) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(34px + (54 - 34) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {

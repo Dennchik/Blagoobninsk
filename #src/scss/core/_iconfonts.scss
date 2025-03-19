@@ -25,19 +25,14 @@
 	font-variant-ligatures: discretionary-ligatures;
 }
 
-.icon-plus {
+.icon-krest {
 	&:before {
-		content: $icon-plus;
+		content: $icon-krest;
 	}
 }
-.icon-check {
+.icon-krest-color {
 	&:before {
-		content: $icon-check;
-	}
-}
-.icon-file-download {
-	&:before {
-		content: $icon-file-download;
+		content: $icon-krest-color;
 	}
 }
 .icon-arow-down {
@@ -128,6 +123,21 @@
 .icon-telegram-fly {
 	&:before {
 		content: $icon-telegram-fly;
+	}
+}
+.icon-plus {
+	&:before {
+		content: $icon-plus;
+	}
+}
+.icon-check {
+	&:before {
+		content: $icon-check;
+	}
+}
+.icon-file-download {
+	&:before {
+		content: $icon-file-download;
 	}
 }
 .icon-volume-high {

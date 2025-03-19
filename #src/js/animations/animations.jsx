@@ -140,7 +140,7 @@ export function tlVerticalReverse() {
 //* _________________________ Анимация: Parallax _______________________________
 export function cassieEvans() {
 	smoother.effects('.parallax__image-cont', {
-		speed: () => gsap.utils.random(0.55, 0.85, 0.05)
+		speed: () => gsap.utils.random(0.55, 0.55, 0.05)
 	});
 
 	gsap.to('.parallax__anime-swipe', {
@@ -178,9 +178,9 @@ export function parallaxEvans() {
 			scrub: 1
 		}
 	})
-		.fromTo('.move-time', { y: 0 }, { y: -1000 }, 0)
-		.fromTo('.cloud1', { y: 0 }, { y: -650 }, 0)
-		.fromTo('.cloud3', { y: 0 }, { y: 250 }, 0);
+		// .fromTo('.move-time', { y: 0 }, { y: -1000 }, 0)
+		// .fromTo('.cloud1', { y: 0 }, { y: -650 }, 0)
+		.fromTo('.cloud3', { y: 0, x: 0 }, { y: 250, x: -300 }, 0);
 	// // .fromTo('.cloud3', { y: 0 }, { y: 850 }, 0);
 	// gsap.timeline({
 	// 	scrollTrigger: {

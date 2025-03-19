@@ -123,12 +123,12 @@
 	// .parallax__anime-swipe
 	&__anime-swipe {
 		width: 100%;
-		// background-color: $black-color;
-		background-image: linear-gradient(
-			to right,
-			#050202ff 20%,
-			#1c153f 50%,
-			#050202ff 80%
-		);
+		background-color: $background;
+		// background-image: linear-gradient(
+		// 	to right,
+		// 	#4894e3 20%,
+		// 	#3b8de1 50%,
+		// 	#3b8de1 80%
+		// );
 	}
 }

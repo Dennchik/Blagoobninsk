@@ -11,7 +11,8 @@ $min-height: calc(100% - ($headerHeight + $footerHeight));
 //* ---------------------------- [Font Variables] ------------------------------
 $font-path: '../fonts';
 $font-family-default: 'Sofia Sans Extra Condensed', sans-serif;
-$font-family-exclude: 'Monomakh', sans-serif;
+// $font-family-exclude: 'Monomakh', sans-serif;
+$font-family-exclude: 'Ponomar', sans-serif;
 $font-weight-default: 400;
 $font-size: 1.6rem;
 //* ------------------------------ [Font color] --------------------------------
@@ -36,7 +37,7 @@ $luminescent-orange: rgb(255, 164, 32);
 $liquid-neon: rgb(200, 255, 0);
 $electric-lime: rgb(204, 255, 0);
 //* --------------------------- [Background Color] -----------------------------
-$background: rgb(226, 243, 255);
+$background: rgb(255, 255, 255);
 $background-color: rgba(226, 243, 255, 0.95);
 $background-color-transparent: rgba(19, 19, 22, 0.7);
 

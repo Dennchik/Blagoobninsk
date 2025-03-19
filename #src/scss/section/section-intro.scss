@@ -4,7 +4,7 @@
 	// .section-intro__body
 	&__body {
 		font-size: 2.2rem;
-		padding: 12rem 4rem 6rem;
+		padding: 6rem 4rem 6rem;
 
 		@include screen-690 {
 			padding-top: 8rem;
@@ -64,6 +64,7 @@
 	&__info {
 		flex: 1;
 		height: auto;
+		margin-top: 12rem;
 
 		@include screen-490 {
 			font-size: 15px;
@@ -72,59 +73,71 @@
 
 	// .section-intro__title-wrapp
 	&__title-wrapp {
+		border-radius: 1rem;
+		padding-right: 3rem;
 		position: relative;
-		// display: flex;
+		display: flex;
 		gap: 6rem;
+		justify-content: space-between;
+		background: linear-gradient(to right, transparent 30%, #bd997962);
+
+		.img-fon {
+			position: absolute;
+			display: inline-block;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 40%;
+			z-index: 999;
+			text-align: right;
+			background-image: linear-gradient(transparent, #ffffff 70%);
+
+			// .img-fon__image-title
+			&__image-title {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				font-size: 20px;
+				font-weight: 600;
+				padding: 1rem 2rem;
+				color: $font-color-link;
+			}
+		}
 	}
 
 	// .section-intro__foto
 	&__foto {
-		display: inline;
-		// padding-top: 5rem;
-		// padding-right: 5rem;
-		// clip-path: ellipse(30% 50% at 50% 50%);
 		z-index: 12;
 		position: relative;
-		width: 100%;
 		height: auto;
 		overflow: visible;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
 
 		// opacity: 0.9;
 		img {
-			max-width: 250px;
-			width: 100%;
-			height: 100%;
-			// position: absolute;
 			// max-width: 250px;
-			object-fit: cover;
-		}
-
-		.img-fon {
-			margin-top: -3rem;
-			position: absolute;
-			bottom: 0;
-			left: 0;
+			margin-top: -5rem;
 			width: 100%;
-			height: 100%;
-			background: linear-gradient(transparent, #fff 80%),
-				linear-gradient(to right, transparent 100%, #fff),
-				linear-gradient(to left, transparent 100%, #fff);
+			height: 350px;
+			object-fit: contain;
 		}
 	}
+
 	&__foto-image {
 		position: relative;
 		flex: 1 1 auto;
 	}
+
 	// .section-intro__title
 	&__title {
 		position: relative;
 		z-index: 1;
 		display: inline-flex;
 		flex-direction: column;
-		margin-bottom: 4rem;
+		padding: 4rem 0;
 
 		&._active {
 			h2 {
@@ -136,8 +149,10 @@
 
 		h2 {
 			font: 84px $font-family-exclude;
-			font-weight: 700;
+			font-weight: 400;
+			text-transform: uppercase;
 			transform: scale(1, 1.5);
+			line-height: 1 !important;
 			color: $font-color-link;
 			@extend .background-clip;
 			span {
@@ -153,7 +168,7 @@
 			}
 
 			@include minmax-490-1920 {
-				font-size: calc(34px + (84 - 34) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(34px + (64 - 34) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
@@ -229,16 +244,6 @@
 			max-width: 100%;
 			object-fit: cover;
 		}
-	}
-
-	// .section-intro__image-title
-	&__image-title {
-		// position: absolute;
-		bottom: 0;
-		font-size: 20px;
-		font-weight: 600;
-		padding: 1rem 2rem;
-		color: $font-color-link;
 	}
 
 	&__news {

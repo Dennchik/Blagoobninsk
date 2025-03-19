@@ -76,8 +76,18 @@ export function timeLineTextItem() {
 		targets: '.el-1',
 		opacity: [0, 0.7],
 		translateX: [1500, 0],
-		scaleX: [5, 0.7],
-		scaleY: [5, 1.3],
+		scale: [5, 1],
+		delay: anime.stagger(100, { start: 100 }),
+		easing: 'easeInOutSine',
+		begin: function (anim) {
+			anim.animatables.forEach(function (animatable) {
+				animatable.target.style.transition = 'all 0.3s ease-out';
+			});
+		}
+	}).add({
+		targets: '.bounce-01',
+		opacity: [0, 0.7],
+		translateX: [-100, 0],
 		delay: anime.stagger(100, { start: 100 }),
 		easing: 'easeInOutSine',
 		begin: function (anim) {
