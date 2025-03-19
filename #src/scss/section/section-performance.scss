@@ -203,11 +203,12 @@
 
 	// .performance__text
 	&__text {
+		margin-top: 1rem;
 		font-weight: 400;
 		text-align: right;
 
 		p {
-			line-height: 1.4;
+			line-height: 1;
 		}
 	}
 }

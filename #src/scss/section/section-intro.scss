@@ -84,6 +84,7 @@
 		.img-fon {
 			position: absolute;
 			display: inline-block;
+			transform: translateY(3px);
 			bottom: 0;
 			left: 0;
 			width: 100%;
@@ -99,7 +100,8 @@
 				right: 0;
 				font-size: 20px;
 				font-weight: 600;
-				padding: 1rem 2rem;
+				line-height: 1;
+				padding-right: 4rem;
 				color: $font-color-link;
 			}
 		}
@@ -138,6 +140,7 @@
 		display: inline-flex;
 		flex-direction: column;
 		padding: 4rem 0;
+		line-height: 1;
 
 		&._active {
 			h2 {

@@ -88,6 +88,7 @@ export function timeLineTextItem() {
 		targets: '.bounce-01',
 		opacity: [0, 0.7],
 		translateX: [-100, 0],
+		scale: [5, 1],
 		delay: anime.stagger(100, { start: 100 }),
 		easing: 'easeInOutSine',
 		begin: function (anim) {
@@ -97,13 +98,14 @@ export function timeLineTextItem() {
 		}
 	}).add({
 		targets: '.el-2',
-		translateY: [200, 0],
-		opacity: [0, 1], duration: 750,
-		delay: anime.stagger(0, { start: 0 }),
+		translateY: [20, 0],
+		// opacity: [0, 1],
+		duration: 1250,
+		delay: anime.stagger(100, { start: 100 }),
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
-				animatable.target.style.transition = 'opacity 0.3s ease-out';
+				animatable.target.style.transition = 'opacity 0.5s ease-out';
 			});
 		}
 	}, 750).add({
