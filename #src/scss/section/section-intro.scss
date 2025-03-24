@@ -1,4 +1,233 @@
 @use '../core/all' as *;
+.blagochinie {
+	border-radius: 1rem;
+	// .blagochinie__column
+	&__column {
+		position: relative;
+		flex: 0 1 25%;
+		border-radius: 1rem;
+		display: flex;
+		justify-content: center;
+		z-index: 1;
+
+		&:nth-child(odd) {
+			z-index: 3;
+		}
+		&:nth-child(3) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	// .blagochinie__title
+	&__title {
+		flex: 0 1 263px;
+		position: relative;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		padding: 4rem 0;
+		line-height: 1;
+
+		h2 {
+			font: 64px $font-family-exclude;
+			font-weight: 400;
+			white-space: nowrap;
+			text-transform: uppercase;
+			transform: scale(1, 1.2);
+			line-height: 1 !important;
+			color: $font-color-secondr;
+			text-shadow: $darkOutline;
+			margin-bottom: 1rem;
+			color: $font-color-link;
+			// @extend .background-clip;
+
+			span {
+				white-space: nowrap;
+			}
+			// &::before {
+			// 	content: 'О Благочинии';
+			// }
+
+			@include minmax-490-1920 {
+				font-size: calc(34px + (64 - 34) * ((100vw - 490px) / (1920 - 490)));
+			}
+
+			@include screen-490 {
+				font-size: 34px;
+			}
+		}
+	}
+
+	// .blagochinie__hr
+	&__hr {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		img {
+			width: 100%;
+			height: 50px;
+			object-fit: cover;
+		}
+	}
+
+	// .blagochinie__button
+	&__button {
+		display: inline-flex;
+		justify-content: center;
+
+		span {
+			padding: 1rem 4rem;
+			text-transform: uppercase;
+			border-radius: 0.5rem;
+			background: $font-color-link;
+			background: linear-gradient(90.61deg, #c9a885 6.02%, #9a7a5f 99.53%);
+			display: inline;
+			width: auto;
+			color: $font-color-secondr;
+		}
+	}
+
+	// .blagochinie__text
+	&__text {
+		padding: 0 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		flex-wrap: wrap;
+		height: 100%;
+		z-index: 1;
+		font-family: $font-family-default;
+		text-shadow: none;
+		font-size: 2.2rem;
+		line-height: 135%;
+
+		P {
+			margin-bottom: 1rem;
+		}
+
+		span {
+			display: inline-block;
+			font-size: 2rem;
+			text-align: left;
+			text-shadow: none;
+			line-height: 1.1;
+			color: $font-color-link;
+			// background: linear-gradient(93.59deg, #bd9673 3.49%, #7d5e42 101.32%);
+			background-clip: text;
+			// -webkit-text-fill-color: transparent;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		@include minmax-320-1920 {
+			font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 16px;
+		}
+	}
+
+	// .blagochinie__foto
+	&__foto-nast {
+		z-index: 1;
+		position: absolute;
+		height: auto;
+		bottom: 0;
+
+		img {
+			width: 100%;
+			height: 350px;
+			object-fit: contain;
+		}
+	}
+
+	// .section-intro__info-nast
+	&__info-nast {
+		padding: 4rem 0 0;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		p {
+			line-height: 1.2;
+
+			&:not(:last-child) {
+				margin-bottom: 0.5rem;
+			}
+
+			&:nth-child(1) {
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 2.2rem;
+				text-align: left;
+				text-shadow: none;
+				line-height: 1.1;
+				font-weight: 500;
+				background: linear-gradient(
+					93.59deg,
+					$black-color 3.49%,
+					rgba(9, 9, 27, 0) 101.32%
+				);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				font-size: 2.2rem;
+				color: $font-color-link;
+			}
+		}
+	}
+
+	// .blagochinie__bg-image
+	&__bg-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 300px;
+		background-size: cover;
+		background-position: center right;
+		background-repeat: no-repeat;
+		height: 100%;
+		z-index: 0;
+		border-radius: 10px;
+		// background: url('../img/pictures/vrata.jpg') center right / cover no-repeat;
+
+		&::after {
+			content: '';
+			background: linear-gradient(
+				85.2deg,
+				#ece2d9 5%,
+				rgba(255, 255, 255, 0) 80%
+			);
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			z-index: 0;
+		}
+	}
+
+	// .blagochinie__bg-fon
+	&__bg-fon {
+		position: absolute;
+		z-index: 2;
+		display: inline-block;
+		transform: translateY(20px);
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 40%;
+		text-align: right;
+		background-image: linear-gradient(transparent, #ffffff 70%);
+	}
+}
 
 .section-intro {
 	// .section-intro__body
@@ -15,17 +244,6 @@
 		}
 	}
 
-	// .section-intro__frame-container
-	.frame-container {
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		@extend .frame-container;
-	}
-
 	// .section-intro__frame-container-inner
 	.frame-container-inner {
 		position: absolute;
@@ -40,11 +258,7 @@
 	// .section-intro__content
 	&__content {
 		margin: 0 2.5rem;
-		display: grid;
-		grid-template-columns: 60% auto;
 		position: relative;
-		z-index: 1;
-		gap: 4rem;
 
 		@include screen-1140 {
 			grid-template-columns: auto;
@@ -54,10 +268,31 @@
 	}
 
 	// .section-intro__column
-	&__column {
+	&__row {
+		position: relative;
 		display: flex;
-		flex-direction: column;
+		gap: 2rem;
 		width: 100%;
+
+		&:nth-child(1) {
+			background: linear-gradient(to right, transparent 30%, #bd997962);
+		}
+
+		&:nth-child(2) {
+			flex-direction: column;
+			z-index: 2;
+		}
+	}
+
+	// .section-intro__top-hr
+	&__top-hr {
+		width: 100%;
+		position: relative;
+		img {
+			// width: 200%;
+			height: 10%;
+			object-fit: cover;
+		}
 	}
 
 	// .section-intro__row
@@ -71,125 +306,27 @@
 		}
 	}
 
-	// .section-intro__title-wrapp
-	&__title-wrapp {
-		border-radius: 1rem;
-		padding-right: 3rem;
-		position: relative;
-		display: flex;
-		gap: 6rem;
-		justify-content: space-between;
-		background: linear-gradient(to right, transparent 30%, #bd997962);
-
-		.img-fon {
-			position: absolute;
-			display: inline-block;
-			transform: translateY(3px);
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 40%;
-			z-index: 999;
-			text-align: right;
-			background-image: linear-gradient(transparent, #ffffff 70%);
-
-			// .img-fon__image-title
-			&__image-title {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				font-size: 20px;
-				font-weight: 600;
-				line-height: 1;
-				padding-right: 4rem;
-				color: $font-color-link;
-			}
-		}
+	// .img-fon__image-title
+	&__image-title {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1;
+		padding-right: 4rem;
+		color: $font-color-link;
 	}
 
-	// .section-intro__foto
-	&__foto {
-		z-index: 12;
-		position: relative;
-		height: auto;
-		overflow: visible;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-
-		// opacity: 0.9;
-		img {
-			// max-width: 250px;
-			margin-top: -5rem;
-			width: 100%;
-			height: 350px;
-			object-fit: contain;
-		}
-	}
-
+	// .section-intro__foto-image
 	&__foto-image {
+		margin-top: -5rem;
 		position: relative;
 		flex: 1 1 auto;
-	}
-
-	// .section-intro__title
-	&__title {
-		position: relative;
-		z-index: 1;
-		display: inline-flex;
-		flex-direction: column;
-		padding: 4rem 0;
-		line-height: 1;
-
-		&._active {
-			h2 {
-				&::before {
-					background-position: 10% 0%;
-				}
-			}
-		}
-
-		h2 {
-			font: 84px $font-family-exclude;
-			font-weight: 400;
-			text-transform: uppercase;
-			transform: scale(1, 1.5);
-			line-height: 1 !important;
-			color: $font-color-link;
-			@extend .background-clip;
-			span {
-				white-space: nowrap;
-			}
-			&::before {
-				content: 'О Благочинии';
-			}
-
-			span {
-				color: $font-color-secondr;
-				text-shadow: $darkOutline;
-			}
-
-			@include minmax-490-1920 {
-				font-size: calc(34px + (64 - 34) * ((100vw - 490px) / (1920 - 490)));
-			}
-
-			@include screen-490 {
-				font-size: 34px;
-			}
-		}
-
-		> span {
-			margin: 2rem 2rem 2rem 2.5rem;
+		span {
 			display: inline-block;
-			font-size: 2rem;
-			text-align: right;
-			max-width: 44rem;
-			text-shadow: none;
-			background: linear-gradient(93.59deg, #bd9673 3.49%, #7d5e42 101.32%);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
+			color: #000;
+			width: 100%;
 		}
 	}
 
@@ -205,32 +342,6 @@
 		@include screen-690 {
 			grid-template-columns: auto;
 			gap: 4rem;
-		}
-	}
-
-	// .section-intro__text
-	&__text {
-		padding: 1rem;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		height: 100%;
-		z-index: 1;
-		font-family: $font-family-default;
-		text-shadow: none;
-		font-size: 2.2rem;
-		line-height: 135%;
-
-		P {
-			margin-bottom: 1rem;
-		}
-
-		@include minmax-320-1920 {
-			font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
-		}
-
-		@include screen-320 {
-			font-size: 16px;
 		}
 	}
 

@@ -57,24 +57,16 @@ $color-title: rgb(143, 242, 255);
 $text-selection: rgba(0, 84, 99, 0.247);
 $text-color-selection: rgb(155, 153, 153);
 //* ----------------------------------------------------------------------------
-$dark-Outline: rgb(16, 16, 56);
+$dark-Outline: rgb(20, 20, 20);
 $darkOutline:
-	$font-color-link 3px 3px 3px,
-	$font-color-link 0.540302px 0.841471px 0px,
-	$font-color-link -0.416147px 0.909297px 0px,
-	$font-color-link -0.989993px 0.14112px 0px,
-	$font-color-link -0.653644px -0.756803px 0px,
-	$font-color-link 0.283662px -0.958924px 0px,
-	$font-color-link 0.96017px -0.279416px 0px;
+	$dark-Outline 3px 3px 3px,
+	$dark-Outline 0.540302px 0.841471px 0px,
+	$dark-Outline -0.416147px 0.909297px 0px,
+	$dark-Outline -0.989993px 0.14112px 0px,
+	$dark-Outline -0.653644px -0.756803px 0px,
+	$dark-Outline 0.283662px -0.958924px 0px,
+	$dark-Outline 0.96017px -0.279416px 0px;
 
-// $darkOutline:
-// 	$neon-blue-dark 3px 3px 3px,
-// 	$neon-blue-dark 0.540302px 0.841471px 0px,
-// 	$neon-blue-dark -0.416147px 0.909297px 0px,
-// 	$neon-blue-dark -0.989993px 0.14112px 0px,
-// 	$neon-blue-dark -0.653644px -0.756803px 0px,
-// 	$neon-blue-dark 0.283662px -0.958924px 0px,
-// 	$neon-blue-dark 0.96017px -0.279416px 0px;
 :root {
 	//* --------------------------------------------------------------------------
 	--font-color-default: rgb(9, 9, 27);

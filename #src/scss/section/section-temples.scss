@@ -3,7 +3,10 @@
 .temples {
 	// .temples__body
 	&__body {
-		padding: 12rem 4rem 6rem;
+		padding: 6rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
 
 		@include screen-320 {
 			padding: 8rem 2rem 6rem;
@@ -12,58 +15,34 @@
 
 	// .temples__row
 	&__row {
-		padding: 4rem 2.6rem;
-
 		.temples__title {
 			margin-bottom: 4rem;
 		}
-
-		@include screen-1140 {
-			padding: 4rem 0;
+		&:not(:first-child) {
+			border-top: 1px solid $font-color-link;
 		}
-	}
-
-	.temples__title,
-	h3 {
-		@include screen-1140 {
-			margin-left: 0.5rem;
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+		}
+		&:first-child {
+			margin-bottom: 0;
 		}
 	}
 
 	// .temples__title
 	&__title {
-		margin-left: 2.5rem;
 		display: flex;
-		gap: 0.4rem;
 		align-items: center;
-
-		&._active {
-			h2 {
-				&::before {
-					background-position: 10% 0%;
-				}
-			}
-
-			h3 {
-				color: $font-color-default;
-				color: $font-color-link;
-				opacity: 1;
-			}
-		}
+		margin-top: -40px;
 
 		h2 {
 			font: 84px $font-family-exclude;
 			font-weight: 400;
 			text-transform: uppercase;
-			transform: scale(1, 1.5);
-			@extend .background-clip;
-
-			&::before {
-				content: 'Храмы';
-			}
+			transform: scale(1, 1.2);
 
 			span {
-				color: $font-color-secondr;
+				color: $font-color-link;
 				text-shadow: $darkOutline;
 			}
 
@@ -78,14 +57,19 @@
 
 		h3 {
 			text-shadow: $darkOutline;
-			margin-left: -2.5rem;
 			font-size: 4.6rem;
 			opacity: 0.8;
-			// -webkit-text-stroke: 1px turquoise;
 			transition:
 				color 0.4s,
 				opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 			color: $font-color-secondr;
+			color: $font-color-link;
+			opacity: 1;
+
+			span {
+				padding-right: 1rem;
+				background: $background;
+			}
 
 			@include minmax-320-1920 {
 				font-size: calc(20px + (46 - 20) * ((100vw - 320px) / (1920 - 320)));

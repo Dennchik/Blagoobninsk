@@ -11,19 +11,24 @@
 		opacity: 0 !important;
 	}
 }
-
+.hr {
+	img {
+		width: 100%;
+		height: 50px;
+	}
+}
 //* ----------------------------------------------------------------------------
 .return-button {
 	position: fixed;
 	z-index: 13;
 	top: 50%;
-	right: 0;
+	right: 5px;
 	margin-top: -17px;
 	width: 35px;
 	height: 35px;
 
 	i {
-		box-shadow: 0 0 7px black;
+		// box-shadow: 0 0 7px black;
 
 		&::before {
 			text-shadow: none;
@@ -37,12 +42,13 @@
 		z-index: 13;
 		left: 0;
 		width: 35px;
-		height: 35px;
+		height: 65px;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
-		color: $font-color-secondr;
-		border-radius: 50%;
-		background: $color;
+		color: $font-color-link;
+		border-radius: 4px;
+		background: transparent;
+		border: 1px solid $font-color-link;
 
 		&:hover {
 			animation: fadeInBackground;
