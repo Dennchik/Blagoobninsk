@@ -19,17 +19,21 @@
 }
 //* ----------------------------------------------------------------------------
 .return-button {
+	cursor: pointer;
 	position: fixed;
 	z-index: 13;
 	top: 50%;
 	right: 5px;
 	margin-top: -17px;
 	width: 35px;
-	height: 35px;
+	height: 65px;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 3px $font-color-link;
 
 	i {
-		// box-shadow: 0 0 7px black;
-
 		&::before {
 			text-shadow: none;
 			font-weight: 400;
@@ -38,17 +42,22 @@
 
 	._button {
 		font-size: 3.8rem;
-		position: absolute;
+		position: relative;
 		z-index: 13;
 		left: 0;
 		width: 35px;
-		height: 65px;
+		height: 35px;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
 		color: $font-color-link;
-		border-radius: 4px;
 		background: transparent;
-		border: 1px solid $font-color-link;
+		display: flex;
+		justify-content: center;
+		img {
+			width: 10px;
+			height: 100%;
+			// height: 35px;
+		}
 
 		&:hover {
 			animation: fadeInBackground;
@@ -56,7 +65,7 @@
 	}
 
 	&._rotate {
-		i {
+		._button {
 			scale: -1;
 		}
 	}
@@ -319,20 +328,16 @@
 }
 
 [class*=' _img'] {
+	pointer-events: none;
 	img {
 		position: relative;
 		top: 0;
 		left: 0;
 		width: 100%;
-		min-width: 100%;
+		height: 100%;
 		vertical-align: middle;
 		object-fit: cover;
 	}
 }
+
 //* ----------------------------------------------------------------------------
-canvas {
-	position: fixed;
-	top: 0;
-	left: 0;
-	opacity: 0;
-}

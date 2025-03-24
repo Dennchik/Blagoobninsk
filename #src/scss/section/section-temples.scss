@@ -1,12 +1,90 @@
 @use '../core/all' as *;
 
+.slide-temples {
+	width: calc(100% + 520px);
+	margin-left: -260px;
+	margin-right: -260px;
+	position: relative;
+
+	@include screen-1024 {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+
+	&__body {
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		overflow: hidden;
+		list-style: none;
+		padding: 0;
+		z-index: 1;
+	}
+
+	// .slide-temples__slide
+	&__slide {
+		position: relative;
+		z-index: 1;
+
+		&.swiper-slide-active {
+			z-index: 2;
+			.slide-temples__image {
+				transition: all 0.4s ease-in-out;
+				opacity: 1;
+			}
+		}
+	}
+
+	// .slide-temples___image
+	&__image {
+		transition: all 0.4s ease-in-out;
+		opacity: 0.3;
+		width: 100%;
+		height: 100%;
+		padding: 2rem;
+		border-radius: 5px;
+		overflow: hidden;
+
+		img {
+			display: block;
+			margin: auto;
+			object-fit: contain;
+			border-radius: 5px;
+
+			@include screen-1024 {
+				max-height: 400px;
+			}
+		}
+	}
+}
+
 .temples {
+	background: linear-gradient(
+		to left,
+		transparent 30%,
+		rgba(189, 153, 121, 0.3843137255)
+	);
+
+	&__bg-fon {
+		position: absolute;
+		z-index: 0;
+		display: inline-block;
+		transform: translateY(-20px);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 40%;
+		text-align: right;
+		background-image: linear-gradient($background, transparent 70%);
+	}
 	// .temples__body
 	&__body {
 		padding: 6rem 0;
 		display: flex;
 		flex-direction: column;
-		gap: 6rem;
+		overflow: hidden;
 
 		@include screen-320 {
 			padding: 8rem 2rem 6rem;
@@ -15,12 +93,6 @@
 
 	// .temples__row
 	&__row {
-		.temples__title {
-			margin-bottom: 4rem;
-		}
-		&:not(:first-child) {
-			border-top: 1px solid $font-color-link;
-		}
 		&:not(:last-child) {
 			margin-bottom: 6rem;
 		}
@@ -31,12 +103,25 @@
 
 	// .temples__title
 	&__title {
+		white-space: nowrap;
+		position: relative;
 		display: flex;
+		gap: 1rem;
 		align-items: center;
-		margin-top: -40px;
+		transform: translateY(45px);
+		&::after {
+			content: '';
+			// position: absolute;
+			transform: translateY(50%);
+			top: 50%;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background: $font-color-link;
+		}
 
 		h2 {
-			font: 84px $font-family-exclude;
+			font: 64px $font-family-exclude;
 			font-weight: 400;
 			text-transform: uppercase;
 			transform: scale(1, 1.2);
@@ -47,7 +132,7 @@
 			}
 
 			@include minmax-490-1920 {
-				font-size: calc(34px + (54 - 34) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(34px + (64 - 34) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
@@ -83,85 +168,59 @@
 
 	// .temples__content
 	&__content {
+		margin: 0 auto;
 		position: relative;
 		height: 100%;
 		align-items: center;
-		display: grid;
-		gap: 4rem;
-		grid-template-columns: 60% auto;
-
-		@include screen-1140 {
-			grid-template-columns: auto;
-			gap: 8rem;
-		}
 	}
 
 	// .temples__frame
-	&__frame {
-		margin: 0 25px;
-		position: relative;
-		align-items: center;
+	// &__frame {
+	// 	margin: 0 25px;
+	// 	position: relative;
+	// 	align-items: center;
 
-		strong {
-			line-height: 110%;
-		}
+	// 	strong {
+	// 		line-height: 110%;
+	// 	}
 
-		p {
-			a {
-				display: block;
-				transition: opacity 0.3s ease-in-out;
-				&:hover {
-					opacity: 0.5;
-				}
-			}
-		}
+	// 	p {
+	// 		a {
+	// 			display: block;
+	// 			transition: opacity 0.3s ease-in-out;
+	// 			&:hover {
+	// 				opacity: 0.5;
+	// 			}
+	// 		}
+	// 	}
 
-		&:not(:last-child) {
-			margin-bottom: 8rem;
-		}
+	// 	&:not(:last-child) {
+	// 		margin-bottom: 8rem;
+	// 	}
 
-		&:not(:first-child) {
-			flex: 1 1 100%;
-		}
+	// 	&:not(:first-child) {
+	// 		flex: 1 1 100%;
+	// 	}
 
-		.temples__image {
-			width: 100%;
-			margin-bottom: 2rem;
-			@include min-550 {
-				float: left;
-				max-width: 356px;
-				margin-right: 2rem;
-			}
-		}
+	// 	.temples__image {
+	// 		width: 100%;
+	// 		margin-bottom: 2rem;
+	// 		@include min-550 {
+	// 			float: left;
+	// 			max-width: 356px;
+	// 			margin-right: 2rem;
+	// 		}
+	// 	}
 
-		.frame-container-inner {
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-	}
-
-	// temples__frame--grid-row
-	// &__frame--grid-row {
-	// 	grid-row: 1 / 2;
-	// 	align-self: start;
+	// 	.frame-container-inner {
+	// 		position: absolute;
+	// 		z-index: -1;
+	// 		top: 0;
+	// 		left: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 	}
 	// }
-
-	// .temples__column
-	&__column {
-		position: relative;
-		height: 100%;
-
-		&:not(:first-child) {
-			display: flex;
-			flex-direction: column;
-			grid-template-columns: 1fr;
-			height: 100%;
-		}
-	}
 
 	// .temples__image
 	&__image {

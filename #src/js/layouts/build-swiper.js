@@ -20,13 +20,6 @@ export function buildSwiper() {
 				slide.appendChild(slide_wrapper);
 				slide.classList.add('swiper-build');
 			}
-			// if (slide.classList.contains('_gallery')) {
-			// slide.data('lightGallery').destroy(true);
-			// }
 		}
-		slides_build_callback();
-	}
-
-	function slides_build_callback() {
 	}
 }

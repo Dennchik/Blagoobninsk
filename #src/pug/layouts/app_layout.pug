@@ -52,8 +52,10 @@ html(lang="ru")
 							include ../chunks/menu-list
 					block aside-button
 						.return-button#scrollButton
-							+iconfont('angle-down', '_button')
-				//- block content-hidden
-				//- block burger-menu
-				//- 	include ../assets/burger-menu
-				//- include ../layouts/page-grid
+							._arrow._button
+								img(src="@@webRoot/img/frame/arrow.png" alt="")
+							//- +iconfont('angle-down', '_button')
+							//- block content-hidden
+							//- block burger-menu
+							//- 	include ../assets/burger-menu
+							//- include ../layouts/page-grid
