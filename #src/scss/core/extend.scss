@@ -27,11 +27,11 @@
 	width: 100%;
 	height: 100%;
 	border: 40px solid transparent;
-	border-image: url('../img/frame/border.png') 85 110;
+	// border-image: url('../img/frame/border.png') 85 110;
 	border-image-repeat: repeat;
 	@include screen-320 {
 		border: 20px solid transparent;
-		border-image: url('../img/frame/border.png') 85 110;
+		// border-image: url('../img/frame/border.png') 85 110;
 		border-image-repeat: repeat;
 	}
 }
@@ -41,7 +41,7 @@
 	border-image-repeat: stretch;
 	border-image-slice: 45;
 	border-image-outset: 25px;
-	border-image-source: url('../img/frame/note.png');
+	// border-image-source: url('../img/frame/note.png');
 	opacity: 0.2;
 }
 

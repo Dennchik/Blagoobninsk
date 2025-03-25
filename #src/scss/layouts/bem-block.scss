@@ -12,6 +12,9 @@
 	}
 }
 .hr {
+	display: flex;
+	justify-content: center;
+
 	img {
 		width: 100%;
 		height: 50px;
@@ -330,9 +333,6 @@
 [class*=' _img'] {
 	pointer-events: none;
 	img {
-		position: relative;
-		top: 0;
-		left: 0;
 		width: 100%;
 		height: 100%;
 		vertical-align: middle;
