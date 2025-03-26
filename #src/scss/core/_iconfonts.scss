@@ -25,6 +25,11 @@
 	font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-unlink {
+	&:before {
+		content: $icon-unlink;
+	}
+}
 .icon-krest {
 	&:before {
 		content: $icon-krest;
@@ -38,41 +43,6 @@
 .icon-arow-down {
 	&:before {
 		content: $icon-arow-down;
-	}
-}
-.icon-sun {
-	&:before {
-		content: $icon-sun;
-	}
-}
-.icon-snow {
-	&:before {
-		content: $icon-snow;
-	}
-}
-.icon-cycle {
-	&:before {
-		content: $icon-cycle;
-	}
-}
-.icon-arrow-left {
-	&:before {
-		content: $icon-arrow-left;
-	}
-}
-.icon-arrow-right {
-	&:before {
-		content: $icon-arrow-right;
-	}
-}
-.icon-hand-pointer {
-	&:before {
-		content: $icon-hand-pointer;
-	}
-}
-.icon-hand-peace {
-	&:before {
-		content: $icon-hand-peace;
 	}
 }
 .icon-angle-left {
@@ -95,34 +65,9 @@
 		content: $icon-angle-down;
 	}
 }
-.icon-hand-shake {
-	&:before {
-		content: $icon-hand-shake;
-	}
-}
 .icon-volume-control-phone {
 	&:before {
 		content: $icon-volume-control-phone;
-	}
-}
-.icon-youtube-logo {
-	&:before {
-		content: $icon-youtube-logo;
-	}
-}
-.icon-whatsapp {
-	&:before {
-		content: $icon-whatsapp;
-	}
-}
-.icon-vk-brand {
-	&:before {
-		content: $icon-vk-brand;
-	}
-}
-.icon-telegram-fly {
-	&:before {
-		content: $icon-telegram-fly;
 	}
 }
 .icon-plus {
@@ -138,26 +83,6 @@
 .icon-file-download {
 	&:before {
 		content: $icon-file-download;
-	}
-}
-.icon-volume-high {
-	&:before {
-		content: $icon-volume-high;
-	}
-}
-.icon-home {
-	&:before {
-		content: $icon-home;
-	}
-}
-.icon-phone-ringing {
-	&:before {
-		content: $icon-phone-ringing;
-	}
-}
-.icon-phone-hand {
-	&:before {
-		content: $icon-phone-hand;
 	}
 }
 .icon-angles-left-solid {
@@ -183,30 +108,5 @@
 .icon-contacts {
 	&:before {
 		content: $icon-contacts;
-	}
-}
-.icon-services {
-	&:before {
-		content: $icon-services;
-	}
-}
-.icon-git-hub-circle {
-	&:before {
-		content: $icon-git-hub-circle;
-	}
-}
-.icon-youtube {
-	&:before {
-		content: $icon-youtube;
-	}
-}
-.icon-location {
-	&:before {
-		content: $icon-location;
-	}
-}
-.icon-enve-mail {
-	&:before {
-		content: $icon-enve-mail;
 	}
 }

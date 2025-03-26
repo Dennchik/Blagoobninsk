@@ -1,3 +1,5 @@
+@use '../core/all' as *;
+
 .section-website {
 	// .section-website__slide-website
 	&__slide-website {
@@ -6,5 +8,28 @@
 	}
 	.slide__slide-column {
 		background: #f7f4f1;
+	}
+
+	.slide__item {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.slide__text {
+		flex: 1 1 auto;
+		height: 100%;
+		margin-bottom: 1.6rem;
+
+		span {
+			text-transform: capitalize;
+		}
+	}
+	.slide__link {
+		._icon {
+			margin-right: 1rem;
+		}
+		span {
+			color: $font-color-link;
+		}
 	}
 }
