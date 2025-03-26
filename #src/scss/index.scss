@@ -2,8 +2,10 @@
 @use 'section/section-performance';
 @use 'section/section-intro';
 @use 'section/section-temples';
+@use 'section/section-news';
+@use 'section/section-schedule';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/arrow';
-@use 'assets/swiper';
+@use 'assets/swiper-11.2.5.scss';
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/svg-mask';

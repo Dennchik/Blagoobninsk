@@ -41,7 +41,7 @@ $background: rgb(255, 255, 255);
 $background-color: rgba(226, 243, 255, 0.95);
 $background-color-transparent: rgba(19, 19, 22, 0.7);
 
-$color: rgb(9, 9, 27);
+$color: rgb(14, 14, 43);
 $color-secondary: rgb(51, 39, 100);
 $black-color: rgb(9, 9, 27);
 $blue-color-transparent: rgba(73, 87, 123, 0.404);
@@ -68,6 +68,7 @@ $darkOutline:
 	$dark-Outline 0.96017px -0.279416px 0px;
 
 :root {
+	--width: calc(0px + (260 - 0) * ((100vw - 320px) / (1024 - 320)));
 	//* --------------------------------------------------------------------------
 	--font-color-default: rgb(9, 9, 27);
 	--font-color-second: rgb(77, 91, 206);

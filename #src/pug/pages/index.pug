@@ -10,16 +10,18 @@ prepend script
 block title
 	- var text='Официальный сайт 3го благочиния города Обнинска'
 
-block main-content-sections 
+block main-content-items  
 	section.main-content__section#about 
 		include ../section/section-intro 
 	.hr 
 		img(src="@@webRoot/img/frame/hr.png" alt="")
-	section.main-content__section#temples 
-		include ../section/section-slide-temples 
 	section.main-content__section
-		//- include ../section/section-temples 
-	.hr 
+		include ../section/section-news
+	section.main-content__section 
+		include ../section/section-temples 
+	section.main-content__section  
+		include ../section/section-schedule 
+	//- .hr
 		img(src="@@webRoot/img/frame/hr.png" alt="")
 //- block content-hidden
 	include ../chunks/content-hidden

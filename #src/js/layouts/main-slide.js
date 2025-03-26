@@ -14,10 +14,8 @@ export function mainSlide(Slide) {
 			breakpoints: {
 				260: {
 					slidesPerView: 1,
+					spaceBetween: 10,
 				},
-				// 	// 	491: {
-				// 	// 		slidesPerView: 2,
-				// 	// 	},
 
 				1024: {
 					slidesPerView: 3,
@@ -26,7 +24,67 @@ export function mainSlide(Slide) {
 		});
 	}
 }
+export function newslide(Slide) {
+	if (Slide) {
+		new Swiper(Slide, {
+			speed: 800,
+			spaceBetween: 20,
+			loop: true,
+			grabCursor: true,
+			slidesPerView: 4,
+			centeredSlides: false,
+			// autoHeight: true,
+			breakpoints: {
+				260: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				490: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				691: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				1024: {
+					slidesPerView: 4,
+				}
+			}
+		});
+	}
+}
 
+export function scheduSlelide(Slide) {
+	if (Slide) {
+		new Swiper(Slide, {
+			speed: 800,
+			spaceBetween: 20,
+			loop: true,
+			grabCursor: true,
+			slidesPerView: 4,
+			centeredSlides: false,
+			// autoHeight: true,
+			breakpoints: {
+				260: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				490: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				691: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				1024: {
+					slidesPerView: 4,
+				}
+			}
+		});
+	}
+}
 // breakpoints: {
 // 	260: {
 // 		slidesPerView: 1,

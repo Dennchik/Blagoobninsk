@@ -1,44 +1,55 @@
 @use '../core/all' as *;
+.bg-grad {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: left;
 
+	background: linear-gradient(
+		to right,
+		transparent 30%,
+		rgba(189, 153, 121, 0.3843137255)
+	);
+}
 .slide-temples {
+	position: relative;
 	width: calc(100% + 520px);
 	margin-left: -260px;
 	margin-right: -260px;
-	position: relative;
 
 	@include screen-1024 {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
-		margin-bottom: 30px;
 	}
 
+	// .slide-temples__body
 	&__body {
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
 		list-style: none;
-		padding: 12rem 0;
 		z-index: 1;
 	}
 
 	.swiper-slide-prev {
-		transition: all 1.4s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 		transform: translateX(20px) !important;
 	}
 
 	.swiper-slide-next {
-		transition: all 1.4s ease-in-out;
+		transition: transform 0.7s ease-in-out;
 		transform: translateX(-20px) !important;
 	}
 
 	// .slide-temples__slide
 	&__slide {
-		position: relative;
 		z-index: 1;
-
+		justify-content: center;
 		&.swiper-slide-active {
-			z-index: 2;
+			z-index: 3;
 
 			.slide-temples__info {
 				transform: translateY(-20%);
@@ -48,7 +59,7 @@
 				opacity: 1;
 
 				@include min-1024 {
-					scale: 1.2;
+					scale: 1.1;
 				}
 			}
 		}
@@ -63,8 +74,16 @@
 		border-radius: 5px;
 		overflow: hidden;
 		transition:
-			opacity 0.4s,
+			opacity 0.7s,
 			scale 0.8s ease-in-out;
+
+		@include screen-1024 {
+			width: auto;
+		}
+
+		@include screen-320 {
+			width: calc(100% - 10px);
+		}
 
 		img {
 			display: block;
@@ -72,10 +91,7 @@
 			object-fit: contain;
 			border-radius: 8px;
 			overflow: hidden;
-
-			@include screen-1024 {
-				max-height: 400px;
-			}
+			max-height: 390px;
 		}
 	}
 
@@ -103,17 +119,29 @@
 		color: #ffffff;
 		transform: translateY(100%);
 		transition: transform 0.8s ease-in-out;
+
+		@extend .text-shadow;
+
+		@include minmax-320-1920 {
+			font-size: calc(12px + (32 - 12) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 12px;
+		}
 	}
 }
 
-.temples {
-	background: linear-gradient(
-		to right,
-		transparent 30%,
-		rgba(189, 153, 121, 0.3843137255)
-	);
+.section-temples {
+	position: relative;
 
-	// .temples__body
+	// .section-temples__title
+	&__title {
+		position: relative;
+		margin-bottom: 4rem;
+	}
+
+	// .section-temples__body
 	&__body {
 		padding: 6rem 0;
 		display: flex;
@@ -125,90 +153,15 @@
 		}
 	}
 
-	// .temples__row
-	&__row {
-		&:not(:last-child) {
-			margin-bottom: 6rem;
-		}
-		&:first-child {
-			margin-bottom: 0;
-		}
-	}
-
-	// .temples__title
-	&__title {
-		white-space: nowrap;
-		position: relative;
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		transform: translateY(45px);
-		&::after {
-			content: '';
-			// position: absolute;
-			transform: translateY(50%);
-			top: 50%;
-			left: 0;
-			height: 1px;
-			width: 100%;
-			background: $font-color-link;
-		}
-
-		h2 {
-			font: 64px $font-family-exclude;
-			font-weight: 400;
-			text-transform: uppercase;
-			transform: scale(1, 1.2);
-
-			span {
-				color: $font-color-link;
-				text-shadow: $darkOutline;
-			}
-
-			@include minmax-490-1920 {
-				font-size: calc(34px + (64 - 34) * ((100vw - 490px) / (1920 - 490)));
-			}
-
-			@include screen-490 {
-				font-size: 34px;
-			}
-		}
-
-		h3 {
-			text-shadow: $darkOutline;
-			font-size: 4.6rem;
-			opacity: 0.8;
-			transition:
-				color 0.4s,
-				opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-			color: $font-color-secondr;
-			color: $font-color-link;
-			opacity: 1;
-
-			span {
-				padding-right: 1rem;
-				background: $background;
-			}
-
-			@include minmax-320-1920 {
-				font-size: calc(20px + (46 - 20) * ((100vw - 320px) / (1920 - 320)));
-			}
-
-			@include screen-320 {
-				font-size: 20px;
-			}
-		}
-	}
-
-	// .temples__content
+	// .section-temples__content
 	&__content {
-		margin: 0 auto;
+		margin: 0;
 		position: relative;
 		height: 100%;
 		align-items: center;
 	}
 
-	// .temples__image
+	// .section-temples__image
 	&__image {
 		align-self: center;
 		position: relative;
@@ -216,7 +169,7 @@
 		width: auto;
 	}
 
-	// .temples__info
+	// .section-temples__info
 	&__info {
 		position: relative;
 		z-index: 1;
@@ -230,7 +183,7 @@
 		}
 	}
 
-	// .temples__text
+	// .section-temples__text
 	&__text {
 		font-size: 2.2rem;
 		text-shadow: none;

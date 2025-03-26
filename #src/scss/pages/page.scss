@@ -50,13 +50,13 @@
 	}
 
 	// .main-content__sections-content
-	&__sections-content {
+	&__items {
+		padding-top: 6rem;
 		position: relative;
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		// background: $background;
 		background: rgb(255, 255, 255);
 	}
 
@@ -74,20 +74,7 @@
 		z-index: 1;
 		width: 100%;
 		height: 100%;
-		background-color: $black-color;
-
-		&::before {
-			content: '';
-			position: absolute;
-			z-index: 0;
-			height: 100%;
-			width: 100%;
-			background-size: 111% 200%;
-			background-position: 0 0;
-			@extend .gradient-footer;
-			box-shadow: 0 -7px 10px $black-color;
-			backdrop-filter: blur(22px);
-		}
+		@extend .gradient-footer;
 	}
 }
 

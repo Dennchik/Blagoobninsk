@@ -1,0 +1,79 @@
+@use '../core/all' as *;
+
+.section-schedule {
+	// .section-schedule__title
+	&__title {
+		margin-bottom: 4rem;
+	}
+
+	// .section-schedule__slide-schedule
+	&__slide-schedule {
+		padding: 4rem 0;
+	}
+}
+.syllabus__item.swiper-slide {
+	height: auto;
+}
+.slide {
+	.slide__body &__body {
+		height: 100%;
+	}
+
+	// .slide__column
+	&__column {
+		padding: 3rem 2rem;
+		border-radius: 8px;
+		background: #e6d9cc;
+		flex-direction: column;
+
+		&.title-red {
+			color: red;
+		}
+	}
+
+	// .slide__title
+	&__title {
+		span {
+			display: block;
+			color: $font-color-link;
+		}
+	}
+
+	// .slide__content-slide
+	&__content-slide {
+		flex: 1 1 auto;
+		height: 100%;
+	}
+
+	// .slide__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	// .slide__text
+	&__text {
+		line-height: 1.1;
+		p {
+			text-transform: uppercase;
+			line-height: 1.1;
+		}
+	}
+
+	// .slide__time
+	&__time {
+		line-height: 1.1;
+		display: flex;
+		gap: 1rem;
+		color: $color;
+		span {
+			display: block;
+			line-height: 1.1;
+		}
+	}
+}
+//* ----------------------------------------------------------------------------
+.syllabus__item {
+	border: 1px solid red;
+}

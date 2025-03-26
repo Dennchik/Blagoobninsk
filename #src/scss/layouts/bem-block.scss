@@ -11,13 +11,76 @@
 		opacity: 0 !important;
 	}
 }
-.hr {
-	display: flex;
-	justify-content: center;
+//* ----------------------------------------------------------------------------
 
-	img {
-		width: 100%;
-		height: 50px;
+.title {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+
+	h2 {
+		font: 44px $font-family-exclude;
+		font-weight: 400;
+		text-transform: uppercase;
+		transform: scale(1, 1.2);
+		line-height: 1 !important;
+		text-shadow: $darkOutline;
+		color: $font-color-link;
+
+		span {
+			white-space: nowrap;
+		}
+
+		@include minmax-320-1920 {
+			font-size: calc(24px + (44 - 24) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 24px;
+		}
+	}
+
+	// .blagochinie__text
+	&__text {
+		padding: 2rem 0 0 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		flex-wrap: wrap;
+		height: 100%;
+		z-index: 1;
+		font-family: $font-family-default;
+		text-shadow: none;
+		font-size: 2.2rem;
+		line-height: 135%;
+
+		P {
+			margin-bottom: 1rem;
+		}
+
+		span {
+			display: inline-block;
+			font-size: 2rem;
+			text-align: left;
+			text-shadow: none;
+			line-height: 1.1;
+			color: $font-color-link;
+			background-clip: text;
+			// -webkit-text-fill-color: transparent;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		@include minmax-320-1920 {
+			font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include screen-320 {
+			font-size: 16px;
+		}
 	}
 }
 //* ----------------------------------------------------------------------------
@@ -172,8 +235,6 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 100%;
-		height: 100%;
 		object-fit: cover;
 	}
 
@@ -333,8 +394,6 @@
 [class*=' _img'] {
 	pointer-events: none;
 	img {
-		width: 100%;
-		height: 100%;
 		vertical-align: middle;
 		object-fit: cover;
 	}

@@ -53,6 +53,11 @@
 			}
 		}
 
+		&:nth-child(2) {
+			border-left: 1px solid $color;
+			padding-left: 2rem;
+		}
+
 		&:nth-child(2),
 		&:nth-child(3) {
 			justify-self: end;
@@ -62,18 +67,17 @@
 
 	// .footer__title
 	&__title {
-		// margin-left: -8rem;
 		width: max-content;
 		width: 100%;
 		text-transform: uppercase;
-		color: gray;
+		color: $background-color;
 		font-size: 86px;
 		font-family: $font-family-exclude;
 		text-transform: uppercase;
 		line-height: 0.6;
 		text-shadow:
-			0 0 15px #000,
-			0 0 1em #000,
+			0 0 15px #00000094,
+			0 0 1em #00000073,
 			0 0 0.2em $color-secondary;
 
 		@include minmax-490-1920 {
@@ -102,10 +106,14 @@
 	// .footer__text
 	&__text {
 		font-size: 20px;
-		color: gray;
+		color: $color;
+		text-shadow: 0 0 2px #0000004b;
 
 		span {
 			white-space: nowrap;
+		}
+		p {
+			font-weight: normal;
 		}
 
 		@include minmax-320-1920 {
@@ -114,9 +122,6 @@
 
 		@include screen-375 {
 			font-size: 14px;
-			p {
-				// text-align: right;
-			}
 		}
 	}
 
