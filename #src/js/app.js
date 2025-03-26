@@ -5,10 +5,10 @@ import {
 parallaxEvans();
 import { buildSwiper } from './layouts/build-swiper.js';
 buildSwiper();
-import { mainSlide, newslide, scheduSlelide } from './layouts/main-slide.js';
+import { mainSlide, newslide, swiperSlelide } from './layouts/main-slide.js';
 mainSlide('.slide-temples__body');
 newslide('.news-slide'),
-	scheduSlelide('.schedule-slide'),
+	swiperSlelide('.slide-swiper'),
 	//* ----------------------------------------------------------------------------
 	document.addEventListener('DOMContentLoaded', () => {
 		const isMobile = /Mobi|Android/i.test(navigator.userAgent);

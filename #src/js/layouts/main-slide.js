@@ -37,15 +37,12 @@ export function newslide(Slide) {
 			breakpoints: {
 				260: {
 					slidesPerView: 1,
-					spaceBetween: 10,
 				},
 				490: {
 					slidesPerView: 2,
-					spaceBetween: 10,
 				},
 				691: {
 					slidesPerView: 3,
-					spaceBetween: 10,
 				},
 				1024: {
 					slidesPerView: 4,
@@ -55,7 +52,7 @@ export function newslide(Slide) {
 	}
 }
 
-export function scheduSlelide(Slide) {
+export function swiperSlelide(Slide) {
 	if (Slide) {
 		new Swiper(Slide, {
 			speed: 800,
