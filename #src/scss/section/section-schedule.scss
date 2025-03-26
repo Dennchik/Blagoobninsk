@@ -98,7 +98,11 @@
 
 	// .slide__text
 	&__text {
+		> span {
+			text-transform: uppercase;
+		}
 		p {
+			margin-bottom: 1.6rem;
 			text-transform: uppercase;
 			line-height: 1.1;
 		}

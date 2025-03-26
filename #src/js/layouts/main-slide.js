@@ -59,7 +59,7 @@ export function swiperSlelide(Slide) {
 			spaceBetween: 20,
 			loop: true,
 			grabCursor: true,
-			slidesPerView: 4,
+			slidesPerView: 5,
 			centeredSlides: false,
 			// autoHeight: true,
 			breakpoints: {
@@ -75,8 +75,12 @@ export function swiperSlelide(Slide) {
 					slidesPerView: 3,
 					spaceBetween: 10,
 				},
-				1024: {
+				1241: {
 					slidesPerView: 4,
+					spaceBetween: 10,
+				},
+				1640: {
+					slidesPerView: 5,
 				}
 			}
 		});
