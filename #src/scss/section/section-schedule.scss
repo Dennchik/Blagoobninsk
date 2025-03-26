@@ -77,6 +77,7 @@
 
 	// .slide__title
 	&__title {
+		user-select: none;
 		span {
 			display: block;
 			color: $font-color-link;
