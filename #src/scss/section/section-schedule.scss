@@ -8,23 +8,27 @@
 
 	// .section-schedule__slide-schedule
 	&__slide-schedule {
-		padding: 4rem 0;
+		padding: 4rem 1rem;
+		overflow: hidden;
 	}
 }
-.syllabus__item.swiper-slide {
-	height: auto;
-}
+
 .slide {
-	.slide__body &__body {
+	// .slide__body
+
+	&__body {
 		height: 100%;
 	}
 
 	// .slide__column
-	&__column {
+	&__slide-column {
+		flex-direction: column;
+		line-height: 1.2;
 		padding: 3rem 2rem;
 		border-radius: 8px;
 		background: #e6d9cc;
-		flex-direction: column;
+		height: auto;
+		box-shadow: 0 0 7px #0000005e;
 
 		&.title-red {
 			color: red;
@@ -54,7 +58,6 @@
 
 	// .slide__text
 	&__text {
-		line-height: 1.1;
 		p {
 			text-transform: uppercase;
 			line-height: 1.1;
@@ -63,13 +66,13 @@
 
 	// .slide__time
 	&__time {
-		line-height: 1.1;
 		display: flex;
 		gap: 1rem;
 		color: $color;
+
 		span {
-			display: block;
-			line-height: 1.1;
+			display: flex;
+			align-items: center;
 		}
 	}
 }

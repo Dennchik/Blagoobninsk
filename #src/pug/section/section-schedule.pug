@@ -1,19 +1,21 @@
-.section-schedule#schedule.p-box
-	._container 
+.section-schedule#schedule
+	._container.p-box  
+		.bg-top
+		.bg-grad
 		hgroup.title.tl-02._title 
 			h2 
 				span Расписание богослужений в храмах благочиния
 		.hr 
 			img(src="@@webRoot/img/frame/hr.png" alt="") 
 		.slide._slide-schedule
-			._body.schedule-slide._swiper.swiper  
-				._column.syllabus__item
+			._body.schedule-slide._swiper  
+				._slide-column 
 					._title
 						strong Понедельник
 						span 27 марта 2025
 					.hr 
 						img(src="@@webRoot/img/frame/hr.png" alt="") 
-					.syllabus-item__text.syllabus-text
+					._content-slide
 						._item 
 							._text 
 								p 
@@ -27,9 +29,8 @@
 								p Вечер 
 							._time 
 								span 09.00
-								span Великое повечерие, утреня.
-
-				._column.syllabus__item
+								span Великое повечерие, утреня. 
+				._slide-column
 					._title
 						strong Вторник
 						span 27 марта 2025
@@ -50,7 +51,7 @@
 							._time 
 								span 09.00
 								span Исповедь, литургия Преждеосвященных Даров.
-				._column.syllabus__item
+				._slide-column 
 					._title
 						strong Среда
 						span 27 марта 2025
@@ -71,7 +72,7 @@
 							._time 
 								span 09.00
 								span Исповедь, литургия Преждеосвященных Даров.
-				._column.syllabus__item
+				._slide-column 
 					._title
 						strong Четверг
 						span 27 марта 2025
@@ -92,7 +93,7 @@
 							._time 
 								span 09.00
 								span Исповедь, литургия Преждеосвященных Даров.
-				._column.syllabus__item
+				._slide-column 
 					._title
 						strong Пятница
 						span 27 марта 2025
@@ -113,7 +114,7 @@
 							._time 
 								span 09.00
 								span Великое повечерие, утреня.
-				._column.syllabus__item
+				._slide-column 
 					._title
 						strong Суббота
 						span 27 марта 2025
@@ -134,7 +135,7 @@
 							._time 
 								span 09.00
 								span Исповедь, литургия Преждеосвященных Даров.
-				._column.syllabus__item
+				._slide-column.title-red  
 					._title
 						strong Воскресенье
 						span 27 марта 2025

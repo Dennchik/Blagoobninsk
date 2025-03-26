@@ -8,15 +8,14 @@
 
 	// .section-news__slide-news
 	&__slide-news {
-		padding: 4rem 0;
+		padding: 4rem 1rem;
+		overflow: hidden;
 	}
 }
 
 .slide {
 	// .slide__body
 	&__body {
-		overflow: hidden;
-		flex: 1 1 auto;
 		height: 100%;
 	}
 
@@ -30,7 +29,6 @@
 	// .slide__column
 	&__column {
 		flex-direction: column;
-		// height: 100% !important;
 	}
 
 	// .slide__image

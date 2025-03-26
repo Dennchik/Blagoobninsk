@@ -2,7 +2,6 @@
 @use 'core/all.scss' as *;
 // todo --------------------------- Modules ------------------------------------
 @use 'modules/preloader';
-// @use 'modules/parallax';
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 // @use 'assets/burger-menu';
@@ -39,6 +38,7 @@
 }
 
 [class*='_container'] {
+	position: relative;
 	max-width: $maxWidth;
 	box-sizing: content-box;
 	margin: 0 auto;
@@ -46,6 +46,38 @@
 
 	@include screen-1140 {
 		padding: 0 2rem;
+	}
+}
+[class*=' _img'] {
+	pointer-events: none;
+	img {
+		vertical-align: middle;
+		object-fit: cover;
+	}
+}
+
+[class*='_ibg'] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		object-fit: cover;
+	}
+
+	svg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
