@@ -42,7 +42,7 @@ $background-color: rgba(226, 243, 255, 0.95);
 $background-color-transparent: rgba(19, 19, 22, 0.7);
 
 $color: rgb(14, 14, 43);
-$color-secondary: rgb(51, 39, 100);
+$color-secondary: #503c2a;
 $black-color: rgb(9, 9, 27);
 $blue-color-transparent: rgba(73, 87, 123, 0.404);
 $gray: gray;
@@ -57,9 +57,17 @@ $color-title: rgb(143, 242, 255);
 $text-selection: rgba(0, 84, 99, 0.247);
 $text-color-selection: rgb(155, 153, 153);
 //* ----------------------------------------------------------------------------
-$dark-Outline: rgb(20, 20, 20);
+$dark-Outline: #8b8177;
+$darkOutlineThin:
+	$dark-Outline 0px 0px 0px,
+	$dark-Outline 0.540302px 0.841471px 0px,
+	$dark-Outline -0.416147px 0.909297px 0px,
+	$dark-Outline -0.989993px 0.14112px 0px,
+	$dark-Outline -0.653644px -0.756803px 0px,
+	$dark-Outline 0.283662px -0.958924px 0px,
+	$dark-Outline 0.96017px -0.279416px 0px;
 $darkOutline:
-	$dark-Outline 3px 3px 3px,
+	$dark-Outline 2px 2px 3px,
 	$dark-Outline 0.540302px 0.841471px 0px,
 	$dark-Outline -0.416147px 0.909297px 0px,
 	$dark-Outline -0.989993px 0.14112px 0px,

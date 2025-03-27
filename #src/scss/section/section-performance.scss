@@ -3,6 +3,14 @@
 .performance {
 	position: relative;
 
+	&__bg {
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100vh;
+		min-height: 100%;
+		background: linear-gradient(#e5cfbd 60%, #fff);
+	}
 	// .performance__icon-svg
 	&__icon-svg {
 		transform: translateY(-5px);
@@ -44,8 +52,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: end;
+
 		hgroup {
-			@extend .text-shadow;
+			text-shadow: $darkOutline;
+			color: $color;
 		}
 	}
 
@@ -65,14 +75,13 @@
 				&:nth-child(1) {
 					padding-right: 3rem;
 					display: flex;
-					@extend .text-shadow;
+					text-shadow: $darkOutline;
 
 					p {
 						font-size: 62px;
 						font-weight: 700;
 						line-height: 100%;
 						text-transform: uppercase;
-						@extend .text-shadow;
 
 						@include minmax-490-1920 {
 							font-size: calc(
@@ -170,10 +179,11 @@
 			align-items: end;
 			letter-spacing: -2px;
 			font: 96px $font-family-exclude;
+			line-height: 1;
 			transform: scaleY(1.5);
 
 			@include minmax-490-1920 {
-				font-size: calc(48px + (96 - 38) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(39px + (96 - 39) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
@@ -188,10 +198,6 @@
 				font-size: 3.4rem;
 				font-weight: 900;
 				line-height: 1;
-			}
-
-			.month {
-				margin-bottom: 1rem;
 			}
 
 			.status {

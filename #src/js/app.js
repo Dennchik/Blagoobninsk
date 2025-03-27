@@ -1,8 +1,11 @@
 import {
-	cassieEvans, tlRotateIcon, applyParallax, parallaxEvans
+	// cassieEvans,
+	tlRotateIcon,
+	// applyParallax,
+	// parallaxEvans
 } from './animations/animations.jsx';
 
-parallaxEvans();
+// parallaxEvans();
 import { buildSwiper } from './layouts/build-swiper.js';
 buildSwiper();
 import { mainSlide, newslide, swiperSlelide } from './layouts/main-slide.js';
@@ -15,12 +18,12 @@ newslide('.news-slide'),
 		const bgSection = document.querySelector('.bg-section');
 		const parallax = document.querySelector('.parallax');
 		if (!isMobile) {
-			cassieEvans();
+			// cassieEvans();
 			bgSection.style.display = 'none';
 		} else {
 			parallax.style.display = 'none';
 			bgSection.style.display = 'block';
-			applyParallax('.bg-section');
+			// applyParallax('.bg-section');
 		}
 
 		setTimeout(() => {

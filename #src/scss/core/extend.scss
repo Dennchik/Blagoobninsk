@@ -97,7 +97,7 @@
 }
 
 .box-shadow {
-	box-shadow: 0 1px 10px #020101;
+	box-shadow: 0 1px 7px #a08973;
 	backdrop-filter: blur(10px);
 }
 //* ----------------------------------------------------------------------------
@@ -112,14 +112,7 @@
 		#9a7a5f 75%
 	);
 }
-// .gradient-header {
-// 	background-image: linear-gradient(
-// 		-40deg,
-// 		#04040e,
-// 		rgb(43 55 73) 65%,
-// 		rgb(9, 9, 27) 75%
-// 	);
-// }
+
 .gradient-footer {
 	background-image: linear-gradient(
 		-40deg,
@@ -128,14 +121,7 @@
 		#9a7a5f 75%
 	);
 }
-// .gradient-footer {
-// 	background-image: linear-gradient(
-// 		-40deg,
-// 		#04040e 35%,
-// 		#2b3749 80%,
-// 		#09091b 75%
-// 	);
-// }
+
 .font-size-calc-h2 {
 	@include minmax-490-1920 {
 		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));

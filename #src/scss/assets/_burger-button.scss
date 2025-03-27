@@ -6,7 +6,7 @@
 	&__line {
 		width: 40px;
 		height: 4px;
-		background-color: $font-color-default;
+		background-color: $color-secondary;
 		display: block;
 		margin: 6px auto;
 		transition: all 0.3s ease-in-out;
@@ -14,7 +14,7 @@
 
 	&.is-active {
 		.hamburger__line {
-			background-color: $font-color-link;
+			background-color: $color-secondary;
 			&:nth-child(1) {
 				transform: translateY(10px);
 			}

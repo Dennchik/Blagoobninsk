@@ -75,10 +75,7 @@
 		font-family: $font-family-exclude;
 		text-transform: uppercase;
 		line-height: 0.6;
-		text-shadow:
-			0 0 15px #00000094,
-			0 0 1em #00000073,
-			0 0 0.2em $color-secondary;
+		text-shadow: $darkOutline;
 
 		@include minmax-490-1920 {
 			font-size: calc(39px + (86 - 39) * ((100vw - 490px) / (1920 - 490)));
