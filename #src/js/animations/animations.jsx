@@ -18,7 +18,7 @@ ScrollTrigger.config({ ignoreMobileResize: true });
 const smoother = ScrollSmoother.create({
 	wrapper: '#wrapper',
 	content: '#content',
-	speed: .8,
+	speed: 1,
 	smooth: 1.5,
 	effects: true,
 	smoothTouch: 0.1,

@@ -167,9 +167,7 @@
 
 	// .contacts__item
 	&__item {
-		color: #fff;
 		margin-top: 1rem;
-		// font-family: $font-family-exclude;
 		font-size: 32px;
 
 		@include minmax-320-1920 {
@@ -183,12 +181,10 @@
 
 	// .contacts__link
 	&__link {
-		color: #fff;
 		@extend .link_split;
 		&::before,
 		&::after {
-			color: #fff;
-			@extend .text-shadow;
+			color: $font-color-default;
 		}
 	}
 }

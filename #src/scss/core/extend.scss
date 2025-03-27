@@ -100,13 +100,16 @@
 	box-shadow: 0 1px 10px #020101;
 	backdrop-filter: blur(10px);
 }
-
+//* ----------------------------------------------------------------------------
+.gradient-button {
+	background: linear-gradient(90.61deg, #c9a885 6.02%, #9a7a5f 99.53%);
+}
 .gradient-header {
 	background-image: linear-gradient(
 		-40deg,
-		#133779bd,
-		#4c99eb57 65%,
-		#133779bd 75%
+		#9a7a5f 20%,
+		#9a7a5f6e 45%,
+		#9a7a5f 75%
 	);
 }
 // .gradient-header {
@@ -120,9 +123,9 @@
 .gradient-footer {
 	background-image: linear-gradient(
 		-40deg,
-		#133779bd,
-		#4c99eb57 25%,
-		#133779bd 75%
+		#9a7a5f 10%,
+		#9a7a5f6e 45%,
+		#9a7a5f 75%
 	);
 }
 // .gradient-footer {
@@ -147,12 +150,17 @@
 	}
 }
 .hr {
+	position: relative;
+	z-index: 9;
+	width: 100%;
+	max-height: 50px;
 	display: flex;
 	justify-content: center;
 
 	img {
-		width: 100%;
+		max-width: 465px;
 		height: 50px;
+		object-fit: contain;
 	}
 }
 

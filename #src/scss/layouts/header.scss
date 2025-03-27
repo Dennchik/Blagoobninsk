@@ -8,27 +8,14 @@
 	display: flex;
 	align-items: center;
 	text-shadow: none;
-	color: $font-color-link;
+	color: $font-color-default;
 	font-family: $font-family-exclude;
-
+	font-weight: 600;
+	font-size: 1.6rem;
 	&.with-border {
-		color: $font-color-secondr;
-		.hamburger__line {
-			background: $font-color-secondr;
-		}
-
 		.header__text {
 			span {
-				color: rgb(226, 226, 255);
 				font-weight: 400;
-			}
-		}
-
-		.header__link-key {
-			&::before,
-			&::after {
-				color: $font-color-secondr;
-				@extend .text-shadow;
 			}
 		}
 
@@ -125,18 +112,19 @@
 
 	// .header__logo
 	&__logo {
-		width: 50px;
-		height: 50px;
+		width: 70px;
+		height: 100%;
 		clip-path: circle(50% at 50% 50%);
+
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: none;
+		}
 
 		@include screen-690 {
 			width: 40px;
-			height: 40px;
-			img {
-				width: 40px;
-				height: 40px;
-				max-width: none;
-			}
+			height: 4100%;
 		}
 	}
 
@@ -153,12 +141,8 @@
 			z-index: -1;
 
 			font: {
-				size: 1.8rem;
+				size: 1.6rem;
 				weight: 600;
-			}
-
-			@include screen-960 {
-				font-size: 1.8rem;
 			}
 
 			@include screen-425 {
@@ -202,16 +186,14 @@
 	&__link-key {
 		font-weight: 300;
 		font-size: 1.6rem;
-		color: $font-color-link;
 		text-shadow: none;
 
-		&::before,
-		&::after {
-			transition: all 0.3s ease-in-out !important;
-			color: $font-color-link;
-			text-shadow: none;
-			opacity: 0;
-		}
+		// &::before,
+		// &::after {
+		// 	transition: all 0.3s ease-in-out !important;
+		// 	text-shadow: none;
+		// 	opacity: 0;
+		// }
 	}
 }
 
