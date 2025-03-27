@@ -36,11 +36,9 @@ html(lang="ru")
 								img(src="@@webRoot/img/parallax/pic-01.png" alt="image")
 						.main-content#wrapper
 							._content#content
-								section._section
-									include ../section/section-performance
-								._items.move-time
-									//- .frame-container 
-									block main-content-items
+								block main-content 
+								//- ._items.move-time 
+								block main-content-items
 								footer._footer
 									block footer 
 										include footer 

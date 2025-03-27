@@ -1,7 +1,8 @@
 @use '../core/all' as *;
 
 .performance {
-	// .performance__bg
+	position: relative;
+
 	&__bg {
 		position: absolute;
 		z-index: 0;
@@ -9,6 +10,27 @@
 		height: 100vh;
 		min-height: 100%;
 		background: linear-gradient(#e6d9cd 60%, #fff);
+	}
+
+	// .performance__icon-svg
+	&__icon-svg {
+		transform: translateY(-5px);
+		vertical-align: middle;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		filter: drop-shadow(2px 2px 3px rgb(0, 0, 0));
+		._icon {
+			&::before {
+				font-size: 134px;
+				@include minmax-320-1920 {
+					font-size: calc(44px + (134 - 44) * ((100vw - 320px) / (1920 - 320)));
+				}
+				@include screen-320 {
+					font-size: 50px;
+				}
+			}
+		}
 	}
 
 	// .performance__body
@@ -31,6 +53,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: end;
+
+		hgroup {
+			// text-shadow: $darkOutline;
+			// color: $color;
+		}
 	}
 
 	// .performance__row
@@ -113,17 +140,14 @@
 	// .performance__column
 	&__column {
 		font-family: $font-family-exclude;
-		line-height: 0.7;
 
-		h1 {
+		h2 {
 			width: auto;
 			font-size: 96px;
 			font-weight: 400;
 			font-family: $font-family-exclude;
 			text-transform: uppercase;
 			line-height: 0.7 !important;
-			text-shadow: $darkOutline;
-			color: $font-color-link;
 
 			@include minmax-490-1920 {
 				font-size: calc(35px + (96 - 35) * ((100vw - 490px) / (1920 - 490)));
@@ -142,15 +166,12 @@
 		}
 	}
 
-	// .performance__icon
-	&__icon {
-	}
-
 	// .performance__date
 	&__date {
 		display: flex;
 		align-items: flex-end;
 		gap: 1.6rem;
+		opacity: 0.7;
 		margin-left: 1.6rem;
 
 		.day {
