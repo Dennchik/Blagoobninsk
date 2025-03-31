@@ -101,7 +101,7 @@ export function swiperPerform(Slide) {
 			// },
 			autoHeight: true,
 			pagination: {
-				el: '.blog-slider__pagination',
+				el: '.perform-slide__pagination',
 				clickable: true,
 			}
 		});
