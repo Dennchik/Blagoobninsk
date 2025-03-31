@@ -87,14 +87,15 @@ export function swiperSlelide(Slide) {
 export function swiperPerform(Slide) {
 	if (Slide) {
 		new Swiper(Slide, {
+			speed: 800,
 			spaceBetween: 120,
-
+			effect: 'fade',
 			grabCursor: true,
-			loop: true,
-			slidesPerView: 1,
+			// loop: true,
+			// slidesPerView: 1,
 			// autoplay: {
-			// delay: 1500,
-			// disableOnInteraction: true,
+			// 	delay: 1500,
+			// 	disableOnInteraction: true,
 			// },
 			// mousewheel: {
 			// 	invert: false,
@@ -103,7 +104,11 @@ export function swiperPerform(Slide) {
 			pagination: {
 				el: '.perform-slide__pagination',
 				clickable: true,
-			}
+			},
+			navigation: {
+				nextEl: '.navigation__button-next',
+				prevEl: '.navigation__button-prev ',
+			},
 		});
 	}
 }
