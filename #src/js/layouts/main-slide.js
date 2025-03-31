@@ -38,13 +38,13 @@ export function newslide(Slide) {
 				260: {
 					slidesPerView: 1,
 				},
-				490: {
+				540: {
 					slidesPerView: 2,
 				},
-				691: {
+				960: {
 					slidesPerView: 3,
 				},
-				1024: {
+				1440: {
 					slidesPerView: 4,
 				}
 			}
@@ -57,7 +57,7 @@ export function swiperSlelide(Slide) {
 		new Swiper(Slide, {
 			speed: 800,
 			spaceBetween: 20,
-			loop: true,
+			// loop: true,
 			grabCursor: true,
 			slidesPerView: 5,
 			centeredSlides: false,
@@ -69,15 +69,12 @@ export function swiperSlelide(Slide) {
 				},
 				490: {
 					slidesPerView: 2,
-					spaceBetween: 10,
 				},
 				691: {
 					slidesPerView: 3,
-					spaceBetween: 10,
 				},
 				1241: {
 					slidesPerView: 4,
-					spaceBetween: 10,
 				},
 				1640: {
 					slidesPerView: 5,
@@ -86,15 +83,27 @@ export function swiperSlelide(Slide) {
 		});
 	}
 }
-// breakpoints: {
-// 	260: {
-// 		slidesPerView: 1,
-// 				},
-// 	491: {
-// 		slidesPerView: 2,
-// 				},
 
-// 	1440: {
-// 		slidesPerView: 3,
-// 				}
-// }
+export function swiperPerform(Slide) {
+	if (Slide) {
+		new Swiper(Slide, {
+			spaceBetween: 120,
+
+			grabCursor: true,
+			loop: true,
+			slidesPerView: 1,
+			// autoplay: {
+			// delay: 1500,
+			// disableOnInteraction: true,
+			// },
+			// mousewheel: {
+			// 	invert: false,
+			// },
+			autoHeight: true,
+			pagination: {
+				el: '.blog-slider__pagination',
+				clickable: true,
+			}
+		});
+	}
+}

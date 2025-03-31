@@ -25,19 +25,69 @@
 	font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-phone-ringing {
+	&:before {
+		content: $icon-phone-ringing;
+	}
+}
+.icon-git-hub-circle {
+	&:before {
+		content: $icon-git-hub-circle;
+	}
+}
+.icon-angles-left-solid {
+	&:before {
+		content: $icon-angles-left-solid;
+	}
+}
+.icon-angles-right-solid {
+	&:before {
+		content: $icon-angles-right-solid;
+	}
+}
+.icon-angles-up-solid {
+	&:before {
+		content: $icon-angles-up-solid;
+	}
+}
+.icon-angles-down-solid {
+	&:before {
+		content: $icon-angles-down-solid;
+	}
+}
+.icon-contacts {
+	&:before {
+		content: $icon-contacts;
+	}
+}
+.icon-snow {
+	&:before {
+		content: $icon-snow;
+	}
+}
+.icon-whatsapp {
+	&:before {
+		content: $icon-whatsapp;
+	}
+}
+.icon-vk-brand {
+	&:before {
+		content: $icon-vk-brand;
+	}
+}
+.icon-telegram-fly {
+	&:before {
+		content: $icon-telegram-fly;
+	}
+}
+.icon-sun {
+	&:before {
+		content: $icon-sun;
+	}
+}
 .icon-unlink {
 	&:before {
 		content: $icon-unlink;
-	}
-}
-.icon-krest {
-	&:before {
-		content: $icon-krest;
-	}
-}
-.icon-krest-color {
-	&:before {
-		content: $icon-krest-color;
 	}
 }
 .icon-arow-down {
@@ -83,30 +133,5 @@
 .icon-file-download {
 	&:before {
 		content: $icon-file-download;
-	}
-}
-.icon-angles-left-solid {
-	&:before {
-		content: $icon-angles-left-solid;
-	}
-}
-.icon-angles-right-solid {
-	&:before {
-		content: $icon-angles-right-solid;
-	}
-}
-.icon-angles-up-solid {
-	&:before {
-		content: $icon-angles-up-solid;
-	}
-}
-.icon-angles-down-solid {
-	&:before {
-		content: $icon-angles-down-solid;
-	}
-}
-.icon-contacts {
-	&:before {
-		content: $icon-contacts;
 	}
 }

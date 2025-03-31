@@ -15,6 +15,7 @@
 
 .title {
 	position: relative;
+	user-select: none;
 	z-index: 3;
 	display: flex;
 	flex-direction: column;
@@ -26,8 +27,12 @@
 		text-transform: uppercase;
 		transform: scale(1, 1.2);
 		line-height: 1 !important;
-		text-shadow: $darkOutline;
-		color: $font-color-link;
+		// text-shadow: $darkOutline;
+		text-shadow: 1px 1px 3px $font-color-link;
+		// color: $font-color-link;
+		background: linear-gradient($black-color, #000000f5);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
 
 		span {
 			white-space: nowrap;
@@ -261,21 +266,15 @@
 .button {
 	cursor: pointer;
 	position: relative;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
-	border-radius: 4px;
-	padding: 0.5rem 2.6rem;
-	transform: skewX(-10deg);
+	border-radius: 0.5rem;
+	padding: 0.5rem 6rem;
+	color: $font-color-secondr;
+	// transform: skewX(-10deg);
 	text-transform: uppercase;
 	font-weight: 400;
 	overflow: hidden;
-	border: 1px solid #8a8a8a;
-
-	font: {
-		family: $font-family-exclude;
-		size: 32px;
-		weight: 400;
-	}
 
 	&:hover {
 		.running-line__inner {
@@ -287,7 +286,7 @@
 
 		@include min-1024 {
 			> span {
-				opacity: 0;
+				// opacity: 0;
 			}
 		}
 	}
@@ -295,10 +294,9 @@
 	span {
 		display: block;
 		text-transform: uppercase;
-		transform: skewX(10deg);
+		// transform: skewX(10deg);
 		pointer-events: none;
 		opacity: 1;
-		@extend .text-shadow;
 		transition: opacity 0.9s ease-in-out;
 
 		@include screen-490 {

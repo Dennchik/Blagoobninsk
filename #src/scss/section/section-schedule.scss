@@ -4,11 +4,17 @@
 	// .section-schedule__title
 	&__title {
 		margin-bottom: 4rem;
+
+		h2 {
+			span {
+				white-space: wrap !important;
+			}
+		}
 	}
 
 	// .section-schedule__slide-schedule
 	&__slide-schedule {
-		padding: 4rem 1rem;
+		padding: 4rem 0.5rem;
 		overflow: hidden;
 	}
 }
@@ -28,9 +34,10 @@
 
 	// .slide__column
 	&__slide-column {
+		user-select: none;
 		flex-direction: column;
 		line-height: 1.2;
-		padding: 2rem 2rem;
+		padding: 2rem;
 		border-radius: 8px;
 		background: #f7f4f1;
 		height: auto;
@@ -127,6 +134,3 @@
 }
 
 //* ----------------------------------------------------------------------------
-.syllabus__item {
-	border: 1px solid red;
-}

@@ -101,27 +101,8 @@
 	backdrop-filter: blur(10px);
 }
 //* ----------------------------------------------------------------------------
-.gradient-button {
-	background: linear-gradient(90.61deg, #c9a885 6.02%, #9a7a5f 99.53%);
-}
-.gradient-header {
-	background-image: linear-gradient(
-		-40deg,
-		#9a7a5f 20%,
-		#9a7a5f6e 45%,
-		#9a7a5f 75%
-	);
-}
 
-.gradient-footer {
-	background-image: linear-gradient(
-		-40deg,
-		#9a7a5f 10%,
-		#9a7a5f6e 45%,
-		#9a7a5f 75%
-	);
-}
-
+//* ----------------------------------------------------------------------------
 .font-size-calc-h2 {
 	@include minmax-490-1920 {
 		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));
@@ -251,20 +232,19 @@
 }
 
 .link_underline {
-	&::before,
-	&::after {
-		position: absolute;
-		width: 0;
-		height: 1px;
-		content: '';
-		transition: width 0.4s ease-in-out;
-		opacity: 0.6;
-		background-color: $neon-electric;
-	}
+	position: relative;
+	transition: color 0.3s ease-in-out;
 
 	&::before {
-		right: 0;
+		content: '';
+		transform: scaleX(0);
+		position: absolute;
 		bottom: 0;
+		width: 100%;
+		height: 1px;
+		transition: transform 0.3s ease-in-out;
+		opacity: 0.6;
+		background-color: $font-color-link;
 	}
 
 	&::after {
@@ -272,26 +252,9 @@
 		left: 0;
 	}
 
-	&._active {
-		&::before {
-			width: 45%;
-		}
-
-		&::after {
-			width: 45%;
-		}
-	}
-
 	&:hover {
-		transition: color 0.4s ease-in-out;
-		color: $neon-blue;
-
 		&::before {
-			width: 45%;
-		}
-
-		&::after {
-			width: 45%;
+			transform: scaleX(1);
 		}
 
 		a {
@@ -328,7 +291,7 @@
 		}
 	}
 }
-//* ----------------------------------------------------------------------------
+//* ------------------------------- Gradient -----------------------------------
 .grad_underline {
 	/* Определяем фоновые изображения */
 	transition: background-size 400ms;
@@ -353,6 +316,44 @@
 	background-size:
 		100% 1px,
 		/* Первое изображение */ 0 1px; /* Второе изображение */
+}
+.gradient-button {
+	background: linear-gradient(45deg, #c9a885 6.02%, #9a7a5f 99.53%);
+	background-image: linear-gradient(
+		to right,
+		#9a7a5f 0%,
+		#b29f94 51%,
+		#9a7a5f 100%
+	);
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	box-shadow: 0 0 2px #2b2b2b;
+	border-radius: 10px;
+	display: block;
+
+	&:hover {
+		background-position: right center; /* change the direction of the change here */
+	}
+}
+
+.gradient-header {
+	background-image: linear-gradient(
+		-40deg,
+		#9a7a5f 20%,
+		#9a7a5f6e 45%,
+		#9a7a5f 75%
+	);
+}
+
+.gradient-footer {
+	background-image: linear-gradient(
+		-40deg,
+		#9a7a5f 10%,
+		#9a7a5f6e 45%,
+		#9a7a5f 75%
+	);
 }
 //! ----------------------------------------------------------------------------
 .border-present {

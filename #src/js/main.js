@@ -50,7 +50,7 @@ import {
 } from './animations/anime-js.jsx';
 
 document.addEventListener('DOMContentLoaded', function () {
-	const textItem = document.querySelector('.performance__text');
+	const textItem = document.querySelector('.hgroup-items');
 	if (textItem) {
 		timeLineTextItem();
 	}

@@ -1,52 +1,122 @@
 .performance.el-opacity
-	._bg
-	//- .svg-mask.el-2 
-		svg(viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg")
-			mask#m
-				g.cloud1
-					rect(fill="#fff" width="100%" height="801" y="900")
-					image(href="img/parallax/cloud7Mask.jpg" width="1200" height="1250")
-			image.cloud3.lag-1(href="img/parallax/cloud3.png" width="1200" height="801") 
-			g(mask="url(#m)")
-				rect(fill="#fff" width="100%" height="100%")
-				text(x="350" y="200" fill="#162a43") FURTHER 
-	//- .parallax
-		._inner
-			figure._image-cont
-				img(src="@@webRoot/img/parallax/pic-01.jpg" alt="image")
-				._anime-swipe
-			figure._image-cont
-				img(src="@@webRoot/img/parallax/pic-01.jpg" alt="image")
-				._anime-swipe
-			figure._image-cont
-				img(src="@@webRoot/img/parallax/pic-01.jpg" alt="image")
-				._anime-swipe
-			figure._image-cont
-				img(src="@@webRoot/img/parallax/pic-01.jpg" alt="image")
-				._anime-swipe
-			figure._image-cont
-				img(src="@@webRoot/img/parallax/pic-01.jpg" alt="image")
-				._anime-swipe
-			figure._image-cont
-				img(src="@@webRoot/img/parallax/pic-01.jpg" alt="image")
-				._anime-swipe
+	.bg-clip._bg-clip 
+		._item 
+		._item 
+	.bg-bottom 
 	._body.top-box
 		._container
 			._content
-				._row
+				._row.tr-row-01
+					._column.el-1 
+						hgroup.hgroup-items 
+							h1._item
+								span Благочиние
+								span города Обнинска
+							._item.bounce-01
+								._text.t-01901
+									p Русская Православная Церковь
+									p Калужская митрополия
+									p Калужская епархия
 					._column.el-3
 						._icon
 							+iconfont('snow', '_icon _rotate-el-01')
 						._date
-				hgroup._row.tr-row-01
-					._column.el-1 
-						//- span._icon-svg 
-							+iconfont('krest', '_icon')
-						h1
-							span Благочиние
-							span города Обнинска
-					._column.bounce-01
-						._text.t-01901
-							p Русская Православная Церковь
-							p Калужская митрополия
-							p Калужская епархия
+					._column
+						.perform-slide._slide-perform
+							._body.slide-perform._swiper 
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-01.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 31 Март 2025
+											._title Седмица 4-я Великого поста, Крестопоклонная. Глас 6.
+											._text 
+												p Мч. Агапия и с ним семи мучеников: Пуплия, Тимолая, Ромила, двух Александров и двух Дионисиев (1,2) (303).
+												p Сщмч. Александра, иерея в Сиде (279-275). Мч. Никандра (ок. 302).
+												p Сщмчч. Алексия пресвитера (1938). Сщмч. Михаила пресвитера (1940).
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE  
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-02.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 01 Апрель 2025
+											._title Седмица 5-я Великого поста, Крестопоклонная. Глас 7.
+											._text 
+												p Мчч. Хрисанфа и Дарии и с ними мчч. Клавдия трибуна, Иларии, жены его, Иасона и Мавра, сынов их, Диодора пресвитера и Мариана диакона (283). Cовершается служба, не отмеченная в Типиконе никаким знакомПрав. Софии, кн. Слуцкой (1612). Прп. Симеона Псково-Печерского (прославление 2003).
+												p Мч. Панхария (ок. 302). Прп. Вассы Псково-Печерской (ок. 1473). Прп. Иннокентия Комельского, Вологодского (1511-1522). Прп. Симеона Дайбабского (1941) (Серб.).
+												p Исп. Иоанна (1932). Прмц. Матроны (1938).
+												p Иконы Божией Матери, именуемой "Умиление", Смоленской (1103).
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE  
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-03.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 02 Апрель 2025
+											._title Седмица 4-я Великого поста, Крестопоклонная. Глас 6.
+											._text
+												p Прпп. Иоанна, Сергия, Патрикия и прочих, во обители св. Саввы убиенных (796).
+												p Мц. Фотины (Светланы) самаряныни, ее сыновей мчч. Виктора, нареченного Фотином, и Иосии; мцц. Анатолии, Фото, Фотиды, Параскевы, Кириакии, Домнины и мч. Севастиана (ок. 66). Мцц. Александры, Клавдии, Евфрасии, Матроны, Иулиании, Евфимии и Феодосии (310). Свт. Никиты, исп., архиеп. Аполлониадского (IX). Прп. Евфросина Синозерского, Новгородского (1612).
+												p Сщмч. Владимира пресвитера (1918). Сщмч. Василия диакона (1938).
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-01.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 03 Апрель 2025
+											._title Седмица 4-я Великого поста, Крестопоклонная. Глас 6.
+											._text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE  
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-02.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 04 Апрель 2025
+											._title Седмица 4-я Великого поста, Крестопоклонная. Глас 6.
+											._text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE 
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-03.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 05 Апрель 2025
+											._title Седмица 4-я Великого поста, Крестопоклонная. Глас 6.
+											._text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE 
+								._slide-column 
+									._image._img 
+										img(src="@@webRoot/img/perform/perf-03.webp" alt="image")
+									.content-slide._content
+										._body 
+											._date 
+												span 06 Апрель 2025
+											._title Седмица 4-я Великого поста, Крестопоклонная. Глас 6.
+											._text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?
+											._button 
+											//- a(href="").button.gradient-button.btn-grad
+											//- 	span READ MORE 
+
+							._pagination

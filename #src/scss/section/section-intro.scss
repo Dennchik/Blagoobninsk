@@ -27,6 +27,7 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
+
 		img {
 			width: 100%;
 			height: 50px;
@@ -36,17 +37,9 @@
 
 	// .blagochinie__button
 	&__button {
-		display: inline-flex;
+		margin-top: 1rem;
+		display: flex;
 		justify-content: center;
-
-		span {
-			padding: 1rem 4rem;
-			text-transform: uppercase;
-			border-radius: 0.5rem;
-			display: inline;
-			width: auto;
-			color: $font-color-secondr;
-		}
 	}
 
 	// .blagochinie__foto
@@ -55,6 +48,7 @@
 		position: absolute;
 		height: auto;
 		bottom: 0;
+		clip-path: ellipse(50% 50% at 50% 50%);
 
 		img {
 			width: 100%;
@@ -65,7 +59,7 @@
 
 	// .section-intro__info-nast
 	&__info-nast {
-		padding: 4rem 0;
+		padding: 4rem 0 0;
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
@@ -138,7 +132,6 @@
 .section-intro {
 	// .section-intro__body
 	&__body {
-		font-size: 2.2rem;
 		margin: 6rem 0;
 	}
 

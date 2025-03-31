@@ -3,7 +3,8 @@
 @use 'extend.scss' as *;
 
 html {
-	scrollbar-width: none;
+	// scrollbar-width: none;
+	// user-select: none;
 	font: {
 		style: normal;
 		size: 62.5%;
@@ -21,13 +22,11 @@ html {
 }
 
 body {
-	scrollbar-width: none;
-	// user-select: none;
+	// scrollbar-width: none;
 	overscroll-behavior: none;
 	font: 2rem/2 $font-family-default;
 	background: $background;
-	// background-color: #9cc7ff;
-	// @extend .text-shadow;
+	background-color: #fff;
 
 	&.no-scroll {
 		overflow: hidden;
@@ -43,7 +42,7 @@ body {
 	margin: 0;
 	padding: 0;
 	border: none;
-	// scrollbar-width: thin;
+	scrollbar-width: thin;
 }
 
 *,
@@ -102,9 +101,9 @@ input[type='submit'] {
 	box-shadow: none;
 }
 
-// input::-ms-clear {
-// 	display: none;
-// }
+input::-ms-clear {
+	display: none;
+}
 
 input,
 textarea,

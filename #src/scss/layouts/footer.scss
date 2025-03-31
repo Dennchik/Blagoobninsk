@@ -74,7 +74,7 @@
 		h2 {
 			width: auto;
 			font-size: 96px;
-			font-weight: 400;
+			font-weight: 300;
 			font-family: $font-family-exclude;
 			text-transform: uppercase;
 			line-height: 0.7 !important;
@@ -176,10 +176,13 @@
 
 	// .contacts__link
 	&__link {
-		@extend .link_split;
 		&::before,
 		&::after {
 			color: $font-color-default;
+		}
+
+		&:hover {
+			color: $font-color-link;
 		}
 	}
 }

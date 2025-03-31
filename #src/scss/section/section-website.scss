@@ -3,18 +3,22 @@
 .section-website {
 	// .section-website__slide-website
 	&__slide-website {
-		padding: 4rem 1rem;
+		padding: 4rem 0.5rem;
 		overflow: hidden;
 	}
+
 	.slide__slide-column {
 		background: #f7f4f1;
 	}
 
+	// .section-website__slide__item
 	.slide__item {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 	}
+
+	// .section-website__slide__text
 	.slide__text {
 		flex: 1 1 auto;
 		height: 100%;
@@ -24,6 +28,8 @@
 			text-transform: capitalize;
 		}
 	}
+
+	// .section-website__slide__link
 	.slide__link {
 		._icon {
 			margin-right: 1rem;

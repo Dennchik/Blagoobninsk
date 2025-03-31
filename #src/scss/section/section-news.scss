@@ -11,6 +11,12 @@
 		padding: 4rem 1rem;
 		overflow: hidden;
 	}
+
+	// .section-news__button
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .content-slide {
