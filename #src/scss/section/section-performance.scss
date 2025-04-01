@@ -134,7 +134,34 @@
 		max-width: 900px;
 	}
 }
+.mask-render {
+	mask-image: var(--astorRender);
+	mask-size: 80% 100vh;
+	mask-repeat: no-repeat;
+	mask-position: top left;
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: -100px;
+	left: -25%;
+	pointer-events: none;
 
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		height: 100%;
+		width: 100%;
+		background: #181a2246;
+		background-size: 150% 150%;
+		background-position: top center;
+	}
+}
 .bg-clip {
 	// bg-clip__item
 	&__item {

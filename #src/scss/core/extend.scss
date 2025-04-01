@@ -24,7 +24,7 @@
 	position: absolute;
 	left: 0;
 	width: 100%;
-	height: 40%;
+	height: 45%;
 	z-index: 1;
 	display: inline-block;
 	text-align: right;
@@ -39,7 +39,7 @@
 .bg-bottom {
 	bottom: 0;
 	transform: translateY(20px);
-	background-image: linear-gradient(transparent, $background 70%);
+	background-image: linear-gradient(transparent, $background 60%);
 }
 //* ----------------------------------------------------------------------------
 .bg-image {
