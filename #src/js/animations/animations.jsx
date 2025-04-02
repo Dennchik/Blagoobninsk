@@ -10,7 +10,7 @@ ScrollTrigger.normalizeScroll(false);
 ScrollTrigger.config({ ignoreMobileResize: true });
 
 //* ----------------------------------------------------------------------------
-const smoother = ScrollSmoother.create({
+export const smoother = ScrollSmoother.create({
 	wrapper: '#wrapper',
 	content: '#content',
 	speed: 1,

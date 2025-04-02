@@ -49,7 +49,7 @@ import {
 	timeLineTextItem,
 } from './animations/anime-js.jsx';
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 	const textItem = document.querySelector('.hgroup-items');
 	if (textItem) {
 		timeLineTextItem();

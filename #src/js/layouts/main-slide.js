@@ -100,7 +100,7 @@ export function swiperPerform(Slide) {
 			// mousewheel: {
 			// 	invert: false,
 			// },
-			autoHeight: true,
+			// autoHeight: true,
 			pagination: {
 				el: '.perform-slide__pagination',
 				clickable: true,

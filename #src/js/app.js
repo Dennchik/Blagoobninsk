@@ -1,11 +1,5 @@
-import {
-	// cassieEvans,
-	tlRotateIcon,
-	// applyParallax,
-	// parallaxEvans
-} from './animations/animations.jsx';
+import { } from './animations/animations.jsx';
 
-// parallaxEvans();
 import { buildSwiper } from './layouts/build-swiper.js';
 buildSwiper();
 import { mainSlide, newslide, swiperSlelide, swiperPerform } from './layouts/main-slide.js';
@@ -15,6 +9,10 @@ swiperSlelide('.slide-swiper');
 swiperPerform('.slide-perform');
 //* ----------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
+	// const textItem = document.querySelector('.hgroup-items');
+	// if (textItem) {
+	// 	timeLineTextItem();
+	// }
 	// 	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	// 	const bgSection = document.querySelector('.bg-section');
 	// 	// const parallax = document.querySelector('.parallax');
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 		// applyParallax('.bg-section');
 	// 	}
 
-	setTimeout(() => {
-		tlRotateIcon();
-	}, 2000);
+	// setTimeout(() => {
+	// 	tlRotateIcon();
+	// }, 2000);
 });
