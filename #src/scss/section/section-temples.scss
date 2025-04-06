@@ -123,7 +123,10 @@
 	&__body {
 		position: relative;
 		z-index: 3;
-		padding: 6rem 0;
+		padding: 8rem 0;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
 
 		@include screen-690 {
 			padding: 4rem 0;
@@ -136,20 +139,9 @@
 		margin-bottom: 4rem;
 	}
 
-	// .section-temples__body
-	&__body {
-		padding: 6rem 0;
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-
-		@include screen-320 {
-			padding: 8rem 2rem 6rem;
-		}
-	}
-
 	// .section-temples__content
 	&__content {
+		padding-top: 6rem;
 		margin: 0;
 		position: relative;
 		height: 100%;
