@@ -120,9 +120,14 @@
 	position: relative;
 
 	// .slide-temples__container
-	&__container {
+	&__body {
 		position: relative;
 		z-index: 3;
+		padding: 6rem 0;
+
+		@include screen-690 {
+			padding: 4rem 0;
+		}
 	}
 
 	// .section-temples__title

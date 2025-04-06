@@ -14,7 +14,7 @@ html {
 	height: 100%;
 	counter-reset: heading;
 	letter-spacing: 1.1px;
-	color: var(--font-color-default);
+	color: $font-color-default;
 
 	@include screen-1024 {
 		font-size: 50%;

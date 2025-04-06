@@ -29,10 +29,6 @@
 		z-index: 9;
 		display: flex;
 		align-items: center;
-
-		@include screen-1140 {
-			margin-top: 10rem;
-		}
 	}
 
 	// .performance__container
@@ -73,9 +69,10 @@
 		line-height: 0.7;
 
 		&:nth-child(1) {
+			margin-bottom: 7rem;
 			z-index: 9;
 			padding-right: 3rem;
-			align-self: center;
+			align-self: end;
 			grid-column: 1 / 2;
 			grid-row: 1 / 3;
 
@@ -150,14 +147,14 @@
 			letter-spacing: -2px;
 			font: 96px $font-family-exclude;
 			line-height: 1;
-			transform: scaleY(1.5);
+			transform: scaleY(1.2);
 
 			@include minmax-490-1920 {
-				font-size: calc(39px + (96 - 39) * ((100vw - 490px) / (1920 - 490)));
+				font-size: calc(32px + (96 - 32) * ((100vw - 490px) / (1920 - 490)));
 			}
 
 			@include screen-490 {
-				font-size: 39px;
+				font-size: 32px;
 			}
 		}
 
@@ -166,7 +163,6 @@
 			.month {
 				font-family: $font-family-exclude;
 				font-size: 3.4rem;
-				font-weight: 900;
 				line-height: 1;
 			}
 
@@ -232,6 +228,7 @@
 			flex: 0 1 70%;
 			background: #e6d9cd;
 			clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+			overflow: hidden;
 
 			@include minmax-490-1920 {
 				flex: 0 1 calc(490px + (1344 - 490) * ((100vw - 490px) / (1920 - 490)));
@@ -265,7 +262,7 @@
 		text-transform: uppercase;
 		line-height: 0.7 !important;
 		text-shadow: $darkOutline;
-		color: $font-color-link;
+		color: $font-color-secondary;
 
 		@include minmax-490-1920 {
 			font-size: calc(35px + (96 - 35) * ((100vw - 490px) / (1920 - 490)));
@@ -305,7 +302,7 @@
 	&__body {
 		position: relative;
 		z-index: 0;
-		background: #fff;
+		background: #ffffff;
 		box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 		padding: 2rem;
 		border-radius: 10px;
@@ -362,7 +359,7 @@
 		border-radius: 10px;
 		box-shadow: 4px 13px 30px 1px rgba(255, 255, 255, 0.2);
 		border-radius: 10px;
-		background: linear-gradient(to right, #e6d9cd, #fff);
+		background: linear-gradient(to right, $color, #fff);
 
 		@include screen-490 {
 			flex: 0 1 auto;
@@ -432,7 +429,7 @@
 		}
 		.swiper-pagination-bullet-active {
 			opacity: 1;
-			background: #ecd3bc;
+			background: $color;
 			height: 30px;
 			box-shadow: 0px 0px 20px #ddd1c6cc;
 		}

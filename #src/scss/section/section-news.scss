@@ -1,6 +1,14 @@
 @use '../core/all' as *;
 
 .section-news {
+	// .section-news__body
+	&__body {
+		padding: 6rem 0;
+
+		@include screen-690 {
+			padding: 4rem 0;
+		}
+	}
 	// .section-news__title
 	&__title {
 		margin-bottom: 4rem;
@@ -39,7 +47,6 @@
 	// .content-slide__text
 	&__text {
 		line-height: 1.2;
-		flex: 1 1 auto;
 		p {
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -54,11 +61,8 @@
 
 	// .content-slide__link
 	&__link {
-		color: $font-color-link;
+		color: $font-color-secondary;
 		font-weight: 600;
 		transition: color 0.9s ease-in-out;
-		&:hover {
-			color: $font-color-default;
-		}
 	}
 }

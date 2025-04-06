@@ -39,7 +39,7 @@
 .bg-bottom {
 	bottom: 0;
 	transform: translateY(20px);
-	background-image: linear-gradient(transparent, $background 60%);
+	background-image: linear-gradient(transparent, $background 40%);
 }
 //* ----------------------------------------------------------------------------
 .bg-image {
@@ -58,7 +58,7 @@
 		display: block;
 		position: absolute;
 		background-clip: text;
-		background: linear-gradient(-135deg, transparent 40%, $black-color);
+		background: linear-gradient(-135deg, transparent 40%, $font-color-default);
 		background-clip: text;
 		color: transparent;
 		text-shadow: none;
@@ -110,10 +110,14 @@
 }
 
 .top-box {
-	padding: 6rem 0 0;
+	padding: 18rem 0 4rem;
 	min-height: 100vh;
 	@include min-960 {
 		padding: 8rem 0 0;
+	}
+
+	@include screen-690 {
+		min-height: 100%;
 	}
 }
 .hr {
@@ -129,11 +133,6 @@
 		height: 50px;
 		object-fit: contain;
 	}
-}
-
-.p-box {
-	padding-top: 6rem;
-	padding-bottom: 6rem;
 }
 
 .gradient-border-bottom {
@@ -164,13 +163,6 @@
 
 .text-shadow-black {
 	text-shadow: 0 0 9px #00000079;
-}
-
-.text-shadow-white {
-	text-shadow:
-		0 0 15px #e4e4e4,
-		0 0 1em #e4e4e4,
-		0 0 0.2em $neon-blue-dark;
 }
 
 .text-shadow {
@@ -244,7 +236,7 @@
 		height: 1px;
 		transition: transform 0.3s ease-in-out;
 		opacity: 0.6;
-		background-color: $font-color-link;
+		background-color: $font-color-secondary;
 	}
 
 	&::after {
@@ -318,7 +310,6 @@
 		/* Первое изображение */ 0 1px; /* Второе изображение */
 }
 .gradient-button {
-	background: linear-gradient(45deg, #c9a885 6.02%, #9a7a5f 99.53%);
 	background-image: linear-gradient(
 		to right,
 		#9a7a5f 0%,
@@ -330,11 +321,11 @@
 	transition: 0.5s;
 	background-size: 200% auto;
 	box-shadow: 0 0 2px #2b2b2b;
-	border-radius: 10px;
 	display: block;
 
 	&:hover {
-		background-position: right center; /* change the direction of the change here */
+		background-position: right center;
+		/* change the direction of the change here */
 	}
 }
 
@@ -355,60 +346,7 @@
 		#9a7a5f 75%
 	);
 }
-//! ----------------------------------------------------------------------------
-.border-present {
-	position: absolute;
-	display: block;
-	color: $neon-blue;
-	background-image: linear-gradient(
-			to right,
-			currentColor 0%,
-			$liquid-neon 8%,
-			transparent 8%,
-			transparent 92%,
-			$liquid-neon 92%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to right,
-			currentColor 0%,
-			$liquid-neon 8%,
-			transparent 8%,
-			transparent 92%,
-			$liquid-neon 92%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to bottom,
-			currentColor 0%,
-			$liquid-neon 11%,
-			transparent 11%,
-			transparent 89%,
-			$liquid-neon 89%,
-			currentColor 100%
-		),
-		linear-gradient(
-			to bottom,
-			currentColor 0%,
-			$liquid-neon 11%,
-			transparent 11%,
-			transparent 89%,
-			$liquid-neon 89%,
-			currentColor 100%
-		);
-	background-repeat: no-repeat;
-	background-position:
-		0 0,
-		0 100%,
-		0 0,
-		100% 0;
-	background-size:
-		100% 1px,
-		100% 1px,
-		1px 100%,
-		1px 100%;
-	inset: 0.7rem;
-}
+
 //* ----------------------------------------------------------------------------
 .pagination {
 	display: flex;

@@ -10,8 +10,8 @@
 	text-shadow: none;
 	color: $font-color-default;
 	font-family: $font-family-default;
-	font-weight: 400;
-	color: $color-secondary;
+	font-weight: 500;
+	color: $font-color-secondary;
 
 	&.with-border {
 		&::before {
@@ -35,12 +35,10 @@
 		height: 8rem;
 		width: 100%;
 		background-size: 111% 200%;
+		background: $color;
 		background-position: 0 0;
 		transition: opacity 0.5s ease-in-out;
 		animation: fadeOutGradient 0.5s ease-in-out alternate-reverse;
-		// @extend .gradient-header;
-
-		background: #e6d9cd;
 	}
 
 	&::after {

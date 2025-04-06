@@ -28,9 +28,9 @@
 		transform: scale(1, 1.2);
 		line-height: 1 !important;
 		// text-shadow: $darkOutline;
-		text-shadow: 1px 1px 3px $font-color-link;
+		text-shadow: 1px 1px 3px $font-color-secondary;
 		// color: $font-color-link;
-		background: linear-gradient($black-color, #000000f5);
+		background: linear-gradient($font-color-default, #000000f5);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 
@@ -71,7 +71,7 @@
 			text-align: left;
 			text-shadow: none;
 			line-height: 1.1;
-			color: $font-color-link;
+			color: $font-color-secondary;
 			background-clip: text;
 			// -webkit-text-fill-color: transparent;
 			&:not(:last-child) {
@@ -102,7 +102,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 0 3px $font-color-link;
+	box-shadow: 0 0 3px $font-color-secondary;
 	background: #f2ebe4;
 
 	i {
@@ -121,7 +121,7 @@
 		height: 35px;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
-		color: $font-color-link;
+		color: $font-color-secondary;
 		background: transparent;
 		display: flex;
 		justify-content: center;
@@ -200,35 +200,6 @@
 	}
 }
 
-.community {
-	// .community__icon
-	&__icon {
-		font-size: 2.2rem;
-		overflow: hidden;
-		width: 4.2rem;
-		height: 4.2rem;
-		transition: all 0.2s ease-in-out;
-		color: $black-color;
-		border-radius: 50%;
-		background: $electric-lime;
-
-		i {
-			&::before {
-				transition: color 0.2s ease-in-out;
-			}
-		}
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-
-		&:hover {
-			color: $electric-lime;
-			background: $black-color;
-		}
-	}
-}
-
 //* ------------------------- [Class _ibg] -------------------------------------
 
 .h1_01901 {
@@ -268,9 +239,9 @@
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	border-radius: 0.5rem;
+	border-radius: 5px;
 	padding: 0.5rem 6rem;
-	color: $font-color-secondr;
+	color: $background;
 	// transform: skewX(-10deg);
 	text-transform: uppercase;
 	font-weight: 400;

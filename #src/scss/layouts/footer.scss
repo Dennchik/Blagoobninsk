@@ -79,7 +79,7 @@
 			text-transform: uppercase;
 			line-height: 0.7 !important;
 			text-shadow: $darkOutline;
-			color: $font-color-link;
+			color: $font-color-secondary;
 
 			@include minmax-490-1920 {
 				font-size: calc(35px + (86 - 35) * ((100vw - 490px) / (1920 - 490)));
@@ -101,7 +101,6 @@
 	// .footer__text
 	&__text {
 		font-size: 20px;
-		color: $color;
 		text-shadow: 0 0 2px #0000004b;
 
 		span {
@@ -182,7 +181,7 @@
 		}
 
 		&:hover {
-			color: $font-color-link;
+			color: $font-color-secondary;
 		}
 	}
 }

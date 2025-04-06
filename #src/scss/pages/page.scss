@@ -75,7 +75,7 @@
 		width: 100%;
 		height: 100%;
 		@extend .gradient-footer;
-		background: #e6d9cd;
+		background: $color;
 	}
 }
 
@@ -85,7 +85,7 @@
 	}
 
 	100% {
-		background: $black-color;
+		background: $font-color-default;
 	}
 }
 
