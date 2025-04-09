@@ -70,39 +70,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	dateContainer.innerHTML = `<div class="day">${day}</div> <div class="data-wrapper">
 <div class="month">${month}</div></div>`;
-
-
-	//* --------------------------- Animation Header -----------------------------
-	const header = document.querySelector('.header');
-	const mainContent = document.querySelector('.page__main-content');
-	if (header && mainContent) {
-		// Именованная функция для обработки скроллинга
-		const handleScroll = () => {
-			const mainContentTop = mainContent.getBoundingClientRect().top;
-
-			if (mainContentTop < 0) {
-				header.classList.add('with-border');
-				header.classList.remove('without-border');
-			} else {
-				header.classList.add('without-border');
-				header.classList.remove('with-border');
-			}
-		};
-		// Выполнение timeLineHeaderItem при загрузке
-		timeLineHeaderItem();
-
-		// Добавление обработчика скроллинга
-		window.addEventListener('scroll', handleScroll);
-
-		// Очистка обработчиков при выгрузке страницы
-		window.addEventListener('beforeunload', () => {
-			window.removeEventListener('scroll', handleScroll);
-		});
-	}
 });
 
+//* --------------------------- Animation Header -----------------------------
+const initHeaderScroll = () => {
+	const header = document.querySelector('.header');
+	const mainContent = document.querySelector('.page__main-content');
 
+	if (!header || !mainContent) return;
 
+	const handleScroll = () => {
+		const mainContentTop = mainContent.getBoundingClientRect().top;
+
+		if (mainContentTop < 0) {
+			header.classList.add('with-border');
+			header.classList.remove('without-border');
+		} else {
+			header.classList.add('without-border');
+			header.classList.remove('with-border');
+		}
+	};
+
+	// Сразу применим поведение при загрузке
+	// handleScroll();
+	// Выполнение timeLineHeaderItem при загрузке
+	timeLineHeaderItem();
+
+	// Добавление обработчика скроллинга 
+	window.addEventListener('scroll', handleScroll);
+
+	// Очистка обработчиков при выгрузке страницы
+	window.addEventListener('beforeunload', () => {
+		window.removeEventListener('scroll', handleScroll);
+	});
+};
+
+// Гарантированно запускаем и при обычной загрузке, и при возврате из истории
+window.addEventListener('DOMContentLoaded', initHeaderScroll);
+window.addEventListener('pageshow', initHeaderScroll);
 //* ----------------------------------------------------------------------------
 console.log('%c РОССИЯ ',
 	'background: blue; color: yellow; font-size: x-large; ' +

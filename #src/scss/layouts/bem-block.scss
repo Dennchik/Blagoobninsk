@@ -11,8 +11,8 @@
 		opacity: 0 !important;
 	}
 }
-//* ----------------------------------------------------------------------------
 
+//* ----------------------------------------------------------------------------
 .title {
 	position: relative;
 	user-select: none;
@@ -27,9 +27,7 @@
 		text-transform: uppercase;
 		transform: scale(1, 1.2);
 		line-height: 1 !important;
-		// text-shadow: $darkOutline;
 		text-shadow: 1px 1px 3px $font-color-secondary;
-		// color: $font-color-link;
 		background: linear-gradient($font-color-default, #000000f5);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -202,7 +200,18 @@
 
 //* ------------------------- [Class _ibg] -------------------------------------
 
-.h1_01901 {
+.t-h1 {
+	font-size: 64px;
+
+	@include minmax-490-1920 {
+		font-size: calc(35px + (64 - 35) * ((100vw - 490px) / (1920 - 490)));
+	}
+	@include screen-490 {
+		font-size: 35px;
+	}
+}
+
+.t-h2 {
 	@include minmax-490-1920 {
 		font-size: calc(
 			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
@@ -213,24 +222,23 @@
 	}
 }
 
-.h2_01901 {
-	@include minmax-490-1920 {
-		font-size: calc(
-			28px + (50 - 28) * ((100vw - 490px) / (1920 - 490))
-		) !important;
-	}
-	@include screen-490 {
-		font-size: 28px !important;
-	}
-}
-
-.t-01901 {
+.t-019 {
 	font-size: 28px;
 	@include minmax-490-1920 {
-		font-size: calc(15px + (28 - 15) * ((100vw - 490px) / (1920 - 490)));
+		font-size: calc(19px + (28 - 19) * ((100vw - 490px) / (1920 - 490)));
 	}
 	@include screen-490 {
-		font-size: 15px;
+		font-size: 19px;
+	}
+}
+
+.t-016 {
+	font-size: 24px;
+	@include minmax-490-1920 {
+		font-size: calc(16px + (24 - 16) * ((100vw - 490px) / (1920 - 490)));
+	}
+	@include screen-490 {
+		font-size: 16px;
 	}
 }
 
@@ -252,12 +260,6 @@
 			@include min-1024 {
 				opacity: 1;
 				transition-duration: 0.6s;
-			}
-		}
-
-		@include min-1024 {
-			> span {
-				// opacity: 0;
 			}
 		}
 	}

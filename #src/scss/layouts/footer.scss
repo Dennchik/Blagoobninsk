@@ -75,28 +75,22 @@
 		font-family: $font-family-exclude;
 
 		h2 {
-			width: auto;
-			font-size: 96px;
-			font-weight: 300;
-			font-family: $font-family-exclude;
+			font-weight: 400;
 			text-transform: uppercase;
-			line-height: 0.7 !important;
-			text-shadow: $darkOutline;
-			color: $font-color-secondary;
-
-			@include minmax-490-1920 {
-				font-size: calc(35px + (86 - 35) * ((100vw - 490px) / (1920 - 490)));
-			}
-
-			@include screen-490 {
-				font-size: 35px;
-			}
+			transform: scale(1, 1.2);
+			line-height: 100%;
 
 			span {
-				pointer-events: none;
+				text-shadow: 1px 1px 3px $font-color-secondary;
+				background: linear-gradient($font-color-default, #000000f5);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
 				letter-spacing: -2px;
 				white-space: nowrap;
 				display: block;
+				&:nth-child(2) {
+					transform: translateY(-5px);
+				}
 			}
 		}
 	}

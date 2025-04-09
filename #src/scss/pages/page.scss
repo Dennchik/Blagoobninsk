@@ -34,6 +34,11 @@
 }
 
 .main-content {
+	// .main-content__bread-crumbs
+	&__bread-crumbs {
+		margin-top: 80px;
+	}
+
 	// .main-content__about-page
 	&__about-page {
 		position: relative;

@@ -22,7 +22,7 @@ html {
 }
 
 body {
-	// scrollbar-width: none;
+	scrollbar-width: none;
 	overscroll-behavior: none;
 	font: 2rem/2 $font-family-default;
 	background: $background;
@@ -33,7 +33,7 @@ body {
 	}
 
 	@include screen-490 {
-		font: 1.5rem/1.5 $font-family-default;
+		font: 1.8rem/1.8 $font-family-default;
 	}
 }
 
@@ -42,7 +42,7 @@ body {
 	margin: 0;
 	padding: 0;
 	border: none;
-	scrollbar-width: thin;
+	// scrollbar-width: thin;
 }
 
 *,

@@ -184,15 +184,11 @@
 	background: url('../img/pictures/a.png') top left / contain no-repeat;
 	mask-size: 80% 100vh;
 	mask-repeat: no-repeat;
-	// mask-position: top left;
 	height: 100vh;
 	width: calc(100% / 2);
 	width: 987px;
 	position: absolute;
 	z-index: 1;
-	// top: -100px;
-	// left: -25%;
-	// object-position: 100% 100%;
 	pointer-events: none;
 	opacity: 0.5;
 	object-fit: contain;
@@ -255,30 +251,25 @@
 
 .hgroup-items {
 	h1 {
-		width: auto;
-		font-size: 96px;
 		font-weight: 400;
-		font-family: $font-family-exclude;
 		text-transform: uppercase;
-		line-height: 0.7 !important;
-		text-shadow: $darkOutline;
-		color: $font-color-secondary;
-
-		@include minmax-490-1920 {
-			font-size: calc(35px + (96 - 35) * ((100vw - 490px) / (1920 - 490)));
-		}
-
-		@include screen-490 {
-			font-size: 35px;
-		}
+		transform: scale(1, 1.2);
+		line-height: 100%;
 
 		span {
-			pointer-events: none;
+			text-shadow: 1px 1px 3px $font-color-secondary;
+			background: linear-gradient($font-color-default, #000000f5);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
 			letter-spacing: -2px;
 			white-space: nowrap;
 			display: block;
+			&:nth-child(2) {
+				transform: translateY(-5px);
+			}
 		}
 	}
+
 	// .hgroup-items__item
 	&__item {
 		&:nth-child(2) {
@@ -446,8 +437,7 @@
 
 	// .content-slide__title
 	&__title {
-		font-size: 24px;
-		font-weight: 700;
+		font-weight: 600;
 		color: #0d0925;
 		margin-bottom: 20px;
 	}

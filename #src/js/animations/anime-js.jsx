@@ -127,36 +127,20 @@ export function timeLineHeaderItem() {
 		duration: 750,
 	});
 	timeline.add({
-		targets: '.header__item',
+		targets: '.menu-items__item',
 		opacity: [0, 1],
-		translateY: [-100, 0],
+		// translateY: [-100, 0],
 		delay: anime.stagger(100, { start: 100 }),
 		easing: 'easeInOutSine',
 		begin: function (anim) {
 			anim.animatables.forEach(function (animatable) {
-				animatable.target.style.transition = 'all 0.3s ease-out';
+				animatable.target.style.transition = 'all 0.1s ease-out';
 			});
 		}
 	}).add({
-		targets: '.header__item',
-		delay: anime.stagger(100, { start: 500 }),
-		easing: 'easeInOutSine',
-	}, '-=250').add({
 		targets: '.el-logo',
 		opacity: [0, 1],
 		translateX: [-200, 0],
-		duration: 1250,
-		easing: 'easeInOutSine',
-		begin: function (anim) {
-			anim.animatables.forEach(function (animatable) {
-				animatable.target.style.transition = 'opacity 0.3s ease-out';
-			});
-		}
-	}, 50).add({
-		targets: '.el-community',
-		opacity: [0, 1],
-		translateX: [200, 0],
-		// translateY: [9, 10],
 		duration: 1250,
 		easing: 'easeInOutSine',
 		begin: function (anim) {

@@ -5,9 +5,9 @@
 				._logo-wrpper.transform-box
 					._logo
 						img(src="@@webRoot/img/icons/logo.png")
-					._text
+					._text.t-016
 						span Благочиние города Обнинска
-			._column.el-community
+			.menu-items._column
 				._menu 
 					ul._menu-items(data-da="bp-1" data-da-position="0" data-da-resolution="768" )
 						li._item
@@ -24,11 +24,6 @@
 								span Новости
 						li._item
 							a(href="#contacts" data-letters="Контакты")._link-key.anchor-link.link_underline
-								span Контакты
-
-				//- a.el-community__contact(href="mailto:awdes@yandex.ru?subject=🤝%20Информация%20о%20проекте.%20Давайте%20поговорим.")
-					+iconfont('contacts', '_icon')
-					.el-community__content
-						span.el-community__title Скажи привет! 
-				._burger-button
-					include ../assets/burger-button
+								span Контакты 
+						li._item
+							include ../assets/burger-button 

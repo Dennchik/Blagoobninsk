@@ -87,15 +87,6 @@
 	}
 }
 
-.frame-container-inner {
-	border: 30px solid transparent;
-	border-image-repeat: stretch;
-	border-image-slice: 45;
-	border-image-outset: 25px;
-	// border-image-source: url('../img/frame/note.png');
-	opacity: 0.2;
-}
-
 .box-shadow {
 	box-shadow: 0 1px 7px #a08973;
 	backdrop-filter: blur(10px);
