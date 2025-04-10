@@ -17,7 +17,7 @@
 	}
 
 	.slide__slide-column {
-		background: #f7f4f1;
+		@extend .bg-card;
 	}
 
 	// .section-website__slide__item

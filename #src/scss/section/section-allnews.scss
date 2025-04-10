@@ -6,7 +6,7 @@
 		padding: 6rem 0;
 
 		@include screen-690 {
-			padding: 4rem 0;
+			padding: 3rem 0;
 		}
 	}
 
@@ -21,7 +21,7 @@
 
 	// .section-news__slide-news
 	&__slide-news {
-		padding: 3rem 1rem;
+		padding: 3rem 0.5rem;
 		overflow: hidden;
 		position: relative;
 		z-index: 9;

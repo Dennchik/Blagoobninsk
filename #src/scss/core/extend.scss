@@ -31,7 +31,9 @@
 	// transform: translateY(-20px);
 	background-image: linear-gradient($background, transparent 70%);
 }
-
+.bg-card {
+	background: #f7f4f1;
+}
 .bg-bottom {
 	bottom: 0;
 	transform: translateY(20px);
@@ -82,7 +84,9 @@
 		border-image-repeat: repeat;
 	}
 }
-
+.box-shadow-card {
+	box-shadow: 0 0 4px 1px #e6d8cc;
+}
 .box-shadow {
 	box-shadow: 0 1px 7px #a08973;
 	backdrop-filter: blur(10px);
@@ -312,7 +316,7 @@
 	display: block;
 
 	&:hover {
-		background-position: right center;
+		background-position: right 5% center;
 		/* change the direction of the change here */
 	}
 }

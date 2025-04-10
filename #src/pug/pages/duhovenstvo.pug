@@ -1,6 +1,6 @@
 extends ../layouts/app_layout
 append link
-	link(rel="stylesheet" type="text/css" href="@@webRoot/css/news.min.css")
+	link(rel="stylesheet" type="text/css" href="@@webRoot/css/duhovenstvo.min.css")
 prepend script
 	script(defer="defer" src="@@webRoot/js/index.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/runtime.min.js")
@@ -8,7 +8,7 @@ prepend script
 	script(defer="defer" src="@@webRoot/js/vendors/swiper-bundle.min.js")
 	//- script(defer="defer" src="@@webRoot/js/vendors/react-vendors.min.js")
 block title
-	- var text='Новости благочиния'
+	- var text='Духовенство'
 
 block main-content-items 
 	section.main-content__section 
@@ -20,8 +20,8 @@ block main-content-items
 					li 
 						+iconfont('angle-right', '_icon')
 					li
-						span._item Новости
-		include ../section/section-allnews  
+						span._item Духовенство
+		include ../section/section-duhovenstvo  
 //- block main-content 
 	section.main-content__section
 		include ../section/section-performance

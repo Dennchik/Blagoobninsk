@@ -22,7 +22,7 @@
 		border-radius: 8px;
 		background: #f7f4f1;
 		height: auto;
-		box-shadow: 0 0 4px 2px #e6d8cc;
+		@extend .box-shadow-card;
 
 		&.title-red {
 			color: red;

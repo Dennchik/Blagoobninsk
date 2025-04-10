@@ -21,12 +21,10 @@
 	flex-direction: column;
 
 	h2 {
-		line-height: 1;
 		font: 44px $font-family-exclude;
 		font-weight: 400;
 		text-transform: uppercase;
 		transform: scale(1, 1.2);
-		line-height: 1 !important;
 		text-shadow: 1px 1px 3px $font-color-secondary;
 		background: linear-gradient($font-color-default, #000000f5);
 		background-clip: text;

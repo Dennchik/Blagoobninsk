@@ -6,7 +6,7 @@
 		padding: 6rem 0 0rem;
 
 		@include screen-690 {
-			padding: 4rem 0 0;
+			padding: 3rem 0 0;
 		}
 
 		@include screen-490 {
@@ -97,7 +97,7 @@
 		}
 
 		&:nth-child(4) {
-			margin-top: 2rem;
+			margin-top: 3rem;
 			justify-self: end;
 			grid-column: 1 / 4;
 
@@ -300,7 +300,11 @@
 	// .navigation-footer__body
 	&__body {
 		display: flex;
-		gap: 2rem;
+		gap: 3rem;
+
+		@include screen-375 {
+			gap: 2rem;
+		}
 	}
 
 	// .navigation-footer__item
