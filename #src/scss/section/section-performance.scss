@@ -381,8 +381,9 @@
 	// .perform-slide__content
 	&__content {
 		flex: 0 1 auto;
+		height: 100%;
 		pointer-events: none;
-		padding-right: 25px;
+		padding: 5px 25px 0 0;
 
 		@include min-490 {
 			margin-left: -60px;
@@ -432,7 +433,7 @@
 	&__date {
 		color: #3d3a53;
 		display: block;
-		font-weight: 500;
+		margin-bottom: 1.6rem;
 	}
 
 	// .content-slide__title
@@ -463,6 +464,7 @@
 	// .navigation__button-prev
 	&__button-prev {
 		transform: rotate(90deg);
+
 		&.swiper-button-disabled {
 			opacity: 0.35;
 		}
@@ -475,8 +477,10 @@
 
 	&__button-prev,
 	&__button-next {
+		width: 20px;
 		transition: opacity 0.3s ease-in-out;
 		cursor: pointer;
+
 		&.swiper-button-disabled {
 			opacity: 0.35;
 		}

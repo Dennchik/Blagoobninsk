@@ -3,7 +3,7 @@
 .section-schedule {
 	// .section-schedule__body
 	&__body {
-		padding: 8rem 0;
+		padding: 6rem 0;
 
 		@include screen-690 {
 			padding: 4rem 0;
@@ -12,7 +12,7 @@
 
 	// .section-schedule__title
 	&__title {
-		margin-bottom: 4rem;
+		margin-bottom: 3rem;
 
 		h2 {
 			span {
@@ -23,7 +23,7 @@
 
 	// .section-schedule__slide-schedule
 	&__slide-schedule {
-		padding: 4rem 0.5rem 0.5rem;
+		padding: 3rem 0.5rem 0.5rem;
 		overflow: hidden;
 	}
 }

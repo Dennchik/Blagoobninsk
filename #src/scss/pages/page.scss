@@ -36,7 +36,7 @@
 .main-content {
 	// .main-content__bread-crumbs
 	&__bread-crumbs {
-		margin-top: 80px;
+		padding-top: 80px;
 	}
 
 	// .main-content__about-page
@@ -79,7 +79,6 @@
 		z-index: 1;
 		width: 100%;
 		height: 100%;
-		@extend .gradient-footer;
 		background: $color;
 	}
 }

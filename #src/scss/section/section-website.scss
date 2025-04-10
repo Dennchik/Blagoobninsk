@@ -3,7 +3,7 @@
 .section-website {
 	// .section-website__body
 	&__body {
-		padding: 8rem 0;
+		padding: 6rem 0;
 
 		@include screen-690 {
 			padding: 4rem 0;
@@ -12,7 +12,7 @@
 
 	// .section-website__slide-website
 	&__slide-website {
-		padding: 4rem 0.5rem;
+		padding: 3rem 0.5rem;
 		overflow: hidden;
 	}
 

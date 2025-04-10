@@ -45,8 +45,8 @@
 	}
 }
 
-@mixin screen-920 {
-	@media screen and (max-width: 920px) {
+@mixin screen-860 {
+	@media screen and (max-width: 860px) {
 		@content;
 	}
 }
@@ -63,8 +63,8 @@
 	}
 }
 
-@mixin screen-580 {
-	@media (max-width: 580px) {
+@mixin screen-620 {
+	@media (max-width: 620px) {
 		@content;
 	}
 }
@@ -120,6 +120,12 @@
 
 @mixin min-920 {
 	@media (min-width: 920.99px) {
+		@content;
+	}
+}
+
+@mixin min-860 {
+	@media (min-width: 860.99px) {
 		@content;
 	}
 }

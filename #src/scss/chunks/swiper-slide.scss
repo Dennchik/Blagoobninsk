@@ -18,7 +18,7 @@
 		user-select: none;
 		flex-direction: column;
 		line-height: 1.2;
-		padding: 2rem;
+		padding: 1.6rem;
 		border-radius: 8px;
 		background: #f7f4f1;
 		height: auto;
@@ -32,14 +32,13 @@
 	// .slide__image
 	&__image {
 		position: relative;
-		top: -2rem;
-		left: -2rem;
-		margin-right: -4rem;
+		top: -1.6rem;
+		left: -1.6rem;
+		margin-right: -3.2rem;
 		overflow: hidden;
 		border-radius: 8px;
 
 		img {
-			height: 100%;
 			object-fit: cover;
 		}
 	}

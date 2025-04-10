@@ -5,7 +5,7 @@ prepend script
 	script(defer="defer" src="@@webRoot/js/index.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/runtime.min.js")
 	script(defer="defer" src="@@webRoot/js/vendors/anime-vendors.min.js")
-	//- script(defer="defer" src="@@webRoot/js/vendors/swiper-bundle.min.js")
+	script(defer="defer" src="@@webRoot/js/vendors/swiper-bundle.min.js")
 	//- script(defer="defer" src="@@webRoot/js/vendors/react-vendors.min.js")
 block title
 	- var text='Официальный сайт 3го благочиния города Обнинска'
@@ -16,14 +16,21 @@ block main-content-items
 	section.main-content__section 
 		.main-content__bread-crumbs
 			include ../chunks/bread-crumbs
-		include ../section/section-news
-	section.main-content__section 
-		//- include ../section/section-temples 
-	section.main-content__section  
-		//- include ../section/section-website 
-	section.main-content__section  
-		//- include ../section/section-schedule 
-		//- .hr
-			img(src="@@webRoot/img/frame/hr.png" alt="")
-//- block content-hidden
-	include ../chunks/content-hidden
+		include ../section/section-allnews  
+//- block main-content 
+	section.main-content__section
+		include ../section/section-performance
+
+		//- include ../section/blog-slider
+//- block main-content-items  
+//- section.main-content__section
+	.main-content__bread-crumbs
+		include ../chunks/bread-crumbs
+//- section.main-content__section
+	include ../section/section-news
+//- section.main-content__section 
+	include ../section/section-temples 
+//- section.main-content__section 
+	include ../section/section-website 
+//- section.main-content__section 
+	include ../section/section-schedule 
