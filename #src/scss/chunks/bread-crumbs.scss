@@ -9,6 +9,9 @@
 	&__list {
 		padding: 1rem 0;
 		display: flex;
+		font-weight: 600;
+		font-size: 1.6rem;
+		text-transform: uppercase;
 
 		li:nth-child(2) {
 			margin: 0 0.5rem;
@@ -45,7 +48,6 @@
 	&__item {
 		position: relative;
 		color: $font-color-default;
-		font-weight: 400;
 
 		// &::before {
 		// 	content: '';

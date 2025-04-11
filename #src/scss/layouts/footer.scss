@@ -230,6 +230,8 @@
 		p {
 			margin-top: -2rem;
 			padding-bottom: 1rem;
+			color: $font-color-secondary;
+			font-weight: 600;
 
 			@include screen-620 {
 				margin-top: -1rem;

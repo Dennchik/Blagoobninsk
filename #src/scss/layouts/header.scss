@@ -32,7 +32,7 @@
 		opacity: 0;
 		content: '';
 		position: absolute;
-		height: 8rem;
+		height: 100%;
 		width: 100%;
 		background-size: 111% 200%;
 		background: $color;
@@ -52,9 +52,42 @@
 		@extend .gradient-border-bottom;
 	}
 
+	// .header__search
+	&__search {
+		position: relative;
+		z-index: 8;
+		text-align: center;
+		display: grid;
+		grid-template-rows: 0fr;
+		transition: grid-template-rows 0.3s ease-in-out;
+	}
+
+	// .header__collapse
+	&__collapse {
+		min-height: 0;
+		overflow: hidden;
+	}
+
 	// .header__container
 	&__container {
 		width: 100%;
+		&._active {
+			.header__search {
+				grid-template-rows: 1fr;
+			}
+
+			.menu-items__search-button {
+				color: red;
+
+				._search {
+					scale: 0;
+				}
+
+				._cross-middle {
+					scale: 1;
+				}
+			}
+		}
 	}
 
 	// .header__burger-menu
@@ -89,6 +122,14 @@
 	&__logo-wrpper {
 		display: flex;
 		align-items: center;
+
+		&:hover {
+			.header__text {
+				transform: translateY(2px);
+				scale: 0.97;
+				opacity: 0.8;
+			}
+		}
 	}
 
 	// .header__column
@@ -103,10 +144,8 @@
 
 	// .header__logo
 	&__logo {
-		padding: 1rem 0;
 		width: 70px;
 		height: 100%;
-		clip-path: circle(50% at 50% 50%);
 
 		img {
 			width: 100%;
@@ -122,6 +161,10 @@
 
 	// .header__text
 	&__text {
+		transition:
+			scale 0.3s,
+			opacity 0.3s,
+			transform 0.3s ease-in-out;
 		margin-left: 1rem;
 		font-size: 24px;
 		text-transform: uppercase;
@@ -159,18 +202,60 @@
 .menu-items {
 	display: flex;
 	align-items: center;
+	gap: 1.6rem;
 
 	// .menu-items__menu
 	&__menu {
 		height: 100%;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
 
 		@include screen-960 {
 			display: none;
 		}
 	}
 
-	// ..menu-items__menu-items
-	&__menu-items {
+	// .menu-items__search
+	&__search {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	// .menu-items__search-button
+	&__search-button {
+		position: relative;
+		width: 3.8rem;
+		height: 3.8rem;
+		padding: 0.6rem;
+		border-radius: 50%;
+		border: 1px solid $border-color;
+		transform: translateY(1px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		._search,
+		._cross-middle {
+			transition: scale 0.3s ease-in-out;
+			position: absolute;
+			pointer-events: none;
+			transform: translateY(1px);
+			color: $color-secondary;
+		}
+
+		._search {
+		}
+
+		._cross-middle {
+			font-size: 2.6rem;
+			scale: 0;
+		}
+	}
+
+	// .menu-items__list
+	&__list {
 		user-select: none;
 		height: 100%;
 		display: flex;

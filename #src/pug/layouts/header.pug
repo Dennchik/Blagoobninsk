@@ -1,29 +1,36 @@
 .header
 	._container
+		._search 
+			._collapse
+				include ../chunks/form-search 
 		._content
-			a(href="@@webRoot/index.html")._column.el-logo.transform-perspective
-				._logo-wrpper.transform-box
+			a(href="@@webRoot/index.html")._column.el-logo 
+				._logo-wrpper 
 					._logo
 						img(src="@@webRoot/img/icons/logo.png")
 					._text.t-016
 						span Благочиние города Обнинска
 			.menu-items._column
+				._search 
+					button(type="button")._search-button 
+						+iconfont('search', '_search')
+						+iconfont('cross-middle', '_cross-middle') 
 				._menu 
-					ul._menu-items(data-da="bp-1" data-da-position="0" data-da-resolution="768" )
+					ul._list(data-da="bp-1" data-da-position="0" data-da-resolution="768" )
 						li._item
-							a(href="#about" data-letters="Церковь")._link-key.anchor-link.link_underline
+							a(href="#about")._link-key.anchor-link.link_underline
 								span Церковь 
 						li._item
-							a(href="#temples" data-letters="Храмы")._link-key.anchor-link.link_underline
+							a(href="@@webRoot/temples.html")._link-key.link_underline
 								span Храмы
 						li._item
-							a(href="@@webRoot/duhovenstvo.html" data-letters="Духовенство")._link-key.link_underline
+							a(href="@@webRoot/duhovenstvo.html")._link-key.link_underline
 								span Духовенство
 						li._item
-							a(href="#news" data-letters="Новости")._link-key.anchor-link.link_underline
+							a(href="@@webRoot/news.html")._link-key.link_underline
 								span Новости
 						li._item
-							a(href="#contacts" data-letters="Контакты")._link-key.anchor-link.link_underline
+							a(href="#contacts")._link-key.anchor-link.link_underline
 								span Контакты 
-						li._item
-							include ../assets/burger-button 
+				._button
+					include ../assets/burger-button 

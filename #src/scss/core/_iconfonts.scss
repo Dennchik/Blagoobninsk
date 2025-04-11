@@ -25,6 +25,11 @@
 	font-variant-ligatures: discretionary-ligatures;
 }
 
+.icon-cross-middle {
+	&:before {
+		content: $icon-cross-middle;
+	}
+}
 .icon-phone-ringing {
 	&:before {
 		content: $icon-phone-ringing;
@@ -58,6 +63,26 @@
 .icon-contacts {
 	&:before {
 		content: $icon-contacts;
+	}
+}
+.icon-search {
+	&:before {
+		content: $icon-search;
+	}
+}
+.icon-plus {
+	&:before {
+		content: $icon-plus;
+	}
+}
+.icon-check {
+	&:before {
+		content: $icon-check;
+	}
+}
+.icon-file-download {
+	&:before {
+		content: $icon-file-download;
 	}
 }
 .icon-snow {
@@ -118,20 +143,5 @@
 .icon-volume-control-phone {
 	&:before {
 		content: $icon-volume-control-phone;
-	}
-}
-.icon-plus {
-	&:before {
-		content: $icon-plus;
-	}
-}
-.icon-check {
-	&:before {
-		content: $icon-check;
-	}
-}
-.icon-file-download {
-	&:before {
-		content: $icon-file-download;
 	}
 }

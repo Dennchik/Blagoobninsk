@@ -1,18 +1,21 @@
 import loaded from './assets/preloader.js';
-
 loaded('.preloader');
 
-// import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
+import { date } from './assets/date.js';
 
+// import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 // dynamicAdaptive();
 
 import returnToSavedPosition from './modules/return-position.js';
 returnToSavedPosition();
 //* ---------------- Плавная прокрутка страницы до позиции ---------------------
 import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
-
 anchorsSmoothScrolling();
 
+import {
+	timeLineHeaderItem,
+	timeLineTextItem,
+} from './animations/anime-js.jsx';
 //* ----------------------------------------------------------------------------
 const menuList = document.querySelector('.menu-list');
 const burgerButtons = document.querySelectorAll('.burger-button');
@@ -44,35 +47,23 @@ burgerButtons.forEach(burgerButton => {
 	});
 });
 //* ----------------------------------------------------------------------------
-import {
-	timeLineHeaderItem,
-	timeLineTextItem,
-} from './animations/anime-js.jsx';
-
 document.addEventListener('DOMContentLoaded', () => {
 	const textItem = document.querySelector('.hgroup-items');
 	if (textItem) {
 		timeLineTextItem();
 	}
 
-
-	//* ------------------------------- Date -------------------------------------
-	let dateContainer = document.querySelector('.performance__date');
-	if (!dateContainer) return;
-
-	let now = new Date();
-	let options = { month: 'short' }; // Сокращённое название месяца
-	let day = now.getDate();
-	let month = new Intl.DateTimeFormat('ru-RU', options).format(now);
-
-	// Убираем точку и делаем первую букву заглавной
-	month = month.replace('.', '').charAt(0).toUpperCase() + month.slice(1, -1);
-
-	dateContainer.innerHTML = `<div class="day">${day}</div> <div class="data-wrapper">
-<div class="month">${month}</div></div>`;
+	date('.performance__date');
 });
 
-//* --------------------------- Animation Header -----------------------------
+//* ----------------------------- Button Search --------------------------------
+const headerContainer = document.querySelector('.header__container');
+
+const searchButton = document.querySelector('.menu-items__search-button');
+searchButton.addEventListener('click', () => {
+	headerContainer.classList.toggle('_active');
+});
+//* --------------------------- Animation Header -------------------------------
 const initHeaderScroll = () => {
 	const header = document.querySelector('.header');
 	const mainContent = document.querySelector('.page__main-content');

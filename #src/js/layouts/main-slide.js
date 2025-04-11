@@ -86,11 +86,13 @@ export function swiperSlelide(Slide) {
 
 export function swiperPerform(Slide) {
 	if (Slide) {
+		const todayIndex = new Date().getDay(); // 0 — воскресенье, 1 — понедельник, ..., 6 — суббота
 		new Swiper(Slide, {
 			speed: 800,
 			spaceBetween: 120,
 			effect: 'fade',
 			grabCursor: true,
+			initialSlide: todayIndex, // <-- добавили эту строку
 			// loop: true,
 			// slidesPerView: 1,
 			// autoplay: {
@@ -100,7 +102,7 @@ export function swiperPerform(Slide) {
 			// mousewheel: {
 			// 	invert: false,
 			// },
-			// autoHeight: true,
+			autoHeight: true,
 			pagination: {
 				el: '.perform-slide__pagination',
 				clickable: true,

@@ -1,0 +1,44 @@
+@use '../core/all' as *;
+
+.form-search {
+	// .form-search__search-box
+	&__search-box {
+		display: flex;
+		padding: 1rem 0 1rem 1rem;
+		gap: 1.6rem;
+		backdrop-filter: blur(50px);
+		label {
+			display: none;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background: $border-color;
+		}
+	}
+
+	// .form-search__search
+	&__search {
+		width: 100%;
+		color: $font-color-default;
+		font-size: 2.4rem;
+		letter-spacing: 1.5px;
+	}
+
+	// .form-search__search-button
+	&__search-button {
+		padding: 0 1rem;
+		._search {
+			color: $color-secondary !important;
+		}
+
+		._cross-middle {
+			color: $color-secondary;
+			font-size: 2.6rem;
+		}
+	}
+}

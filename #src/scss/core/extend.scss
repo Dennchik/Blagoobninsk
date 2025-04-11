@@ -261,10 +261,12 @@
 
 //! ----------------------------------------------------------------------------
 .transform-perspective {
+	// родительский блок
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
 	perspective: 100px;
 
+	// Дочерний блок
 	.transform-box {
 		transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 

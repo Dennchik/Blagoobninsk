@@ -29,3 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
 	// 	tlRotateIcon();
 	// }, 2000);
 });
+//* ----------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+	const todayIndex = new Date().getDay(); // Воскресенье = 0, Понедельник = 1, ..., Суббота = 6
+
+	// Если используешь Swiper
+	if (typeof swiper !== 'undefined') {
+		swiper.slideTo(todayIndex); // прокрутить к нужному слайду
+	}
+
+	// Если слайдер кастомный
+	const slides = document.querySelectorAll('._slide-column');
+	const sliderContainer = document.querySelector('.slide-perform'); // замените на свой селектор
+
+	if (sliderContainer && slides.length) {
+		const slideWidth = slides[0].offsetWidth;
+		sliderContainer.scrollLeft = slideWidth * todayIndex;
+	}
+});
