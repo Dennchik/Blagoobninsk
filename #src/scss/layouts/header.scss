@@ -80,12 +80,12 @@
 				color: red;
 
 				._search {
-					scale: 0;
+					// scale: 0;
 					opacity: 0;
 				}
 
 				._cross-middle {
-					scale: 1;
+					// scale: 1;
 					opacity: 1;
 				}
 			}
@@ -258,7 +258,8 @@
 
 		._cross-middle {
 			font-size: 2.6rem;
-			scale: 0;
+			// scale: 0;
+			opacity: 0;
 		}
 	}
 
