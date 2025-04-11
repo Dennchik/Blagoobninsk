@@ -19,6 +19,10 @@
 	&__slide-news {
 		padding: 3rem 1rem;
 		overflow: hidden;
+
+		@include screen-490 {
+			padding: 3rem 0;
+		}
 	}
 
 	// .section-news__button
