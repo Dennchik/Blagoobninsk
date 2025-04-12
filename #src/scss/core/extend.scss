@@ -13,6 +13,9 @@
 
 	background: linear-gradient(to right, transparent 50%, $color, $color);
 }
+.hidden {
+	overflow: hidden;
+}
 
 .bg-top,
 .bg-bottom {
@@ -101,13 +104,11 @@
 }
 
 .top-box {
-	padding: 18rem 0 4rem;
 	min-height: 100vh;
-	@include min-960 {
-		padding: 8rem 0 0;
-	}
+	padding: 8rem 0 0;
 
-	@include screen-690 {
+	@include screen-1440 {
+		padding: 18rem 0 4rem;
 		min-height: 100%;
 	}
 }

@@ -10,15 +10,21 @@ ScrollTrigger.normalizeScroll(false);
 ScrollTrigger.config({ ignoreMobileResize: true });
 
 //* ----------------------------------------------------------------------------
-export const smoother = ScrollSmoother.create({
-	wrapper: '#wrapper',
-	content: '#content',
-	speed: 1,
-	smooth: 1.5,
-	effects: true,
-	smoothTouch: 0.1,
-});
+export function smooter() {
+	const smoother = ScrollSmoother.create({
 
+		wrapper: '#wrapper',
+		content: '#content',
+		speed: 1,
+		smooth: 1.5,
+		effects: true,
+		smoothTouch: 0.1,
+	});
+
+	return () => {
+		smoother.kill(); // Удаляем Smooth при размонтировании
+	};
+}
 //* ___________________________ "applyParallax" ________________________________
 export function applyParallax(element) {
 	const smoother = ScrollSmoother.get();

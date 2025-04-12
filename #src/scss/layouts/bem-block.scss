@@ -109,6 +109,7 @@
 	}
 
 	._button {
+		pointer-events: none;
 		font-size: 3.8rem;
 		position: relative;
 		z-index: 13;

@@ -77,15 +77,13 @@
 			}
 
 			.menu-items__search-button {
-				color: red;
-
 				._search {
-					// scale: 0;
+					scale: 0;
 					opacity: 0;
 				}
 
 				._cross-middle {
-					// scale: 1;
+					scale: 1;
 					opacity: 1;
 				}
 			}
@@ -122,6 +120,7 @@
 
 	// .header__logo-wrpper
 	&__logo-wrpper {
+		padding: 10px 0;
 		display: flex;
 		align-items: center;
 
@@ -145,18 +144,14 @@
 
 	// .header__logo
 	&__logo {
-		width: 70px;
-		height: 100%;
+		width: 7rem;
+		height: 7rem;
 
 		img {
 			width: 100%;
 			height: 100%;
 			max-width: none;
-		}
-
-		@include screen-690 {
-			width: 40px;
-			height: 4100%;
+			object-fit: contain;
 		}
 	}
 
@@ -245,7 +240,9 @@
 
 		._search,
 		._cross-middle {
-			transition: scale 0.3s ease-in-out;
+			transition:
+				opacity 0.4s,
+				scale 0.4s ease-out;
 			position: absolute;
 			pointer-events: none;
 			color: $color-secondary;
@@ -258,7 +255,7 @@
 
 		._cross-middle {
 			font-size: 2.6rem;
-			// scale: 0;
+			scale: 0;
 			opacity: 0;
 		}
 	}

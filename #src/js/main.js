@@ -58,10 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //* ----------------------------- Button Search --------------------------------
 const headerContainer = document.querySelector('.header__container');
-
+const breadCrumbs = document.querySelector('.main-content__bread-crumbs');
 const searchButton = document.querySelector('.menu-items__search-button');
 searchButton.addEventListener('click', () => {
 	headerContainer.classList.toggle('_active');
+	if (breadCrumbs) {
+		if (headerContainer.classList.contains('_active')) {
+			breadCrumbs.style.paddingTop = '14rem';
+			breadCrumbs.style.transition = 'padding-top 0.3s ease-in-out';
+		} else {
+			breadCrumbs.style.paddingTop = '9rem';
+			breadCrumbs.style.transition = 'padding-top 0.3s ease-in-out';
+		}
+	}
 });
 //* --------------------------- Animation Header -------------------------------
 const initHeaderScroll = () => {
@@ -83,7 +92,7 @@ const initHeaderScroll = () => {
 	};
 
 	// Сразу применим поведение при загрузке
-	// handleScroll();
+	handleScroll();
 	// Выполнение timeLineHeaderItem при загрузке
 	timeLineHeaderItem();
 
@@ -95,10 +104,12 @@ const initHeaderScroll = () => {
 		window.removeEventListener('scroll', handleScroll);
 	});
 };
+document.addEventListener('DOMContentLoaded', () => {
+	// Гарантированно запускаем и при обычной загрузке, и при возврате из истории
+	window.addEventListener('DOMContentLoaded', initHeaderScroll);
+	window.addEventListener('pageshow', initHeaderScroll);
 
-// Гарантированно запускаем и при обычной загрузке, и при возврате из истории
-window.addEventListener('DOMContentLoaded', initHeaderScroll);
-window.addEventListener('pageshow', initHeaderScroll);
+});
 //* ----------------------------------------------------------------------------
 console.log('%c РОССИЯ ',
 	'background: blue; color: yellow; font-size: x-large; ' +

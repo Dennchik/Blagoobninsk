@@ -11,9 +11,9 @@
 	}
 
 	// .section-intro__container
-	&__container {
-		@include screen-960 {
-			padding-right: 0;
+	&._container {
+		@include screen-1440 {
+			padding-right: 0 !important;
 		}
 	}
 
