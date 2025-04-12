@@ -5,11 +5,12 @@ if (!isMobile) {
 }
 import { buildSwiper } from './layouts/build-swiper.js';
 buildSwiper();
-import { mainSlide, newslide, swiperSlelide, swiperPerform } from './layouts/main-slide.js';
+import { swiperPerform, templesSlide, newslide, websiteSlelide, slideSchedule } from './layouts/main-slide.js';
 swiperPerform('.slide-perform');
-mainSlide('.slide-temples__body');
+templesSlide('.temples-slide');
 newslide('.news-slide');
-swiperSlelide('.slide-swiper');
+websiteSlelide('.slide-website');
+slideSchedule('.slide-schedule');
 //* ----------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
 	// const textItem = document.querySelector('.hgroup-items');

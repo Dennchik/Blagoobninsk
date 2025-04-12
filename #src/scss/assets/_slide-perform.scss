@@ -194,7 +194,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	gap: 6rem;
+	gap: 4rem;
 
 	// .navigation__button-prev
 	&__button-prev {
@@ -219,5 +219,10 @@
 		&.swiper-button-disabled {
 			opacity: 0.35;
 		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
 	}
 }

@@ -1,6 +1,82 @@
 @use '../core/all' as *;
 
+.section-temples {
+	position: relative;
+
+	// .slide-temples__container
+	&__body {
+		position: relative;
+		z-index: 3;
+		padding: 6rem 0;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+
+		@include screen-690 {
+			padding: 4rem 0;
+		}
+	}
+
+	// .section-temples__title
+	&__title {
+		position: relative;
+		margin-bottom: 4rem;
+	}
+
+	// .section-temples__content
+	&__content {
+		padding-top: 3rem;
+		margin: 0;
+		position: relative;
+		height: 100%;
+	}
+
+	// .section-temples__image
+	&__image {
+		align-self: center;
+		position: relative;
+		display: inline-block;
+		width: auto;
+	}
+
+	// .section-temples__info
+	&__info {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+		line-height: 135%;
+
+		p {
+			text-shadow: none;
+			line-height: 120%;
+		}
+	}
+
+	// .section-temples__text
+	&__text {
+		font-size: 2.2rem;
+		text-shadow: none;
+		line-height: 125%;
+
+		p {
+			line-height: 120%;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		ul {
+			margin-left: 1.6rem;
+		}
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
 .slide-temples {
+	position: relative;
 	width: calc(100% + 520px);
 	margin-left: -260px;
 	margin-right: -260px;
@@ -114,79 +190,118 @@
 			font-size: 12px;
 		}
 	}
-}
-
-.section-temples {
-	position: relative;
-
-	// .slide-temples__container
-	&__body {
-		position: relative;
-		z-index: 3;
-		padding: 6rem 0;
+	//* --------------------------------------------------------------------------
+	// .slide-temples__navigation
+	&__navigation {
+		width: 100%;
 		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-
-		@include screen-690 {
-			padding: 4rem 0;
-		}
+		justify-content: center;
+		gap: 10rem;
 	}
 
-	// .section-temples__title
-	&__title {
-		position: relative;
-		margin-bottom: 4rem;
-	}
-
-	// .section-temples__content
-	&__content {
-		padding-top: 3rem;
-		margin: 0;
-		position: relative;
+	// .slide-temples__button-prev
+	&__button-prev {
+		left: 0;
 		height: 100%;
-	}
 
-	// .section-temples__image
-	&__image {
-		align-self: center;
-		position: relative;
-		display: inline-block;
-		width: auto;
-	}
+		&::after {
+			transform: translateY(-15px);
+		}
 
-	// .section-temples__info
-	&__info {
-		position: relative;
-		z-index: 1;
-		margin-bottom: 1rem;
-		font-size: 1.8rem;
-		line-height: 135%;
+		span {
+			position: relative;
+			right: 0;
+			transform: translateY(-25px) rotate(90deg);
 
-		p {
-			text-shadow: none;
-			line-height: 120%;
+			&::after {
+				content: '';
+				transform: translate(-16px, 9px) rotate(-90deg);
+				clip-path: polygon(
+					40% 0%,
+					40% 20%,
+					100% 20%,
+					100% 80%,
+					40% 80%,
+					40% 100%,
+					0% 50%
+				);
+			}
 		}
 	}
 
-	// .section-temples__text
-	&__text {
-		font-size: 2.2rem;
-		text-shadow: none;
-		line-height: 125%;
+	// .slide-temples__button-next
+	&__button-next {
+		right: 0;
 
-		p {
-			line-height: 120%;
-			&:not(:last-child) {
-				margin-bottom: 1rem;
+		span {
+			left: 0;
+			transform: translateY(-25px) rotate(-90deg);
+
+			&::after {
+				content: '';
+				transform: translate(-16px, 9px) rotate(-90deg);
+				clip-path: polygon(
+					40% 0%,
+					40% 20%,
+					100% 20%,
+					100% 80%,
+					40% 80%,
+					40% 100%,
+					0% 50%
+				);
+			}
+		}
+	}
+
+	&__button-prev,
+	&__button-next {
+		top: 0;
+		z-index: 9;
+
+		span {
+			cursor: pointer;
+			display: inline-block;
+			width: 20px;
+			transition: opacity 0.3s ease-out;
+			top: 50%;
+
+			img {
+				position: relative;
+				z-index: 1;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: 0;
+				top: 0px;
+				left: 1px;
+
+				width: 49px;
+				height: 31px;
+				border-radius: 50%;
+				background: #fff;
+			}
+
+			@include min-1024 {
+				position: absolute;
+			}
+
+			@include screen-1024 {
+				position: relative;
 			}
 		}
 
-		ul {
-			margin-left: 1.6rem;
+		@include min-1024 {
+			width: 30%;
+			height: 100%;
+			position: absolute;
 		}
-		&:not(:last-child) {
-			margin-bottom: 2rem;
+
+		@include screen-1024 {
+			width: auto;
+			height: auto;
+			position: relative;
 		}
 	}
 }
