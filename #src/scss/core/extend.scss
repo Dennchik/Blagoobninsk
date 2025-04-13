@@ -95,8 +95,6 @@
 	backdrop-filter: blur(10px);
 }
 //* ----------------------------------------------------------------------------
-
-//* ----------------------------------------------------------------------------
 .font-size-calc-h2 {
 	@include minmax-490-1920 {
 		font-size: calc(28px + (50 - 28) * ((100vw - 490px) / (1920 - 490)));
@@ -259,7 +257,6 @@
 		grid-template-rows: 1fr;
 	}
 }
-
 //! ----------------------------------------------------------------------------
 .transform-perspective {
 	// родительский блок
@@ -370,5 +367,41 @@
 
 	&.swiper-pagination-lock {
 		display: none;
+	}
+}
+
+.render-mask {
+	mask-image: var(--astorRender);
+	-webkit-mask-image: var(--astorRender);
+	mask-size: auto 100%;
+	mask-repeat: no-repeat;
+	mask-position: top left;
+	-webkit-mask-size: auto 100%;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: top left;
+	position: absolute;
+	height: 1000px;
+	width: 700px;
+	top: -100px;
+	left: -75px;
+	pointer-events: none;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(
+			to bottom,
+			var(--bgInverse2) 400px,
+			var(--accent)
+		);
+		background-size: 150% 150%;
+		background-position: top center;
 	}
 }

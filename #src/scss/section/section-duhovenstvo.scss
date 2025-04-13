@@ -50,11 +50,15 @@
 		display: flex;
 		flex-wrap: wrap;
 		// gap: 2rem;
-		justify-content: space-between;
+		justify-content: space-around;
 
 		.gallery-item {
-			width: 32%;
+			width: 24%;
 			margin-top: 160px;
+
+			@include screen-1440 {
+				width: 32%;
+			}
 
 			@include screen-860 {
 				width: 48%;
