@@ -106,8 +106,12 @@
 	padding: 8rem 0 0;
 
 	@include screen-1440 {
-		padding: 18rem 0 4rem;
+		padding: 18rem 0 14rem;
 		min-height: 100%;
+	}
+
+	@include screen-768 {
+		padding: 18rem 0 4rem;
 	}
 }
 .hr {
@@ -246,6 +250,24 @@
 	}
 }
 
+.link-hover {
+	position: relative;
+	color: $color-secondary;
+
+	&::after {
+		content: '';
+		transform: scaleX(1);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		transition: transform 0.3s ease-in-out;
+		opacity: 0.6;
+		background-color: $font-color-secondary;
+	}
+}
+
 .is-open {
 	display: grid;
 	width: 100%;
@@ -371,8 +393,13 @@
 }
 
 .render-mask {
+	position: relative;
+	z-index: 1;
 	mask-image: var(--astorRender);
-	-webkit-mask-image: var(--astorRender);
+	// mask-image: url('../img/pictures/render-mask.png');
+	// -webkit-mask-image: var(--astorRender);
+
+	// -webkit-mask-image: url('../img/pictures/render-mask.png');
 	mask-size: auto 100%;
 	mask-repeat: no-repeat;
 	mask-position: top left;
@@ -384,7 +411,7 @@
 	width: 700px;
 	top: -100px;
 	left: -75px;
-	pointer-events: none;
+	// pointer-events: none;
 
 	&::before {
 		content: '';
@@ -403,5 +430,28 @@
 		);
 		background-size: 150% 150%;
 		background-position: top center;
+	}
+}
+.mask-render {
+	background: url('../img/pictures/d-g.png') top left / contain no-repeat;
+	mask-size: 80% 100vh;
+	mask-repeat: no-repeat;
+	height: 100vh;
+	// width: calc(100% / 2);
+	width: 987px;
+	position: absolute;
+	top: 90px;
+	left: 0;
+	z-index: 0;
+	pointer-events: none;
+	opacity: 0.5;
+	object-fit: contain;
+
+	@include minmax-320-1920 {
+		width: calc(320px + (987 - 320) * ((100vw - 320px) / (1920 - 320)));
+	}
+
+	@include screen-320 {
+		width: 320px;
 	}
 }

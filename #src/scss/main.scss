@@ -9,6 +9,7 @@
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/menu-list';
 @use 'chunks/form-search';
+@use 'chunks/bread-crumbs';
 // todo --------------------------- Fonts --------------------------------------
 @use 'core/_fonts.scss';
 //todo  --------------------------- Icon Fonts ---------------------------------
@@ -22,7 +23,7 @@
 // todo ---------------------------- Pages -------------------------------------
 @use 'pages/page';
 // todo -------------------------- Section -------------------------------------
-
+@use 'section/section-about';
 // todo ------------------------ Default fonts ---------------------------------
 // &display=swap&subset=cyrillic-ext
 @import url('https://fonts.googleapis.com/css?family=Sofia+Sans+Extra+Condensed:regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
@@ -48,7 +49,7 @@
 	}
 }
 [class*=' _img'] {
-	pointer-events: none;
+	// pointer-events: none;
 	img {
 		vertical-align: middle;
 		object-fit: cover;

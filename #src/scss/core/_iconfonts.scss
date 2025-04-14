@@ -25,64 +25,19 @@
 	font-variant-ligatures: discretionary-ligatures;
 }
 
-.icon-cross-middle {
+.icon-scroll-auto {
 	&:before {
-		content: $icon-cross-middle;
+		content: $icon-scroll-auto;
 	}
 }
-.icon-phone-ringing {
+.icon-scrol-horizontal {
 	&:before {
-		content: $icon-phone-ringing;
+		content: $icon-scrol-horizontal;
 	}
 }
-.icon-git-hub-circle {
+.icon-horizontal-scroll-hand {
 	&:before {
-		content: $icon-git-hub-circle;
-	}
-}
-.icon-angles-left-solid {
-	&:before {
-		content: $icon-angles-left-solid;
-	}
-}
-.icon-angles-right-solid {
-	&:before {
-		content: $icon-angles-right-solid;
-	}
-}
-.icon-angles-up-solid {
-	&:before {
-		content: $icon-angles-up-solid;
-	}
-}
-.icon-angles-down-solid {
-	&:before {
-		content: $icon-angles-down-solid;
-	}
-}
-.icon-contacts {
-	&:before {
-		content: $icon-contacts;
-	}
-}
-.icon-search {
-	&:before {
-		content: $icon-search;
-	}
-}
-.icon-plus {
-	&:before {
-		content: $icon-plus;
-	}
-}
-.icon-check {
-	&:before {
-		content: $icon-check;
-	}
-}
-.icon-file-download {
-	&:before {
-		content: $icon-file-download;
+		content: $icon-horizontal-scroll-hand;
 	}
 }
 .icon-snow {
@@ -143,5 +98,65 @@
 .icon-volume-control-phone {
 	&:before {
 		content: $icon-volume-control-phone;
+	}
+}
+.icon-cross-middle {
+	&:before {
+		content: $icon-cross-middle;
+	}
+}
+.icon-phone-ringing {
+	&:before {
+		content: $icon-phone-ringing;
+	}
+}
+.icon-git-hub-circle {
+	&:before {
+		content: $icon-git-hub-circle;
+	}
+}
+.icon-angles-left-solid {
+	&:before {
+		content: $icon-angles-left-solid;
+	}
+}
+.icon-angles-right-solid {
+	&:before {
+		content: $icon-angles-right-solid;
+	}
+}
+.icon-angles-up-solid {
+	&:before {
+		content: $icon-angles-up-solid;
+	}
+}
+.icon-angles-down-solid {
+	&:before {
+		content: $icon-angles-down-solid;
+	}
+}
+.icon-contacts {
+	&:before {
+		content: $icon-contacts;
+	}
+}
+.icon-search {
+	&:before {
+		content: $icon-search;
+	}
+}
+.icon-plus {
+	&:before {
+		content: $icon-plus;
+	}
+}
+.icon-check {
+	&:before {
+		content: $icon-check;
+	}
+}
+.icon-file-download {
+	&:before {
+		content: $icon-file-download;
 	}
 }

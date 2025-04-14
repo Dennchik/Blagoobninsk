@@ -1,16 +1,45 @@
 @use '../core/all' as *;
 
 .perform-slide {
+	// .perform-slide__content
+	&__content {
+		flex: 0 1 auto;
+		pointer-events: none;
+
+		@include min-490 {
+			margin-left: -60px;
+			height: 100%;
+		}
+
+		> * {
+			opacity: 0;
+			transform: translateY(25px);
+			transition:
+				opacity 0.4s,
+				transform 0.4s ease-out;
+		}
+	}
+
 	// .perform-slide__body
 	&__body {
+		background: #ffffff;
+		padding-right: 25px;
 		position: relative;
+		width: 100%;
+		height: 100%;
 		padding: 1.6rem;
 		z-index: 0;
-		background: #ffffff;
 		box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 		border-radius: 8px;
 		display: flex;
 		flex-direction: column;
+
+		&.slide-perform {
+			cursor: url('../img/icons/scroll-auto.svg'), grab;
+			&.is-grabbing {
+				cursor: grab;
+			}
+		}
 	}
 
 	// .perform-slide__slide-column
@@ -48,16 +77,16 @@
 	// .perform-slide__image
 	&__image {
 		position: relative;
-		flex: 0 0 220px;
-		width: 220px;
-		height: 300px;
+		flex: 0 0 250px;
+		width: 250px;
+		height: 330px;
 		overflow: hidden;
 		border-radius: 8px;
 		background: linear-gradient(to right, $color, #fff);
 		box-shadow: 4px 13px 30px 1px rgba(255, 255, 255, 0.712);
 
 		@include screen-490 {
-			flex: 1 auto;
+			flex: 0 1 auto;
 			margin-bottom: 2rem;
 			width: 100%;
 		}
@@ -93,25 +122,6 @@
 			display: block;
 			opacity: 0;
 			transition: opacity 1s ease-out;
-		}
-	}
-
-	// .perform-slide__content
-	&__content {
-		flex: 0 1 auto;
-		pointer-events: none;
-		padding: 5px 25px 0 0;
-
-		@include min-490 {
-			margin-left: -60px;
-		}
-
-		> * {
-			opacity: 0;
-			transform: translateY(25px);
-			transition:
-				opacity 0.4s,
-				transform 0.4s ease-out;
 		}
 	}
 

@@ -16,7 +16,7 @@ $font-color-secondary: rgb(80, 60, 42);
 //* --------------------------- [Background Color] -----------------------------
 $background: rgb(255, 255, 255);
 $color: rgb(230, 217, 205);
-$color-secondary: rgb(80, 60, 42);
+$color-secondary: #503c2a;
 $border-color: rgba(125, 94, 66, 0.397);
 //* ------------------------------- [Shadow] -----------------------------------
 $boxShadow: 0px 0px 2px 3px rgba(4, 217, 255, 0.699);
@@ -45,10 +45,14 @@ $darkOutline:
 	$dark-Outline 0.96017px -0.279416px 0px;
 //* ----------------------------------------------------------------------------
 :root {
-	--astorRender: url('../img/pictures/d-t.png');
+	--astorRender: url('../img/pictures/d-g.png');
 	--width: calc(0px + (260 - 0) * ((100vw - 320px) / (1024 - 320)));
 	--font-color-default: rgb(9, 9, 27);
 	--font-color-secondary: rgb(80, 60, 42);
+
+	--bgInverse2: #494949;
+	--accent: #897666;
+
 	//* ---------------------------- [Background] --------------------------------
 	--background-color: rgb(210, 242, 255);
 	--background-second: rgb(2, 10, 16);

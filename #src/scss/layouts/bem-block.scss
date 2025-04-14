@@ -24,14 +24,16 @@
 		font: 44px $font-family-exclude;
 		font-weight: 400;
 		text-transform: uppercase;
-		transform: scale(1, 1.2);
+		// transform: scale(1, 1.2);
 		text-shadow: 1px 1px 3px $font-color-secondary;
 		background: linear-gradient($font-color-default, #000000f5);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 
 		span {
+			display: block;
 			white-space: nowrap;
+			line-height: 1.1;
 		}
 
 		@include minmax-320-1920 {

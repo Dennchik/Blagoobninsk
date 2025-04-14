@@ -58,17 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //* ----------------------------- Button Search --------------------------------
 const headerContainer = document.querySelector('.header__container');
-const breadCrumbs = document.querySelector('.main-content__bread-crumbs');
+const sectionTop = document.querySelector('.section-top');
 const searchButton = document.querySelector('.menu-items__search-button');
 searchButton.addEventListener('click', () => {
 	headerContainer.classList.toggle('_active');
-	if (breadCrumbs) {
+	if (sectionTop) {
 		if (headerContainer.classList.contains('_active')) {
-			breadCrumbs.style.paddingTop = '14rem';
-			breadCrumbs.style.transition = 'padding-top 0.3s ease-in-out';
+			sectionTop.style.paddingTop = '50px';
+			sectionTop.style.transition = 'padding-top 0.3s ease-in-out';
 		} else {
-			breadCrumbs.style.paddingTop = '9rem';
-			breadCrumbs.style.transition = 'padding-top 0.3s ease-in-out';
+			sectionTop.style.paddingTop = '0';
+			sectionTop.style.transition = 'padding-top 0.3s ease-in-out';
 		}
 	}
 });

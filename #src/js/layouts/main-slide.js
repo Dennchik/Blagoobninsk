@@ -4,23 +4,29 @@ import Swiper from 'swiper/bundle';
 
 
 export function swiperPerform(Slide) {
+	const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
 	if (Slide) {
 		const todayIndex = new Date().getDay(); // 0 — воскресенье, 1 — понедельник, ..., 6 — суббота
+		const cursor = document.querySelector('.slide-perform');
 		new Swiper(Slide, {
 			// speed: 800,
 			spaceBetween: 20,
 			effect: 'fade',
-			grabCursor: true,
+			// grabCursor: true,
 			initialSlide: todayIndex, // <-- добавили эту строку
+			on: {
+				touchStart: () => cursor.classList.add('is-grabbing'),
+				touchEnd: () => cursor.classList.remove('is-grabbing'),
+			},
 			// loop: true,
 			// slidesPerView: 1,
 			// autoplay: {
 			// 	delay: 1500,
 			// 	disableOnInteraction: true,
 			// },
-			// mousewheel: {
-			// 	invert: false,
-			// }, 
+			mousewheel: isMobile ? false : {
+				invert: false,
+			},
 			pagination: {
 				el: '.perform-slide__pagination',
 				clickable: true,
@@ -131,6 +137,7 @@ export function slideSchedule(Slide) {
 	if (Slide) {
 		new Swiper(Slide, {
 			speed: 800,
+			loop: true,
 			spaceBetween: 20,
 			grabCursor: true,
 			initialSlide: todayIndexSlide, // <-- добавили эту строку
