@@ -21,12 +21,14 @@
 			}
 
 			i {
-				transform: translateY(-2px);
+				@include min-1440 {
+					transform: translateY(-0.2rem);
+				}
 			}
 		}
 
-		li:nth-child(odd) {
-			margin: 0 1.6rem;
+		li:nth-child(even) {
+			margin: 0 1.2rem;
 		}
 
 		&::before {
@@ -54,6 +56,7 @@
 	&__link {
 		color: $color-secondary;
 		line-height: 1;
+		white-space: nowrap;
 	}
 
 	// .bread-crumbs__item

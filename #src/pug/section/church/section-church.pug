@@ -1,24 +1,36 @@
-.section-about._container
+.section-greed._container 
+	.mask-render
+		.bg-bottom 
 	._body 
 		.bg-grad 
 		.bg-top 
 		._content 
 			._column
-				ul._list 
-					li 
-						span.link-hover Что такое Церковь?
-					li 
-						a(href="#")._link.link_underline Епархиальная и приходская жизнь
+				nav._menu 
+					ul._list 
+						li._item 
+							span._link.link-hover Церковь
+						ul._sub-menu 
+							li._sub-item  
+								a(href="@@webRoot/church/church-history.html")._link.link_underline  Церковь в истории
+							li._sub-item 
+								a(href="#")._link.link_underline Епархиальная и приходская жизнь
+							li._sub-item 
+								a(href="#")._link.link_underline Социальное служение
+							li._sub-item 
+								a(href="#")._link.link_underline Образование и катехизация
+							li._sub-item 
+								a(href="#")._link.link_underline Монашество
 			._column 
 				._bread-crumbs
 					nav.bread-crumbs
 						ul._list
 							li
 								a(href="@@webRoot/index.html" title="Главная")._link.link_underline Главная
-							li 
-								//- +iconfont('angle-right', '_icon')
+							li._item  
+								+iconfont('angle-right', '_icon')
 							li
-								span._item Патриарх
+								span._item Церковь
 				hgroup.title.tl-02._title 
 					h2 
 						span Что такое Церковь?

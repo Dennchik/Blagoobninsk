@@ -1,8 +1,8 @@
-import { smooter } from './animations/animations.jsx';
-const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-if (!isMobile) {
-	smooter();
-}
+// import { smooter } from './animations/animations.jsx';
+// const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+// if (!isMobile) {
+// 	smooter();
+// }
 import { buildSwiper } from './layouts/build-swiper.js';
 buildSwiper();
 import { swiperPerform, templesSlide, newslide, websiteSlelide, slideSchedule } from './layouts/main-slide.js';

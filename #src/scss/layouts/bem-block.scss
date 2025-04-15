@@ -32,7 +32,6 @@
 
 		span {
 			display: block;
-			white-space: nowrap;
 			line-height: 1.1;
 		}
 
@@ -224,7 +223,7 @@
 }
 
 .t-019 {
-	font-size: 28px;
+	font-size: 19px;
 	@include minmax-490-1920 {
 		font-size: calc(19px + (28 - 19) * ((100vw - 490px) / (1920 - 490)));
 	}

@@ -1,20 +1,22 @@
-.section-about._container
-	.mask-render
-		.bg-bottom 
+.section-greed._container 
 	._body 
+		.mask-render 
 		.bg-grad 
 		.bg-top 
 		._content 
 			._column
 				nav._menu 
 					ul._list 
-						li 
+						li._item  
 							a(href="@@webRoot/blagochinie/about.html")._link.link_underline О благочинии
-						li 
-							a(href="@@webRoot/blagochinie/duhovenstvo.html")._link.link_underline Духовенство
-						li 
+						ul._sub-menu 
+							li._sub-item  
+								a(href="@@webRoot/blagochinie/temples.html")._link.link_underline Храмы благочиния 
+							li._sub-item   
+								a(href="@@webRoot/blagochinie/duhovenstvo.html")._link.link_underline Духовенство
+						li._item 
 							span._link.link-hover Патриарх
-						li 
+						li._item 
 							a(href="@@webRoot/blagochinie/arhierey.html")._link.link_underline Правящий архиерей
 			._column 
 				._bread-crumbs

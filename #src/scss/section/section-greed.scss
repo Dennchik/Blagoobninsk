@@ -1,7 +1,7 @@
 @use '../core/all' as *;
 
-.section-about {
-	// .section-about__body
+.section-greed {
+	// .section-greed__body
 	&__body {
 		padding: 8rem 0 6rem;
 
@@ -10,7 +10,7 @@
 		}
 	}
 
-	// .section-about__content
+	// .section-greed__content
 	&__content {
 		position: relative;
 		z-index: 9;
@@ -19,8 +19,15 @@
 		gap: 2rem;
 	}
 
-	// .section-about__column
+	&__content-info {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	// .section-greed__column
 	&__column {
+		height: auto;
 		&:nth-child(1) {
 			flex: 0 0 21.8rem;
 			width: 21.8rem;
@@ -36,49 +43,80 @@
 		}
 	}
 
-	// .section-about__list
+	&__menu {
+		position: sticky;
+		top: 8rem;
+		backdrop-filter: blur(8px);
+		transform: translateX(-1.6rem);
+		padding-left: 1.6rem;
+	}
+
+	// .section-greed__row
+	&__row {
+		position: relative;
+	}
+
+	// .section-greed__list
 	&__list {
 		height: 100%;
+	}
 
-		li {
-			position: relative;
-			padding: 3rem 0;
+	// .section-greed__sub-item
+	&__sub-item {
+		position: relative;
+		padding: 3rem 0 3rem 1rem;
+		line-height: 1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background: linear-gradient(to right, #6464645b, transparent);
+		}
+	}
+
+	// .section-greed__list
+	&__item {
+		position: relative;
+		padding: 3rem 0;
+		line-height: 1;
+
+		span {
+			user-select: none;
 			line-height: 1;
+			font-size: 2.2rem;
+			font-weight: 600;
+			line-height: 1;
+			text-transform: uppercase;
+		}
 
-			span {
-				user-select: none;
-				line-height: 1;
-				font-size: 2.2rem;
-				font-weight: 600;
-				line-height: 1;
-				text-transform: uppercase;
-			}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background: linear-gradient(to right, #6464645b, transparent);
+		}
 
-			&::before {
+		&:last-child {
+			&::after {
 				content: '';
 				position: absolute;
-				top: 0;
+				bottom: 0;
 				left: 0;
 				height: 1px;
-				width: 80%;
+				width: 100%;
 				background: linear-gradient(to right, #6464645b, transparent);
-			}
-
-			&:last-child {
-				&::after {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					height: 1px;
-					width: 80%;
-					background: linear-gradient(to right, #6464645b, transparent);
-				}
 			}
 		}
 	}
 
-	// .section-about__link
+	// .section-greed__link
 	&__link {
 		font-size: 2.2rem;
 		font-weight: 600;
@@ -90,7 +128,7 @@
 		}
 	}
 
-	// .section-about__title
+	// .section-greed__title
 	&__title {
 		padding: 3rem 0;
 
@@ -110,6 +148,7 @@
 			max-width: 385px;
 			margin: 0 auto;
 		}
+
 		.gallery-item__text {
 			margin-bottom: 1rem;
 		}
@@ -397,4 +436,94 @@
 		font-weight: 600;
 		transition: color 0.9s ease-in-out;
 	}
+}
+//* ----------------------------------------------------------------------------
+.info-content {
+	// .info-content__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	// .info-content__item
+	&__item {
+		padding: 2rem 2rem 3rem 2rem;
+		border-radius: 8px;
+		width: 100%;
+
+		p {
+			line-height: 1.1;
+
+			&:not(:last-child) {
+				padding-bottom: 1rem;
+			}
+		}
+
+		@extend .bg-card;
+		@extend .box-shadow-card;
+	}
+
+	// .info-content__image
+	&__image {
+		width: 100%;
+		min-width: 250px;
+		margin-bottom: 1rem;
+
+		@include min-768 {
+			padding: 0 3rem 2rem 0;
+			width: 33%;
+			float: left;
+			clear: both;
+		}
+
+		img {
+			border-radius: 8px;
+		}
+	}
+
+	// .info-content__church-info
+	&__church-info {
+		display: inline;
+		float: left;
+	}
+
+	// .info-content__item-list
+	&__item-list {
+		list-style-position: inside;
+		list-style-type: disc;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	// .info-content__title
+	&__title {
+		margin-bottom: 4rem;
+		width: 100%;
+		line-height: 1;
+		color: $font-color-secondary;
+		text-align: center;
+		text-transform: uppercase;
+
+		p {
+			display: inline-block;
+			max-width: 96rem;
+			text-align: left;
+		}
+	}
+
+	// .info-content__text
+	&__text {
+		line-height: 100%;
+	}
+
+	// .info-content__
+
+	// .info-content__
+
+	// .info-content__
+
+	// .info-content__
 }

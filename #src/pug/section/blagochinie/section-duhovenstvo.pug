@@ -1,50 +1,51 @@
-.section-about._container 
-	.mask-render
-		.bg-bottom 
-	._body
-		.bg-grad 
-		.bg-top 
-		._content
-			._column
+.section-greed._container 
+	._body 
+		.mask-render 
+		.bg-grad  
+		._content 
+			._column 
 				nav._menu 
 					ul._list 
-						li 
+						li._item  
 							a(href="@@webRoot/blagochinie/about.html")._link.link_underline О благочинии
-						li 
-							span._link.link-hover Духовенство
-						li 
-							a(href="@@webRoot/blagochinie/patriarh.html")._link.link_underline Патриарх
-						li 
-							a(href="@@webRoot/blagochinie/arhierey.html")._link.link_underline Правящий архиерей
-			._column
-				._bread-crumbs
-					nav.bread-crumbs
-						ul._list
-							li
-								a(href="@@webRoot/index.html" title="Главная")._link.link_underline Главная
-							li 
-								+iconfont('angle-right', '_icon')
-							li
-								a(href="@@webRoot/index.html" title="Главная")._link.link_underline О благочинии
-							li 
-								+iconfont('angle-right', '_icon')
-							li
-								span._item Духовенство
+						ul._sub-menu 
+							li._sub-item 
+								a(href="@@webRoot/blagochinie/temples.html")._link.link_underline Храмы благочиния 
+							li._sub-item 
+								span._link.link-hover Духовенство 
+						li._item  
+							a(href="@@webRoot/blagochinie/patriarh.html")._link.link_underline Патриарх 
+						li._item 
+							a(href="@@webRoot/blagochinie/arhierey.html")._link.link_underline Правящий архиерей 
+			._column 
+				._bread-crumbs 
+					nav.bread-crumbs 
+						ul._list 
+							li._item 
+								a(href="@@webRoot/index.html" title="Главная")._link.link_underline Главная 
+							li._item 
+								+iconfont('angle-right', '_icon') 
+							li._item 
+								a(href="@@webRoot/blagochinie/about.html" title="О благочинии")._link.link_underline О благочинии 
+							li._item 
+								+iconfont('angle-right', '_icon') 
+							li._item 
+								span._item Духовенство 
 				hgroup.title.tl-02._title 
 					h2 
 						span Духовенство 
 				.hr 
-					img(src="@@webRoot/img/frame/hr.png" alt="") 
-				.gallery
+					img(src="@@webRoot/img/frame/hr.png" alt="image") 
+				.gallery 
 					._top 
 						.gallery-item._card 
 							._image._img 
-								img(src="@@webRoot/img/foto/sergiy-vishnyakov.png" alt="image")
+								img(src="@@webRoot/img/foto/sergiy-vishnyakov.png" alt="image") 
 							._info 
 								._post 
-									p Благочинный Протоиерей
-									span 3-его благочиния г. Обнинска
-								._name.t-019  
+									p Благочинный Протоиерей 
+									span 3-его благочиния г. Обнинска 
+								._name.t-019 
 									strong Сергий Вишняков
 								._text Настоятель храма в честь мучениц Веры, Надежды, Любови и матери их Софии
 								a(href="#")._link.link_underline 
