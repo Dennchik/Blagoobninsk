@@ -65,6 +65,10 @@ export function anchorsSmoothScrolling() {
 		// Если был переход с другой страницы с якорем
 		const savedAnchorId = localStorage.getItem('scrollToAnchor'); // получаем сохранённый id из localStorage
 		if (savedAnchorId) {
+			let attempts = 0; // счётчик попыток
+			const maxAttempts = 30; // максимум попыток
+			const delay = 100; // задержка между попытками (мс)
+
 			// Функция прокрутки к элементу с учётом отступа
 			const scrollToAnchorWithOffset = () => {
 				const targetElement = document.getElementById(savedAnchorId);
@@ -83,11 +87,20 @@ export function anchorsSmoothScrolling() {
 
 					// Удаляем сохранённый якорь, чтобы он не сработал снова
 					localStorage.removeItem('scrollToAnchor');
+				} else {
+					// Если элемент ещё не найден — ждём и пробуем снова
+					attempts++;
+					if (attempts < maxAttempts) {
+						setTimeout(scrollToAnchorWithOffset, delay);
+					} else {
+						// Если не удалось найти элемент — очищаем localStorage
+						localStorage.removeItem('scrollToAnchor');
+					}
 				}
 			};
 
 			// Запускаем прокрутку через небольшой таймер (чтобы DOM успел полностью построиться)
-			setTimeout(scrollToAnchorWithOffset);
+			setTimeout(scrollToAnchorWithOffset, 50);
 		}
 	});
 }

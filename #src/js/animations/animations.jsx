@@ -25,6 +25,15 @@ export function smooter() {
 		smoother.kill(); // Удаляем Smooth при размонтировании
 	};
 }
+
+const smoother = ScrollSmoother.create({
+	wrapper: '#wrapper',
+	content: '#content',
+	speed: 1,
+	smooth: 1.5,
+	effects: true,
+	smoothTouch: 0.1,
+});
 //* ___________________________ "applyParallax" ________________________________
 export function applyParallax(element) {
 	const smoother = ScrollSmoother.get();
@@ -33,34 +42,28 @@ export function applyParallax(element) {
 	});
 }
 //* _______________________ Создание ScrollTrigger _____________________________
-// export function refreshScrollTrigger() {
-// 	return ScrollTrigger.refresh();
-// }
+export function refreshScrollTrigger() {
+	return ScrollTrigger.refresh();
+}
 
-// export function LagTextFunction() {
-// 	const smoother = ScrollSmoother.get();
+export function LagTextFunction() {
+	const smoother = ScrollSmoother.get();
 
-// 	if (window.innerWidth > 490) {
-// 		smoother.effects('.lag-1', { lag: 2, speed: 1 });
-// 		smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
-// 		smoother.effects('.col-1', { lag: 1.5, speed: 0.8 });
-// 		smoother.effects('.col-2', { lag: 1.5, speed: 1 });
-// 	}
-// }
+	if (window.innerWidth > 490) {
+		smoother.effects('.lag-1', { lag: 2, speed: 1 });
+		smoother.effects('.lag-2', { lag: 2, speed: 1.2 });
+		smoother.effects('.col-1', { lag: 1.5, speed: 0.8 });
+		smoother.effects('.col-2', { lag: 1.5, speed: 1 });
+	}
+}
 
-// export function applyParallax(element) {
-// 	const smoother = ScrollSmoother.get();
-// 	smoother.effects(element, {
-// 		speed: () => 0.5
-// 	});
-// }
 
 //*
 // ----------------------------------------------------------------------------
 export function initSectionTriggerMove(trigger, targets) {
 	ScrollTrigger.create({
 		trigger: trigger,
-		/* Начинаем событие, когда верхняя граница элемента-1 находится на 100px ниже верха окна браузера*/
+		// Начинаем событие, когда верхняя граница элемента-1 находится на 100px ниже верха окна браузера 
 		start: 'top center',
 		endTrigger: trigger,
 		// Конец события - конец документа 
@@ -77,14 +80,13 @@ export function tlRotateIcon() {
 		ease: 'none', // Равномерное изменение без ускорений
 		scrollTrigger: {
 			trigger: '._rotate-el-01',
-			start: 'top bottom', // Начало анимации, когда `.trigger` выше нижней
-			// границы экрана
-			end: 'top top', // Конец анимации, когда `.trigger` выше нижней границы
-			// экрана
+			start: 'top bottom', // Начало анимации, когда `.trigger` выше нижней границы экрана
+			end: 'top top', // Конец анимации, когда `.trigger` выше нижней границы экрана
 			scrub: true, // Гладкая привязка к скроллу с небольшой задержкой
-			// markers: true, // Для отладки (убрать в продакшене)
+			// markers: true, 
 		}
 	});
+
 	// gsap.to('._rotate-el-02', {
 	// 	rotate: -720, // постоянное вращение
 	// 	ease: 'none', // Равномерное изменение без ускорений

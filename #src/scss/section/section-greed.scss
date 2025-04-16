@@ -142,7 +142,7 @@
 	// .gallery__top
 	&__top {
 		text-align: center;
-		margin-top: 160px;
+		margin-top: 16rem;
 
 		.gallery-item {
 			max-width: 385px;
@@ -232,6 +232,7 @@
 		line-height: 1;
 		color: $color-secondary;
 		text-transform: uppercase;
+		margin-bottom: 1.6rem;
 
 		span {
 			text-transform: none;
@@ -241,6 +242,8 @@
 	// .gallery-item__name
 	&__name {
 		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 1.6rem;
 	}
 
 	// .gallery-item__text
@@ -452,8 +455,23 @@
 		border-radius: 8px;
 		width: 100%;
 
+		strong {
+			clear: both;
+			font-size: 24px;
+			line-height: 1;
+		}
+		li {
+			line-height: 1.4;
+			list-style-type: disc;
+			list-style-position: inside;
+			padding-left: 1.6rem;
+		}
+		ul {
+			margin-bottom: 1.6rem;
+		}
+
 		p {
-			line-height: 1.1;
+			line-height: 1.2;
 
 			&:not(:last-child) {
 				padding-bottom: 1rem;
@@ -470,22 +488,31 @@
 		min-width: 250px;
 		margin-bottom: 1rem;
 
+		&.curent {
+			max-width: 8rem;
+		}
+
 		@include min-768 {
 			padding: 0 3rem 2rem 0;
 			width: 33%;
-			float: left;
-			clear: both;
+			// clear: both;
 		}
 
 		img {
 			border-radius: 8px;
+		}
+		&.left {
+			float: left;
+		}
+		&.right {
+			float: right;
 		}
 	}
 
 	// .info-content__church-info
 	&__church-info {
 		display: inline;
-		float: left;
+		// float: left;
 	}
 
 	// .info-content__item-list
