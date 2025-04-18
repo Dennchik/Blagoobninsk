@@ -6,11 +6,7 @@
 		padding: 6rem 0 0rem;
 
 		@include screen-690 {
-			padding: 4rem 0 0;
-		}
-
-		@include screen-490 {
-			padding-left: 0;
+			padding: 4rem 0 0rem;
 		}
 	}
 
@@ -42,6 +38,7 @@
 	&__column {
 		position: relative;
 		width: 100%;
+		padding: 2rem 0;
 
 		&:not(:first-child) {
 			padding-left: 2rem;
@@ -50,6 +47,7 @@
 		&:nth-child(1) {
 			height: 100%;
 			grid-column: 1 / 2;
+			padding: 0;
 
 			@include screen-320 {
 				min-width: 150px;
@@ -60,7 +58,6 @@
 			grid-column: 2 / 3;
 
 			@include screen-620 {
-				margin-top: 2rem;
 				padding-left: 0;
 				grid-column: 1 / 2;
 			}
@@ -85,19 +82,16 @@
 			}
 
 			@include screen-860 {
-				margin-top: 2rem;
 				padding-left: 0;
 				grid-column: 1 / 3;
 			}
 
 			@include screen-620 {
-				margin-top: 2rem;
 				grid-column: 1 / 2;
 			}
 		}
 
 		&:nth-child(4) {
-			margin-top: 3rem;
 			justify-self: end;
 			grid-column: 1 / 4;
 
@@ -106,7 +100,6 @@
 			}
 
 			@include screen-620 {
-				margin-top: 2rem;
 				grid-column: 1 / 2;
 			}
 		}
@@ -114,6 +107,7 @@
 		&:nth-child(5) {
 			justify-self: center;
 			grid-column: 1 / 4;
+			padding-top: 0;
 
 			@include screen-860 {
 				grid-column: 1 / 3;
@@ -204,8 +198,6 @@
 		}
 
 		@include screen-860 {
-			padding: 2rem 0;
-
 			&::before {
 				content: '';
 				position: absolute;

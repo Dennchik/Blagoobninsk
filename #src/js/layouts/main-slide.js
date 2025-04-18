@@ -133,15 +133,15 @@ export function websiteSlelide(Slide) {
 }
 
 export function slideSchedule(Slide) {
-	const todayIndexSlide = new Date().getDay(); // 0 — воскресенье, 1 — понедельник, ..., 6 — суббота
 	if (Slide) {
+		const todayIndex = (new Date().getDay()); // 0 — воскресенье, 1 — понедельник, ..., 6 — суббота
 		new Swiper(Slide, {
 			speed: 800,
 			loop: true,
 			spaceBetween: 20,
 			grabCursor: true,
-			initialSlide: todayIndexSlide, // <-- добавили эту строку
-			slidesPerView: 5,
+			initialSlide: todayIndex, // <-- добавили эту строку
+
 			centeredSlides: false,
 			navigation: {
 				nextEl: '.slide-schedule-next',
@@ -163,7 +163,7 @@ export function slideSchedule(Slide) {
 				},
 				1640: {
 					slidesPerView: 5,
-				}
+				},
 			}
 		});
 	}

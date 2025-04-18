@@ -29,8 +29,8 @@
 	&__column {
 		height: auto;
 		&:nth-child(1) {
-			flex: 0 0 21.8rem;
-			width: 21.8rem;
+			flex: 0 0 23.8rem;
+			width: 23.8rem;
 
 			@include screen-620 {
 				display: none;
@@ -122,6 +122,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		transition: color 0.3s ease-out;
+		user-select: none;
 
 		&:hover {
 			color: $font-color-secondary;
@@ -130,10 +131,40 @@
 
 	// .section-greed__title
 	&__title {
-		padding: 3rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		padding: 6rem 0;
 
-		h2 {
+		h1 {
+			font: 44px $font-family-exclude;
+			font-weight: 400;
 			text-align: center;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 3px $font-color-secondary;
+			background: linear-gradient($font-color-default, #000000f5);
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			max-width: 1440px;
+
+			span {
+				display: block;
+				line-height: 1.1;
+			}
+
+			@include minmax-320-1920 {
+				font-size: calc(24px + (44 - 24) * ((100vw - 320px) / (1920 - 320)));
+			}
+
+			@include screen-320 {
+				font-size: 24px;
+			}
+		}
+
+		@include screen-690 {
+			padding: 4rem 0;
 		}
 	}
 }
@@ -449,8 +480,8 @@
 		gap: 4rem;
 	}
 
-	// .info-content__item
-	&__item {
+	// .info-content__row
+	&__row {
 		padding: 2rem 2rem 3rem 2rem;
 		border-radius: 8px;
 		width: 100%;
@@ -480,6 +511,39 @@
 
 		@extend .bg-card;
 		@extend .box-shadow-card;
+	}
+
+	// .info-content__cursive
+	&__cursive {
+		font-style: italic;
+		text-align: right;
+		color: $color-secondary;
+	}
+
+	// .info-content__text-color
+	&__text-color {
+		font-size: 2.4rem;
+		margin-top: 2rem;
+		color: $color-secondary;
+	}
+
+	// .info-content__menu
+	&__menu {
+		li {
+			list-style-type: upper-roman;
+			padding-left: 0;
+			font-weight: 600;
+			color: $font-color-secondary;
+		}
+	}
+
+	// .info-content__sub-menu
+	&__sub-menu {
+		margin-left: 1.6rem;
+		li {
+			font-weight: normal;
+			list-style: none;
+		}
 	}
 
 	// .info-content__image
@@ -516,7 +580,7 @@
 	}
 
 	// .info-content__item-list
-	&__item-list {
+	&__item {
 		list-style-position: inside;
 		list-style-type: disc;
 
