@@ -9,6 +9,7 @@ export function anchorsSmoothScrolling() {
 			history.scrollRestoration = 'manual';
 		}
 
+
 		// Находим все ссылки с классом .anchor-link (к ним будет применена плавная прокрутка)
 		const anchorLinks = document.querySelectorAll('.anchor-link');
 

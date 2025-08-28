@@ -28,7 +28,6 @@ burgerButtons.forEach(burgerButton => {
 			document.documentElement).getPropertyValue(
 				'--background-transparent');
 
-
 		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].classList.toggle('is-active');
 		}
@@ -55,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	date('.performance__date');
 });
-
 //* ----------------------------- Button Search --------------------------------
 const headerContainer = document.querySelector('.header__container');
 const sectionTop = document.querySelector('.section-top');

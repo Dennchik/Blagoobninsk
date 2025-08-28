@@ -32,7 +32,7 @@
 			flex: 0 0 23.8rem;
 			width: 23.8rem;
 
-			@include screen-620 {
+			@include screen-690 {
 				display: none;
 			}
 		}
@@ -136,7 +136,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 1rem;
-		padding: 6rem 0;
+		padding: 6rem 0 4rem;
 
 		h1 {
 			font: 44px $font-family-exclude;
@@ -164,7 +164,7 @@
 		}
 
 		@include screen-690 {
-			padding: 4rem 0;
+			padding: 4rem 0 2rem;
 		}
 	}
 }
@@ -471,6 +471,7 @@
 		transition: color 0.9s ease-in-out;
 	}
 }
+
 //* ----------------------------------------------------------------------------
 .info-content {
 	// .info-content__column
@@ -534,6 +535,7 @@
 			padding-left: 0;
 			font-weight: 600;
 			color: $font-color-secondary;
+			transition: transform 0.9s ease-in-out;
 		}
 	}
 
@@ -609,12 +611,4 @@
 	&__text {
 		line-height: 100%;
 	}
-
-	// .info-content__
-
-	// .info-content__
-
-	// .info-content__
-
-	// .info-content__
 }

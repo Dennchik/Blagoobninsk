@@ -13,7 +13,7 @@
 	// .footer__content
 	&__content {
 		display: grid;
-		column-gap: 2rem;
+		gap: 2rem;
 		justify-content: space-between;
 		grid-template-columns: minmax(300px, 390px) max-content auto;
 
@@ -30,7 +30,6 @@
 
 		@include screen-690 {
 			grid-template-columns: 1fr;
-			column-gap: 2rem;
 		}
 	}
 
@@ -38,7 +37,7 @@
 	&__column {
 		position: relative;
 		width: 100%;
-		padding: 2rem 0;
+		padding: 2rem 0 0;
 
 		&:not(:first-child) {
 			padding-left: 2rem;
@@ -299,10 +298,6 @@
 		@include screen-375 {
 			gap: 2rem;
 		}
-	}
-
-	// .navigation-footer__item
-	&__item {
 	}
 
 	// .navigation-footer__title
