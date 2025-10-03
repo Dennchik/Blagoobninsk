@@ -1,0 +1,20 @@
+extends @/pug/layouts/app_layout
+append link 
+prepend script 
+block title
+	- var text='Официальный сайт 3го благочиния города Обнинска'
+
+block main-content 
+	section.main-content__section.hidden 
+		include @/pug/section/section-perform
+block main-content-items 
+	section.main-content__section 
+		include @/pug/section/section-intro 
+	section.main-content__section 
+		include @/pug/section/section-news
+	section.main-content__section 
+		include @/pug/section/section-temples 
+	section.main-content__section 
+		include @/pug/section/section-website 
+	section.main-content__section 
+		include @/pug/section/section-schedule 

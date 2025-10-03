@@ -1,0 +1,43 @@
+@use '../core/all.scss' as *;
+
+.page-grid-3 {
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    box-sizing: border-box;
+    // padding: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    @include screen-960 {
+      grid-template-columns: 1fr minmax(190px, 249px) !important;
+      gap: 20px;
+    }
+
+    @include screen-375 {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
+
+  &__column {
+    width: 100%;
+    height: 100%;
+    background: #ff9e4331;
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}

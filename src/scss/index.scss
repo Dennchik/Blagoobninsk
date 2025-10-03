@@ -1,0 +1,12 @@
+// todo -------------------------- Section -------------------------------------
+@use 'sections/index/section-perform';
+@use 'sections/index/section-intro';
+@use 'sections/index/section-temples';
+@use 'sections/index/section-news';
+@use 'sections/index/section-schedule';
+@use 'sections/index/section-website';
+// todo --------------------------- Chunks -------------------------------------
+@use 'chunks/slide-perform';
+@use 'chunks/arrow';
+@use 'chunks/swiper-slide';
+@use 'chunks/svg-mask';

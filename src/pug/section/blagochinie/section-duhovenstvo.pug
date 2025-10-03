@@ -1,0 +1,64 @@
+.section-greed._container
+	.section-greed__body
+		.mask-render
+		.bg-grad
+		.section-greed__content
+			.section-greed__column
+				nav.section-greed__menu
+					ul.section-greed__list
+						li.section-greed__item
+							a(href=linkTo('blagochinie/about', filename) title="О благочинии").section-greed__link.link_underline О благочинии 
+						ul.section-greed__sub-menu 
+							li.section-greed__sub-item 
+								a(href=linkTo('blagochinie/temples', filename) title="Храмы благочиния").section-greed__link.link_underline Храмы благочиния 
+							li.section-greed__sub-item 
+								span.section-greed__link.link-hover Духовенство 
+						li.section-greed__item  
+							a(href=linkTo('blagochinie/patriarh', filename) title="Патриарх").section-greed__link.link_underline Патриарх
+						li.section-greed__item 
+							a(href=linkTo('blagochinie/arhierey', filename) title="Правящий архиерей").section-greed__link.link_underline Правящий архиерей
+			.section-greed__column 
+				.section-greed__bread-crumbs 
+					nav.bread-crumbs 
+						ul.bread-crumbs__list 
+							li
+								a(href=getWebRoot(filename) + "index.html" aria-label="home" title="Главная").bread-crumbs__link.link_underline Главная 
+							li 
+								+iconfont('angle-right', '_icon') 
+							li 
+								a(href=linkTo('blagochinie/about', filename) title="О благочинии").bread-crumbs__link.link_underline О благочинии 
+							li 
+								+iconfont('angle-right', '_icon') 
+							li 
+								span Духовенство 
+				hgroup.title.tl-02.section-greed__title 
+					h2 
+						span Духовенство 
+					.hr 
+						+picture('img/frame/hr.png', 'image') 
+				.gallery 
+					.gallery__top 
+						.gallery-item.gallery__card 
+							.gallery-item__image._img 
+								+picture('/img/foto/sergiy-vishnyakov.png', 'Сергий Вишняков') 
+							.gallery-item__info 
+								.gallery-item__post 
+									p Благочинный Протоиерей 
+									span 3-его благочиния г. Обнинска 
+								.gallery__name.t-019 
+									strong Сергий Вишняков
+								.gallery-item__text Настоятель храма в честь мучениц Веры, Надежды, Любови и матери их Софии
+								a(href="#").gallery-item__link.link_underline 
+									span Подробнее
+					.gallery__second 
+						each item in galleryCard 
+							.gallery-item.gallery__card 
+								.gallery-item__image._img 
+									+picture('/img/foto/' + item.image, '' + item.name) 
+								.gallery-item__info  
+									.gallery-item__post= item.post
+									.gallery-item__name.t-019  
+										strong= item.name
+									.gallery-item__text= item.rank
+									a(href="#").gallery-item__link.link_underline 
+										span Подробнее

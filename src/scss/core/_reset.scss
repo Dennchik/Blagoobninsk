@@ -1,0 +1,236 @@
+@use 'variables' as *;
+@use 'mixins.scss' as *;
+
+html {
+  counter-reset: heading;
+  height: 100%;
+  color: $font-color-default;
+  letter-spacing: 1.1px;
+  // scrollbar-width: none;
+  // user-select: none;
+  font: {
+    size: 62.5%;
+
+    family: $font-family-default;
+    style: normal;
+    weight: $font-weight-default;
+  }
+
+  @include screen-1024 {
+    font-size: 50%;
+  }
+}
+
+body {
+  scrollbar-width: none;
+
+  overscroll-behavior: none;
+
+  font: 2rem/2 $font-family-default;
+
+  background: $background;
+  background-color: #fff;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @include screen-490 {
+    font: 1.8rem/1.8 $font-family-default;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  -webkit-tap-highlight-color: transparent;
+  // scrollbar-width: thin;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  pointer-events: none;
+  user-select: none;
+
+  width: 100%;
+  max-width: none;
+  height: auto;
+
+  vertical-align: top;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  vertical-align: baseline;
+  background-color: transparent;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+a:visited {
+  text-emphasis-style: none;
+  vertical-align: middle;
+}
+
+h2,
+h3 {
+  font-family: $font-family-exclude;
+}
+
+input,
+button,
+textarea {
+  border: none;
+}
+
+button,
+input[type='submit'] {
+  cursor: pointer;
+  display: inline-block;
+  background: transparent none;
+  box-shadow: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+a:focus,
+a:active,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: {
+    style: inherit;
+    weight: inherit;
+  }
+}
+
+//  * Изменить стиль выделения текста
+::selection {
+  color: $text-color-selection;
+  text-shadow: 0 1px 0 #000;
+  background-color: $text-selection;
+}
+
+::selection {
+  color: $text-color-selection;
+  text-shadow: 0 1px 0 #000;
+  background-color: $text-selection;
+}
+
+// * Изменить стиль полосы прокрутки (scrollbar)
+::-webkit-scrollbar {
+  width: 0.5rem;
+  padding: 0.031em;
+  transition: all 0.4s ease-in-out;
+}
+
+::-webkit-scrollbar-track {
+  opacity: 0;
+  background: var(--scrollbar-thumb-bgcolor);
+
+  // background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+
+  background-color: var(--themes-color);
+  background-image: linear-gradient(
+    45deg,
+    var(--background-thumb) 25%,
+    transparent 25%,
+    transparent 50%,
+    var(--background-thumb) 50%,
+    var(--background-thumb) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+  background-color: var(--background-thumb);
+  background-image: linear-gradient(
+    45deg,
+    var(--themes-color) 25%,
+    transparent 25%,
+    transparent 50%,
+    var(--themes-color) 50%,
+    var(--themes-color) 75%,
+    transparent 75%,
+    transparent
+  );
+  transition: background-image 0.4s ease-in-out;
+}

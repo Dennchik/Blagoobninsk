@@ -1,0 +1,30 @@
+@use '../core/variables' as *;
+
+.hamburger {
+  cursor: pointer;
+  // .hamburger__line
+  &__line {
+    display: block;
+
+    width: 40px;
+    height: 4px;
+    margin: 6px auto;
+
+    background-color: $color-secondary;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.is-active {
+    .hamburger__line {
+      background-color: $color-secondary;
+      &:nth-child(1) {
+        transform: translateY(10px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

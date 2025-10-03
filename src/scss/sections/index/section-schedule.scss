@@ -1,0 +1,32 @@
+@use '../../core/variables' as *;
+@use '../../core/mixins' as *;
+
+.section-schedule {
+  // .section-schedule__body
+  &__body {
+    padding: 6rem 0;
+
+    @include screen-690 {
+      padding: 4rem 0;
+    }
+  }
+
+  // .section-schedule__title
+  &__title {
+    margin-bottom: 3rem;
+
+    h2 {
+      span {
+        white-space: wrap !important;
+      }
+    }
+  }
+
+  // .section-schedule__slide-schedule
+  &__slide-schedule {
+    overflow: hidden;
+    padding: 3rem 0.5rem 0.5rem;
+  }
+}
+
+//* ----------------------------------------------------------------------------

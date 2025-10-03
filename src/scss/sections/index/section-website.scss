@@ -1,0 +1,53 @@
+@use '../../core/variables' as *;
+@use '../../core/mixins' as *;
+@use '../../core/extend' as *;
+
+.section-website {
+  // .section-website__body
+  &__body {
+    padding: 6rem 0;
+
+    @include screen-690 {
+      padding: 4rem 0;
+    }
+  }
+
+  // .section-website__slide-website
+  &__slide-website {
+    overflow: hidden;
+    padding: 3rem 0.5rem 0.5rem;
+  }
+
+  .slide__slide-column {
+    @extend .bg-card;
+  }
+
+  // .section-website__slide__item
+  .slide__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  // .section-website__slide__text
+  .slide__text {
+    flex: 1 1 auto;
+    height: 100%;
+    margin-bottom: 1.6rem;
+
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  // .section-website__slide__link
+  .slide__link {
+    ._icon {
+      margin-right: 1rem;
+    }
+    span {
+      font-weight: 500;
+      color: $font-color-secondary;
+    }
+  }
+}

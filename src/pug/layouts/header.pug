@@ -1,0 +1,36 @@
+.header
+	.header__container
+		.header__search 
+			.header__collapse
+				include @/pug/chunks/form-search 
+		.header__content
+			a(href=getWebRoot(filename) + "index.html" aria-label="home").header__column.el-logo 
+				.header__logo-wrapper 
+					.header__logo
+						img(src="/img/icons/logo.png")
+					.header__text.t-016
+						span Благочиние города Обнинска
+			.menu-items.header__column
+				.menu-items__search 
+					button(type="button").menu-items__search-button 
+						+iconfont('search', '_search')
+						+iconfont('cross-middle', '_cross-middle') 
+				.menu-items__menu 
+					ul.menu-items__list(data-da="bp-1" data-da-position="0" data-da-resolution="768" )
+						li.menu-items__item
+							a(href=linkTo('church/church', filename)).menu-items__link-key.link_underline 
+								span Церковь 
+						li.menu-items__item
+							a(href=linkTo('blagochinie/temples', filename)).menu-items__link-key.link_underline 
+								span Храмы
+						li.menu-items__item
+							a(href=linkTo('blagochinie/about', filename)).menu-items__link-key.link_underline 
+								span О благочинии
+						li.menu-items__item
+							a(href=linkTo('news', filename)).menu-items__link-key.link_underline 
+								span Новости
+						li.menu-items__item 
+							a(href="#contacts").menu-items__link-key.anchor-link.link_underline
+								span Контакты 
+				.menu-items__button
+					include @/pug/assets/burger-button 

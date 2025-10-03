@@ -1,0 +1,55 @@
+@use '../core/all' as *;
+.preloader {
+  @extend .gradient-services;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #000;
+
+  &__loader {
+    position: relative;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+
+    animation: rotation 1s linear infinite;
+  }
+
+  &__loader::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    border: 3px solid;
+    border-color: #ff3d00 transparent;
+    border-radius: 50%;
+  }
+}
+.preloader-remove {
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

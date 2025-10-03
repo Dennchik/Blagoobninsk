@@ -1,0 +1,248 @@
+@use '../core/variables' as *;
+@use '../core/mixins' as *;
+
+.perform-slide {
+  // .perform-slide__content
+  &__content {
+    pointer-events: none;
+    flex: 0 1 auto;
+
+    @include min-490 {
+      height: 100%;
+      margin-left: -60px;
+    }
+
+    > * {
+      transform: translateY(25px);
+      opacity: 0;
+      transition:
+        opacity 0.4s,
+        transform 0.4s ease-out;
+    }
+  }
+
+  // .perform-slide__body
+  &__body {
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    padding: 1.6rem;
+    padding-right: 25px;
+    border-radius: 8px;
+
+    background: #fff;
+    box-shadow: 0 14px 80px rgb(34 35 58 / 20%);
+
+    &.slide-perform {
+      cursor: url('/img/icons/scroll-auto.svg'), grab;
+      &.is-grabbing {
+        cursor: grab;
+      }
+    }
+  }
+
+  // .perform-slide__slide-column
+  &__slide-column {
+    align-items: center;
+    transition: opacity 0.4s ease-out;
+
+    &.swiper-slide-active {
+      .perform-slide__image {
+        img {
+          opacity: 1;
+          transition-delay: 0.3s;
+        }
+      }
+
+      .perform-slide__content {
+        > * {
+          transform: none;
+          opacity: 1;
+
+          @for $i from 0 to 15 {
+            &:nth-child(#{$i + 1}) {
+              transition-delay: $i * 0.1 + 0.3s;
+            }
+          }
+        }
+      }
+    }
+
+    @include screen-490 {
+      flex-direction: column;
+    }
+  }
+
+  // .perform-slide__image
+  &__image {
+    position: relative;
+
+    overflow: hidden;
+    flex: 0 0 250px;
+
+    width: 250px;
+    height: 330px;
+    border-radius: 8px;
+
+    background: linear-gradient(to right, $color, #fff);
+    box-shadow: 4px 13px 30px 1px rgb(255 255 255 / 71.2%);
+
+    @include screen-490 {
+      flex: 0 1 auto;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    @include min-490 {
+      transform: translateX(-80px);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+
+      opacity: 0.8;
+      background-image: linear-gradient(
+        147deg,
+        transparent 0%,
+        rgb(230 217 205 / 46.6%) 74%
+      );
+    }
+
+    img {
+      position: absolute;
+      opacity: 0;
+      object-position: center;
+      transition: opacity 1s ease-out;
+    }
+  }
+
+  // .perform-slide__pagination
+  &__pagination {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    right: 20px;
+    bottom: auto !important;
+    left: auto !important;
+    transform: translateY(-50%);
+
+    width: 11px !important;
+
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      cursor: pointer;
+
+      display: block;
+
+      width: 11px;
+      height: 11px;
+      margin: 8px 0;
+      border-radius: 8px;
+
+      opacity: 0.2;
+      background: #062744;
+
+      transition:
+        opacity 0.4s,
+        background 0.4s,
+        height 0.4s ease-out;
+    }
+
+    .swiper-pagination-bullet-active {
+      height: 30px;
+      opacity: 1;
+      background: $color;
+      box-shadow: 0 0 20px #ddd1c6cc;
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: 1.6rem;
+    color: $font-color-secondary;
+    .date {
+      margin-right: 1rem;
+    }
+  }
+
+  // .content-slide__title
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $font-color-default;
+  }
+
+  // .content-slide__text
+  &__text {
+    margin-bottom: 1rem;
+    font-family: $font-family-default;
+    p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+
+      line-height: 100%;
+      text-overflow: ellipsis;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.navigation {
+  position: relative;
+
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+
+  width: 100%;
+
+  // .navigation__button-prev
+  &__button-prev {
+    transform: rotate(90deg);
+
+    &.swiper-button-disabled {
+      opacity: 0.35;
+    }
+  }
+
+  // .navigation__button-next
+  &__button-next {
+    transform: rotate(-90deg);
+  }
+
+  &__button-prev,
+  &__button-next {
+    cursor: pointer;
+    width: 20px;
+    transition: opacity 0.3s ease-out;
+
+    &.swiper-button-disabled {
+      opacity: 0.35;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+}

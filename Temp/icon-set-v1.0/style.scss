@@ -1,0 +1,180 @@
+@import 'variables';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1l53gn');
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?1l53gn#iefix')
+      format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?1l53gn')
+      format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?1l53gn')
+      format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?1l53gn##{$icomoon-font-family}')
+      format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  speak: never;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-transform: none;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+}
+
+.icon-scroll-auto {
+  &::before {
+    content: $icon-scroll-auto;
+  }
+}
+.icon-scrol-horizontal {
+  &::before {
+    content: $icon-scrol-horizontal;
+  }
+}
+.icon-horizontal-scroll-hand {
+  &::before {
+    content: $icon-horizontal-scroll-hand;
+  }
+}
+.icon-snow {
+  &::before {
+    content: $icon-snow;
+  }
+}
+.icon-whatsapp {
+  &::before {
+    content: $icon-whatsapp;
+  }
+}
+.icon-vk-brand {
+  &::before {
+    content: $icon-vk-brand;
+  }
+}
+.icon-telegram-fly {
+  &::before {
+    content: $icon-telegram-fly;
+  }
+}
+.icon-sun {
+  &::before {
+    content: $icon-sun;
+  }
+}
+.icon-unlink {
+  &::before {
+    content: $icon-unlink;
+  }
+}
+.icon-arow-down {
+  &::before {
+    content: $icon-arow-down;
+  }
+}
+.icon-angle-left {
+  &::before {
+    content: $icon-angle-left;
+  }
+}
+.icon-angle-right {
+  &::before {
+    content: $icon-angle-right;
+  }
+}
+.icon-angle-up {
+  &::before {
+    content: $icon-angle-up;
+  }
+}
+.icon-angle-down {
+  &::before {
+    content: $icon-angle-down;
+  }
+}
+.icon-volume-control-phone {
+  &::before {
+    content: $icon-volume-control-phone;
+  }
+}
+.icon-cross-middle {
+  &::before {
+    content: $icon-cross-middle;
+  }
+}
+.icon-phone-ringing {
+  &::before {
+    content: $icon-phone-ringing;
+  }
+}
+.icon-git-hub-circle {
+  &::before {
+    content: $icon-git-hub-circle;
+  }
+}
+.icon-angles-left-solid {
+  &::before {
+    content: $icon-angles-left-solid;
+  }
+}
+.icon-angles-right-solid {
+  &::before {
+    content: $icon-angles-right-solid;
+  }
+}
+.icon-angles-up-solid {
+  &::before {
+    content: $icon-angles-up-solid;
+  }
+}
+.icon-angles-down-solid {
+  &::before {
+    content: $icon-angles-down-solid;
+  }
+}
+.icon-contacts {
+  &::before {
+    content: $icon-contacts;
+  }
+}
+.icon-search {
+  &::before {
+    content: $icon-search;
+  }
+}
+.icon-plus {
+  &::before {
+    content: $icon-plus;
+  }
+}
+.icon-check {
+  &::before {
+    content: $icon-check;
+  }
+}
+.icon-file-download {
+  &::before {
+    content: $icon-file-download;
+  }
+}
