@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-descriptor-value-no-unknown */
 @use 'variables' as *;
 @use 'variables-icon' as *;
 
@@ -134,7 +135,7 @@
 }
 
 @mixin min-768 {
-  @media (width >= 768.98px) {
+  @media (width > 768px) {
     @content;
   }
 }

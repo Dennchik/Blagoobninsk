@@ -67,8 +67,8 @@
     color: $font-color-secondary;
   }
 
-  // .section-intro__foto-image
-  &__foto-image {
+  // .section-intro__photo-image
+  &__photo-image {
     position: relative;
     flex: 1 1 auto;
     margin-top: -5rem;
@@ -80,7 +80,7 @@
     }
   }
 
-  // .section-intro__frane
+  // .section-intro__frame
   &__frame {
     position: relative;
 
@@ -196,8 +196,8 @@
     margin-top: 1rem;
   }
 
-  // .blagochinie__foto
-  &__foto-nast {
+  // .blagochinie__photo
+  &__photo {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -217,8 +217,8 @@
     }
   }
 
-  // .section-intro__info-nast
-  &__info-nast {
+  // .section-intro__info
+  &__info {
     z-index: 2;
 
     display: flex;
@@ -263,7 +263,6 @@
 
     width: 300px;
     height: 100%;
-    padding: 6rem;
     border-radius: 10px;
 
     background: url('/img/pictures/vrata.jpg') center right / cover no-repeat;

@@ -24,7 +24,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 //* ✅ конвертируем шрифты перед dev/build
 fonts(paths.fonts.src);
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ command }) => {
   const isProd = command === 'build';
   const isDev = command === 'dev';
 

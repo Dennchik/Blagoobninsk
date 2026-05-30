@@ -5,8 +5,8 @@ loaded('.preloader');
 
 import { date } from './assets/date.js';
 
-// import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
-// dynamicAdaptive();
+import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
+dynamicAdaptive();
 
 import returnToSavedPosition from './modules/return-position.js';
 returnToSavedPosition();

@@ -129,16 +129,6 @@ button:active {
   outline: none;
 }
 
-input,
-textarea,
-button,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -174,12 +164,6 @@ h6 {
 }
 
 //  * Изменить стиль выделения текста
-::selection {
-  color: $text-color-selection;
-  text-shadow: 0 1px 0 #000;
-  background-color: $text-selection;
-}
-
 ::selection {
   color: $text-color-selection;
   text-shadow: 0 1px 0 #000;
