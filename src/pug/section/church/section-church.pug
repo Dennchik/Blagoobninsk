@@ -4,21 +4,51 @@
 		.bg-grad 
 		.section-greed__content 
 			.section-greed__column
-				nav.section-greed__menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
-					ul.section-greed__list 
-						li.section-greed__item 
-							span.section-greed__link.link-hover Церковь
-						ul.section-greed__sub-menu 
-							li.section-greed__sub-item 
-								a(href=linkTo('church/church-history', filename)).section-greed__link.link_underline  Церковь в истории 
-							li.section-greed__sub-item 
-								a(href=linkTo('church/prihodsk-zhizn', filename)).section-greed__link.link_underline Епархиальная и приходская жизнь 
-							li.section-greed__sub-item 
-								a(href=linkTo('church/social', filename)).section-greed__link.link_underline Социальное служение 
-							li.section-greed__sub-item 
-								a(href=linkTo('church/catechism', filename)).section-greed__link.link_underline Образование и катехизис 
-							li.section-greed__sub-item 
-								a(href=linkTo('church/monashestvo', filename)).section-greed__link.link_underline Монашество 
+				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
+					ul.aside-menu__list 
+						li.aside-menu__item 
+							span.aside-menu__link.link-hover Церковь
+						ul.aside-menu__sub-menu 
+							li.aside-menu__item 
+								a(href=linkTo('church/church-history', filename)).aside-menu__link.link_underline  Церковь в истории 
+							li.aside-menu__item 
+								a(href=linkTo('church/prihodsk-zhizn', filename)).aside-menu__link.link_underline Епархиальная и приходская жизнь 
+							li.aside-menu__item._toggle-menu
+								.aside-menu__link._trigger  
+									span О таинствах церкви
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item 
+											a(href=linkTo('church/kreshenie', filename)).aside-menu__link.link_underline
+												span Крещение
+										li.aside-menu__item 
+											a(href=linkTo('church/pokayanie', filename)).aside-menu__link.link_underline
+												span Покаяние
+										li.aside-menu__item 
+											a(href=linkTo('church/evharistiya', filename)).aside-menu__link.link_underline
+												span Евхаристия
+										li.aside-menu__item 
+											a(href=linkTo('church/soborovanie', filename)).aside-menu__link.link_underline
+												span Соборование (елеосвящение)
+										li.aside-menu__item 
+											a(href=linkTo('church/miropomazanie', filename)).aside-menu__link.link_underline
+												span Миропомазание
+										li.aside-menu__item 
+											a(href=linkTo('church/venchanie', filename)).aside-menu__link.link_underline
+												span Венчание
+										li.aside-menu__item 
+											a(href=linkTo('church/svyashenstvo', filename)).aside-menu__link.link_underline
+												span Священство 
+										li.aside-menu__item 
+											a(href=linkTo('church/pominanie', filename)).aside-menu__link.link_underline
+												span Поминовение усопших
+							li.aside-menu__item 
+								a(href=linkTo('church/social', filename)).aside-menu__link.link_underline Социальное служение 
+							li.aside-menu__item 
+								a(href=linkTo('church/catechism', filename)).aside-menu__link.link_underline Образование и катехизис 
+							li.aside-menu__item 
+								a(href=linkTo('church/monashestvo', filename)).aside-menu__link.link_underline Монашество 
 			.section-greed__column 
 				.section-greed__bread-crumbs
 					nav.bread-crumbs
@@ -53,3 +83,5 @@
 								p Еще&nbsp;более масштабное понятие – Вселенская Церковь. То есть собрание православных христиан, живущих по&nbsp;всему миру. Вселенская Церковь объединяет все&nbsp;Поместные Церкви.
 								p И, наконец, в&nbsp;самом полном смысле слова Церковь&nbsp;Христова – это&nbsp;собрание всех, кто&nbsp;верит и&nbsp;любит Христа, причем собрание не&nbsp;только живущих, но&nbsp;и умерших. Это Церковь Небесная, где&nbsp;пребывают Пресвятая Богородица, Ангельские силы, все&nbsp;святые и&nbsp;спасшиеся христиане, которая также&nbsp;именуется Торжествующей, и&nbsp;Церковь Земная, называющаяся Воинствующей, поскольку ведет постоянную брань с&nbsp;отцом всякой лжи и&nbsp;его приспешниками. Церковь – единое Тело&nbsp;Христово. И все&nbsp;мы являемся, или&nbsp;по&nbsp;крайней мере, стараемся быть&nbsp;членами этой&nbsp;Церкви, и&nbsp;потому мы молимся и&nbsp;за живых, и&nbsp;за усопших, поскольку верим в&nbsp;бессмертие души.
 								p Что касается слова «собор», то&nbsp;в&nbsp;современном понимании – это&nbsp;главное церковное сооружение города или&nbsp;монастырского комплекса, в&nbsp;котором богослужение совершает епископ (архиепископ, митрополит, патриарх). Само слово происходит от&nbsp;старославянских «съезд», «собрание». Главное отличие собора от&nbsp;храма — особый статус, усвояемый церковному сооружению по&nbsp;причине особого положения храма или&nbsp;его значения. Русскому слову «собор» в&nbsp;западноевропейских языках соответствуют cathedral (англ), cathédrale (фр.), cattedrale (итал.), происходящие от&nbsp;слова «кафедра». То&nbsp;есть храм с&nbsp;кафедрой епископа.
+								.hr 
+									+picture('/img/frame/hr.png', 'image') 

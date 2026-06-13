@@ -1,31 +1,40 @@
 // todo --------------------------- Fonts --------------------------------------
 @use 'core/fonts';
 @use 'core/fonts-import';
-//todo  --------------------------- Core ---------------------------------------
+
+// todo  --------------------------- Core --------------------------------------
 @use 'core/reset' as *;
 @use 'core/variables' as *;
 @use 'core/mixins' as *;
 @use 'core/extend' as *;
+
 // todo --------------------------- layout -------------------------------------
 @use 'layouts/page';
 @use 'layouts/bem-block';
 @use 'layouts/header';
 @use 'layouts/footer';
-//todo  --------------------------- Icon Fonts ---------------------------------
+
+// todo  ------------------------ Icon Fonts -----------------------------------
 @use 'core/iconfonts';
-// todo --------------------------- utils ------------------------------------
+
+// todo --------------------------- utils --------------------------------------
 @use 'utils/preloader';
+
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
 @use 'assets/swiper-11.2.10';
+
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/menu-list';
 @use 'chunks/form-search';
 @use 'chunks/bread-crumbs';
+@use 'chunks/aside-menu';
+
 // todo ------------------------ components ------------------------------------
 
 // todo -------------------------- Section -------------------------------------
-@use 'sections/section-greed.scss';
+@use 'sections/section-greed';
+
 // todo --------------------------- Style --------------------------------------
 .wrapper {
   display: flex;
@@ -38,7 +47,7 @@
 
 [class*='_container'] {
   box-sizing: content-box;
-  max-width: $maxWidth;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 0 6.5rem;
 

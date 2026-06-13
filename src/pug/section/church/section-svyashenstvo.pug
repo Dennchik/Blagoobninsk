@@ -1,0 +1,97 @@
+.section-greed._container 
+	.section-greed__body 
+		.mask-render
+		.bg-grad 
+		.section-greed__content 
+			.section-greed__column
+				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
+					ul.aside-menu__list 
+						li.aside-menu__item.link-hover 
+							span.aside-menu__link Церковь
+						ul.aside-menu__sub-menu 
+							li.aside-menu__item 
+								a(href=linkTo('church/church-history', filename)).aside-menu__link
+									span Крещение
+							li.aside-menu__item 
+								a(href=linkTo('church/prihodsk-zhizn', filename)).aside-menu__link
+									span Епархиальная и приходская жизнь 
+							li.aside-menu__item._toggle-menu.is-active 
+								.aside-menu__link._trigger  
+									span О таинствах церкви
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item
+											a(href=linkTo('church/kreshenie', filename)).aside-menu__link 
+												span Крещение
+										li.aside-menu__item 
+											a(href=linkTo('church/pokayanie', filename)).aside-menu__link 
+												span Покаяние
+										li.aside-menu__item
+											a(href=linkTo('church/evharistiya', filename)).aside-menu__link 
+												span Евхаристия
+										li.aside-menu__item
+											a(href=linkTo('church/soborovanie', filename)).aside-menu__link 
+												span Соборование (елеосвящение)
+										li.aside-menu__item
+											a(href=linkTo('church/miropomazanie', filename)).aside-menu__link 
+												span Миропомазание
+										li.aside-menu__item
+											a(href=linkTo('church/venchanie', filename)).aside-menu__link 
+												span Венчание
+										li.aside-menu__item.link-hover 
+											.aside-menu__link 
+												span Священство 
+										li.aside-menu__item 
+											a(href=linkTo('church/pominanie', filename)).aside-menu__link 
+												span Поминовение усопших 
+							li.aside-menu__item 
+								a(href=linkTo('church/social', filename)).aside-menu__link
+									span Социальное служение 
+							li.aside-menu__item 
+								a(href=linkTo('church/catechism', filename)).aside-menu__link
+									span Образование и катехизис 
+							li.aside-menu__item 
+								a(href=linkTo('church/monashestvo', filename)).aside-menu__link
+									span Монашество 
+			.section-greed__column 
+				.section-greed__bread-crumbs
+					nav.bread-crumbs
+						ul.bread-crumbs__list
+							li
+								a(href=getWebRoot(filename) + "index.html" aria-label="home").bread-crumbs__link.link_underline Главная 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								a(href=linkTo('church/church', filename)).bread-crumbs__link.link_underline Церковь 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								.bread-crumbs__link Таинства церкви 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								span.bread-crumbs__item Таинство священства
+				.section-greed__title 
+					hgroup.title.tl-02 
+						h1 
+							span Таинство священства 
+				.section-greed__row
+					.info-content 
+						.info-content__column 
+							.info-content__row
+								.hr 
+									+picture('/img/frame/hr.png', 'image')
+								p <strong>Cвященство </strong> – есть Таинство, посредством которого избранный человек через архиерейское рукоположение (хиротонию), получает особую благодать Святого Духа для священного служения Церкви Христовой.
+								p Это Таинство совершается только над лицами, избираемыми и посвящаемыми в священнослужители. Степеней священства три: диакон, пресвитер (иерей или священник) и епископ (архиерей).
+								.info-content__image.current.left
+									+picture('img/photo/svyashenstvo.jpg', 'image') 
+								p Посвящаемый в диакона получает благодать служить при совершении Таинств. Посвящаемый во священника получает благодать совершать Таинства. Посвящаемый во епископа (архиерея) получает благодать не только совершать Таинства, но и посвящать других для совершения Таинств.
+								p Зачем существует Таинство священства? Разве каждый христианин не может совершать церковные Таинства? Нужны ли специально поставленные для этого люди?
+								p В Православной Церкви этот вопрос никогда не вызывал сомнений, потому что, как и все другие Таинства, Таинство священства есть установление божественное. Апостол Павел свидетельствует, что Сам Господь Иисус Христос “поставил одних апостолами, других пророками, иных евангелистами, иных пастырями и учителями, к совершению святых, на дело служения, для созидания Тела Христова” (Послание апостола Павла к Ефесянам, 4, 11 – 12).
+								p Велики, страшны и непостижимы для слабого человеческого ума Таинства Церкви. Человек способен совершить церковное Таинство только имея сугубую Божественную благодать. Не следует также забывать о том, что священнослужитель является не только совершителем Таинств Церкви, но и пастырем, пасущим христиан, овец Христовых, ведущим их Царство Божие. Если и самого себя невозможно спасти без благодатной помощи Божией, то как же можно направлять ко спасению других, не имея на то особенной, сугубой Божественной благодати? Для получения такой сугубой благодати и существует Таинство священства. 
+								p Большая ответственность лежит на человеке, получившим благодать священства. Даже обычная человеческая логика подсказывает, что быть достойным совершителем Таинств и пастырем может далеко не каждый, но только избранный Самим Богом.
+								p Все лица, прошедшие через Таинство священства, составляют Церковную иерархию. Принявшие Божественную благодать в Таинстве священства, через рукоположение передают ее вновь посвящаемым. Образуется некая цепочка рукоположений. В Православной Церкви эта цепочка простирается от наших дней до самих апостолов, а через них к Самому Пастыреначальнику Христу, нигде не прерываясь.
+								p Совершать Таинство священства могут только высшие чины церковной иерархии – архиереи (епископы). Рукоположение, совершенное лицами, находящимися в ереси или расколе, Православной Церковью не признается действительным. 
+								.hr 
+									+picture('/img/frame/hr.png', 'image') 

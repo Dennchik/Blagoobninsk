@@ -3,7 +3,7 @@
   --width: calc(0px + (260 - 0) * ((100vw - 320px) / (1024 - 320)));
   --font-color-default: rgb(9 9 27);
   --font-color-secondary: rgb(80 60 42);
-  --bgInverse2: #494949;
+  --bg-inverse2: #494949;
   --accent: #897666;
   --background-color: rgb(210 242 255);
   --background-second: rgb(2 10 16);
@@ -546,7 +546,7 @@
   background-image: linear-gradient(rgb(255, 255, 255), transparent 70%);
 }
 
-.bg-card, .section-website .slide__slide-column {
+.section-website .slide__slide-column {
   background: rgba(247, 244, 241, 0.431372549);
   backdrop-filter: blur(8px);
 }
@@ -600,7 +600,7 @@
   }
 }
 
-.box-shadow-card, .slide__slide-column {
+.slide__slide-column {
   box-shadow: 0 0 6px 1px #e6d8cc;
 }
 
@@ -732,6 +732,7 @@
 }
 
 .link-hover {
+  cursor: default;
   color: #503c2a;
 }
 
@@ -834,9 +835,9 @@
   left: -75px;
   width: 700px;
   height: 1000px;
-  mask-image: var(--astorRender);
-  mask-position: top left;
+  mask-image: var(--astor-render);
   mask-repeat: no-repeat;
+  mask-position: top left;
   mask-size: auto 100%;
 }
 .render-mask::before {
@@ -846,7 +847,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, var(--bgInverse2) 400px, var(--accent));
+  background: linear-gradient(to bottom, var(--bg-inverse2) 400px, var(--accent));
   background-position: top center;
   background-size: 150% 150%;
 }
@@ -854,8 +855,6 @@
 .text-overflow {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
   line-clamp: 3;
   text-overflow: ellipsis;
 }
@@ -987,17 +986,16 @@
   margin-left: auto;
   list-style: none;
 }
-.slide-temples .swiper-slide-prev {
-  transform: translateX(20px) !important;
-  transition: transform 0.7s ease-in-out;
-}
-.slide-temples .swiper-slide-next {
-  transform: translateX(-20px) !important;
-  transition: transform 0.7s ease-in-out;
-}
 .slide-temples__slide {
   z-index: 1;
   justify-content: center;
+  transition: transform 0.7s ease-in-out;
+}
+.slide-temples__slide .swiper-slide-prev {
+  transform: translateX(20px) !important;
+}
+.slide-temples__slide .swiper-slide-next {
+  transform: translateX(-20px) !important;
 }
 .slide-temples__slide.swiper-slide-active {
   z-index: 3;

@@ -19,7 +19,7 @@
   }
 
   .slide__slide-column {
-    @extend .bg-card;
+    @extend %bg-card;
   }
 
   // .section-website__slide__item
@@ -45,6 +45,7 @@
     ._icon {
       margin-right: 1rem;
     }
+
     span {
       font-weight: 500;
       color: $font-color-secondary;

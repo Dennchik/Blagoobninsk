@@ -111,6 +111,28 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('DOMContentLoaded', initHeaderScroll);
   window.addEventListener('pageshow', initHeaderScroll);
 });
+
+//* -------------------------- [ Блок Aside menu ] -----------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleMenu = document.querySelectorAll('._toggle-menu');
+
+  toggleMenu.forEach((item) => {
+    const trigger = item.querySelector('._trigger');
+
+    trigger.addEventListener('click', () => {
+      // 1. Если хотим, чтобы открывался не блок один за раз - закомментируй код ниже:
+
+      toggleMenu.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('is-active');
+        }
+      });
+
+      // 2. Переключаем класс на текущем элементе
+      item.classList.toggle('is-active');
+    });
+  });
+});
 //* ----------------------------------------------------------------------------
 console.log(
   '%c РОССИЯ ',
