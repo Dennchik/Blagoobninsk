@@ -1,0 +1,135 @@
+.section-greed._container 
+	.section-greed__body 
+		.mask-render
+		.bg-grad 
+		.section-greed__content 
+			.section-greed__column
+				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
+					ul.aside-menu__list 
+						li.aside-menu__item.link-hover 
+							span.aside-menu__link Церковь
+						ul.aside-menu__sub-menu 
+							li.aside-menu__item 
+								a(href=linkTo('church/church-history', filename)).aside-menu__link
+									span Крещение
+							li.aside-menu__item 
+								a(href=linkTo('church/prihodsk-zhizn', filename)).aside-menu__link
+									span Епархиальная и приходская жизнь  
+							li.aside-menu__item._toggle-menu 
+								.aside-menu__link._trigger  
+									span Школа Духовной Жизни
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/o-boge', filename)).aside-menu__link 
+												span О Боге
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/molitva', filename)).aside-menu__link 
+												span Молитва
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/izuchenie-evangeliya', filename)).aside-menu__link 
+												span Изучение Евангелия
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/izuchenie-svyatyih-ottsov', filename)).aside-menu__link 
+												span Изучение творений святых отцов
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/pokayanie', filename)).aside-menu__link 
+												span Покаяние
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/prichashhenie-svyatyih-hristovyih-tayn', filename)).aside-menu__link 
+												span Причащение Святых Христовых Тайн
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/lyubov-k-blizhnim', filename)).aside-menu__link 
+												span Любовь к ближним 
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/strah-pered-bogom', filename)).aside-menu__link 
+												span Страх перед Богом и любовь к Богу
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/postoyannoe-bodrstvovanie', filename)).aside-menu__link 
+												span Постоянное бодрствование над собою
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/predosterezhenie-svyatitelya-ignatiya', filename)).aside-menu__link 
+												span Предостережение святителя Игнатия от опасностей на пути спасения
+							li.aside-menu__item._toggle-menu.is-active 
+								.aside-menu__link._trigger  
+									span О таинствах церкви
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/kreshenie', filename)).aside-menu__link 
+												span Крещение
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/pokayanie', filename)).aside-menu__link 
+												span Покаяние
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/evharistiya', filename)).aside-menu__link 
+												span Евхаристия
+										li.aside-menu__item.link-hover   
+											.aside-menu__link
+												span Соборование (елеосвящение)
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/miropomazanie', filename)).aside-menu__link 
+												span Миропомазание
+										li.aside-menu__item 
+											a(href=linkTo('churchtainstva//venchanie', filename)).aside-menu__link 
+												span Венчание
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/svyashenstvo', filename)).aside-menu__link 
+												span Священство 
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/pominanie', filename)).aside-menu__link 
+												span Поминовение усопших 
+							li.aside-menu__item 
+								a(href=linkTo('church/social', filename)).aside-menu__link
+									span Социальное служение 
+							li.aside-menu__item 
+								a(href=linkTo('church/catechism', filename)).aside-menu__link
+									span Образование и катехизис 
+							li.aside-menu__item 
+								a(href=linkTo('church/monashestvo', filename)).aside-menu__link
+									span Монашество 
+			.section-greed__column 
+				.section-greed__bread-crumbs
+					nav.bread-crumbs
+						ul.bread-crumbs__list
+							li
+								a(href=getWebRoot(filename) + "index.html" aria-label="home").bread-crumbs__link.link_underline Главная 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								a(href=linkTo('church/church', filename)).bread-crumbs__link.link_underline Церковь  
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								.bread-crumbs__link Таинства церкви 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								span.bread-crumbs__item Таинство соборования (елеосвящения)
+				.section-greed__title 
+					hgroup.title.tl-02 
+						h1 
+							span Таинство соборования (елеосвящения)
+				.section-greed__row
+					.info-content 
+						.info-content__column 
+							.info-content__row
+								.hr 
+									+picture('/img/frame/hr.png', 'image') 
+								p <strong>Елеосвящение (соборование)</strong> – это Таинство, в котором, при помазании больного освященным елеем (маслом), призывается на больного Божественная благодать для исцеления его от телесных и душевных недугов.
+								p Таинство елеосвящения еще называется соборованием, потому что для его совершения собирается несколько священников, хотя по нужде может совершать его и один священник.
+								.info-content__image.current.left
+									+picture('img/photo/soborovanie-01.jpg', 'image')
+								p Но даже если человек ведет добрую христианскую жизнь, регулярно прибегая к покаянию, целый ряд соделанных им грехов в силу человеческой забывчивости или их кажущейся незначительности, остается не исповеданными. Накопившийся груз таких “незначительных” нераскаянных грехов может также привести к печальным последствиям. Вот здесь и приходит на помощь Таинство елеосвящения. Избавляясь от забытых нераскаянных грехов, человек возвращает потерянное здоровье.
+								p В храмах Русской Православной Церкви Таинство елеосвящения совершается во время продолжительных постов (обычно Великим постом). В это время все верующие, чувствующие необходимость в этом Таинстве, могут прибегнуть к нему. В другое время Таинство совершается в случае особой нужды. При этом следует знать, что, подчеркивая великую пользу Таинства елеосвящения, Православная Церковь, однако, не поощряет частое его применение. В каких случаях и как следует прибегать к Таинству елеосвящения?
+								p Во-первых, следует помнить, что каждый христианин – воин Христов, обязанный стойко, с благодарением Бога, переносить различные невзгоды и болезни. Если у Вас закапало из носа, не стоит тут же приглашать собор священников. К Таинству елеосвящения следует прибегать лишь в случае тяжелых недугов, которые не поддаются излечению обычными медицинскими средствами, или которые ставят под угрозу Вашу жизнь. Во всех иных случаях рекомендуется прибегать к Таинству елеосвящения не чаще, чем единожды в год. 
+								p Если Вы давно не посещали храм Божий, не исповедовались и не причащались, воцерковление нужно начинать не с Таинства елеосвящения, а с Таинства покаяния. 
+								p Помните, что Таинство елеосвящения избавляет от невольных, забытых, а не намеренно скрытых грехов, от которых мы отошли, и они больше не привлекают нас. Если вашу христианскую совесть тяготит какой-либо грех, то необходимо, прежде всего, покаяться в нем на исповеди.
+								p Обычно, особой подготовки к Таинству елеосвящения не требуют, отчасти оттого, что оно совершается во время поста. Но следует помнить, что, по слову апостола Иакова, только “молитва веры исцелит болящего”. Каждому дается по вере его. Поэтому, при подготовке к Таинству желательно усилить свой покаянный и молитвенный настрой.
+								p Во время соборования елеем (маслом) помазуются лицо, руки и грудь, поэтому приходить к Таинству желательно в одежде, позволяющей осуществить помазание, и имея при себе салфетку или полотенце. 
+								p Как и любое таинство Церкви, Таинство Святаго елея неразрывно связано с Таинством Святой Евхаристии, поэтому после прохождения Таинства елеосвящения для его духовного завершения, в самые ближайшие дни необходимо исповедовавшись, причаститься Святых Христовых Таин.
+								p Велико и страшно Таинство причащения. Поэтому подготовляться к нему необходимо особым образом.
+								.hr 
+									+picture('/img/frame/hr.png', 'image') 

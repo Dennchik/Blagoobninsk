@@ -1,0 +1,131 @@
+.section-greed._container 
+	.section-greed__body 
+		.mask-render
+		.bg-grad 
+		.section-greed__content 
+			.section-greed__column
+				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
+					ul.aside-menu__list 
+						li.aside-menu__item.link-hover 
+							span.aside-menu__link Церковь
+						ul.aside-menu__sub-menu 
+							li.aside-menu__item 
+								a(href=linkTo('church/church-history', filename)).aside-menu__link
+									span Крещение
+							li.aside-menu__item 
+								a(href=linkTo('church/prihodsk-zhizn', filename)).aside-menu__link
+									span Епархиальная и приходская жизнь  
+							li.aside-menu__item._toggle-menu 
+								.aside-menu__link._trigger  
+									span Школа Духовной Жизни
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/o-boge', filename)).aside-menu__link 
+												span О Боге
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/molitva', filename)).aside-menu__link 
+												span Молитва
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/izuchenie-evangeliya', filename)).aside-menu__link 
+												span Изучение Евангелия
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/izuchenie-svyatyih-ottsov', filename)).aside-menu__link 
+												span Изучение творений святых отцов
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/pokayanie', filename)).aside-menu__link 
+												span Покаяние
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/prichashhenie-svyatyih-hristovyih-tayn', filename)).aside-menu__link 
+												span Причащение Святых Христовых Тайн
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/lyubov-k-blizhnim', filename)).aside-menu__link 
+												span Любовь к ближним 
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/strah-pered-bogom', filename)).aside-menu__link 
+												span Страх перед Богом и любовь к Богу
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/postoyannoe-bodrstvovanie', filename)).aside-menu__link 
+												span Постоянное бодрствование над собою
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/predosterezhenie-svyatitelya-ignatiya', filename)).aside-menu__link 
+												span Предостережение святителя Игнатия от опасностей на пути спасения
+							li.aside-menu__item._toggle-menu.is-active 
+								.aside-menu__link._trigger  
+									span О таинствах церкви
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/kreshenie', filename)).aside-menu__link 
+												span Крещение
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/pokayanie', filename)).aside-menu__link 
+												span Покаяние
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/evharistiya', filename)).aside-menu__link 
+												span Евхаристия
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/soborovanie', filename)).aside-menu__link 
+												span Соборование (елеосвящение)
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/miropomazanie', filename)).aside-menu__link 
+												span Миропомазание
+										li.aside-menu__item.link-hover 
+											.aside-menu__link 
+												span Венчание
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/svyashenstvo', filename)).aside-menu__link 
+												span Священство 
+										li.aside-menu__item 
+											a(href=linkTo('church/tainstva/pominanie', filename)).aside-menu__link 
+												span Поминовение усопших 
+							li.aside-menu__item 
+								a(href=linkTo('church/social', filename)).aside-menu__link
+									span Социальное служение 
+							li.aside-menu__item 
+								a(href=linkTo('church/catechism', filename)).aside-menu__link
+									span Образование и катехизис 
+							li.aside-menu__item 
+								a(href=linkTo('church/monashestvo', filename)).aside-menu__link
+									span Монашество 
+			.section-greed__column 
+				.section-greed__bread-crumbs
+					nav.bread-crumbs
+						ul.bread-crumbs__list
+							li
+								a(href=getWebRoot(filename) + "index.html" aria-label="home").bread-crumbs__link.link_underline Главная 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon') 
+							li
+								a(href=linkTo('church/church', filename)).bread-crumbs__link.link_underline Церковь 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon') 
+							li
+								.bread-crumbs__link Таинства церкви 
+							li.bread-crumbs__item  
+								+iconfont('angle-right', '_icon')
+							li
+								span.bread-crumbs__item Венчание
+				.section-greed__title 
+					hgroup.title.tl-02 
+						h1 
+							span Венчание 
+				.section-greed__row
+					.info-content 
+						.info-content__column 
+							.info-content__row
+								.hr 
+									+picture('/img/frame/hr.png', 'image')
+								p <strong>Венча́ние</strong> это Таинство, в котором при свободном (перед священником и Церковью) обещании женихом и невестой взаимной верности друг другу, благословляется их супружеский союз, в образ духовного союза Христа с Церковью, и испрашивается и подается благодать Божья для взаимной помощи и единодушия, и для благословенного рождения и христианского воспитания детей.
+								.info-content__image.current.left
+									+picture('img/photo/venchanie.jpg', 'image') 
+								p Брак установлен Самим Богом еще в раю. По сотворении Адама и Евы, “благословил их Бог и сказал им Бог: плодитесь и размножайтесь, и наполняйте землю и обладайте ею” (Книга Бытия, 1, 28). Господь Иисус Христос освятил брак Своим присутствием на браке в Кане Галилейской и подтвердил его Божественное установление, сказав: “оставит человек отца и мать и прилепится к жене своей, и будут два одною плотью, так что они уже не двое, но одна плоть. И так, что Бог сочетал, то человек да не разлучает” (Евангелие от Матфея, 19, 4-6).
+								p Зачем же нужно Таинство венчания, если Сам Господь еще в раю благословил супружеский союз на все последующие времена? Конечно, супружеский союз является священным. Древняя мудрость гласит о том, что браки заключаются на небесах. И христианская Церковь изначально не оспаривала действительность и законность супружеского союза. Но, вместе с тем, христианское мировоззрение, наряду с другими сторонами человеческой жизни, требовало особого, христианского, освящения такого важного явления, как супружеский союз. Отношения взаимной христианской любви между членами Церкви, проникли и в супружеский союз, преобразуя его в особый образ – образ отношений Христа и Церкви.
+								p Святой апостол Павел говорит: “Тайна сия велика; я говорю по отношению ко Христу и к Церкви” (Послание Апостола Павла к Ефесянам, 5, 31-32). Союз Иисуса Христа с Церковью основывается на любви Христа к Церкви, и на полной преданности Церкви в волю Христа. Отсюда муж обязан самоотверженно любить жену, и жена обязана добровольно, т.е. с любовью, повиноваться мужу. Апостол Павел говорит мужьям: “Мужья, любите своих жен, как и Христос возлюбил Церковь и предал Себя за нее, … любящий свою жену любит самого себя” (Послание Апостола Павла к Ефесянам, 5, 25, 28). А женам говорит: “Жены, повинуйтесь своим мужьям, как Господу, потому что муж есть глава жены, как и Христос глава Церкви, и Он же Спаситель тела; но как Церковь повинуется Христу, так и жены своим мужьям во всем” (Послание Апостола Павла к Ефесянам, 5, 22-24). Таким образом, в Таинстве брака испрашивается и подается особая Божественная благодать – образовать супружеский союз двух верующих во Христа.
+								p Это, конечно же, налагает особые требования на христианский брак. Церковь и Христос неразделимы. Поэтому супруги, вступившие в христианский брак, не только обязаны всю жизнь хранить взаимную любовь и уважение, взаимную преданность и верность, что в общем-то требуется от любого супружеского союза, но и рука об руку следовать по пути духовного совершенства, имея конечной целью вечное Царство Христово. Если же Господь благословит их стать родителями, то прямой их обязанностью является воспитание детей в христианской Православной вере. Обо всем этом следует помнить парам, решившим освятить свою супружескую жизнь Таинством брака. К сожалению, в наши дни наблюдается достаточно легкомысленное отношение к этому великому Таинству. Идя под венец, далеко не каждые венчающиеся отдают себе отчет в том, на что же они испрашивают благословение у Бога. Печальные последствия такого легкомысленного отношения не заставляют себя ждать. Брак не является обязательным для всех христиан, но следует помнить, что лица, добровольно остающимися безбрачными, обязаны проводить чистую, непорочную и девственную жизнь.
+								p <strong>Архиепископ Фессалоникийский Симеон о миропомазании пишет следующее:</strong> Миропомазание полагает первую печать и восстанавливает образ Божий, повреждённый в нас через преслушание. Точно так же оно возрождает в нас благодать, которую Бог вдунул в душу человеческую. Миропомазание содержит в себе силу Духа Святого. Оно — сокровищница Его благоухания, знамение и печать Христовы. 
+								p Христианская Православная Церковь предельно жестко регламентирует половую сферу человеческой жизни. Любые половые контакты вне брака расцениваются как любодеяние (блуд) и являются смертным грехом. Следует также знать, что хотя Православная Христианская Церковь в принципе признает законность брачного союза, заключенного согласно юридическим и моральным законам той или иной страны, есть целый ряд ограничений, налагаемых на христианское освящение брака. Например, Православная Церковь отрицательно относится к повторным бракам, бракам лиц, состоящим в близкой степени родства, и лиц, подверженным психическим или умственным заболеваниям. И уж, конечно, церковный брак невозможен в случае, если один из венчающихся является атеистом или представителем нехристианской религии. Поэтому, если Вы решили венчаться, следует выяснить возможность освящения Вашего супружеского союза у священника или церковнослужителей.
+								.hr 
+									+picture('/img/frame/hr.png', 'image') 

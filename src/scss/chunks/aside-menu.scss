@@ -4,13 +4,23 @@
 .aside-menu {
   position: sticky;
   top: 11rem;
+
+  overflow-x: hidden;
+
+  max-height: calc(100vh - 8rem);
   padding: 0 2rem;
+  padding-bottom: 5rem;
+
   backdrop-filter: blur(8px);
+
+  &::-webkit-scrollbar {
+    width: 0.4rem !important;
+    margin-right: 5px;
+  }
 
   // .aside-menu__list
   &__list {
     height: 100%;
-    padding-bottom: 2rem;
   }
 
   // .aside-menu__item
@@ -25,7 +35,7 @@
 
       a {
         &:hover {
-          transform: translateX(4%);
+          transform: translateX(1%);
         }
       }
     }
@@ -54,7 +64,7 @@
     span {
       user-select: none;
 
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 600;
       line-height: 1;
       text-transform: uppercase;

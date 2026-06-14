@@ -46,7 +46,7 @@ export function newslide(Slide) {
     new Swiper(Slide, {
       speed: 800,
       spaceBetween: 20,
-      loop: true,
+      // loop: true,
       grabCursor: true,
       slidesPerView: 4,
       centeredSlides: false,

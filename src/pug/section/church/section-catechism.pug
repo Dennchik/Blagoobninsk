@@ -7,14 +7,51 @@
 				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
 					ul.aside-menu__list 
 						li.aside-menu__item 
-							span.aside-menu__link.link-hover Церковь
+							a(href=linkTo('church/church', filename)).aside-menu__link 
+								span Церковь
 						ul.aside-menu__sub-menu 
 							li.aside-menu__item 
 								a(href=linkTo('church/church-history', filename)).aside-menu__link 
 									span Церковь в истории 
 							li.aside-menu__item 
 								a(href=linkTo('church/prihodsk-zhizn', filename)).aside-menu__link 
-									span Епархиальная и приходская жизнь 
+									span Епархиальная и приходская жизнь  
+							li.aside-menu__item._toggle-menu 
+								.aside-menu__link._trigger  
+									span Школа Духовной Жизни
+									+iconfont('angle-down', 'icon')
+								.aside-menu__collapse 
+									ul.aside-menu__sub-menu
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/o-boge', filename)).aside-menu__link 
+												span О Боге
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/molitva', filename)).aside-menu__link 
+												span Молитва
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/izuchenie-evangeliya', filename)).aside-menu__link 
+												span Изучение Евангелия
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/izuchenie-svyatyih-ottsov', filename)).aside-menu__link 
+												span Изучение творений святых отцов
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/pokayanie', filename)).aside-menu__link 
+												span Покаяние
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/prichashhenie-svyatyih-hristovyih-tayn', filename)).aside-menu__link 
+												span Причащение Святых Христовых Тайн
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/lyubov-k-blizhnim', filename)).aside-menu__link 
+												span Любовь к ближним 
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/strah-pered-bogom', filename)).aside-menu__link 
+												span Страх перед Богом и любовь к Богу
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/postoyannoe-bodrstvovanie', filename)).aside-menu__link 
+												span Постоянное бодрствование над собою
+										li.aside-menu__item 
+											a(href=linkTo('church/shkola/predosterezhenie-svyatitelya-ignatiya', filename)).aside-menu__link 
+												span Предостережение святителя Игнатия от опасностей на пути спасения
 							li.aside-menu__item._toggle-menu
 								.aside-menu__link._trigger  
 									span О таинствах церкви
@@ -22,28 +59,28 @@
 								.aside-menu__collapse 
 									ul.aside-menu__sub-menu
 										li.aside-menu__item 
-											a(href=linkTo('church/kreshenie', filename)).aside-menu__link 
+											a(href=linkTo('church/tainstva/kreshenie', filename)).aside-menu__link 
 												span Крещение
 										li.aside-menu__item 
-											a(href=linkTo('church/pokayanie', filename)).aside-menu__link 
+											a(href=linkTo('church/tainstva/pokayanie', filename)).aside-menu__link 
 												span Покаяние
 										li.aside-menu__item 
-											a(href=linkTo('church/evharistiya', filename)).aside-menu__link 
+											a(href=linkTo('church/tainstva/evharistiya', filename)).aside-menu__link 
 												span Евхаристия
 										li.aside-menu__item 
-											a(href=linkTo('church/soborovanie', filename)).aside-menu__link 
+											a(href=linkTo('church/tainstva/soborovanie', filename)).aside-menu__link 
 												span Соборование (елеосвящение)
 										li.aside-menu__item 
-											a(href=linkTo('church/miropomazanie', filename)).aside-menu__link.link_underline
+											a(href=linkTo('church/tainstva/miropomazanie', filename)).aside-menu__link.link_underline
 												span Миропомазание
 										li.aside-menu__item 
-											a(href=linkTo('church/venchanie', filename)).aside-menu__link.link_underline
+											a(href=linkTo('church/tainstva/venchanie', filename)).aside-menu__link.link_underline
 												span Венчание
 										li.aside-menu__item 
-											a(href=linkTo('church/svyashenstvo', filename)).aside-menu__link 
+											a(href=linkTo('church/tainstva/svyashenstvo', filename)).aside-menu__link 
 												span Священство 
 										li.aside-menu__item 
-											a(href=linkTo('church/pominanie', filename)).aside-menu__link 
+											a(href=linkTo('church/tainstva/pominanie', filename)).aside-menu__link 
 												span Поминовение усопших
 							li.aside-menu__item 
 								a(href=linkTo('church/social', filename)).aside-menu__link 

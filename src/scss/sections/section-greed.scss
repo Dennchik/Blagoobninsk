@@ -469,6 +469,7 @@
     width: 100%;
     padding: 4rem;
     border-radius: 8px;
+    line-height: 1.1;
 
     strong {
       clear: both;
@@ -479,22 +480,41 @@
     h2 {
       clear: both;
 
-      max-width: 80%;
-      margin: 4rem auto 2rem;
+      padding: 4rem 0 2rem;
 
       line-height: 100%;
       text-align: center;
       text-transform: uppercase;
+
+      @include screen-490 {
+        font-size: 1.1em;
+      }
     }
 
     h3 {
       clear: both;
 
-      margin: 3rem auto 2rem;
+      margin: 3rem 0 2rem;
 
       line-height: 100%;
       text-align: left;
       text-transform: uppercase;
+
+      @include screen-490 {
+        font-size: 0.9em;
+      }
+    }
+
+    h4 {
+      margin: 2rem 0 1rem;
+      font-weight: 600;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    i {
+      font-weight: 500;
+      line-height: 1;
     }
 
     li {
@@ -571,7 +591,6 @@
   &__image {
     width: 100%;
     min-width: 250px;
-    margin-bottom: 1rem;
 
     &.current {
       max-width: 8rem;
@@ -579,7 +598,6 @@
 
     @include min-768 {
       width: 33%;
-      padding: 0 3rem 2rem 0;
     }
 
     img {
@@ -588,10 +606,18 @@
 
     &.left {
       float: left;
+
+      @include min-768 {
+        padding: 0 3rem 1rem 0;
+      }
     }
 
     &.right {
       float: right;
+
+      @include min-768 {
+        padding: 0 0 1rem 3rem;
+      }
     }
   }
 
