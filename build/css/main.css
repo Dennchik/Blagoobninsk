@@ -44,6 +44,13 @@
   font-display: swap;
   src: url("../fonts/icon-set.eot") format("eot"), url("../fonts/icon-set.woff") format("woff"), url("../fonts/icon-set.woff2") format("woff2"), url("../fonts/icon-set.ttf") format("truetype");
 }
+@font-face {
+  font-family: "trebuchetms";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/trebuchetms.eot") format("eot"), url("../fonts/trebuchetms.woff") format("woff"), url("../fonts/trebuchetms.woff2") format("woff2"), url("../fonts/trebuchetms.ttf") format("truetype");
+}
 html {
   counter-reset: heading;
   height: 100%;
@@ -1454,10 +1461,15 @@ h6 {
     background: linear-gradient(90deg, rgba(125, 94, 66, 0.397) 0, rgba(255, 255, 255, 0) 100%);
   }
 }
+.footer__copyrite {
+  padding: 2rem 0;
+  text-align: center;
+}
 .footer__hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2rem;
 }
 .footer__hr p {
   margin-top: -2rem;
@@ -2173,7 +2185,7 @@ h6 {
 }
 .bread-crumbs__list {
   display: flex;
-  padding: 3rem 0;
+  padding: 2rem 0;
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;

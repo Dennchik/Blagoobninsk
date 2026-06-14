@@ -6,6 +6,9 @@
   &__body {
     padding: 6rem 0;
 
+    // line-height: 110%;
+    // letter-spacing: 0.3px;
+
     @include screen-690 {
       padding: 4rem 0;
     }
@@ -172,6 +175,7 @@
         display: none;
       }
     }
+
     h2 {
       margin-bottom: 1.6rem;
     }
@@ -217,7 +221,7 @@
     }
   }
 
-  // .section-intro__info
+  // .blagochinie__info
   &__info {
     z-index: 2;
 
@@ -225,7 +229,7 @@
     flex-direction: column;
     justify-content: center;
 
-    padding: 4rem 0 0;
+    padding: 4rem 0;
 
     p {
       line-height: 1.2;

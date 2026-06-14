@@ -217,10 +217,17 @@
     }
   }
 
+  // .footer__copyrite
+  &__copyrite {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
   &__hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
 
     p {
       margin-top: -2rem;

@@ -6,6 +6,7 @@ html {
   height: 100%;
   color: $font-color-default;
   letter-spacing: 1.1px;
+
   // scrollbar-width: none;
   // user-select: none;
   font: {
@@ -28,6 +29,8 @@ body {
 
   font: 2rem/2 $font-family-default;
 
+  // letter-spacing: 0.1px;
+
   background: $background;
   background-color: #fff;
 
@@ -47,6 +50,7 @@ body {
   border: none;
 
   -webkit-tap-highlight-color: transparent;
+
   // scrollbar-width: thin;
 }
 

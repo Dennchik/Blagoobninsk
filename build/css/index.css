@@ -469,7 +469,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 0 0;
+  padding: 4rem 0;
 }
 .blagochinie__info p {
   line-height: 1.2;
@@ -1219,6 +1219,7 @@
 
 .section-website__body {
   padding: 6rem 0;
+  line-height: 110%;
 }
 @media (width <= 690px) {
   .section-website__body {

@@ -6,6 +6,9 @@
   // .section-website__body
   &__body {
     padding: 6rem 0;
+    line-height: 110%;
+
+    // letter-spacing: 0.3px;
 
     @include screen-690 {
       padding: 4rem 0;

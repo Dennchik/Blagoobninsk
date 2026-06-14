@@ -3,9 +3,12 @@ $min-width: 320px;
 $max-width: 1920px;
 $max-width-container: 1440px;
 
-// * ---------------------------- [Font Variables] ------------------------------
+// * ---------------------------- [Font Variables] -----------------------------
 $font-path: '../fonts';
+
 $font-family-default: 'Sofia Sans Extra Condensed', sans-serif;
+
+// $font-family-default: 'trebuchetms', sans-serif;
 $font-family-exclude: 'Ponomar', sans-serif;
 $font-weight-default: 400;
 $font-size: 1.6rem;
@@ -14,21 +17,21 @@ $font-size: 1.6rem;
 $font-color-default: rgb(9 9 27);
 $font-color-secondary: rgb(80 60 42);
 
-// * --------------------------- [Background Color] -----------------------------
+// * --------------------------- [Background Color] ----------------------------
 $background: rgb(255 255 255);
 $color: rgb(230 217 205);
 $color-secondary: #503c2a;
 $border-color: rgb(125 94 66 / 39.7%);
 
-// * ------------------------------- [Shadow] -----------------------------------
+// * ------------------------------- [Shadow] ----------------------------------
 $black-shadow: rgb(9 17 22);
 $filter: drop-shadow(1px 0px 3px rgb(32 25 71)) invert(5%);
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 $text-selection: rgb(0 84 99 / 24.7%);
 $text-color-selection: rgb(155 153 153);
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 $dark-outline: #5c554e;
 $dark-outline-thin:
   $dark-outline 0px 0px 0px,
@@ -47,7 +50,7 @@ $dark-outline:
   $dark-outline 0.283px -0.958px 0px,
   $dark-outline 0.96px -0.279px 0px;
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 :root {
   --width: calc(0px + (260 - 0) * ((100vw - 320px) / (1024 - 320)));
   --font-color-default: rgb(9 9 27);
@@ -55,7 +58,7 @@ $dark-outline:
   --bg-inverse2: #494949;
   --accent: #897666;
 
-  // * ---------------------------- [Background] --------------------------------
+  // * ---------------------------- [Background] -------------------------------
   --background-color: rgb(210 242 255);
   --background-second: rgb(2 10 16);
   --background-selected: rgb(43 45 65 / 33.7%);
@@ -67,7 +70,7 @@ $dark-outline:
   --background-thumb: rgb(86 56 20 / 76.7%);
   --scrollbar-thumb-bgcolor: rgb(231 231 231);
 
-  // * -------------------------- [Other colors] --------------------------------
+  // * -------------------------- [Other colors] -------------------------------
   --border-color: rgb(86 56 20 / 62.3%);
 
   // ---------------------------------------------------------------------------
