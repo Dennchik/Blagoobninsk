@@ -42,7 +42,10 @@
     }
 
     &:nth-child(2) {
+      display: flex;
       flex: 0 1 85%;
+      flex-direction: column;
+      gap: 8rem;
 
       @include screen-690 {
         flex: 0 1 auto;
@@ -70,7 +73,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 6rem 0 4rem;
+    padding-block: 0 4rem;
 
     h1 {
       max-width: 1440px;
@@ -89,6 +92,7 @@
       span {
         display: block;
         line-height: 1.1;
+        text-align: center;
       }
 
       @include minmax-320-1920 {
@@ -97,6 +101,12 @@
 
       @include screen-320 {
         font-size: 24px;
+      }
+    }
+
+    h2 {
+      span {
+        text-align: center;
       }
     }
 
@@ -138,7 +148,7 @@
 .gallery {
   // .gallery__top
   &__top {
-    margin-top: 16rem;
+    margin-top: 100px;
     text-align: center;
 
     .gallery-item {
@@ -198,15 +208,13 @@
 .gallery-item {
   // .gallery-item__image
   &__image {
-    position: absolute;
+    // position: absolute;
     z-index: 2;
     top: -130px;
-    right: 0;
-    left: 0;
 
     width: 150px;
-    height: 230px;
     margin: auto;
+    margin-top: -200px;
 
     text-align: center;
 
@@ -518,14 +526,12 @@
     }
 
     li {
-      padding-left: 1.6rem;
-      line-height: 1.4;
+      line-height: 1.1;
       list-style-position: inside;
-      list-style-type: disc;
     }
 
     p {
-      line-height: 1.2;
+      line-height: 1.1;
 
       span {
         display: block;
@@ -540,12 +546,50 @@
       }
 
       &:not(:last-child) {
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
       }
     }
 
     @include screen-490 {
       padding: 4rem 2rem;
+    }
+  }
+
+  // info-content__list
+  &__list {
+    margin-bottom: 1.6rem;
+  }
+
+  // .info-content__list-item
+  &__list-item {
+    padding-left: 1.6rem;
+    list-style-type: disc;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // .info-content__sub-item
+  &__sub-item {
+    padding-left: 2.8rem;
+    list-style-type: '- ';
+
+    &::marker {
+      display: block;
+      margin-right: 20px;
+    }
+  }
+
+  // .info-content__link
+  &__link {
+    .icon {
+      margin-right: 5px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $color-secondary;
     }
   }
 

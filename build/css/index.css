@@ -1464,8 +1464,11 @@
 }
 .navigation__button-prev, .navigation__button-next {
   cursor: pointer;
-  width: 20px;
+  height: 100%;
   transition: opacity 0.3s ease-out;
+}
+.navigation__button-prev span, .navigation__button-next span {
+  display: block;
 }
 .navigation__button-prev.swiper-button-disabled, .navigation__button-next.swiper-button-disabled {
   opacity: 0.35;
@@ -1580,9 +1583,7 @@
   text-transform: uppercase;
 }
 .slide__text p {
-  margin-bottom: 1.6rem;
   line-height: 1.1;
-  text-transform: uppercase;
 }
 .slide__time {
   display: flex;

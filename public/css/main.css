@@ -2370,7 +2370,10 @@ h6 {
   }
 }
 .section-greed__column:nth-child(2) {
+  display: flex;
   flex: 0 1 85%;
+  flex-direction: column;
+  gap: 8rem;
 }
 @media (width <= 690px) {
   .section-greed__column:nth-child(2) {
@@ -2392,7 +2395,7 @@ h6 {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  padding: 6rem 0 4rem;
+  padding-block: 0 4rem;
 }
 .section-greed__title h1 {
   max-width: 1440px;
@@ -2408,6 +2411,7 @@ h6 {
 .section-greed__title h1 span {
   display: block;
   line-height: 1.1;
+  text-align: center;
 }
 @media (width >= 320.98px) and (width <= 1920px) {
   .section-greed__title h1 {
@@ -2418,6 +2422,9 @@ h6 {
   .section-greed__title h1 {
     font-size: 24px;
   }
+}
+.section-greed__title h2 span {
+  text-align: center;
 }
 @media (width <= 690px) {
   .section-greed__title {
@@ -2445,7 +2452,7 @@ h6 {
 }
 
 .gallery__top {
-  margin-top: 16rem;
+  margin-top: 100px;
   text-align: center;
 }
 .gallery__top .gallery-item {
@@ -2493,14 +2500,11 @@ h6 {
 }
 
 .gallery-item__image {
-  position: absolute;
   z-index: 2;
   top: -130px;
-  right: 0;
-  left: 0;
   width: 150px;
-  height: 230px;
   margin: auto;
+  margin-top: -200px;
   text-align: center;
 }
 .gallery-item__image img {
@@ -2729,13 +2733,11 @@ h6 {
   line-height: 1;
 }
 .info-content__row li {
-  padding-left: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.1;
   list-style-position: inside;
-  list-style-type: disc;
 }
 .info-content__row p {
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .info-content__row p span {
   display: block;
@@ -2748,12 +2750,37 @@ h6 {
   font-style: italic;
 }
 .info-content__row p:not(:last-child) {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 @media screen and (width <= 490px) {
   .info-content__row {
     padding: 4rem 2rem;
   }
+}
+.info-content__list {
+  margin-bottom: 1.6rem;
+}
+.info-content__list-item {
+  padding-left: 1.6rem;
+  list-style-type: disc;
+}
+.info-content__list-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.info-content__sub-item {
+  padding-left: 2.8rem;
+  list-style-type: "- ";
+}
+.info-content__sub-item::marker {
+  display: block;
+  margin-right: 20px;
+}
+.info-content__link .icon {
+  margin-right: 5px;
+  font-size: 14px;
+}
+.info-content__link:hover {
+  color: #503c2a;
 }
 .info-content__cursive {
   margin-right: calc(150px + 89 * (100vw - 320px) / 1600);

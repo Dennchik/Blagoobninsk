@@ -40,6 +40,7 @@
 
     &.slide-perform {
       cursor: url('/img/icons/scroll-auto.svg'), grab;
+
       &.is-grabbing {
         cursor: grab;
       }
@@ -174,6 +175,7 @@
     display: block;
     margin-bottom: 1.6rem;
     color: $font-color-secondary;
+
     .date {
       margin-right: 1rem;
     }
@@ -191,6 +193,7 @@
   &__text {
     margin-bottom: 1rem;
     font-family: $font-family-default;
+
     p {
       overflow: hidden;
       display: -webkit-box;
@@ -200,6 +203,7 @@
 
       line-height: 100%;
       text-overflow: ellipsis;
+
       &:not(:last-child) {
         margin-bottom: 1rem;
       }
@@ -233,8 +237,12 @@
   &__button-prev,
   &__button-next {
     cursor: pointer;
-    width: 20px;
+    height: 100%;
     transition: opacity 0.3s ease-out;
+
+    span {
+      display: block;
+    }
 
     &.swiper-button-disabled {
       opacity: 0.35;

@@ -1,0 +1,18 @@
+@keyframes invert {
+  from {
+    color: black;
+    background-color: white;
+  }
+
+  to {
+    color: white;
+    background-color: black;
+  }
+}
+
+body {
+  animation: invert;
+  animation-timeline: scroll();
+}
+
+
