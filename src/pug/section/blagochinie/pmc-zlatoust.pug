@@ -1,0 +1,60 @@
+.section-greed._container
+	.section-greed__body
+		.mask-render
+		.bg-grad
+		.section-greed__content
+			.section-greed__column
+				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
+					ul.aside-menu__list 
+						li.aside-menu__item 
+							a(href=linkTo('blagochinie/about', filename) title="О благочинии").aside-menu__link 
+								span О благочинии
+						ul.aside-menu__sub-menu
+							li.aside-menu__item 
+								a(href=linkTo('blagochinie/temples', filename) title="Храмы благочиния").aside-menu__link 
+									span Храмы благочиния 
+							li.aside-menu__item 
+								a(href=linkTo('blagochinie/duhovenstvo', filename) title="Духовенство").aside-menu__link 
+									span Духовенство 
+							li.aside-menu__item 
+								span.aside-menu__link.link-hover ПМЦ "Златоуст"
+						li.aside-menu__item 
+							a(href=linkTo('blagochinie/patriarh', filename) title="Патриарх").aside-menu__link 
+								span Патриарх 
+						li.aside-menu__item 
+							a(href=linkTo('blagochinie/arhierey', filename) title="Правящий архиерей").aside-menu__link 
+								span Правящий архиерей 
+			.section-greed__column
+				.section-greed__bread-crumbs
+					nav.bread-crumbs
+						ul.bread-crumbs__list
+							li.bread-crumbs__item
+								a(href=getWebRoot(filename) + "index.html" aria-label="home" title="Главная").bread-crumbs__link.link_underline Главная 
+							li.bread-crumbs__item
+								+iconfont('angle-right', '_icon')
+							li.bread-crumbs__item
+								a(href=linkTo('/blagochinie/about', filename) title="О благочинии").bread-crumbs__link.link_underline О благочинии
+							li.bread-crumbs__item
+								+iconfont('angle-right', '_icon')
+							li.bread-crumbs__item
+								span ПМЦ "Златоуст"
+				hgroup.title.tl-02.section-greed__title
+					h2
+						span ПМЦ "Златоуст"
+					.hr
+						+picture('/img/frame/hr.png', 'image') 
+				.section-greed__row 
+					.info-content 
+						.info-content__column
+							.info-content__row 
+								ul.info-content__doc-list
+									li.info-content__item 
+										a.link_underline(href="/img/documents/anketa.docx") Анкета
+									li.info-content__item 
+										a.link_underline(href="/img/documents/proshenie.docx") Прошение
+									li.info-content__item 
+										a.link_underline(href="/img/documents/soglasie_na_obrabotku.docx") Согласие на обработку Пдн Златоуст
+									li.info-content__item 
+										a.link_underline(href="/img/documents/blank_ids_zlatoust.docx") Бланк ИДС Златоуст 
+								ul.info-content__doc
+									+picture('/img/documents/CP_PMC_2021.jpg', 'image')

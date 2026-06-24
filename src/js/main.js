@@ -1,52 +1,54 @@
 import '../scss/main.scss';
 import '../scss/index.scss';
 import loaded from './assets/preloader.js';
+import { date } from './assets/date.js';
+import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
+import returnToSavedPosition from './modules/return-position.js';
+
 loaded('.preloader');
 
-import { date } from './assets/date.js';
-
-import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 dynamicAdaptive();
 
-import returnToSavedPosition from './modules/return-position.js';
 returnToSavedPosition();
-//* ---------------- Плавная прокрутка страницы до позиции ---------------------
-import { anchorsSmoothScrolling } from './assets/anchors-smooth-scrolling.js';
-anchorsSmoothScrolling();
-
+//* ------------------------- Header animations --------------------------------
 import {
   timeLineHeaderItem,
   timeLineTextItem,
 } from './animations/anime-js.jsx';
 //* ----------------------------------------------------------------------------
-const menuList = document.querySelector('.menu-list');
-const burgerButtons = document.querySelectorAll('.burger-button');
-const listContent = document.querySelector('.page__menu-list');
-const buttons = document.querySelectorAll('.hamburger');
+function layoutMenu(params) {
+  const menuList = document.querySelector('.menu-list');
+  const burgerButtons = document.querySelectorAll('.burger-button');
+  const buttons = document.querySelectorAll('.hamburger');
 
-burgerButtons.forEach((burgerButton) => {
-  burgerButton.addEventListener('click', () => {
-    const backgroundColorTransparent = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue('--background-transparent');
+  burgerButtons.forEach((burgerButton) => {
+    burgerButton.addEventListener('click', () => {
+      const backgroundColorTransparent = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue('--background-transparent');
 
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].classList.toggle('is-active');
-    }
-    // burgerButton.firstChild.classList.toggle('is-active');
-    menuList.classList.toggle('_open-list');
-    document.body.classList.toggle('no-scroll');
-    if (menuList.classList.contains('_open-list')) {
-      // listContent.style.pointerEvents = 'all';
-      listContent.style.backgroundColor = backgroundColorTransparent;
-      document.body.classList.add('no-scroll');
-    } else {
+      for (let i = 0; i < burgerButtons.length; i++) {
+        burgerButtons[i].classList.toggle('is-active');
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) {
+            burgerButtons[i].classList.remove('is-active');
+          }
+        });
+      }
+
+      menuList.classList.toggle('_open-list');
+      document.body.classList.toggle('no-scroll');
+    });
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      menuList.classList.remove('_open-list');
       document.body.classList.remove('no-scroll');
-      listContent.style.backgroundColor = 'transparent';
-      // listContent.style.pointerEvents = 'none';
     }
   });
-});
+}
+document.addEventListener('DOMContentLoaded', layoutMenu);
+
 //* ----------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   const textItem = document.querySelector('.hgroup-items');

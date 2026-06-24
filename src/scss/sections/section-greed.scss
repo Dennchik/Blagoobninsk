@@ -45,7 +45,7 @@
       display: flex;
       flex: 0 1 85%;
       flex-direction: column;
-      gap: 8rem;
+      gap: 4rem;
 
       @include screen-690 {
         flex: 0 1 auto;
@@ -72,8 +72,6 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
-
-    padding-block: 0 4rem;
 
     h1 {
       max-width: 1440px;
@@ -148,7 +146,7 @@
 .gallery {
   // .gallery__top
   &__top {
-    margin-top: 100px;
+    margin-top: 160px;
     text-align: center;
 
     .gallery-item {
@@ -275,7 +273,7 @@
   }
 }
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 .gallery-news {
   // .gallery-news__content
   &__content {
@@ -419,7 +417,7 @@
   }
 }
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 .news-content {
   // .news-content__body
   &__body {
@@ -460,13 +458,58 @@
   }
 }
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 .info-content {
+  display: flex;
+
   // .info-content__column
   &__column {
     display: flex;
-    flex-direction: column;
     gap: 4rem;
+
+    &:nth-child(1) {
+      flex: 1 1 53%;
+      width: 53%;
+    }
+
+    &:nth-child(2) {
+      width: auto;
+    }
+
+    @include min-960 {
+      align-items: start;
+    }
+
+    .gallery {
+      @include min-960 {
+        position: sticky;
+        top: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: auto;
+      }
+    }
+
+    @include screen-960 {
+      flex-direction: column;
+    }
+  }
+
+  // .info-content__doc-list
+  &__doc-list {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+
+  // .info-content__doc
+  &__doc {
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   // .info-content__row

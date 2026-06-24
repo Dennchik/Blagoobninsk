@@ -301,14 +301,15 @@ h6 {
 
 .frame-container {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  border: 40px solid transparent;
   border-image-repeat: repeat;
+  background: linear-gradient(136deg, rgba(230, 217, 205, 0.178), #e6d9cd, rgb(230, 217, 205));
+  background-color: #fff;
 }
 @media screen and (width <= 320px) {
   .frame-container {
@@ -762,12 +763,12 @@ h6 {
 }
 @media (width >= 320.98px) and (width <= 1920px) {
   .title h2 {
-    font-size: calc(24px + 20 * (100vw - 320px) / 1600);
+    font-size: calc(20px + 24 * (100vw - 320px) / 1600);
   }
 }
 @media screen and (width <= 320px) {
   .title h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .title__text {
@@ -1758,10 +1759,10 @@ h6 {
     transform: rotate(360deg);
   }
 }
-.hamburger {
+.burger-button {
   cursor: pointer;
 }
-.hamburger__line {
+.burger-button__line {
   display: block;
   width: 40px;
   height: 4px;
@@ -1769,13 +1770,13 @@ h6 {
   background-color: #503c2a;
   transition: all 0.3s ease-in-out;
 }
-.hamburger.is-active .hamburger__line {
+.burger-button.is-active .burger-button__line {
   background-color: #503c2a;
 }
-.hamburger.is-active .hamburger__line:nth-child(1) {
+.burger-button.is-active .burger-button__line:nth-child(1) {
   transform: translateY(10px);
 }
-.hamburger.is-active .hamburger__line:nth-child(3) {
+.burger-button.is-active .burger-button__line:nth-child(3) {
   transform: translateY(-10px);
 }
 
@@ -2053,9 +2054,9 @@ h6 {
   position: relative;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255, 255);
 }
 .menu-list__content {
+  position: relative;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -2065,7 +2066,7 @@ h6 {
 }
 .menu-list__content .frame-container {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
@@ -2373,7 +2374,7 @@ h6 {
   display: flex;
   flex: 0 1 85%;
   flex-direction: column;
-  gap: 8rem;
+  gap: 4rem;
 }
 @media (width <= 690px) {
   .section-greed__column:nth-child(2) {
@@ -2395,7 +2396,6 @@ h6 {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  padding-block: 0 4rem;
 }
 .section-greed__title h1 {
   max-width: 1440px;
@@ -2452,7 +2452,7 @@ h6 {
 }
 
 .gallery__top {
-  margin-top: 100px;
+  margin-top: 160px;
   text-align: center;
 }
 .gallery__top .gallery-item {
@@ -2682,10 +2682,49 @@ h6 {
   transition: color 0.9s ease-in-out;
 }
 
+.info-content {
+  display: flex;
+}
 .info-content__column {
   display: flex;
-  flex-direction: column;
   gap: 4rem;
+}
+.info-content__column:nth-child(1) {
+  flex: 1 1 53%;
+  width: 53%;
+}
+.info-content__column:nth-child(2) {
+  width: auto;
+}
+@media (width >= 960.99px) {
+  .info-content__column {
+    align-items: start;
+  }
+}
+@media (width >= 960.99px) {
+  .info-content__column .gallery {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+}
+@media screen and (width <= 960px) {
+  .info-content__column {
+    flex-direction: column;
+  }
+}
+.info-content__doc-list {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.info-content__doc {
+  max-width: 80%;
+  margin: 0 auto;
 }
 .info-content__row {
   width: 100%;

@@ -1,8 +1,9 @@
 @use '../core/variables' as *;
 
-.hamburger {
+.burger-button {
   cursor: pointer;
-  // .hamburger__line
+
+  // .burger-button__line
   &__line {
     display: block;
 
@@ -16,8 +17,9 @@
   }
 
   &.is-active {
-    .hamburger__line {
+    .burger-button__line {
       background-color: $color-secondary;
+
       &:nth-child(1) {
         transform: translateY(10px);
       }

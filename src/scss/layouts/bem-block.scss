@@ -40,11 +40,11 @@
     }
 
     @include minmax-320-1920 {
-      font-size: calc(24px + (44 - 24) * ((100vw - 320px) / (1920 - 320)));
+      font-size: calc(20px + (44 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
 
     @include screen-320 {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 

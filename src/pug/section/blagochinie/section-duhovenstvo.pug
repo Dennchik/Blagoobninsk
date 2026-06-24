@@ -15,6 +15,9 @@
 									span Храмы благочиния 
 							li.aside-menu__item 
 								span.aside-menu__link.link-hover Духовенство 
+							li.aside-menu__item 
+								a(href=linkTo('blagochinie/pmc-zlatoust', filename) title="Духовенство").aside-menu__link 
+									span ПМЦ "Златоуст"
 						li.aside-menu__item  
 							a(href=linkTo('blagochinie/patriarh', filename) title="Патриарх").aside-menu__link
 								span  Патриарх
@@ -52,8 +55,6 @@
 								.gallery__name.t-019 
 									strong Сергий Вишняков
 								.gallery-item__text Настоятель храма в честь мучениц Веры, Надежды, Любови и матери их Софии
-								//- a(href="#").gallery-item__link.link_underline 
-									span Подробнее
 					.gallery__second 
 						each item in galleryCard 
 							.gallery-item.gallery__card 
