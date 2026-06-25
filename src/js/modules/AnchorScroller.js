@@ -120,11 +120,5 @@ export default class AnchorScroller {
       this.onCloseButton(closeBtn);
       console.log('after onCloseButton:', closeBtn.className);
     }
-
-    // if (closeBtn) {
-    //   console.log('closeBtn found, clicking it');
-    //   closeBtn.click();
-    //   console.log('after click, sidebar classes:', sidebar?.className);
-    // }
   }
 }

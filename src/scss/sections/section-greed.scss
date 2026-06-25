@@ -73,6 +73,8 @@
     align-items: center;
     justify-content: center;
 
+    margin-bottom: 4rem;
+
     h1 {
       max-width: 1440px;
 
@@ -598,6 +600,14 @@
     }
   }
 
+  // .info-content__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+  }
+
   // info-content__list
   &__list {
     margin-bottom: 1.6rem;
@@ -711,8 +721,6 @@
   // .info-content__church-info
   &__church-info {
     display: inline;
-
-    // float: left;
   }
 
   // .info-content__item-list
