@@ -105,20 +105,22 @@ export default class AnchorScroller {
 
   closeSidebars() {
     const sidebar = this.findSidebar();
-    console.log('sidebar element:', sidebar);
-    console.log('sidebar classes before:', sidebar?.className);
 
     const closeBtn = document.querySelector(
       '.sidebar-close, .burger-button, [data-close-sidebar]'
     );
+    const tagBody = document.querySelector('body');
+
+    if (tagBody.classList.contains('no-scroll')) {
+      tagBody.classList.remove('no-scroll');
+    }
+
     if (this.onCloseSidebar && sidebar) {
       this.onCloseSidebar(sidebar);
-      console.log('after onCloseSidebar:', sidebar.className);
     }
 
     if (this.onCloseButton && closeBtn) {
       this.onCloseButton(closeBtn);
-      console.log('after onCloseButton:', closeBtn.className);
     }
   }
 }

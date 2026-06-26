@@ -21,7 +21,6 @@ new AnchorScroller({
   headerSelector: '.offset-header',
   selector: '.anchor-link',
   sidebarSelector: '[data-sidebar]',
-  // onCloseButtonSelector: '.burger-button',
 
   onCloseSidebar: (sidebar) => sidebar?.classList.remove('_open-list'),
   onCloseButton: (button) => button?.classList.remove('is-active'),
