@@ -13,7 +13,6 @@
 
   font-family: $font-family-default;
   font-weight: 500;
-  color: $font-color-default;
   color: $font-color-secondary;
   text-shadow: none;
 
@@ -241,6 +240,11 @@
     @include min-768 {
       display: none;
     }
+  }
+
+  // .menu-items__link-key
+  &__link-key {
+    @extend %link-underline;
   }
 
   // .menu-items__search

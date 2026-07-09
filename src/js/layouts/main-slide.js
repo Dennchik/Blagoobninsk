@@ -11,6 +11,7 @@ export function swiperPerform(Slide) {
     new Swiper(Slide, {
       // speed: 800,
       spaceBetween: 20,
+      lazy: true,
       effect: 'fade',
       // grabCursor: true,
       initialSlide: todayIndex, // <-- добавили эту строку

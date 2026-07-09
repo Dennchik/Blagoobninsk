@@ -1,7 +1,7 @@
 import '../scss/main.scss';
 import '../scss/index.scss';
 import loaded from './assets/preloader.js';
-import { date } from './assets/date.js';
+// import { date } from './assets/date.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 import returnToSavedPosition from './modules/return-position.js';
 
@@ -9,7 +9,7 @@ loaded('.preloader');
 
 dynamicAdaptive();
 
-returnToSavedPosition();
+returnToSavedPosition('scrollButton');
 //* ------------------------- Header animations --------------------------------
 import {
   timeLineHeaderItem,
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     timeLineTextItem();
   }
 
-  date('.performance__date');
+  // date('.performance__date');
 });
 //* ----------------------------- Button Search --------------------------------
 const headerContainer = document.querySelector('.header__container');

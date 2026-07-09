@@ -45,7 +45,6 @@
       display: flex;
       flex: 0 1 85%;
       flex-direction: column;
-      gap: 4rem;
 
       @include screen-690 {
         flex: 0 1 auto;
@@ -73,7 +72,7 @@
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 4rem;
+    margin-block: 4rem;
 
     h1 {
       max-width: 1440px;
@@ -113,6 +112,16 @@
     @include screen-690 {
       padding: 4rem 0 2rem;
     }
+  }
+
+  // .section-greed__line
+  &__line {
+    margin: 0 auto;
+  }
+
+  // .section-greed__bread-crumbs
+  &__bread-crumbs {
+    margin-bottom: 0;
   }
 
   .mask-render {
@@ -275,7 +284,7 @@
   }
 }
 
-// * ---------------------------------------------------------------------------
+// * -------------------- [ Страница новостей  ] -------------------------------
 .gallery-news {
   // .gallery-news__content
   &__content {
@@ -287,23 +296,16 @@
   // .gallery-news__body
   &__body {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 6rem;
-    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 2rem;
 
     @include screen-690 {
       row-gap: 4rem;
     }
   }
 
-  // .gallery-news__column
-  &__column {
-    user-select: none;
-
-    display: flex;
-    flex: 0 1 24%;
-    flex-direction: column;
-
+  // .gallery-news__line
+  &__line {
     height: auto;
     padding: 1.6rem;
     border-radius: 8px;
@@ -312,33 +314,18 @@
 
     background: #f7f4f1;
     box-shadow: 0 0 4px 2px #e6d8cc;
-
-    @include screen-1440 {
-      flex: 0 1 32%;
-    }
-
-    @include screen-960 {
-      flex: 0 1 48%;
-    }
-
-    @include screen-690 {
-      flex: 0 1 auto;
-    }
-
-    &.title-red {
-      color: red;
-    }
   }
 
   // .gallery-news__image
   &__image {
     position: relative;
-    top: -1.6rem;
-    left: -1.6rem;
 
+    float: left;
     overflow: hidden;
 
-    margin-right: -3.2rem;
+    aspect-ratio: 3 / 2;
+    width: 25%;
+    margin-right: 2.5rem;
     border-radius: 8px;
 
     img {
@@ -441,12 +428,25 @@
     flex: 1 1 auto;
     line-height: 1.2;
 
+    ul {
+      padding-left: 1rem;
+
+      li {
+        list-style: inside;
+        list-style-type: disc;
+      }
+    }
+
+    a {
+      display: inline;
+      color: $font-color-secondary;
+
+      @extend %link-underline;
+    }
+
     p {
-      overflow: hidden;
-      display: -webkit-box;
-
+      display: block;
       margin-bottom: 1rem;
-
       line-height: 100%;
       text-overflow: ellipsis;
     }
@@ -478,12 +478,12 @@
       width: auto;
     }
 
-    @include min-960 {
+    @include min-1024 {
       align-items: start;
     }
 
     .gallery {
-      @include min-960 {
+      @include min-1024 {
         position: sticky;
         top: 100px;
 
@@ -496,7 +496,7 @@
       }
     }
 
-    @include screen-960 {
+    @include screen-1024 {
       flex-direction: column;
     }
   }
@@ -533,8 +533,9 @@
     h2 {
       clear: both;
 
-      padding: 4rem 0 2rem;
+      padding: 3rem 0;
 
+      font-weight: 500;
       line-height: 100%;
       text-align: center;
       text-transform: uppercase;
@@ -547,8 +548,9 @@
     h3 {
       clear: both;
 
-      margin: 3rem 0 2rem;
+      margin: 2rem 0;
 
+      font-weight: 500;
       line-height: 100%;
       text-align: left;
       text-transform: uppercase;
@@ -559,8 +561,8 @@
     }
 
     h4 {
-      margin: 2rem 0 1rem;
-      font-weight: 600;
+      margin: 1.6rem 0;
+      font-weight: 500;
       text-align: left;
       text-transform: uppercase;
     }
@@ -703,17 +705,19 @@
 
     &.left {
       float: left;
+      padding: 0 3rem 1rem 0;
 
-      @include min-768 {
-        padding: 0 3rem 1rem 0;
+      @include screen-768 {
+        padding: 0 0 2rem;
       }
     }
 
     &.right {
       float: right;
+      padding: 0 0 1rem 3rem;
 
-      @include min-768 {
-        padding: 0 0 1rem 3rem;
+      @include screen-768 {
+        margin: 0 0 2rem;
       }
     }
   }

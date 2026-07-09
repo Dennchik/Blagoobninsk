@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 :root {
   --swiper-scrollbar-top: auto;
   --swiper-scrollbar-bg-color: rgb(0 0 0 / 10%);
@@ -6,7 +8,7 @@
   --swiper-scrollbar-bottom: 0.4rem;
   --swiper-scrollbar-sides-offset: 1%;
   --swiper-scrollbar-border-radius: 1rem;
-  --swiper-theme-color: #7796f3;
+  --swiper-theme-color: #{$color};
   --swiper-navigation-size: 3rem;
   --swiper-pagination-color: #f65e38;
   --swiper-pagination-bullet-opacity: 1;
@@ -16,8 +18,8 @@
   --swiper-pagination-bullet-inactive-color: rgb(0 0 0);
   --swiper-pagination-bullet-width: 1.2rem;
   --swiper-pagination-bullet-height: 1.2rem;
-  --swiper-pagination-top: auto;
+  --swiper-pagination-top: 50%;
   --swiper-pagination-bottom: 0.5rem;
-  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+  --swiper-pagination-bullet-horizontal-gap: 1.2rem;
   --swiper-transition-opacity: 0.9s;
 }

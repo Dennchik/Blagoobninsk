@@ -1,5 +1,6 @@
 @use '../../core/variables' as *;
 @use '../../core/mixins' as *;
+@use '../../core/extend' as *;
 
 .section-news {
   // .section-news__body
@@ -33,51 +34,5 @@
   &__button {
     display: flex;
     justify-content: center;
-  }
-}
-
-.content-slide {
-  // .content-slide__body
-  &__body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  // .content-slide__title
-  &__title {
-    position: relative;
-
-    display: flex;
-    flex: 1 1 auto;
-
-    margin: 0 0 1rem;
-
-    line-height: 1.2;
-  }
-
-  // .content-slide__text
-  &__text {
-    line-height: 1.2;
-
-    p {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-
-      margin-bottom: 1rem;
-
-      line-height: 100%;
-      text-overflow: ellipsis;
-    }
-  }
-
-  // .content-slide__link
-  &__link {
-    font-weight: 600;
-    color: $font-color-secondary;
-    transition: color 0.9s ease-in-out;
   }
 }

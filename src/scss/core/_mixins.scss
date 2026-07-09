@@ -22,6 +22,12 @@
 }
 
 // * ---------------------------------------------------------------------------
+@mixin screen {
+  @media screen {
+    @content;
+  }
+}
+
 @mixin screen-hover {
   @media (hover: hover) {
     @content;

@@ -1,5 +1,6 @@
 @use '../core/variables' as *;
 @use '../core/mixins' as *;
+@use '../core/extend' as *;
 
 .footer {
   // .footer__body
@@ -341,7 +342,14 @@
 
   // .navigation-footer__list
   &__list {
-    li > a {
+    // display: inline-block;
+  }
+
+  // /navigation-footer__item-list
+  &__item-list {
+    a {
+      @extend %link-underline;
+      display: inline;
       transition: color 0.4s ease;
 
       &:hover {

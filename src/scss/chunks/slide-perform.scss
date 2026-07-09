@@ -2,23 +2,8 @@
 @use '../core/mixins' as *;
 
 .perform-slide {
-  // .perform-slide__content
-  &__content {
-    pointer-events: none;
-    flex: 0 1 auto;
-
-    @include min-490 {
-      height: 100%;
-      margin-left: -60px;
-    }
-
-    > * {
-      transform: translateY(25px);
-      opacity: 0;
-      transition:
-        opacity 0.4s,
-        transform 0.4s ease-out;
-    }
+  @include screen-375 {
+    margin: 0 -16px;
   }
 
   // .perform-slide__body
@@ -31,15 +16,14 @@
 
     width: 100%;
     height: 100%;
-    padding: 1.6rem;
-    padding-right: 25px;
+    padding: 1.6rem 2.5rem;
     border-radius: 8px;
 
     background: #fff;
-    box-shadow: 0 14px 80px rgb(34 35 58 / 20%);
+    box-shadow: 0 14px 80px rgb(154 122 95 / 20%);
 
     &.slide-perform {
-      cursor: url('/img/icons/scroll-auto.svg'), grab;
+      cursor: grab;
 
       &.is-grabbing {
         cursor: grab;
@@ -49,10 +33,12 @@
 
   // .perform-slide__slide-column
   &__slide-column {
-    align-items: center;
+    pointer-events: none;
     transition: opacity 0.4s ease-out;
 
     &.swiper-slide-active {
+      pointer-events: all;
+
       .perform-slide__image {
         img {
           opacity: 1;
@@ -61,6 +47,8 @@
       }
 
       .perform-slide__content {
+        pointer-events: all;
+
         > * {
           transform: none;
           opacity: 1;
@@ -87,8 +75,11 @@
     flex: 0 0 250px;
 
     width: 250px;
+    height: 100%;
     height: 330px;
     border-radius: 8px;
+
+    text-align: left;
 
     background: linear-gradient(to right, $color, #fff);
     box-shadow: 4px 13px 30px 1px rgb(255 255 255 / 71.2%);
@@ -124,9 +115,38 @@
 
     img {
       position: absolute;
+
+      height: 100%;
+
       opacity: 0;
       object-position: center;
+
       transition: opacity 1s ease-out;
+    }
+  }
+
+  // .perform-slide__content
+  &__content {
+    pointer-events: none;
+
+    padding: 3rem 2rem;
+    border-radius: 8px;
+
+    text-align: left;
+
+    background: #fff;
+    box-shadow: -4px 0 15px 4px rgb(227 220 213 / 40%);
+
+    @include min-490 {
+      margin-left: -60px;
+    }
+
+    > * {
+      transform: translateY(25px);
+      opacity: 0;
+      transition:
+        opacity 0.4s,
+        transform 0.4s ease-out;
     }
   }
 
@@ -134,7 +154,6 @@
   &__pagination {
     position: absolute;
     z-index: 99;
-    top: 50%;
     right: 20px;
     bottom: auto !important;
     left: auto !important;
@@ -215,14 +234,17 @@
   position: relative;
 
   display: flex;
-  gap: 4rem;
+  gap: 6rem;
   justify-content: center;
 
   width: 100%;
 
   // .navigation__button-prev
   &__button-prev {
-    transform: rotate(90deg);
+    span {
+      transform: rotate(90deg);
+      width: 20px;
+    }
 
     &.swiper-button-disabled {
       opacity: 0.35;
@@ -231,7 +253,10 @@
 
   // .navigation__button-next
   &__button-next {
-    transform: rotate(-90deg);
+    span {
+      transform: rotate(-90deg);
+      width: 20px;
+    }
   }
 
   &__button-prev,

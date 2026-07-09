@@ -102,6 +102,10 @@ input,
 button,
 textarea {
   border: none;
+
+  &::placeholder {
+    transition: opacity 0.3s ease-in-out;
+  }
 }
 
 button,
@@ -131,6 +135,15 @@ input:active,
 button:focus,
 button:active {
   outline: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+
+  &::placeholder {
+    opacity: 0;
+  }
 }
 
 button::-moz-focus-inner {

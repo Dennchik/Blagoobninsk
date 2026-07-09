@@ -94,7 +94,7 @@
   }
 }
 
-// * ----------------------------------------------------------------------------
+// * ---------------------------------------------------------------------------
 .return-button {
   cursor: pointer;
 
@@ -122,13 +122,11 @@
     }
   }
 
-  ._button {
+  // .return-button__arrow
+  &__arrow {
     pointer-events: none;
-    cursor: pointer;
 
     position: relative;
-    z-index: 13;
-    left: 0;
 
     display: flex;
     justify-content: center;
@@ -154,7 +152,7 @@
   }
 
   &._rotate {
-    ._button {
+    .return-button__arrow {
       scale: -1;
     }
   }
@@ -329,6 +327,7 @@
     display: block;
 
     text-transform: uppercase;
+    white-space: nowrap;
 
     opacity: 1;
 

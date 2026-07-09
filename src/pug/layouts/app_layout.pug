@@ -43,8 +43,8 @@ html(lang="ru")
 							include @/pug/chunks/menu-list
 					block aside-button
 						.return-button#scrollButton
-							._arrow._button
-								img(src="/img/frame/arrow.png" alt="image")
+							.return-button__arrow
+								+picture('img/frame/arrow.png', 'image') 
 							//- +iconfont('angle-down', '_button')
 							//- block content-hidden
 							//- block burger-menu

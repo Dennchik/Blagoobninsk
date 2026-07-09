@@ -22,7 +22,8 @@
 
 // todo --------------------------- Assets -------------------------------------
 @use 'assets/burger-button';
-@use 'assets/swiper-11.2.10';
+
+@use 'assets/swiper-14.0.1';
 
 // todo --------------------------- Chunks -------------------------------------
 @use 'chunks/menu-list';
@@ -60,7 +61,6 @@
   display: block;
 
   img {
-    vertical-align: middle;
     object-fit: cover;
   }
 }

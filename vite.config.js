@@ -16,7 +16,7 @@ import { viteConvertPugInHtml } from '@mish.dev/vite-convert-pug-in-html';
 import { moveHtmlFiles } from './vite/tasks/moveHtmlFiles.js';
 import { fontStyle } from './vite/tasks/fontsStyle.js';
 import { convertImagesToWebp } from './vite/tasks/webp.js';
-import { compileScss } from './vite/tasks/compileScss.js';
+// import { compileScss } from './vite/tasks/compileScss.js';
 import { fonts } from './vite/tasks/fonts.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -41,7 +41,7 @@ export default defineConfig(({ command }) => {
       moveHtmlFiles(), // 👈 ключевой плагин для переименования HTML
 
       // 🔹 Запускаем compileScss()
-      ...(isProd ? [compileScss()] : []), // 👈 только при build
+      // ...(isProd ? [compileScss()] : []), // 👈 только при build
 
       // 🔹 Добавляем анализатор только в продакшн-сборке
     ],
@@ -93,9 +93,9 @@ export default defineConfig(({ command }) => {
           // 'card-product': resolve(__dirname, 'src/js/card.js'),
         },
         output: {
-          entryFileNames: 'assets/[name]-[hash].js',
-          assetFileNames: 'assets/[name]-[hash].[ext]',
-          chunkFileNames: 'assets/vendors/[name]-[hash].js',
+          entryFileNames: 'assets/[name].js',
+          assetFileNames: 'assets/[name].[ext]',
+          chunkFileNames: 'assets/vendors/[name].js',
 
           manualChunks(id) {
             if (id.includes('node_modules')) {
