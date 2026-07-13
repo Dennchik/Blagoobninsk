@@ -9,6 +9,8 @@
   --swiper-scrollbar-sides-offset: 1%;
   --swiper-scrollbar-border-radius: 1rem;
   --swiper-theme-color: #{$color};
+  --swiper-navigation-color: #{$background};
+  --swiper-virtual-size: inherit;
   --swiper-navigation-size: 3rem;
   --swiper-pagination-color: #f65e38;
   --swiper-pagination-bullet-opacity: 1;
@@ -22,4 +24,12 @@
   --swiper-pagination-bottom: 0.5rem;
   --swiper-pagination-bullet-horizontal-gap: 1.2rem;
   --swiper-transition-opacity: 0.9s;
+  --swiper-pagination-progressbar-bg-color: rgb(0 0 0 / 25%);
+  --swiper-pagination-bullet-vertical-gap: 6px;
+  --swiper-pagination-progressbar-size: 4px;
+  --swiper-pagination-right: 8px;
+  --swiper-navigation-sides-offset: 4px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-pagination-left: auto;
+  --swiper-pagination-fraction-color: inherit;
 }

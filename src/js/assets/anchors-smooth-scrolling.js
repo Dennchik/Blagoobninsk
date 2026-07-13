@@ -1,93 +1,92 @@
 // Экспорт функции, чтобы использовать её в других модулях
 export function anchorsSmoothScrolling() {
+  // Ожидаем полной загрузки DOM
+  document.addEventListener('DOMContentLoaded', function () {
+    // Отключаем авто-прокрутку браузера к якорю при переходе по ссылке вида page.html#anchor
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
 
-	// Ожидаем полной загрузки DOM
-	document.addEventListener('DOMContentLoaded', function () {
+    // Находим все ссылки с классом .anchor-link (к ним будет применена плавная прокрутка)
+    const anchorLinks = document.querySelectorAll('.anchor-link');
 
-		// Отключаем авто-прокрутку браузера к якорю при переходе по ссылке вида page.html#anchor
-		if ('scrollRestoration' in history) {
-			history.scrollRestoration = 'manual';
-		}
+    // Для каждой такой ссылки:
+    anchorLinks.forEach((link) => {
+      link.addEventListener('click', function (e) {
+        // Получаем href, на который указывает ссылка
+        const href = this.getAttribute('href');
+        if (!href) return; // если нет href — ничего не делаем
 
-		// Находим все ссылки с классом .anchor-link (к ним будет применена плавная прокрутка)
-		const anchorLinks = document.querySelectorAll('.anchor-link');
+        // Проверяем, является ли ссылка якорем на текущей странице (например, #about)
+        const isSamePageAnchor = href.startsWith('#');
 
-		// Для каждой такой ссылки:
-		anchorLinks.forEach(link => {
-			link.addEventListener('click', function (e) {
+        // Проверяем, ведет ли ссылка на другую страницу + якорь (например, page.html#block)
+        const isAnchorWithPage = href.includes('#') && !isSamePageAnchor;
 
-				// Получаем href, на который указывает ссылка
-				const href = this.getAttribute('href');
-				if (!href) return; // если нет href — ничего не делаем
+        // Если это переход на другую страницу с якорем
+        if (isAnchorWithPage) {
+          const anchorId = href.split('#')[1]; // извлекаем id якоря после #
+          if (anchorId) {
+            localStorage.setItem('scrollToAnchor', anchorId); // сохраняем его в localStorage
+          }
+          // Не отменяем стандартное поведение — браузер должен перейти на другую страницу
+          return;
+        }
 
-				// Проверяем, является ли ссылка якорем на текущей странице (например, #about)
-				const isSamePageAnchor = href.startsWith('#');
+        // Если это переход по якорю на текущей странице
+        e.preventDefault(); // отменяем стандартное поведение браузера
 
-				// Проверяем, ведет ли ссылка на другую страницу + якорь (например, page.html#block)
-				const isAnchorWithPage = href.includes('#') && !isSamePageAnchor;
+        // Извлекаем id якоря без #
+        const targetId = href.substring(1);
 
-				// Если это переход на другую страницу с якорем
-				if (isAnchorWithPage) {
-					const anchorId = href.split('#')[1]; // извлекаем id якоря после #
-					if (anchorId) {
-						localStorage.setItem('scrollToAnchor', anchorId); // сохраняем его в localStorage
-					}
-					// Не отменяем стандартное поведение — браузер должен перейти на другую страницу
-					return;
-				}
+        // Находим элемент с таким id
+        const targetElement = document.getElementById(targetId);
+        if (!targetElement) return; // если такого нет — выходим
 
-				// Если это переход по якорю на текущей странице
-				e.preventDefault(); // отменяем стандартное поведение браузера
+        // Вычисляем отступ (высоту фиксированной шапки)
+        const screenWidth = window.innerWidth;
+        const offset = screenWidth <= 1024 ? 60 : 98;
 
-				// Извлекаем id якоря без #
-				const targetId = href.substring(1);
+        // Вычисляем позицию элемента на странице
+        const targetPosition =
+          targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = targetPosition - offset; // вычитаем отступ
 
-				// Находим элемент с таким id
-				const targetElement = document.getElementById(targetId);
-				if (!targetElement) return; // если такого нет — выходим
+        // Прокручиваем страницу до нужной позиции
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth', // плавно
+        });
+      });
+    });
 
-				// Вычисляем отступ (высоту фиксированной шапки)
-				const screenWidth = window.innerWidth;
-				const offset = screenWidth <= 1024 ? 60 : 98;
+    // Если был переход с другой страницы с якорем
+    const savedAnchorId = localStorage.getItem('scrollToAnchor'); // получаем сохранённый id из localStorage
+    if (savedAnchorId) {
+      // Функция прокрутки к элементу с учётом отступа
+      const scrollToAnchorWithOffset = () => {
+        const targetElement = document.getElementById(savedAnchorId);
+        if (targetElement) {
+          const screenWidth = window.innerWidth;
+          const offset = screenWidth <= 1024 ? 64 : 80;
 
-				// Вычисляем позицию элемента на странице
-				const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-				const offsetPosition = targetPosition - offset; // вычитаем отступ
+          const targetPosition =
+            targetElement.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = targetPosition - offset;
 
-				// Прокручиваем страницу до нужной позиции
-				window.scrollTo({
-					top: offsetPosition,
-					behavior: 'smooth' // плавно
-				});
-			});
-		});
+          // Прокручиваем к элементу с учётом отступа
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
 
-		// Если был переход с другой страницы с якорем
-		const savedAnchorId = localStorage.getItem('scrollToAnchor'); // получаем сохранённый id из localStorage
-		if (savedAnchorId) {
-			// Функция прокрутки к элементу с учётом отступа
-			const scrollToAnchorWithOffset = () => {
-				const targetElement = document.getElementById(savedAnchorId);
-				if (targetElement) {
-					const screenWidth = window.innerWidth;
-					const offset = screenWidth <= 1024 ? 64 : 80;
+          // Удаляем сохранённый якорь, чтобы он не сработал снова
+          localStorage.removeItem('scrollToAnchor');
+        }
+      };
 
-					const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-					const offsetPosition = targetPosition - offset;
-
-					// Прокручиваем к элементу с учётом отступа
-					window.scrollTo({
-						top: offsetPosition,
-						behavior: 'smooth'
-					});
-
-					// Удаляем сохранённый якорь, чтобы он не сработал снова
-					localStorage.removeItem('scrollToAnchor');
-				}
-			};
-
-			// Запускаем прокрутку через небольшой таймер (чтобы DOM успел полностью построиться)
-			setTimeout(scrollToAnchorWithOffset);
-		}
-	});
+      // Запускаем прокрутку через небольшой таймер (чтобы DOM успел полностью построиться)
+      setTimeout(scrollToAnchorWithOffset);
+    }
+  });
 }

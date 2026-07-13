@@ -1,4 +1,5 @@
-import { resolve } from 'path';
+import { resolve } from 'node:path';
+
 export const pathSrc = 'src';
 export const pathDest = 'build';
 

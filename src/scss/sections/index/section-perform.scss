@@ -205,7 +205,6 @@
     z-index: 1;
     top: 0;
 
-    width: calc(100% / 2);
     width: 987px;
     height: 100vh;
 
@@ -255,7 +254,7 @@
       }
 
       @include screen-490 {
-        flex: 0 1 0px;
+        flex: 0 1 0;
       }
     }
   }
@@ -264,8 +263,10 @@
 .hgroup-items {
   h1 {
     transform: scale(1, 1.2);
+
     font-weight: 400;
     line-height: 100%;
+    text-align: left;
     text-transform: uppercase;
 
     span {

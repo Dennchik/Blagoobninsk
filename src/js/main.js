@@ -1,8 +1,13 @@
 import '../scss/main.scss';
 import '../scss/index.scss';
-import loaded from './assets/preloader.js';
+//* ------------------------- Header animations --------------------------------
+import {
+  timeLineHeaderItem,
+  timeLineTextItem,
+} from './animations/anime-js.jsx';
 // import { date } from './assets/date.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
+import loaded from './assets/preloader.js';
 import returnToSavedPosition from './modules/return-position.js';
 
 loaded('.preloader');
@@ -10,22 +15,17 @@ loaded('.preloader');
 dynamicAdaptive();
 
 returnToSavedPosition('scrollButton');
-//* ------------------------- Header animations --------------------------------
-import {
-  timeLineHeaderItem,
-  timeLineTextItem,
-} from './animations/anime-js.jsx';
+
 //* ----------------------------------------------------------------------------
-function layoutMenu(params) {
+function layoutMenu() {
   const menuList = document.querySelector('.menu-list');
   const burgerButtons = document.querySelectorAll('.burger-button');
-  const buttons = document.querySelectorAll('.hamburger');
 
   burgerButtons.forEach((burgerButton) => {
     burgerButton.addEventListener('click', () => {
-      const backgroundColorTransparent = getComputedStyle(
-        document.documentElement
-      ).getPropertyValue('--background-transparent');
+      // const backgroundColorTransparent = getComputedStyle(
+      //   document.documentElement
+      // ).getPropertyValue('--background-transparent');
 
       for (let i = 0; i < burgerButtons.length; i++) {
         burgerButtons[i].classList.toggle('is-active');
@@ -55,9 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (textItem) {
     timeLineTextItem();
   }
-
-  // date('.performance__date');
 });
+
 //* ----------------------------- Button Search --------------------------------
 const headerContainer = document.querySelector('.header__container');
 const sectionTop = document.querySelector('.section-top');
@@ -76,6 +75,7 @@ searchButton.addEventListener('click', () => {
     }
   }
 });
+
 //* --------------------------- Animation Header -------------------------------
 const initHeaderScroll = () => {
   const header = document.querySelector('.header');
@@ -122,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const trigger = item.querySelector('._trigger');
 
     trigger.addEventListener('click', () => {
-      // 1. Если хотим, чтобы открывался не блок один за раз - закомментируй код ниже:
+      // 1. Если хотим, чтобы открывался блок один за раз, закомментируй
+      // код ниже:
 
       toggleMenu.forEach((otherItem) => {
         if (otherItem !== item) {

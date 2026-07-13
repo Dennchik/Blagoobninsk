@@ -5,10 +5,7 @@ $max-width-container: 1440px;
 
 // * ---------------------------- [Font Variables] -----------------------------
 $font-path: '../fonts';
-
 $font-family-default: 'Sofia Sans Extra Condensed', sans-serif;
-
-// $font-family-default: 'trebuchetms', sans-serif;
 $font-family-exclude: 'Ponomar', sans-serif;
 $font-weight-default: 400;
 $font-size: 1.6rem;
@@ -73,7 +70,7 @@ $dark-outline:
   // * -------------------------- [Other colors] -------------------------------
   --border-color: rgb(86 56 20 / 62.3%);
 
-  // ---------------------------------------------------------------------------
+  // * --------------------------------------------------------------------------
   --pos: center center;
   --size: 0;
   --inset-top: 0;
@@ -81,7 +78,7 @@ $dark-outline:
   --inset-bottom: 100%;
   --inset-left: 0;
 
-  // ---------------------------------------------------------------------------
+  // * --------------------------------------------------------------------------
   --stripe-width: 10px;
   --nav-marker-border: rgb(59 134 134);
   --sidebar-width: 28.5rem;

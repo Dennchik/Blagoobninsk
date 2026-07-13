@@ -1,8 +1,8 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getWebRoot } from '../utils/getWebRoot.js';
 //* ✅ data - данные
 import data from '../../src/data/data.json' with { type: 'json' };
+import { getWebRoot } from '../utils/getWebRoot.js';
 //* ✅ const
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

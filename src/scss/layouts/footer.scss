@@ -112,7 +112,6 @@
 
   // .footer__title
   &__title {
-    width: max-content;
     width: 100%;
     font-family: $font-family-exclude;
     font-size: 86px;
@@ -182,10 +181,6 @@
         rgb(255 255 255 / 0%) 100%
       );
     }
-
-    @include screen-425 {
-      motion-path: 0;
-    }
   }
 
   // .footer__item
@@ -218,8 +213,8 @@
     }
   }
 
-  // .footer__copyrite
-  &__copyrite {
+  // .footer__copyright
+  &__copyright {
     padding: 2rem 0;
     text-align: center;
   }
@@ -228,7 +223,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
 
     p {
       margin-top: -2rem;

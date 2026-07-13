@@ -173,7 +173,7 @@
 
   // .slide-temples__img-content
   &__img-content {
-    @extend .bg-image;
+    @extend %bg-image;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -187,7 +187,7 @@
 
   // .slide-temples__info
   &__info {
-    @extend .text-shadow;
+    @extend %text-shadow;
     transform: translateY(100%);
 
     width: 100%;

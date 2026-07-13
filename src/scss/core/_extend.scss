@@ -3,83 +3,7 @@
 @use 'mixins.scss' as *;
 @use 'sass:list';
 
-.bg-grad {
-  pointer-events: none;
-
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: linear-gradient(to right, transparent 50%, $color, $color);
-  background-position: left;
-}
-
-.hidden {
-  overflow: hidden;
-}
-
-.bg-top,
-.bg-bottom {
-  pointer-events: none;
-
-  position: absolute;
-  z-index: 1;
-  left: 0;
-
-  display: inline-block;
-
-  width: 100%;
-  height: 45%;
-
-  text-align: right;
-}
-
-.bg-top {
-  top: 0;
-  background-image: linear-gradient($background, transparent 70%);
-}
-
 %link-underline {
-  position: relative;
-  transition: color 0.3s ease-in-out;
-
-  &::before {
-    content: '';
-
-    position: absolute;
-    bottom: 0;
-    transform: scaleX(0);
-
-    width: 100%;
-    height: 1px;
-
-    opacity: 0.6;
-    background-color: $font-color-secondary;
-
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &::after {
-    bottom: 0;
-    left: 0;
-  }
-
-  &:hover {
-    &::before {
-      transform: scaleX(1);
-    }
-
-    a {
-      opacity: 1;
-    }
-  }
-}
-
-.link_underline {
   position: relative;
   transition: color 0.3s ease-in-out;
 
@@ -127,7 +51,7 @@
 }
 
 // * ----------------------------------------------------------------------------
-.bg-image {
+%bg-image {
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -151,8 +75,8 @@
     color: transparent;
     text-shadow: none;
 
-    background: linear-gradient(-135deg, transparent 40%, $font-color-default);
-    background-position: 100% 0%;
+    background: linear-gradient(-135deg, transparent 40%, $font-color-default)
+      100% 0;
     background-clip: text;
     background-size: 300% 100%;
     mix-blend-mode: multiply;
@@ -163,8 +87,6 @@
 
 .frame-container {
   position: absolute;
-
-  // pointer-events: none;
   z-index: -1;
   top: 0;
   left: 0;
@@ -174,18 +96,11 @@
   margin: 0 auto;
   border-image-repeat: repeat;
 
-  background: linear-gradient(
-    136deg,
-    rgb(230 217 205 / 17.8%),
-    #e6d9cd,
-    rgb(230 217 205)
-  );
-  background-color: #fff;
+  background: #fff
+    linear-gradient(136deg, rgb(230 217 205 / 17.8%), #e6d9cd, rgb(230 217 205));
 
   @include screen-320 {
     border: 20px solid transparent;
-
-    // border-image: url('../img/frame/border.png') 85 110;
     border-image-repeat: repeat;
   }
 }
@@ -270,7 +185,7 @@
   text-shadow: 0 0 9px #00000079;
 }
 
-.text-shadow {
+%text-shadow {
   text-shadow:
     0 0 15px #00000070,
     0 0 1em #00000070,
@@ -375,7 +290,7 @@
 
 // * ------------------------------- Gradient -----------------------------------
 .grad_underline {
-  /* Размер фона для каждого слоя */
+  /* Переход для изменения размера фона */
   background-image:
     linear-gradient(to left, transparent, transparent),
     linear-gradient(
@@ -384,20 +299,20 @@
       var(--font-color-active)
     );
 
-  /* Позиционирование фона */
+  /* Определяем фоновые изображения */
   background-repeat: no-repeat;
 
-  /* Повторение фона */
+  /* Размер фона для каждого слоя */
   background-position:
     100% 100%,
     /* Первое изображение */ 0 100%; /* Второе изображение */
 
-  /* Переход для изменения размера фона */
+  /* Позиционирование фона */
   background-size:
     100% 1px,
     /* Первое изображение */ 0 1px; /* Второе изображение */
 
-  /* Определяем фоновые изображения */
+  /* Повторение фона */
   transition: background-size 400ms;
 }
 
@@ -479,7 +394,6 @@
 }
 
 .render-mask {
-  position: relative;
   position: absolute;
   z-index: 1;
   top: -100px;
@@ -511,11 +425,11 @@
     height: 100%;
 
     background: linear-gradient(
-      to bottom,
-      var(--bg-inverse2) 400px,
-      var(--accent)
-    );
-    background-position: top center;
+        to bottom,
+        var(--bg-inverse2) 400px,
+        var(--accent)
+      )
+      top center;
     background-size: 150% 150%;
   }
 }
@@ -600,4 +514,20 @@
 
 .class {
   margin-bottom: fibonacci(7) * 2px;
+}
+
+// * ----------------------------------------------------------------------------
+
+%grayscale {
+  filter: grayscale(1);
+  transition: all 0.1s ease 0s;
+
+  -moz-filte: grayscale(1);
+}
+
+%grayscaleOff {
+  filter: grayscale(0);
+  transition: all 0.3s ease 0s;
+
+  -moz-filte: grayscale(0);
 }

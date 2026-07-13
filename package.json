@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
+    "Start": "vite",
+    "Build": "vite build",
     "Preview": "vite preview"
   },
   "dependencies": {

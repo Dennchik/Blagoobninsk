@@ -1,4 +1,4 @@
-include @/pug/includes/mixins
+include ../includes/mixins
 doctype html
 html(lang="ru")
 	head
@@ -10,7 +10,7 @@ html(lang="ru")
 		meta(name="description" content="Краткое описание документа")
 		meta(name="keywords" content="keywords-ключевые слова для поиска")
 		block link 
-			link(rel="icon" type="image/icon" href="/img/icons/logo.png") 
+			link(rel="icon" type="image/icon" href="/img/icons/logo.png")
 		block style
 		block script 
 			script(defer type="module" src="/src/js/app.js")
@@ -18,16 +18,16 @@ html(lang="ru")
 
 		block title
 		- var text
-			title #{text}
+		title #{text}
 
 	body
-		include @/pug/utils/preloader
-		include @/pug/includes/mixins
+		include ../utils/preloader
+		include ../includes/mixins
 		.wrapper
 			.page
 				block header 
-					header.page__header.offset-header 
-						include @/pug/layouts/header
+					header.page__header.offset-header
+						include ../layouts/header
 				block mask-render
 				block page-content
 					main.page__main-content
@@ -37,14 +37,14 @@ html(lang="ru")
 								block main-content-items
 								footer.main-content__footer
 									block footer 
-										include footer 
+										include footer
 					block menu-list
 						nav.page__menu-list
-							include @/pug/chunks/menu-list
+							include ../chunks/menu-list
 					block aside-button
 						.return-button#scrollButton
 							.return-button__arrow
-								+picture('img/frame/arrow.png', 'image') 
+								+picture('img/frame/arrow.png', 'image')
 							//- +iconfont('angle-down', '_button')
 							//- block content-hidden
 							//- block burger-menu

@@ -34,6 +34,7 @@
   // .perform-slide__slide-column
   &__slide-column {
     pointer-events: none;
+    display: flex;
     transition: opacity 0.4s ease-out;
 
     &.swiper-slide-active {

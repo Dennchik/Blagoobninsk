@@ -3,36 +3,33 @@
 @use '../../core/extend' as *;
 
 .section-news {
-  // .section-news__body
-  &__body {
-    padding: 6rem 0;
-
-    // line-height: 170%;
-    // letter-spacing: 0.3px;
-
-    @include screen-690 {
-      padding: 4rem 0;
-    }
-  }
-
-  // .section-news__title
-  &__title {
-    margin-bottom: 3rem;
-  }
-
-  // .section-news__slide-news
-  &__slide-news {
-    overflow: hidden;
-    padding: 3rem 1rem;
-
-    @include screen-490 {
-      padding: 3rem 0;
-    }
-  }
-
-  // .section-news__button
-  &__button {
-    display: flex;
-    justify-content: center;
-  }
+	// .section-news__body
+	&__body {
+		padding: 6rem 0;
+		
+		@include screen-690 {
+			padding: 4rem 0;
+		}
+	}
+	
+	// .section-news__title
+	&__title {
+		margin-bottom: 3rem;
+	}
+	
+	// .section-news__slide-news
+	&__slide-news {
+		overflow: hidden;
+		padding: 3rem 1rem;
+		
+		@include screen-490 {
+			padding: 3rem 0;
+		}
+	}
+	
+	// .section-news__button
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
 }

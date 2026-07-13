@@ -1,116 +1,143 @@
-.section-greed._container 
-	.section-greed__body 
+.section-greed._container
+	.section-greed__body
 		.mask-render
-		.bg-grad 
-		.section-greed__content 
+		.bg-grad
+		.section-greed__content
 			.section-greed__column
 				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
-					ul.aside-menu__list 
-						li.aside-menu__item 
-							span.aside-menu__link.link-hover Церковь
-						ul.aside-menu__sub-menu 
-							li.aside-menu__item 
-								a(href=linkTo('church/church-history', filename)).aside-menu__link
+					ul.aside-menu__list
+						li.aside-menu__item
+							span.aside-menu__link Церковь
+						ul.aside-menu__sub-menu
+							li.aside-menu__item.link-hover
+								a(href=linkTo('church/church',
+									filename)).aside-menu__link
+									span Что такое церковь
+							li.aside-menu__item
+								a(href=linkTo('church/church-history',
+									filename)).aside-menu__link
 									span Церковь в истории 
-							li.aside-menu__item 
-								a(href=linkTo('church/prihodsk-zhizn', filename)).aside-menu__link
+							li.aside-menu__item
+								a(href=linkTo('church/prihodsk-zhizn',
+									filename)).aside-menu__link
 									span Епархиальная и приходская жизнь  
-							li.aside-menu__item._toggle-menu 
-								.aside-menu__link._trigger  
+							li.aside-menu__item._toggle-menu
+								.aside-menu__link._trigger
 									span Школа Духовной Жизни
 									+iconfont('angle-down', 'icon')
-								.aside-menu__collapse 
+								.aside-menu__collapse
 									ul.aside-menu__sub-menu
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/o-boge', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/o-boge',
+												filename)).aside-menu__link
 												span О Боге
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/molitva', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/molitva',
+												filename)).aside-menu__link
 												span Молитва
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/izuchenie-evangeliya', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/izuchenie-evangeliya',
+												filename)).aside-menu__link
 												span Изучение Евангелия
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/izuchenie-svyatyih-ottsov', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/izuchenie-svyatyih-ottsov',
+												filename)).aside-menu__link
 												span Изучение творений святых отцов
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/pokayanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/pokayanie',
+												filename)).aside-menu__link
 												span Покаяние
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/prichashhenie-svyatyih-hristovyih-tayn', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo(
+												'church/shkola/prichashhenie-svyatyih-hristovyih-tayn',
+												filename)).aside-menu__link
 												span Причащение Святых Христовых Тайн
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/lyubov-k-blizhnim', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/lyubov-k-blizhnim',
+												filename)).aside-menu__link
 												span Любовь к ближним 
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/strah-pered-bogom', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/strah-pered-bogom',
+												filename)).aside-menu__link
 												span Страх перед Богом и любовь к Богу
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/postoyannoe-bodrstvovanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/shkola/postoyannoe-bodrstvovanie',
+												filename)).aside-menu__link
 												span Постоянное бодрствование над собою
-										li.aside-menu__item 
-											a(href=linkTo('church/shkola/predosterezhenie-svyatitelya-ignatiya', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo(
+												'church/shkola/predosterezhenie-svyatitelya-ignatiya',
+												filename)).aside-menu__link
 												span Предостережение святителя Игнатия от опасностей на пути спасения
 							li.aside-menu__item._toggle-menu
-								.aside-menu__link._trigger  
+								.aside-menu__link._trigger
 									span О таинствах церкви
 									+iconfont('angle-down', 'icon')
-								.aside-menu__collapse 
+								.aside-menu__collapse
 									ul.aside-menu__sub-menu
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/kreshenie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/kreshenie',
+												filename)).aside-menu__link
 												span Крещение
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/pokayanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/pokayanie',
+												filename)).aside-menu__link
 												span Покаяние
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/evharistiya', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/evharistiya',
+												filename)).aside-menu__link
 												span Евхаристия
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/soborovanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/soborovanie',
+												filename)).aside-menu__link
 												span Соборование (елеосвящение)
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/miropomazanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/miropomazanie',
+												filename)).aside-menu__link
 												span Миропомазание
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/venchanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/venchanie',
+												filename)).aside-menu__link
 												span Венчание
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/svyashenstvo', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/svyashenstvo',
+												filename)).aside-menu__link
 												span Священство 
-										li.aside-menu__item 
-											a(href=linkTo('church/tainstva/pominanie', filename)).aside-menu__link 
+										li.aside-menu__item
+											a(href=linkTo('church/tainstva/pominanie',
+												filename)).aside-menu__link
 												span Поминовение усопших
-							li.aside-menu__item 
+							li.aside-menu__item
 								a(href=linkTo('church/social', filename)).aside-menu__link
 									span Социальное служение 
-							li.aside-menu__item 
+							li.aside-menu__item
 								a(href=linkTo('church/catechism', filename)).aside-menu__link
 									span Образование и катехизис 
-							li.aside-menu__item 
+							li.aside-menu__item
 								a(href=linkTo('church/monashestvo', filename)).aside-menu__link
 									span Монашество 
-			.section-greed__column 
+			.section-greed__column
 				.section-greed__bread-crumbs
 					nav.bread-crumbs
 						ul.bread-crumbs__list
 							li
-								a(href=getWebRoot(filename) + "index.html" aria-label="home").bread-crumbs__link.link_underline Главная 
-							li.bread-crumbs__item  
+								a(href=getWebRoot(
+									filename) + "index.html" aria-label="home").bread-crumbs__link.link_underline Главная
+							li.bread-crumbs__item
 								+iconfont('angle-right', '_icon')
 							li
 								span.bread-crumbs__item Церковь
 				.section-greed__row
-					.section-greed__title 
-						hgroup.title.tl-02 
-							h1 
+					.section-greed__title
+						hgroup.title.tl-02
+							h1
 								span Что такое Церковь?
-					.info-content 
-						.info-content__column 
+					.info-content
+						.info-content__column
 							.info-content__row
-								.hr 
-									+picture('/img/frame/hr.png', 'image') 
-								h3 Что такое Церковь? Размышления Митрополита Марка
+								.hr
+									+picture('/img/frame/hr.png', 'image')
+								h2 Что такое Церковь? Размышления Митрополита Марка
 								.info-content__image.current.left
 									+picture('img/photo/church.jpg', 'image')
 								p <b>Церковь</b> – это собрание верующих. Обратимся к&nbsp;истории понятия. Современное слово в&nbsp;русском языке, в&nbsp;его современном фонетическом произношении — «церковь», по&nbsp;мнению ученых-языковедов, восходит к&nbsp;греческому прилагательному «Κυριακόν» – «Господне, Господу принадлежащее» (от&nbsp;него же&nbsp;произошло название церкви во&nbsp;многих языках мира, в&nbsp;частности, германских: нем. «Kirche»; англ. «church»; слав. «цръквь», «цркы»; рус. «церковь»).
@@ -131,5 +158,5 @@
 								p Еще более масштабное понятие – <b>Вселенская Церковь</b>. То есть собрание православных христиан, живущих по всему миру. <b>Вселенская Церковь</b> объединяет все Поместные Церкви.
 								p И, наконец, в самом полном смысле слова <b>Церковь Христова</b> – это собрание всех, кто верит и любит <b>Христа</b>, причем собрание не только живущих, но и умерших. Это <b>Церковь Небесная</b>, где пребывают Пресвятая Богородица, Ангельские силы, все святые и спасшиеся христиане, которая также именуется Торжествующей, и <b>Церковь Земная</b>, называющаяся Воинствующей, поскольку ведет постоянную брань с отцом всякой лжи и его приспешниками. Церковь – единое Тело Христово. И все мы являемся, или по крайней мере, стараемся быть членами этой Церкви, и потому мы молимся и за живых, и за усопших, поскольку верим в бессмертие души.
 								p Что касается слова <b>«собор»</b>, то в современном понимании – это главное церковное сооружение города или монастырского комплекса, в котором богослужение совершает епископ (архиепископ, митрополит, патриарх). Само слово происходит от старославянских <b>«съезд», «собрание»</b>. Главное отличие собора от храма — особый статус, усвояемый церковному сооружению по причине особого положения храма или его значения. Русскому слову «собор» в западноевропейских языках соответствуют <b>cathedral (англ), cathédrale (фр.), cattedrale (итал.)</b>, происходящие от слова <b>«кафедра»</b>. То есть храм с кафедрой епископа.
-								.hr 
+								.hr
 									+picture('/img/frame/hr.png', 'image') 

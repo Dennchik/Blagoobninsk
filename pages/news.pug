@@ -1,9 +1,9 @@
-extends @/pug/layouts/app_layout
+extends ../src/pug/layouts/app_layout
 append link 
 prepend script 
 block title
 	- var text='Новости благочиния'
 
 block main-content-items 
-	section.main-content__section.section-top 
-		include @/pug/section/news/section-all-news
+	section.main-content__section.section-top
+		include ../src/pug/section/news/section-all-news
