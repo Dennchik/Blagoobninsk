@@ -1,6 +1,10 @@
 @use '../core/variables' as *;
 @use '../core/mixins' as *;
 
+._collapse:not(._show) {
+  display: none;
+}
+
 .aside-menu {
   position: sticky;
   top: 11rem;
@@ -8,8 +12,7 @@
   overflow-x: hidden;
 
   max-height: calc(100vh - 8rem);
-  padding: 0 2rem;
-  padding-bottom: 5rem;
+  padding: 0 2rem 5rem;
 
   backdrop-filter: blur(8px);
 
@@ -20,25 +23,8 @@
 
   // .aside-menu__list
   &__list {
-    height: 100%;
-  }
-
-  // .aside-menu__item
-  &__item {
     position: relative;
-    line-height: 1;
-
-    @include screen-hover {
-      a {
-        transition: transform 0.3s ease-in-out;
-      }
-
-      a {
-        &:hover {
-          transform: translateX(1%);
-        }
-      }
-    }
+    height: 100%;
 
     &::before {
       content: '';
@@ -51,6 +37,50 @@
       height: 1px;
 
       background: linear-gradient(to right, #6464645b, transparent);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background: linear-gradient(to right, #6464645b, transparent);
+    }
+  }
+
+  // .aside-menu__item
+  &__item {
+    position: relative;
+    line-height: 1;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background: linear-gradient(to right, #6464645b, transparent);
+    }
+
+    @include screen-hover {
+      a {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      a {
+        &:hover {
+          transform: translateX(1%);
+        }
+      }
     }
 
     @include screen-768 {
@@ -71,12 +101,15 @@
     }
 
     &.is-active {
-      .aside-menu__collapse {
-        grid-template-rows: 1fr;
-      }
+      > ._trigger {
+        span {
+          color: $color-secondary;
+        }
 
-      .icon-angle-down {
-        transform: scale(-1);
+        .icon-angle-down {
+          transform: scale(-1);
+          color: $color-secondary;
+        }
       }
     }
   }
@@ -98,8 +131,10 @@
 
     transition: color 0.3s ease-out;
 
-    &:hover {
-      color: $font-color-secondary;
+    @include screen-hover {
+      &:hover {
+        color: $font-color-secondary;
+      }
     }
 
     .icon-angle-down {
@@ -108,17 +143,9 @@
     }
   }
 
-  // .aside-menu__collapse
-  &__collapse {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.3s ease-in-out;
-  }
-
   // .aside-menu__sub-menu
   &__sub-menu {
     overflow: hidden;
-    min-height: 0;
     padding-left: 1rem;
   }
 }

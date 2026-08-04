@@ -1,39 +1,41 @@
 //! ✅ vite.config.js
-import { defineConfig } from 'vite';
+import { viteConvertPugInHtml } from '@mish.dev/vite-convert-pug-in-html';
+import autoprefixer from 'autoprefixer';
 //* ✅ Path
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { paths } from './vite/config/path.js';
-//* ✅ app
-import { app } from './vite/config/app.js';
-import { getPugConfig } from './vite/config/pug-config.js';
+import postcssMediaMinMax from 'postcss-media-minmax';
 //* ✅ Plugins
 import sortMediaQueries from 'postcss-sort-media-queries';
-import postcssMediaMinMax from 'postcss-media-minmax';
-import autoprefixer from 'autoprefixer';
-import { viteConvertPugInHtml } from '@mish.dev/vite-convert-pug-in-html';
+import { defineConfig } from 'vite';
+//* ✅ app
+import { app } from './vite/config/app.js';
+import { paths } from './vite/config/path.js';
+import { getPugConfig } from './vite/config/pug-config.js';
+import { compileScss } from './vite/tasks/compileScss.js';
+import { fontStyle } from './vite/tasks/fontsStyle.js';
 //* ✅ Tasks
 import { moveHtmlFiles } from './vite/tasks/moveHtmlFiles.js';
-import { fontStyle } from './vite/tasks/fontsStyle.js';
 import { convertImagesToWebp } from './vite/tasks/webp.js';
-// import { compileScss } from './vite/tasks/compileScss.js';
-import { fonts } from './vite/tasks/fonts.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-//* ✅ конвертируем шрифты перед dev/build
-fonts(paths.fonts.src);
+//* ✅ Вызываем fontStyle ДО конфигурации
+fontStyle(paths.fonts.src, paths.fonts.dest);
 
 export default defineConfig(({ command }) => {
   const isProd = command === 'build';
   const isDev = command === 'dev';
 
+  // ✅ Вызываем compileScss() только для продакшн сборки
+  if (isProd) {
+    compileScss();
+  }
+
   return {
     base: './',
 
     plugins: [
-      fonts(),
-      fontStyle(),
       convertImagesToWebp(app.webp),
       viteConvertPugInHtml(getPugConfig(isProd)),
 
@@ -49,16 +51,21 @@ export default defineConfig(({ command }) => {
       open: true,
     },
     css: {
-      devSourcemap: !isProd, // 👈 только для dev
+      devSourcemap: !isProd,
       postcss: {
         plugins: [
-          autoprefixer(app.autoprefixer),
+          ...(isProd
+            ? [
+                // 1. Конвертируем modern media query синтаксис (width >= 768px)
+                postcssMediaMinMax(app.postcssMediaMinMax),
 
-          // 🔹сортировки и объединения медиа-запросов CSS
-          ...(isProd ? [] : [sortMediaQueries(app.postcssSortMediaQueries)]),
+                // 2. Сортируем и объединяем media queries
+                sortMediaQueries(app.postcssSortMediaQueries),
 
-          // 🔹 конвертация нового синтаксиса медиа-запросов
-          ...(isProd ? [] : [postcssMediaMinMax(app.postcssMediaMinMax)]),
+                // 3. Добавляем vendors префиксы
+                autoprefixer(app.autoprefixer),
+              ]
+            : []),
         ],
       },
       preprocessorOptions: { scss: {} },
@@ -104,6 +111,12 @@ export default defineConfig(({ command }) => {
               }
               if (id.includes('chart.js') || id.includes('d3')) {
                 return 'charts';
+              }
+              if (id.includes('gsap-vendors')) {
+                return 'gsap';
+              }
+              if (id.includes('animejs') || id.includes('swiper')) {
+                return 'anime-vendors';
               }
               return 'vendor';
             }

@@ -1,19 +1,27 @@
+import fancyBox from '@/js/utils/fancyapps.js';
+import newsAnimation from './animations/news-animation.jsx';
 import { buildSwiper } from './layouts/build-swiper.js';
-import AnchorScroller from './modules/AnchorScroller.js';
-buildSwiper();
 import {
+  newsSlide,
   swiperPerform,
   templesSlide,
-  newslide,
-  websiteSlelide,
-  slideSchedule,
 } from './layouts/main-slide.js';
+import AnchorScroller from './modules/AnchorScroller.js';
+import initMap from './modules/map.js';
 
-swiperPerform('.slide-perform');
-templesSlide('.temples-slide');
-newslide('.news-slide');
-websiteSlelide('.slide-website');
-slideSchedule('.slide-schedule');
+function onDomReady() {
+  initMap();
+  buildSwiper();
+  fancyBox();
+  newsAnimation();
+  swiperPerform('.slide-perform');
+  templesSlide('.temples-slide');
+  newsSlide('.news-slide');
+
+  // slideSchedule('.slide-schedule');`
+}
+document.addEventListener('DOMContentLoaded', onDomReady);
+
 //* ---------------- Плавная прокрутка страницы до позиции ---------------------
 //* AnchorScroller — всегда (и на мобилке, и на ПК)
 //* Здесь передаём smoother, чтобы он использовал правильный scrollTo с offset'ом

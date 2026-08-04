@@ -1,6 +1,8 @@
 //* import Swiper bundle with all modules installed
 import Swiper from 'swiper/bundle';
+import { Navigation, Pagination } from 'swiper/modules';
 
+const swiperModules = [Navigation, Pagination];
 export function swiperPerform(Slide) {
   const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(
     navigator.userAgent
@@ -10,8 +12,10 @@ export function swiperPerform(Slide) {
     const cursor = document.querySelector('.slide-perform');
     new Swiper(Slide, {
       // speed: 800,
+      modules: swiperModules,
       spaceBetween: 20,
       lazy: true,
+      mousewheel: false,
       effect: 'fade',
       // grabCursor: true,
       initialSlide: todayIndex, // <-- добавили эту строку
@@ -25,11 +29,11 @@ export function swiperPerform(Slide) {
       // 	delay: 1500,
       // 	disableOnInteraction: true,
       // },
-      mousewheel: isMobile
-        ? false
-        : {
-            invert: false,
-          },
+      // mousewheel: isMobile
+      //   ? false
+      //   : {
+      //       invert: false,
+      //     },
       pagination: {
         el: '.perform-slide__pagination',
         clickable: true,
@@ -42,9 +46,10 @@ export function swiperPerform(Slide) {
   }
 }
 
-export function newslide(Slide) {
+export function newsSlide(Slide) {
   if (Slide) {
     new Swiper(Slide, {
+      modules: swiperModules,
       speed: 800,
       spaceBetween: 20,
       // loop: true,
@@ -76,6 +81,7 @@ export function newslide(Slide) {
 export function templesSlide(Slide) {
   if (Slide) {
     new Swiper(Slide, {
+      modules: swiperModules,
       speed: 800,
       spaceBetween: 0,
       loop: true,
@@ -100,9 +106,10 @@ export function templesSlide(Slide) {
   }
 }
 
-export function websiteSlelide(Slide) {
+export function websiteSlide(Slide) {
   if (Slide) {
     new Swiper(Slide, {
+      modules: swiperModules,
       speed: 800,
       spaceBetween: 20,
       // loop: true,
@@ -139,6 +146,7 @@ export function slideSchedule(Slide) {
   if (Slide) {
     const todayIndex = new Date().getDay(); // 0 — воскресенье, 1 — понедельник, ..., 6 — суббота
     new Swiper(Slide, {
+      modules: swiperModules,
       speed: 800,
       // loop: true,
       spaceBetween: 20,

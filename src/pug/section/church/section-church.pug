@@ -7,26 +7,26 @@
 				aside.aside-menu(data-da="bp-1" data-da-position="1" data-da-resolution="690")
 					ul.aside-menu__list
 						li.aside-menu__item
-							span.aside-menu__link Церковь
-						ul.aside-menu__sub-menu
-							li.aside-menu__item.link-hover
-								a(href=linkTo('church/church',
-									filename)).aside-menu__link
-									span Что такое церковь
-							li.aside-menu__item
-								a(href=linkTo('church/church-history',
-									filename)).aside-menu__link
-									span Церковь в истории 
-							li.aside-menu__item
-								a(href=linkTo('church/prihodsk-zhizn',
-									filename)).aside-menu__link
-									span Епархиальная и приходская жизнь  
-							li.aside-menu__item._toggle-menu
-								.aside-menu__link._trigger
-									span Школа Духовной Жизни
-									+iconfont('angle-down', 'icon')
-								.aside-menu__collapse
-									ul.aside-menu__sub-menu
+							.aside-menu__link
+								span Церковь
+							ul.aside-menu__sub-menu
+								li.aside-menu__item.link-hover
+									a(href=linkTo('church/church',
+										filename)).aside-menu__link
+										span Что такое церковь
+								li.aside-menu__item
+									a(href=linkTo('church/church-history',
+										filename)).aside-menu__link
+										span Церковь в истории
+								li.aside-menu__item
+									a(href=linkTo('church/prihodsk-zhizn',
+										filename)).aside-menu__link
+										span Епархиальная и приходская жизнь
+								li.aside-menu__item._toggle-menu
+									.aside-menu__link._trigger
+										span Школа Духовной Жизни
+										+iconfont('angle-down', 'icon')
+									ul.aside-menu__sub-menu._collapse
 										li.aside-menu__item
 											a(href=linkTo('church/shkola/o-boge',
 												filename)).aside-menu__link
@@ -55,7 +55,7 @@
 										li.aside-menu__item
 											a(href=linkTo('church/shkola/lyubov-k-blizhnim',
 												filename)).aside-menu__link
-												span Любовь к ближним 
+												span Любовь к ближним
 										li.aside-menu__item
 											a(href=linkTo('church/shkola/strah-pered-bogom',
 												filename)).aside-menu__link
@@ -69,12 +69,11 @@
 												'church/shkola/predosterezhenie-svyatitelya-ignatiya',
 												filename)).aside-menu__link
 												span Предостережение святителя Игнатия от опасностей на пути спасения
-							li.aside-menu__item._toggle-menu
-								.aside-menu__link._trigger
-									span О таинствах церкви
-									+iconfont('angle-down', 'icon')
-								.aside-menu__collapse
-									ul.aside-menu__sub-menu
+								li.aside-menu__item._toggle-menu
+									.aside-menu__link._trigger
+										span О таинствах церкви
+										+iconfont('angle-down', 'icon')
+									ul.aside-menu__sub-menu._collapse
 										li.aside-menu__item
 											a(href=linkTo('church/tainstva/kreshenie',
 												filename)).aside-menu__link
@@ -102,20 +101,21 @@
 										li.aside-menu__item
 											a(href=linkTo('church/tainstva/svyashenstvo',
 												filename)).aside-menu__link
-												span Священство 
+												span Священство
 										li.aside-menu__item
 											a(href=linkTo('church/tainstva/pominanie',
 												filename)).aside-menu__link
 												span Поминовение усопших
-							li.aside-menu__item
-								a(href=linkTo('church/social', filename)).aside-menu__link
-									span Социальное служение 
-							li.aside-menu__item
-								a(href=linkTo('church/catechism', filename)).aside-menu__link
-									span Образование и катехизис 
-							li.aside-menu__item
-								a(href=linkTo('church/monashestvo', filename)).aside-menu__link
-									span Монашество 
+								li.aside-menu__item
+									a(href=linkTo('church/social', filename)).aside-menu__link
+										span Социальное служение
+								li.aside-menu__item
+									a(href=linkTo('church/catechism', filename)).aside-menu__link
+										span Образование и катехизис
+								li.aside-menu__item
+									a(href=linkTo('church/monashestvo',
+										filename)).aside-menu__link
+										span Монашество
 			.section-greed__column
 				.section-greed__bread-crumbs
 					nav.bread-crumbs

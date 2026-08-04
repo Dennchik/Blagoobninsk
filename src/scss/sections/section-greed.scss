@@ -287,7 +287,6 @@
   // .gallery-news__content
   &__content {
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
   }
 
@@ -325,6 +324,18 @@
     width: 25%;
     margin-right: 2.5rem;
     border-radius: 8px;
+
+    @include screen-960 {
+      float: none;
+      width: 70%;
+      margin-bottom: 2rem;
+    }
+
+    @include screen-540 {
+      float: none;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
 
     img {
       object-fit: cover;
@@ -584,6 +595,10 @@
         font-style: italic;
       }
 
+      em {
+        font-weight: 600;
+      }
+
       &.ps {
         font-weight: 600;
         font-style: italic;
@@ -755,4 +770,71 @@
   &__text {
     line-height: 100%;
   }
+}
+
+table {
+  border-collapse: collapse;
+  break-inside: avoid;
+
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 25px;
+
+  font-size: 16px;
+}
+
+th {
+  padding: 10px;
+  color: #503c2a;
+  text-align: left;
+  background-color: rgb(230 217 205);
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color) !important;
+  vertical-align: middle;
+}
+
+td:nth-child(1) {
+  width: 10%;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+tr:nth-child(1) {
+  font-weight: 400;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+  border: none;
+}
+
+.wp-block-table thead {
+  border-bottom: none;
+}
+
+.wp-block-table {
+  overflow-x: auto;
+}
+
+.wp-block-table .has-fixed-layout {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.wp-block-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.wp-block-table .has-fixed-layout td,
+.wp-block-table .has-fixed-layout th {
+  word-break: break-word;
 }

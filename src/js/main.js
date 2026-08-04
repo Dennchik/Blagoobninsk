@@ -5,6 +5,7 @@ import {
   timeLineHeaderItem,
   timeLineTextItem,
 } from './animations/anime-js.jsx';
+import ItcCollapse from './assets/collapse.js';
 // import { date } from './assets/date.js';
 import { dynamicAdaptive } from './assets/dynamic-adaptive.js';
 import loaded from './assets/preloader.js';
@@ -116,26 +117,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //* -------------------------- [ Блок Aside menu ] -----------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleMenu = document.querySelectorAll('._toggle-menu');
+  const items = document.querySelectorAll('._toggle-menu');
 
-  toggleMenu.forEach((item) => {
-    const trigger = item.querySelector('._trigger');
+  items.forEach((item) => {
+    const collapse = item.querySelector(':scope > ._collapse');
 
-    trigger.addEventListener('click', () => {
-      // 1. Если хотим, чтобы открывался блок один за раз, закомментируй
-      // код ниже:
-
-      toggleMenu.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.classList.remove('is-active');
-        }
-      });
-
-      // 2. Переключаем класс на текущем элементе
-      item.classList.toggle('is-active');
-    });
+    if (collapse) {
+      item.collapse = new ItcCollapse(collapse);
+      if (item.classList.contains('is-active')) {
+        item.collapse.show();
+      }
+    }
   });
+
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('._trigger');
+    if (!trigger) return;
+
+    const item = trigger.closest('._toggle-menu');
+    if (!item) return;
+
+    // Родительский список данного уровня
+    const parentList = item.parentElement;
+
+    // Ищем только соседей этого уровня
+    const openedItem = parentList.querySelector(
+      ':scope > ._toggle-menu.is-active'
+    );
+
+    if (openedItem && openedItem !== item) {
+      closeItem(openedItem);
+    }
+
+    toggleItem(item);
+  });
+
+  function toggleItem(item) {
+    if (!item.collapse) return;
+
+    item.classList.toggle('is-active');
+    item.collapse.toggle();
+  }
+
+  function closeItem(item) {
+    if (!item.classList.contains('is-active')) return;
+
+    item.classList.remove('is-active');
+    item.collapse.toggle();
+  }
 });
+
 //* ----------------------------------------------------------------------------
 console.log(
   '%c РОССИЯ ',

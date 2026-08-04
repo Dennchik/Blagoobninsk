@@ -1,3 +1,6 @@
 {
-  "recommendations": ["steoates.autoimport"]
+  "recommendations": [
+    "steoates.autoimport",
+    "openai.chatgpt"
+  ]
 }
